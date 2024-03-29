@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : language.css
+ * description : 영문  CSS
+ * date : 2019-01-03
+******************************************************** */
+
+/* ******************  메인페이지********************** */
+.main-search-box .main-search-select > a span em{letter-spacing:0px;}
+.main-search-box .main-search-select .main-select-con li a span{letter-spacing:0px;}
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info .info-tit{letter-spacing:0px;text-align:left; width:25%; padding-right: 10px; }
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li input {width:70%;}
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info .info-tit i {font-size: 20px;}
+#mainGlobalCon .global-con .global-tit{letter-spacing:0px;}
+#mainGlobalCon .exchange-con .main-exchange-tbl thead th{font-size:16px; letter-spacing:-0.25px;}
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li input::placeholder {letter-spacing:0.5px;}
+
+#mainInquiryCon .main-inquiry-con .right-con .agreement-tit{letter-spacing:0px;}
+#mainInquiryCon .main-inquiry-con .right-con .agreement-tit-box .agreement-link{letter-spacing:0px; top: 5px;}
+#mainInquiryCon .main-inquiry-con .right-con .text-area .main-textarea-txt{letter-spacing:0px;}
+#mainInquiryCon .main-inquiry-con .right-con .main-form-btn span{letter-spacing:0px;}
+#mainInquiryCon .main-inquiry-con .inquiry-tit{letter-spacing:0px;}
+
+
+/* ******************  회사소개 - About Microworks********************** */
+.summary-top-box .top-blue-box .inner .top-tit-kr{font-size:39px; letter-spacing:-1.5px;}
+.summary-top-box .top-blue-box .inner .top-tit-txt{letter-spacing:-0.35px;}
+.summary-top-box .top-txt-box .txt{letter-spacing:-0.15px;}
+.summary-con02 dl {height:320px;}
+.summary-con02 dl dd .txt{letter-spacing:-0.15px;}
+.summary-con02 dl dt .tit{font-size:18px;}
+.summary-con-list dl { padding-bottom: 20px;}
+.summary-con-list dl dd .txt-box .txt{font-size: 17px; line-height:22px;  letter-spacing:0px; margin-top: 10px;}
+.summary-con .summary-con-tit{ letter-spacing:0px;}
+
+
+/* ******************  CEO인사말 - CEO Greeting********************** */
+.ceo-page .ceo-txt-con .tit-box .tit-kor{letter-spacing:-1px;}
+.ceo-page .ceo-txt-con .txt-box .txt{letter-spacing:0px;}
+.ceo-page .ceo-txt-con .sign-box .sign-txt{letter-spacing:-0.25px;}
+
+
+/* ******************  조직도 - Organization********************** */
+.org-list li dl dd .txt-box .txt{letter-spacing:0px;}
+.org-list li dl dt {height:180px;}
+
+
+/* ******************  연혁 - Milestone********************** */
+.history-list-box .history-year-box .history-year-item .history-info-con p{letter-spacing:0px;}
+
+
+/* ******************  파트너 - Partners********************** */
+.partners-top .tit-kor{color:rgba(255,255,255,0.8); font-size:21px; line-height:1.4; letter-spacing:0px;}
+
+
+/* ******************  What We do > Memory ********************** */
+.do-page .txt-con .tit{letter-spacing:0px; /*font-size:30px; line-height:43px;*/}
+.do-page .txt-con .tit.disty{font-size:30px; line-height:43px;}
+.do-page .txt-con .txt{letter-spacing:0px;}
+.do-page .txt-con .txt{font-size:16px;}
+
+/* ******************  What We do > Strong Line ********************** */
+.line-tit-box .line-tit-txt{letter-spacing:0px;}
+
+
+/* ******************  What We do > Quality Control ********************** */
+.control-con-box .text-con .tit{line-height:1.25;}
+.product-tit-box .product-tit{font-size:23px; letter-spacing:0px; line-height:32px;}
+.product-tit-box .product-tit-txt{letter-spacing:0px;}
+.control-con-box .text-con .txt{letter-spacing:0px;}
+
+
+/* ******************  What We do > Verfification Program ********************** */
+.program-top .txt-con .txt{margin-top:25px;}
+.program-top .txt-con .tit > span{letter-spacing:-0.65px;}
+.program-top .txt-con .tit{font-size:48px; letter-spacing:-0.25px;}
+.program-top .txt-con .tit b{letter-spacing:-1.5px; line-height:1.2;}
+.program-top .txt-con .txt{letter-spacing:0px; color:#444;}
+.program-con-list li dl dd .txt{letter-spacing:0px;}
+
+
+/* ******************  Product Search > Memory ********************** */
+.product-view-tbl thead th{letter-spacing:0px;}
+
+/* ******************  Product Search > Stock List ********************** */
+.product-list-con .tel-info-box li{width:57%;}
+
+
+
+/* ******************  Contact Us > Contact Us ********************** */
+.contact-con .txt-con .go-inquiry-btn em{letter-spacing:0px;}
+.contact-con .txt-con .txt{letter-spacing:0px;}
+.map-tbl th, .map-tbl td{letter-spacing:0px;}
+
+
+
+

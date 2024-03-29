@@ -1,0 +1,351 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : content_responsive.css
+ * description : 서브페이지 컨텐츠 반응형 CSS
+ * date : 2019-02-01
+******************************************************** */
+
+
+/* ******************  서브공통 ********************** */
+/* -------- 공통 스크롤바  -------- */
+@media all and (max-width:1220px){
+	.custom-scrollbar-wrapper .scroll-object{max-width:100%;}
+}
+@media all and (max-width:800px){
+	.custom-scrollbar-wrapper{position:relative;margin-right:-15px; cursor:move}
+	.custom-scrollbar-wrapper .scroll-object{max-width:none; width:800px; }
+	.custom-scrollbar-cover{display:block; position:absolute; top:0px; left:0px; right:0px; bottom:0px; background-color:rgba(0,0,0,0.4)}
+	.custom-scrollbar-cover .scroll-cover-txt{position:absolute; top:50%; margin-top: -35px; left:0; width:100%; text-align:center; color:#fff; font-weight:300; font-size:15px;}
+	.custom-scrollbar-cover .scroll-cover-txt i{font-size:30px; display:block; margin-bottom:20px; }
+}
+
+
+/* ******************  COMPANY ********************** */
+/* -------- COMPANY ::  회사소개 -------- */
+@media all and (max-width:1360px){
+	.summary-top-box {padding:0 15px;}
+}
+
+@media all and (max-width:800px){
+	.summary-top-box  {margin-top:0;}
+	.summary-top-box .top-bg {height:auto; background:none;  }
+	.summary-top-box .top-bg img {display:block;}
+	.summary-top-box .top-blue-box  { position:static; width:auto; height:auto; padding-left: 0; }
+	.summary-top-box .top-blue-box .inner {background-color: #1a0c79; width:100%; height:100%; padding:30px; }
+	.summary-top-box .top-blue-box .inner .top-tit-en {font-size: 15px; }
+	.summary-top-box .top-blue-box .inner .top-tit-kr {font-size: 28px; line-height:36px; margin-top:25px;}
+	.summary-top-box .top-blue-box .inner .top-tit-txt {font-size: 15px; line-height:26px;margin-top:25px;}
+	.summary-top-box .top-txt-box { width:100%; padding-top:20px;  padding-left: 0; }
+	.summary-top-box .top-txt-box .txt {font-size: 14px; line-height:20px; padding-left:0; }
+	.summary-top-box .top-txt-box .txt br {display:none;}
+	.summary-con {margin-top: 77.5px;}
+	.summary-con .summary-con-tit {font-size:20px; }
+	.summary-con-list {margin:35px 0 0;}
+	.summary-con-list li {float:none; width:100%; margin:-20px 0 0;}
+	.summary-con-list li.item01 {margin-top:0;}
+	.summary-con-list li .inner .img img {max-width:109px;}
+	.summary-con-list dl {top:-50px;height:auto;padding-bottom: 30px;}
+	.summary-con-list dl dt {padding: 70px 0 20px;}
+	.summary-con-list dl dt .tit {font-size: 18px;}
+	.summary-con-list dl dd .txt-box {padding: 10px 15px 0;}
+	.summary-con-list dl dd .txt-box .txt {font-size:14px; line-height: 20px; margin-top:10px; padding-left:24px;}
+	.summary-con-list dl dd .txt-box .txt i {font-size:14px;}
+	
+	.summary-con02 {margin-top:0;}
+	.summary-con02 .sales-con dl dt span img {max-width: 51px;}
+	.summary-con02 .buy-con dl dt span img {max-width: 35px;}
+	.summary-con02 dl {display:block; text-align:center; height: 303px; padding: 30px 20px; -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	 box-sizing: border-box; }
+	.summary-con02 dl dt {width:100%; display:block; }
+	.summary-con02 dl dt .tit {font-size:15px; margin-top:10px;}
+	.summary-con02 dl dt:before {top:-31px;}
+	.summary-con02 dl dd {display:block; margin-top:20px; }
+	.summary-con02 dl dd .txt-box {display:inline-block;}
+	.summary-con02 dl dd .txt {font-size:13px; line-height: 24px; text-align:left;}
+	.summary-con02 dl dd .txt:before {width:3px; height:3px; }
+	.summary-con02 dl dd .txt br {display:block;}
+}
+@media all and (max-width:640px){
+	.summary-con02 .inner {margin:0;}
+	.summary-con02 .sales-con  {width:100%; float:none; margin:0;}
+	.summary-con02 .buy-con  {width:100%; float:none; margin:20px 0 0;}
+	.summary-con02 dl {height:auto;}
+}
+
+/* -------- COMPANY ::  CED 인사말 -------- */
+@media all and (max-width:1220px){
+	.ceo-page .ceo-img-con {width:100%; float:none; text-align:center;}
+	.ceo-page .ceo-img-con img {/* width:385px;  */max-width:100%;}
+	.ceo-page .ceo-txt-con {width:100%; float:none; padding-left:0;}
+}
+@media all and (max-width:800px){
+	.ceo-page {margin-top:0;}
+/* 	.ceo-page .ceo-img-con {width:100%; float:none; text-align:center;}
+	.ceo-page .ceo-img-con img {width:385px; max-width:100%;}
+	.ceo-page .ceo-txt-con {width:100%; float:none; padding-left:0;} */
+	.ceo-page .ceo-txt-con .tit-box {padding:40px 0 30px; position:relative;}
+	.ceo-page .ceo-txt-con .tit-box:after {content:""; display:block; position:absolute; width: 36px; height:12px; background:url("/images/icon/dia_red_icon.png"); bottom:0;}
+	.ceo-page .ceo-txt-con .tit-box .tit-en {font-size: 15px; }
+	.ceo-page .ceo-txt-con .tit-box .tit-kor {font-size:28px; line-height:40px;  margin-top:10px; word-break:keep-all;}
+	.ceo-page .ceo-txt-con .txt-box {padding-top:20px;}
+	.ceo-page .ceo-txt-con .txt-box .txt {font-size: 14px; line-height:24px; }
+	.ceo-page .ceo-txt-con .txt-box .txt01 br{display:none;}
+	.ceo-page .ceo-txt-con .txt-box .txt02{margin-top:4%;}
+	.ceo-page .ceo-txt-con .sign-box {padding-top:30px; }
+	.ceo-page .ceo-txt-con .sign-box .sign-txt {font-size: 14px;  }
+	.ceo-page .ceo-txt-con .sign-box img {margin-top:10px;}
+
+}
+
+/* -------- COMPANY ::  조직도 -------- */
+
+@media all and (max-width:800px){
+	.org-page {margin-top:0;}
+	.org-tit {font-size: 28px; line-height:1.2;}
+	.org-tit:before {width: 46.2px; height:46.2px; margin-top: -23.1px; margin-left:-23.1px;}
+	.org-list {margin: 0 -1%;}
+	.org-list li { width:48%; margin: 35px 1% 0; }
+	.org-list li dl dt {height:auto; padding: 30px 0;}
+	.org-list li dl dt .icon img {max-width:56.7px;}
+	.org-list li dl dt .tit-en {font-size:14px; margin-top:20px; }
+	.org-list li dl dt .tit-kor {font-size:13px; margin-top:8px; }
+	.org-list li dl dd .txt-box {padding: 15px 20px;}
+	.org-list li dl dd .txt-box .txt {font-size:13px; line-height:18px; margin-top:5px; }
+}
+@media all and (max-width:480px){
+	.org-list {margin: 0;}
+	.org-list li { float:none; width:100%; margin: 20px 0 0; }
+}
+
+/* -------- COMPANY ::  연혁 -------- */
+@media all and (max-width:800px){
+	.history-top {margin-top: 0;}
+	.history-top-box  {height: 266px; background-size:cover;}
+	.history-top-box .top-tit {font-size:31px;}
+	.history-top-box .top-tab-list {margin-top:25px; }
+	.history-top-box .top-tab-list li {width:130px; height: 46.2px; margin:0 5px; }
+	.history-top-box .top-tab-list li a span {font-size:15px; line-height:46.2px;}
+	.history-con {margin-top: 50px;}
+}
+
+@media all and ( max-width:1024px ){
+    /* -------- 회사소개 :: BEST 연혁 02 -------- */
+    .history-list-box .history-year-box{ padding-left:200px}
+}
+@media all and ( max-width:800px ){
+    /* -------- 회사소개 :: BEST 연혁  02-------- */
+    .history-list-box .history-year-box{padding-left:0}
+    .history-list-box .history-year-box h4{position:relative; left:auto; top:auto; margin-bottom:25px; font-size:26px;}
+    .history-list-box .history-year-box h4:after{top:100%; left:0; margin-top:5px;}
+    .history-list-box .history-year-box .history-year-item:before{font-size:80px}
+    .history-list-box .history-year-box .history-year-item .history-info-con p{font-size:14px}
+}
+@media all and ( max-width:480px ){
+    /* -------- 회사소개 :: BEST 연혁  02 -------- */
+    .history-list-box .history-year-box{margin-bottom:50px}
+    .history-list-box .history-year-box h4{font-size:20px;}
+    .history-list-box .history-year-box h4:after{width:45px; height:2px}
+    .history-list-box .history-year-box .history-year-item .history-year{width:60px;}
+    .history-list-box .history-year-box .history-year-item .history-year strong{font-size:17px}
+    .history-list-box .history-year-box .history-year-item:before{left:60px}
+    .history-list-box .history-year-box .history-year-item .history-info-con{padding-left:90px; }
+    .history-list-box .history-year-box .history-year-item:last-child .history-info-con{padding-bottom:0}
+    .history-list-box .history-year-box .history-year-item .history-info-con p{font-size:13px}
+}
+
+/* -------- COMPANY ::  파트너사 -------- */
+@media all and (max-width:800px){
+    .parti-list li{width:49%;}
+	.partners-page {margin-top:0;}
+	.partners-top {height: 338px; background-size:cover; }
+	.partners-top .tit-en-sub {font-size: 17px; }
+	.partners-top .tit-en {font-size:30px; margin-top:25px; line-height:1.1; }
+	.partners-top .tit-kor {font-size:17px; margin-top:20px;}
+
+}
+/* -------- COMPANY ::  공지사항 -------- */
+@media all and (max-width:800px){
+	.notice-page {margin-top:0; }
+
+}
+
+
+/* ****************** WHAT WE DO ********************** */
+/* --------  WHAT WE DO :: 공통  -------- */
+@media all and (max-width:800px){
+	.do-page {margin-top:0px;}
+	.do-page .bg-con {float:none; width: 100%; max-width: 100%; height:auto; background:none; }
+	.do-page .bg-con img {display:block; max-width:100%; }
+	.do-page .txt-con {float:none; width: 100%; min-width:100%; height:auto; display:block; padding: 30px 25px; }
+	.do-page .txt-con .tit {font-size: 22px; line-height: 30px; }
+	.do-page .txt-con .icon {margin-top:20px;}
+	.do-page .txt-con .icon img {max-width:40px;}
+	.do-page .txt-con .txt {font-size:13px; line-height:20px; margin-top:20px;}
+}
+@media all and (max-width:480px){
+	.do-page .txt-con .txt br {display:none;}
+}
+
+/* --------  WHAT WE DO :: Strong Line  -------- */
+ @media all and (max-width:800px){
+	.line-tit-box {margin-bottom: 35px;}
+	.line-tit-box .line-tit {font-size: 23px; line-height:32px; padding-bottom:30px; }
+	.line-tit-box .line-tit-txt {font-size:14px; line-height: 22px; margin-top:20px; }
+	.line-con {margin-top: 45px;}
+	.line-con .line-con-tit {font-size: 17px; margin-bottom:20px; padding-left: 15px; }
+	.line-con .line-con-tit:before {width:8px; height:8px; border-width:2px; top:4px; }
+ }
+
+ /* --------  WHAT WE DO :: Quality Control  -------- */
+ @media all and (max-width:800px){
+	.control-page-tit {font-size: 22px; line-height: 30px; word-break:keep-all; }
+	.control-page-tit br {display:block; }
+	.control-con .num {font-size:50px; }
+	.control-con01 {margin-top:50px;}
+	.control-con02, .control-con03 {margin-top:30px;}
+	.control-con-box .img-con {height:216.3px;}
+	.control-con-box .text-con {height:216.3px;}
+	.control-con-box .text-con	.tit {font-size: 16px; padding-bottom:10px;}
+	.control-con-box .text-con .txt {font-size:13px; line-height: 20px;}
+	.control-con-box .text-con .txt:before {width:3px; height:3px; top: 8px;}
+	.control-con-box .text-con dl dd {padding-top: 10px; }
+	.control-item-list li {width:50%; margin-bottom:10px; padding-bottom: 20px;}
+	.control-item-list li.item03 {border-left:1px solid #e0e0e0;}
+	.control-item-list li .item-name {font-size:13px; line-height:18px; height: 36px;}
+}
+@media all and (max-width: 640px){
+	.control-con-box .img-con {float:none; width:100%; height: auto; background:none;}
+	.control-con-box .img-con img {display:block; max-width:100%; width:100%;}
+	.control-con-box .text-con {float:none; width:100%; height:auto; padding: 30px 40px; }
+}
+
+/* --------  WHAT WE DO :: Vertification program  -------- */
+@media all and (max-width:800px){
+	.program-page {margin-top: 0;}
+	.program-top .img-con {width:100%; float:none; padding-left: 0; height:auto; text-align:center;}
+	.program-top .img-con img {max-width:394px;}
+	.program-top .txt-con {height:auto;width:100%; padding-top:20px;} 
+	.program-top .txt-con .tit {font-size: 31px; padding-bottom:25px; }
+	.program-top .txt-con .tit > span {font-size: 17px; }
+	.program-top .txt-con .txt {font-size:14px; line-height:20px; margin-top:10px;}
+	.program-top .txt-con .txt br {display:none;}
+
+	.program-con {margin-top: 50px;}
+	.program-con .program-con-tit {font-size: 18px; padding-left:15px;}
+	.program-con .program-con-tit:before {width:10px; height:10px;}
+	.program-con-list {margin: 25px -0.805% 0; }
+	.program-con-list li  {height:265px; padding: 20px 30px;}
+	.program-con-list li dl {display:block; }
+	.program-con-list li dl dt {display:block;  width:100%;}
+	.program-con-list li dl dt img {max-width:74.9px;}
+	.program-con-list li dl dd {display:block; padding-top:20px; padding-right: 0; }
+	.program-con-list li dl dd .tit {font-size: 17px; padding-bottom: 15px;}
+	.program-con-list li dl dd .txt {font-size:14px; line-height:24px;}
+	.program-con-list li dl dd .txt:before {top:10px;}
+}
+@media all and (max-width:480px){
+	.program-top .img-con img {max-width:100%;}
+	.program-con-list {margin:25px 0 0;}
+	.program-con-list li {float:none; width:100%; height:auto; margin: 0 0 10px;}
+}
+
+
+/* ******************  PRODUCT SEARCH ********************** */
+@media all and (max-width:800px){
+	/* --------  PRODUCT SEARCH :: 공통  -------- */
+	.product-page {padding-top:0;}
+	.product-tit-box .product-tit {font-size:18px; line-height: 24px;  word-break:keep-all; }
+	.product-tit-box .product-tit-txt {font-size:13px; line-height: 18px; margin-top:10px; word-break:keep-all;}
+
+	/* PRODUCT SEARCH :: 게시판 */
+	.product-board-con {margin-top:50px;}
+	.product-board-con .bbs-relative-row {padding-top:15px;}
+	.product-board-con .bbs-list-row .column {font-size:14px; padding:3px 0; }
+	.product-board-con .bbs-subject-con .bbs-subject-txt {font-size:14px; }
+	.product-board-con .bbs-list-row .bbs-title {padding-right: 95px;}
+	.product-board-con .bbs-list-row .reply-state {height:auto; line-height: 1.1;  }
+	.product-board-con .bbs-list-row .reply-state span {padding:10px 15px; font-size:12px; }
+	.product-board-con .bbs-list-row .column.bbs-absolute {right: 2%; top:18px; left:auto; }
+
+}
+/* --------  PRODUCT SEARCH :: Memory trend - view페이지  -------- */
+@media all and (max-width:800px){
+	.product-view-top-tit {font-size: 15px;}
+	.product-view-top-tit i {margin-right: 8px;}
+	.product-view-page {padding: 50px 0;  margin:15px 0 35px;}
+	.product-view-page .tit {font-size: 23px; }
+	.product-view-con{margin-top:30px;}
+	.product-view-con .con-tit {font-size: 15px; margin-bottom:15px; margin-top:0; }
+	/*  테이블  */ 
+	.product-view-tbl thead th {height: 40px; font-size:13px; padding-left: 20px; } 
+	.product-view-tbl tbody td {height:52px; font-size:13px; padding-left: 20px; }
+}
+/* --------  PRODUCT SEARCH :: Memory trend - popup페이지  -------- */
+@media all and (max-width:800px){
+		.trend-popup .footer-inner {height: auto;}
+		.trend-popup .modal-close-btn {top:-30px; right:0;}
+		.trend-popup .chart-con {float:none; width:100%; height: auto; padding: 30px;  }
+		.trend-popup .chart-con .chart-tit {font-size: 15px; }
+		.trend-popup .tit-box {float:none; width:100%; height: auto; background:#0c117f; padding: 20px;}
+		.trend-popup .tit-box span {font-size: 14px; }
+		.trend-popup .tit-box p {font-size: 18px; margin-top:10px;}
+
+	}
+/* --------  PRODUCT SEARCH :: Stock List  -------- */
+@media all and (max-width:800px){
+	.product-list-con  .bbs-list-row .column {font-size:13px; }
+	.product-list-con .board-search-box {float:none; width: 100%;  max-width:533px;  margin:0 auto; text-align:left; padding: 20px 0; }
+	.product-list-con .board-search-box .bbs-search-btn {width:59.5px; height:44px; }
+	.product-list-con .board-search-box .bbs-search-btn img {max-width: 16px;}
+	.product-list-con .board-search-box .search-word {height:44px; width:calc(100% - 59.5px);}
+	.product-list-con .tel-info-box {margin:0 auto; float:none; width: 100%;}
+	.product-list-con .tel-info-box li  {height: 44px; } 
+	.product-list-con .tel-info-box li span em,.product-list-con .tel-info-box li span em i  {font-size:14px;}
+	.product-list-con .tel-info-box li span em i  {margin-right: 5px;}
+ }
+ @media all and (max-width:480px){
+	.product-list-con .tel-info-box li {width:100%; float:none;}
+ }
+
+ /* ******************  MEDIA  ********************** */
+/* -------- MEDIA :: media  -------- */
+@media all and (max-width:800px){
+	.media-page {margin-top:0;}
+	.media-page .total-list-con {padding-top:0;}
+	.media-page .top-search-box {padding-top:0;}
+}
+/* ******************  Contact Us  ********************** */
+/* --------  Contact Us :: contact  -------- */
+@media all and ( max-width:800px ){
+	.contact-page {margin-top: 0px; }
+	.contact-tit {font-size: 17px; padding-left: 20px; margin-bottom:20px;}
+	.contact-tit:before {width:10px; height:10px; border-width:2px; top:3px;}
+	.map-con iframe  {height:350px;}
+	.map-tbl th,.map-tbl td{padding:15px 10px; font-size:13px; line-height:1.5; vertical-align:top;}
+	.map-info-wrap  {top:0; padding: 30px 0;}
+	.map-info-wrap .map-logo img {max-width:135px; }
+	.map-tbl {margin-top:15px;}
+	.contact-con {margin-top:30px;}
+	.contact-con .img-con {width:100%; height:auto; float:none; background:none; }
+	.contact-con .img-con img {display:block; max-width:100%;}
+	.contact-con .txt-con-wrap {float:none; width:100%; height:auto; }
+	.contact-con .txt-con {width:100%; height:auto;display:block; padding: 30px 15px; -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	 box-sizing: border-box; }
+	.contact-con .txt-con .txt-con-inner { display:block; }
+	.contact-con .txt-con .icon img {max-width:37px;}
+	.contact-con .txt-con .txt {font-size:14px; line-height:20px; padding:15px 0;}
+	.contact-con .txt-con .go-inquiry-btn {width:120px; height: 40px; margin-top:15px;}
+	.contact-con .txt-con .go-inquiry-btn em {font-size:12px; line-height:40px; }
+}
+@media all and (max-width:480px){
+	.map-tbl th {width:50px}
+}
+
+/* --------  Contact Us :: 문의하기  -------- */
+@media all and (max-width:800px){
+	.inquiry-page colgroup {display:none;}
+	.inquiry-page .bbs-write-tbl .tel-row .write-input {width: 27%;}
+}
+

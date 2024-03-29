@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+/* *******************************************************
+ * filename : language.css
+ * description : 중문  CSS
+ * date : 2019-01-03
+******************************************************** */
+body, table, th, td, button, select, input, textarea { font-family:'Poppins', "Noto Sans SC",  "맑은 고딕","Malgun Gothic",sans-serif; font-size: 16px; color: #222; }
+
+
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info .info-tit{text-align:left;}
+#mainInquiryCon .main-inquiry-con .main-inquiry-list li input::placeholder {letter-spacing:0.5px;}
+
+/* ******************  회사소개 ********************** */
+.summary-top-box .top-blue-box .inner .top-tit-kr{letter-spacing:-1px;}
+.summary-top-box .top-blue-box .inner .top-tit-txt{letter-spacing:-0.65px;}
+.summary-con-list dl dd .txt-box .txt{letter-spacing:-0.25px;}
+.summary-con02 dl dd .txt{letter-spacing:-0.35px;}
+
+/* ******************  CEO인사말 ********************** */
+.ceo-page .ceo-txt-con .txt-box .txt{letter-spacing:-0.35px;}
+
+
+/* ******************  연혁 ********************** */
+.history-list-box .history-year-box .history-year-item .history-info-con p{letter-spacing:-0.15px;}
+
+/* ******************  조직도 ********************** */
+.org-list li dl dt {height: auto}
+/* ******************  파트너즈 ********************** */
+.partners-top .tit-en{letter-spacing:0px;}
+.partners-top .tit-kor{letter-spacing:-0.25px;}
+
+
+/* ******************  What we do > Memory ********************** */
+.do-page .txt-con .tit{letter-spacing:0px; font-weight:400;}
+.do-page .txt-con .txt{letter-spacing:0px;}
+
+
+/* ******************  What we do > Verfication Program ********************** */
+.control-page-tit{letter-spacing:0px;}
+.control-con-box .text-con .tit{letter-spacing:-0.25px;}
+.control-con-box .text-con .txt{letter-spacing:0px;}
+
+/* ******************  What we do > Strong line ********************** */
+.line-tit-box .line-tit{letter-spacing:0px;}
+.line-tit-box .line-tit-txt{letter-spacing:0px;}
+
+/* ****************** Product Search > Memory Trend ********************** */
+.product-tit-box .product-tit{letter-spacing:0px;}
+.product-tit-box .product-tit-txt{letter-spacing:0px;}
+.product-view-tbl thead th{letter-spacing:0px;}
+
