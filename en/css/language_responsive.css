@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : language.css
+ * description : 영문  CSS
+ * date : 2019-01-03
+******************************************************** */
+
+/* ******************  메인페이지********************** */
+@media all and (max-width:1220px){
+	#mainInquiryCon .main-inquiry-con .left-con {padding-right: 3%}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info .info-tit {font-size:14px; padding-left: 40px; width:30%; }
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li input {width:65%;}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li input::placeholder { font-size:13px;}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li input::-webkit-input-placeholder  {font-size:13px;}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li input::-ms-input-placeholder {font-size:13px;}
+	#mainInquiryCon .main-inquiry-con .right-con .agreement-tit-box .agreement-link {top:30px}
+	#mainInquiryCon .main-inquiry-con .right-con .text-area {margin-top:40px;}
+}
+@media all and  (max-width: 800px){
+	#mainGlobalCon .global-con .global-tit {font-size:20px;}
+	#mainGlobalCon .exchange-con .main-exchange-tbl thead th {font-size: 13px; height:65px;}
+	#mainInquiryCon .main-inquiry-con .right-con .text-area {margin-top:20px;}
+	#mainInquiryCon .main-inquiry-con .right-con .agreement-tit-box .agreement-link {top:auto;}
+}
+@media all and (max-width:480px){
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list {margin-top:20px;}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info .info-tit {display:block; }
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li .inquiry-info em {display:block; width:96%; margin:5px auto 0;}
+	#mainInquiryCon .main-inquiry-con .main-inquiry-list li input {width:100%;}
+}
+
+
+/* ******************  회사소개 - About Microworks********************** */
+@media all and (max-width:1024px){
+	.summary-con-list {margin:50px -1% 0; text-align:center;}
+	.summary-con-list li { float:none; display:inline-block; width:47%; margin:0px 1% ; vertical-align:top;}
+	.summary-con-list li dl {height:420px;}
+	.summary-con-list li.item03 {margin-top:-50px;}
+}
+@media all and (max-width:800px){
+/* 	.summary-con02 dl {height:auto;} */
+	.summary-con02 dl dd .txt {line-height:22px;}
+	.summary-top-box .top-blue-box .inner .top-tit-kr{font-size: 28px;}
+	.summary-con-list li dl {height:auto;}
+	.summary-con-list dl dd .txt-box .txt{font-size: 14px;}
+	.summary-con-list {margin:35px 0 0;}
+	.summary-con-list li {float:none; width:100%; margin:-20px 0 0;}
+	.summary-con-list li.item01 {margin-top:0;}
+	.summary-con-list li.item03 {margin-top:0;} 
+}
+/* ******************  조직도 - Organization********************** */
+@media all and (max-width:800px){
+	.org-list li dl dt {height:auto;}
+}
+
+/* ******************  파트너 - Partners********************** */
+@media all and (max-width:800px){
+.partners-top .tit-kor{font-size: 14px;}
+}
+
+@media all and (max-width:480px){
+.partners-top .tit-kor br{display:none;}
+}
+
+
+/* ******************  What We do > Memory ********************** */
+@media all and (max-width:1024px){
+	.control-con-box .text-con {padding:20px 30px;}
+}
+@media (max-width: 800px){
+	.do-page .txt-con .txt br {display: none;}
+	.control-con-box .text-con {height:230px;}
+	.control-con-box .img-con {height:230px;}
+	.do-page .txt-con .tit.disty{font-size:22px;line-height:30px;}
+	.do-page .txt-con .txt{font-size:13px; }
+
+}
+@media all and (max-width:640px){
+	.control-con-box .text-con {height:auto; padding:15px 20px;}
+	.control-con-box .img-con {height:auto;}
+}
+
+/* ******************  Product Search > Stock List ********************** */
+@media all and (max-width:800px){
+.product-list-con .tel-info-box li{width:100%;}
+.product-tit-box .product-tit{font-size: 18px; line-height: 24px;}
+}
+
+@media all and (max-width:480px){
+.product-tit-box .product-tit{font-size: 15px; line-height: 1.2;}
+}
