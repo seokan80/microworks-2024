@@ -249,7 +249,7 @@
 -moz-box-sizing: border-box;
  box-sizing: border-box; }
  #mainAbout .notice-con:after {content:""; display:block; width:96.42%; height:100%; border:1px solid  #e0e0e0; background-color:#fff;  position:absolute; right:0; top: -27px; z-index:-1;}
-#mainAbout .notice-con .notice-con-inner {width:100%; padding: 60px 40px 55px; background:url("/images/main/main_notice_bg.jpg") no-repeat; background-size:cover;  box-shadow:5px 7px 15px 3px rgba(0, 0, 0, 0.07);
+#mainAbout .notice-con .notice-con-inner {width:100%; padding: 60px 40px 55px; background:url("../images/main/main_notice_bg.jpg") no-repeat; background-size:cover;  box-shadow:5px 7px 15px 3px rgba(0, 0, 0, 0.07);
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
  box-sizing: border-box;  }
@@ -279,7 +279,7 @@
 #mainAbout .notice-con li a:hover .notice-date {color: #3441bc;}
 
 /* -------- 메인 컨텐츠 :: Quick Menu -------- */
-#mainQuickMenu {background:url("/images/main/main_quick_menu_bg.jpg") no-repeat; background-size:cover;}
+#mainQuickMenu {background:url("../images/main/main_quick_menu_bg.jpg") no-repeat; background-size:cover;}
 #mainQuickMenu .quick-menu-con {float:left;width:33.33%; height:638px; text-align:center; display:table; cursor:pointer; position:relative; }
 #mainQuickMenu .quick-menu-con:before {content:"";width:100%; height:100%; position:absolute; top:0; left:0;background-color:rgba(5,34,138,0.7); z-index:1; opacity:0;filter:Alpha(opacity=0); -webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.3s;}
 #mainQuickMenu .quick-menu-con .quick-menu-inner {display:table-cell; vertical-align:middle;}
@@ -396,7 +396,7 @@
 #mainGlobalCon .exchange-con .main-exchange-tbl tbody th p{font-family:Nanum-Gothic; font-weight:500;}
 
 /* -------- 메인 컨텐츠 :: 문의 -------- */
-#mainInquiryCon {background:url("/images/main/main_inquiry_bg.jpg") no-repeat; background-size:cover; padding:90px 0 100px;}
+#mainInquiryCon {background:url("../images/main/main_inquiry_bg.jpg") no-repeat; background-size:cover; padding:90px 0 100px;}
 #mainInquiryCon .main-inquiry-con .left-con {float:left; width:49.07%; padding-right:7.8%; -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
  box-sizing: border-box; }
