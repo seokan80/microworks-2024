@@ -301,8 +301,8 @@ jQuery(function($){
 		$(".scroll-animate-first").addClass("scroll-active-animate");
 	},50);
 
+	let autoPlayerHandler = false;
 	$(window).scroll( function (){
-
 		$(".scroll-animate").each(function  () {
 			//var point_of_object = $(this).offset().top + $(this).outerHeight();
 			//var point_of_window = $(window).scrollTop() + ( $(window).height() / 2 );
@@ -316,11 +316,62 @@ jQuery(function($){
 			
 			if( point_of_window > point_of_object - ($(window).height()) ){
 				$(this).addClass("scroll-active-animate");
-			}
 
-		
+				if($(this).attr("id") === "mainAbout" && autoPlayerHandler !== true){
+					autoPlayerHandler = true;
+					mainAutoPlaySlider();
+				}
+			}
 		});
-	
 	});
 
+	const mainAutoPlaySlider = function(){
+		$(".autoplay-slider").each(function(idx, el) {
+			let autoSpeed = 3000;
+			let itemLength = $(el).find(".item").length;
+			let str = "";
+			for(var i = 0; i < itemLength; i++){
+				str += `<a href="javascript:void(0);" class="progress-bar"><span class="bar"></span></a>`;
+			}
+			$(el).find(".controller .progress-wrapper").html(str);
+
+			$(el).find(".slider").slick({
+				fade: true,
+				arrows: true,
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: autoSpeed,
+				pauseOnHover: false,
+				prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="material-icons">&#xE314;</i></button>',
+				nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="material-icons">&#xE315;</i></button>',
+			});
+
+			// $(el).find(".slider").on("beforeChange", changeBefore = function(){
+			// 	let targetIdx = $(this).find(".item.slick-active").attr("data-slick-index");
+			// 	let $target = $(el).find(".progress-bar").eq(targetIdx).find(".bar");
+			// 	if(Number($(this).find(".item.slick-active").attr("data-slick-index")) + 1 >= itemLength){
+			// 		console.log("!!!");
+			// 		$(el).find(".progress-bar").find(".bar").css({width: "0%"});
+			// 	}
+			// 	$target.animate({width: "100%"}, autoSpeed, "linear");
+
+			// 	return targetIdx;
+			// });
+
+			$(el).find(".player").on("click", function(){
+				if($(this).hasClass("play")){
+					$(this).removeClass("play").addClass("pause");
+					$(el).find(".slider").slick("slickPause");
+				} else if($(this).hasClass("pause")){
+					$(this).removeClass("pause").addClass("play");
+					$(el).find(".slider").slick("slickPlay");
+				}
+			})
+		});
+	
+
+		
+
+		
+	}
 });
