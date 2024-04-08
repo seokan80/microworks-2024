@@ -91,6 +91,21 @@ strong,
 .split-container.align-center{align-items: center;}
 .split-container > :first-child{flex-grow: 1;}
 
+/* header */
+#gnb.each-menu > ul > li .gnb-2dep ul li .gnb-3dep{margin-top: 18px;}
+#gnb.each-menu > ul > li .gnb-2dep ul li .gnb-3dep li{position: relative; margin-top: 8px; padding: unset; padding-left: 17px; color: white; opacity: .6; transition: unset;}
+#gnb.each-menu > ul > li .gnb-2dep ul li .gnb-3dep li::before{content: ""; position: absolute; top: 50%; left: 8px; width: 4.3px; height: 4.3px; border-radius: 1px; transform: translateY(-50%) rotateZ(-45deg); background-color: #fff;}
+#gnb.each-menu > ul > li .gnb-2dep ul li .gnb-3dep li:hover{opacity: 1;}
+
+/* sitemap */
+.sitemap-wrapper > ul > li > h2,
+.sitemap-wrapper > ul > li .sitemap-2dep a em,
+.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{font-weight: 600;}
+.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep{padding: 15px 20px; background-color: #F7F7F7;}
+.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li:not(:first-child){margin-top: 12px;}
+.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{padding: unset; text-align: left; letter-spacing: -.5px;}
+.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a:hover{color: var(--primary-color);}
+
 /* main */
 section{position: relative; width: 100%;}
 section.full-height{height: 100dvh;}
