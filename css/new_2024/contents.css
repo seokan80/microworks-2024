@@ -71,10 +71,6 @@ strong,
 .button.disabled{background-color: var(--disabled-button-color); color: var(--disabled-button-text-color); pointer-events: none;}
 
 .button.type-round{min-height: unset; padding: unset; border-radius: 100%;}
-.button.type-round::before,
-.button.type-round::after{content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white;}
-.button.type-round::before{width: 1px; height: 7px;}
-.button.type-round::after{width: 7px; height: 1px;}
 
 .button.type-line{background-color: transparent; border: 1px solid white;}
 
