@@ -2,11 +2,12 @@
 .guide-list li{padding: 15px; font-size: 24px; border-bottom: 1px solid #333;}
 .guide-title{font-size: 40px; margin: 32px 0;}
 
-.guide table{width: 100%;}
-.guide table tr{border-bottom: 1px solid #000;}
-.guide table tr:first-child{border-top: 1px solid #000;}
-.guide table tr.fill-darken th, .guide table tr.fill-darken td{color: white; border-color: #fff;}
-.guide table td,
-.guide table th{padding: 10px; text-align: center; vertical-align: middle; border-right: 1px solid #000; font-size: 16px;}
-.guide table td:first-child,
-.guide table th:first-child{border-left: 1px solid #000;}
+.guide > table{width: 100%;}
+.guide > table tr{border-bottom: 1px solid #000;}
+.guide > table tr:first-child{border-top: 1px solid #000;}
+.guide > table tr.fill-darken th,
+.guide > table tr.fill-darken td{color: white; border-color: #fff;}
+.guide > table td,
+.guide > table th{padding: 10px; text-align: center; vertical-align: middle; border-right: 1px solid #000; font-size: 16px;}
+.guide > table td:first-child,
+.guide > table th:first-child{border-left: 1px solid #000;}
