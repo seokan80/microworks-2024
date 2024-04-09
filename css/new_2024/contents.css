@@ -121,12 +121,12 @@ strong,
 /* form */
 .input, .select{width: 100%; max-width: var(--form-size-default); height: 38px; background-color: #fff; border: 1px solid var(--input-line-color); font-size: 14px; color: var(--text-color-light); vertical-align: middle; box-sizing: border-box;}
 .input.fluid{max-width: unset;}
-.input.width-xxl{max-width: 650px;}
 
 fieldset{display: flex; align-items: center; gap: 4px;}
 fieldset.fieldset-email .select{max-width: calc(var(--form-size-default) + 15px);}
 fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-spacing: 1.5px; text-align: center;}
 
+table .ox{height: 38px; display: inline-flex; align-items: center;}
 .ox input[type='radio']{display: none;}
 .ox label{position: relative; padding-left: 25px;font-size: 15px; color: var(--text-color-light);}
 .ox label::before{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 18px; height: 18px; border-radius: 100%; border: 1px solid #767676;}
@@ -353,6 +353,60 @@ box-sizing: border-box; }
 .inquiry-popup .modal-close-btn{top: 50%; transform: translateY(-50%);}
 .inquiry-popup .modal-fixed-pop-inner{display: block; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1088px; height: unset; background-color: white;}
 .inquiry-popup .modal-inner-content{height: 640px; padding: 30px 28px 36px; overflow-y: auto; box-sizing: border-box;}
-.inquiry-popup .bbs-write-tbl td{height: 55px; box-sizing: border-box;}
-.inquiry-popup .inquiry-essential-txt{font-size: 14px; color: var(--text-color-darken)}
 .inquiry-popup .agree-tit{font-weight: 600;}
+.inquiry-popup .inquiry-form td{padding-right: 10px;}
+.inquiry-popup .inquiry-form .input.fluid{max-width: 650px;}
+
+/* 문의 하기 폼 */
+.inquiry-form th{color: var(--text-color-darken);}
+.inquiry-form td{padding-right: 86px;}
+.inquiry-form .inquiry-essential-txt{font-size: 14px; color: var(--text-color-darken)}
+
+/* product search - tab */
+.tabs{display: flex; width: 100%; max-width: 1300px; margin: 0 auto 60px; border-bottom: 1px solid var(--line-color-dark); box-sizing: border-box;}
+.tabs .tab{flex: 1 1; display: flex; justify-content: center; align-items: center; position: relative; max-height: 60px; padding: 20px; font-size: 18px; font-weight: 600; color: var(--text-color-light);}
+.tabs .tab:not(:first-child)::before{content: ""; position: absolute; top: 50%; left: 0; width: 1px; height: 28px; transform: translateY(-50%); background-color: var(--line-color);}
+.tabs .tab:hover,
+.tabs .tab.active{background-color: var(--secondary-color); color: white;}
+.tabs .tab:hover::before,
+.tabs .tab.active::before{display: none;}
+.tabs .tab.active + .tab::before,
+.tabs .tab:hover + .tab::before{display: none;}
+
+/* product search - replacement-search-box */
+
+.replacement-search-box {display: flex; gap: 3px; position:relative; max-width:1112px; width:100%; margin: 56px auto 0; height:80px; }
+.replacement-search-box .replacement-search-select {
+	flex: 1 0 24.108%; height:100%; display:inline-block; vertical-align:top; position:relative; border:1px solid #c8c8c8;
+	background: #fff url("/images/icon/main_search_select_icon.png") 90% 50% no-repeat ; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  
+}
+.replacement-search-box .replacement-search-select.open-icon {background: #fff url("/images/icon/main_search_select_open_icon.png") 90% 50% no-repeat ; }
+.replacement-search-box .replacement-search-select > a {position:relative; display:block; padding: 0 40px 0 30px; height:100%; }
+.replacement-search-box .replacement-search-select > a span {display:table; width:100%; height:100%;}
+.replacement-search-box .replacement-search-select > a span em {display:table-cell; vertical-align:middle; font-size: 16px; letter-spacing:-0.75px; color: #585858; word-break:keep-all;}
+.replacement-search-box .replacement-search-select .replacement-select-con {display:none;position:absolute; width:100%; border:1px solid #c8c8c8;-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+ box-sizing: border-box;  }
+.replacement-search-box .replacement-search-select .replacement-select-con li a {display:block; width:100%; padding: 30px 25px; background-color: #fff; -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+ box-sizing: border-box; }
+.replacement-search-box .replacement-search-select .replacement-select-con li a span {font-size: 16px; letter-spacing:-0.75px; color: #585858;}
+.replacement-search-box .replacement-search-select .replacement-select-con li a:hover {background-color: #edf0f8; -webkit-transition:all s;-moz-transition:all s;-o-transition:all s;transition:all 0.3s; }
+
+.replacement-search-box input {flex: 1 1 100%; height:100%; border:1px solid #c8c8c8; font-size: 16px; letter-spacing:-0.75px; color: #585858; padding: 30px 25px;  
+	-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+ box-sizing: border-box; }
+.replacement-search-box button {flex: 1 0 17.233%; height:100%; background: linear-gradient( 153deg, #b80007, #ff2429 );}
+
+/* 메모리 대치품 검색 - search-results */
+.search-results-header{padding: 17px 0; border-bottom: 1px solid var(--line-color);}
+.search-results-header p{font-size: 16px; color: var(--text-color-darken);}
+
+/* product search - no-result-box */
+.no-result-box{display: flex; flex-direction: column; align-items: center; margin-top: 28px; padding: 62px 0; background-color: #f7f7f7;}
+.no-result-box p{margin-top: 30px; text-align: center; font-size: 18px; color: black; line-height: 1.4;}
+.no-result-box .button{width: 150px; margin-top: 40px;}
