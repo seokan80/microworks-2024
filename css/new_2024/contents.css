@@ -77,6 +77,7 @@ strong,
 .button.fluid{width: 100%;}
 
 .button.size-sm{padding: 0 24px; min-height: 32px; font-size: 13px;}
+.button.size-lg{padding: 0 48px;}
 .button.size-xl{min-height: 66px; font-size: 24px; font-weight: 600; border-width: 2px;}
 
 .more-view{position: relative; width: 24px; height: 24px;}
@@ -85,11 +86,19 @@ strong,
 .more-view::before{width: 1px; height: 7px;}
 .more-view::after{width: 7px; height: 1px;}
 
+/* button-layout */
+.button-layout{display: flex; width: 100%;}
+.button-layout.center{justify-content: center;}
+
 /* helper */
 .extra{flex-shrink: 0; margin-left: auto;}
 .split-container{display: flex;}
 .split-container.align-center{align-items: center;}
 .split-container > :first-child{flex-grow: 1;}
+
+.margin-top-xxl{margin-top: 60px;}
+
+.margin-center{margin-right: auto; margin-left: auto;}
 
 /* header */
 #gnb.each-menu > ul > li .gnb-2dep ul li .gnb-3dep{margin-top: 18px;}
@@ -301,8 +310,4 @@ box-sizing: border-box; }
 .main-inquiry .contact dt{font-weight: 600;}
 .main-inquiry .contact dd a{color: white;}
 .main-inquiry .main-form-btn{margin-top: 30px;}
-.main-inquiry .main-form-btn:hover {background-color:rgba(0,0,0,0.1); -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;} */
-
-/* .main-inquiry .main-form-btn {margin-top:25px; display:block; border:2px solid #fff; height:63px;}
-.main-inquiry .main-form-btn span {display:block;font-size:23px; letter-spacing:-0.75px; color:#fff; font-weight:600; text-align:center; line-height: 63px;}
 .main-inquiry .main-form-btn:hover {background-color:rgba(0,0,0,0.1); -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;} */
