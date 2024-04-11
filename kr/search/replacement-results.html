@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N45FDBW');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135188412-1"></script>
+  <!-- Channel Plugin Scripts -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return (window.console.error || window.console.log || function () {})('ChannelIO script included twice.');
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+        s.charset = 'UTF-8';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+      if (document.readyState === 'complete') {
+        l();
+      } else if (window.attachEvent) {
+        window.attachEvent('onload', l);
+      } else {
+        window.addEventListener('DOMContentLoaded', l, false);
+        window.addEventListener('load', l, false);
+      }
+    })();
+    ChannelIO('boot', {
+      "pluginKey": "32344bc6-bd6c-4221-b011-fefc31738c6c"
+    });
+  </script>
+  <!-- End Channel Plugin -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135188412-1');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+
+
+  <meta name="Title" content="<?=$site_title?>">
+  <meta name="Subject" content="<?=$site_subject?>">
+  <meta name="Author" content="<?=$site_author?>">
+  <meta name="Keywords" content="<?=$site_keywords?>">
+  <meta name="Description" content="<?=$site_description?>">
+  <meta name="Robots" content="<?=$site_robots?>">
+
+  <!--
+<meta property="og:type" content="<?=$og_type?>">
+<meta property="og:title" content="<?=$og_title?>">
+<meta property="og:description" content="<?=$og_description?>">
+<meta property="og:image" content="<?=$og_image?>">
+<meta property="og:url" content="<?=$og_url?>">
+-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Microworks Korea Co.,Ltd.">
+  <meta property="og:description" content="Semiconductor Total Solution Provider">
+  <meta property="og:image" content="<?=$og_image?>/img/og_02.jpg">
+  <meta property="og:url" content="http://www.microworks.co.kr/kr/index.php">
+
+
+  <meta name="twitter:card" content="<?=$sns_card?>">
+  <meta name="twitter:title" content="<?=$sns_title?>">
+  <meta name="twitter:description" content="<?=$sns_description?>">
+  <meta name="twitter:image" content="<?=$sns_image?>">
+  <meta name="twitter:domain" content="<?=$sns_domain?>">
+  <meta name="google-site-verification" content="<?=$google_verification?>">
+  <meta name="naver-site-verification" content="<?=$naver_verification?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일사이트, 반응형사이트 제작시 사용 -->
+  <meta name="format-detection" content="telephone=no" /><!-- ios 자동전화걸기 방지 -->
+  <link rel="canonical" href="..">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/editor.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/content.css">
+  <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+  <link rel="stylesheet" href="/css/layout_responsive.css">
+  <link rel="stylesheet" href="/css/content_responsive.css">
+  <link rel="stylesheet" href="/css/main_responsive.css" />
+  <link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
+  <link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
+  <link rel="stylesheet" href="/kr/css/language.css" />
+  <!-- <link rel="stylesheet" href="/css/member.css"> -->
+  <!-- 회원관련 폼 제작시 사용 -->
+  <!-- <link rel="stylesheet" href="/css/member_responsive.css"> -->
+  <!-- 회원관련 폼(반응형, 모바일) 제작시 사용 -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.3.min.js"><\/script>')
+  </script>
+  <?=$script_content?>
+  <!--[if lt IE 9]>
+	<script src="/js/vendor/html5shiv.js"></script>
+	<script src="/js/vendor/respond.min.js"></script>
+	<link rel="stylesheet" href="/css/ie8.css">
+<![endif]-->
+
+  <script src="/js/vendor/jquery.easing.1.3.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/layer_popup.js"></script>
+
+  <!-- 아이콘폰트 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <!-- 슬라이드 플러그인 -->
+  <link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
+  <script src="/js/plugin/slick.js"></script>
+
+  <!-- 스크롤바 커스텀 -->
+
+  <!-- 인증서 확대 모달 -->
+
+  <script>
+  </script>
+  <script type="text/javascript" src="/js/nav.js"></script>
+  <script type="text/javascript" src="/js/sub.js"></script>
+  <script>
+    $(document).ready(function () {
+      var subtit = $(".visual-tit").text();
+      var subTitFront = subtit.trim().charAt(0);
+      var subTitextra = subtit.trim().substring(1, subtit.length);
+      $(".visual-tit").html("<span>" + subTitFront + "</span>" + subTitextra);
+    });
+  </script>
+
+  <!-- new_2024 -->
+  <link rel="stylesheet" href="/css/new_2024/contents.css">
+
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+<p class="cm-alert-ie">현재 웹브라우저에서는 사이트가 정상적으로 표시되지 않을 수 있습니다. <strong><a href="http://browsehappy.com/" target="_blank">여기를 클릭</a></strong>하여 웹브라우저를 업그레이드 하세요.</p>
+<![endif]-->
+  <!-- accessibility -->
+  <div class="cm-accessibility">
+    <a href="#container">본문바로가기</a>
+  </div>
+  <!-- //accessibility -->
+
+  <!-- code -->
+  <div id="wrap">
+    <!-- header -->
+
+    <header id="header" class="">
+      <div class="gnb-overlay-bg"></div>
+      <div id="headerInnerWrap">
+        <!-- ****************** 헤더상단 ********************** -->
+        <div id="headerInner" class="clearfix">
+          <h1 class="logo"><a href="<?=$site_url?>/" title="메인으로">
+              <span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
+              <span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
+            </a></h1>
+          <div class="header-util-box">
+            <!-- 외국어선택 -->
+            <div class="header-lang">
+              <a href="javascript:;" class="lang-open-btn"><i
+                  class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
+              <ul>
+                <li class="item01"><a href="/en/">ENGLISH</a></li>
+                <li class="item02"><a href="/cn/">CHINESE</a></li>
+              </ul>
+            </div>
+            <!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
+            <button onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;"
+              class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+              <span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+              <!-- <span class="line line4"></span> -->
+            </button>
+            <!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
+            <!-- <button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
+						<i class="material-icons">&#xE8DE;</i>
+					</button> -->
+          </div>
+        </div>
+        <!-- ****************** GNB ********************** -->
+        <!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
+        <nav id="gnb" class="each-menu">
+          <h2 class="blind">주메뉴</h2>
+          <!-- 
+					- 전체메뉴 : class="total-menu"
+					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
+				-->
+          <!-- <div id="gnbBg"></div> -->
+          <ul class="clearfix menu5 area">
+            <li class="gnb1">
+              <a href="<?=$site_url?>/company/summary.php">COMPANY</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="<?=$site_url?>/company/summary.php"><span><em>About Microworks</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/org.php"><span><em>Organization</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/history.php"><span><em>Milestone</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/partners.php"><span><em>Partners</em></span></a></li>
+                  <!-- <li><a href="<?=$site_url?>/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="gnb2">
+              <a href="<?=$site_url?>/do/memory.php">WHAT WE DO</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="<?=$site_url?>/do/memory.php"><span><em>Memory</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/disty.php"><span><em>Manufacturing</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/writing.php"><span><em>Writing Service</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/line.php"><span><em>Strong Line</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/control.php"><span><em>Quality Control</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/program.php"><span><em>Verfication<br>Program</em></span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb3">
+              <a href="<?=$site_url?>/product/trend_list.php">PRODUCT SEARCH</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li>
+                    <a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Trend</em></span></a>
+                    <div class="gnb-3dep">
+                      <ul>
+                        <li><a href="#">메모리 가격동향</a></li>
+                        <li><a href="#">메모리 대치품 검색</a></li>
+                        <li><a href="#">메모리 스탁재고 문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb4">
+              <a href="<?=$site_url?>/industrial/transcend.php">INDUSTRIAL</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <!-- <li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li> -->
+                  <li><a href="<?=$site_url?>/industrial/transcend.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/goodram.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/nexcopy.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/advantech.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/etc.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb5">
+              <a href="<?=$site_url?>/company/notice.php">INFORMATION</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="<?=$site_url?>/company/notice.php"><span><em>공지사항</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/miniblog.php"><span><em>Mini blog</em></span></a></li>
+                  <li><a href="<?=$site_url?>/media/media.php"><span><em>Media</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/contact.php"><span><em>Contact Us</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- GNB Mobile -->
+      <button class="nav-open-btn" title="네비게이션 열기">
+        <span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+      </button>
+      <div class="gnb-overlay-bg-m"></div>
+      <nav id="gnbM" class="gnb-style-basic">
+        <!-- 
+				기본스타일 : .gnb-style-basic
+				Full 스타일 : .gnb-style-full
+			-->
+        <h2 class="blind">주메뉴</h2>
+        <!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
+        <div class="header-util-menu-box">
+          <!-- 언어 선택 리스트 -->
+          <!-- <ul class="clearfix lang-select">
+					<li class="cur"><a href="/kr/">KR</a></li>
+					<li><a href="/en/">EN</a></li>
+					<li><a href="/jp/">JP</a></li>
+					<li><a href="/cn/">CH</a></li>
+				</ul> -->
+          <!-- // -->
+          <!-- 회원메뉴 -->
+          <!-- <ul class="clearfix member-menu-box">
+					<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+				</ul> -->
+        </div>
+        <!-- // -->
+        <div class="gnb-navigation-wrapper">
+          <div class="gnb-navigation-inner">
+            <ul id="navigation">
+              <li>
+                <a href="javascript:;">COMPANY</a>
+                <ul class="gnb-2dep">
+                  <li><a href="<?=$site_url?>/company/summary.php"><span><em>About Microworks</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/org.php"><span><em>Organization</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/history.php"><span><em>Milestone</em></span></a></li>
+                  <li><a href="<?=$site_url?>/company/partners.php"><span><em>Partners</em></span></a></li>
+                  <!-- <li><a href="<?=$site_url?>/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">WHAT WE DO</a>
+                <ul class="gnb-2dep">
+                  <li><a href="<?=$site_url?>/do/memory.php"><span><em>Memory</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/disty.php"><span><em>Manufacturing</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/writing.php"><span><em>Writing Service</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/line.php"><span><em>Strong Line</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/control.php"><span><em>Quality Control</em></span></a></li>
+                  <li><a href="<?=$site_url?>/do/program.php"><span><em>Verfication<br>Program</em></span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">PRODUCT SEARCH</a>
+                <ul class="gnb-2dep">
+                  <li><a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Trend</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
+                  <li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">INDUSTRIAL</a>
+                <ul class="gnb-2dep">
+                  <li><a href="<?=$site_url?>/industrial/transcend.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/goodram.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/nexcopy.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/advantech.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+                  <li><a href="<?=$site_url?>/industrial/etc.php"
+                      onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="javascript:;">INFORMATION</a>
+                <ul class="gnb-2dep">
+                  <li><a href="<?=$site_url?>/company/notice.php"><span><em>공지사항</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/miniblog.php"><span><em>Mini blog</em></span></a></li>
+                  <li><a href="<?=$site_url?>/media/media.php"><span><em>Media</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/contact.php"><span><em>Contact Us</em></span></a></li>
+                  <li><a href="<?=$site_url?>/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- //header -->
+    <!-- container -->
+    <div id="container">
+      <!-- visual -->
+      <section id="visual" class="sub-visual-<?=$page_section?>">
+        <div class="visual-img-con"
+          style="background:#eee url(/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
+        <div class="area visual-txt-con">
+          <div class="table-cell-layout">
+            <h2 class="visual-tit trans400">
+              <?=$page_info?>
+            </h2>
+            <p class="visual-sub-txt">MICROWORKS KOREA</p>
+          </div>
+        </div>
+      </section>
+      <!-- //visual -->
+      <!-- middleArea -->
+      <div id="middleArea">
+        <?if($page_section != "search" && $sub_section != "profile"){?>
+        <!-- 서브메뉴1 -->
+        <aside id="topMenu01" class="">
+          <!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+          <div class="side-menu-inner">
+            <div class="area">
+              <ul class="snb sub-menu-<?=$page_section?> clearfix">
+                <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <!-- // -->
+        <!-- 모바일 서브메뉴 2 -->
+        <aside id="topMenuM02" class="cm-top-menu clearfix">
+          <div class="side-menu-inner clearfix">
+            <!-- 2차메뉴 -->
+            <div class="menu-location  location2">
+              <a href="javascript:;" class="cur-location">
+                <span><?=$sub_info?></span>
+                <i class="material-icons arrow">&#xE313;</i>
+              </a>
+              <ul class="location-menu-con">
+                <?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <!-- // -->
+        <?}?>
+
+        <!-- 상단정보 (센터정렬) -->
+        <aside id="contentInfoCon" class="content-info-style01">
+          <h3 class="content-tit">
+            <?if($sub_info){?><?=$sub_info?>
+            <?}else{?><?=$page_info?>
+            <?}?>
+            대치품 검색
+          </h3>
+        </aside>
+        <!-- content -->
+        <section id="content" class="">
+          <!-- 컨텐츠 내용 -->
+          <article class="sub-page product-page">
+            <div class="area02">
+              <form action="" class="search-results-form">
+                <div class="search-results">
+                  <div class="search-results-header">
+                    <p class="text-lg">카테고리명</p>
+                    <button type="button" class="button size-sm type-secondary extra"><strong>검색 다시하기</strong></button>
+                  </div>
+                  <div class="search-results-body">
+                    <div class="search-utility">
+                      <div class="search-box">
+                        <input placeholder="" type="search" name="search_order" class="input"
+                          value="<?=$search_order?>">
+                        <button type="submit" class="search-button" title="검색"><i
+                            class="material-icons">&#xE8B6;</i></button>
+                        <span class="result-count text-darken">검색 결과 : <strong
+                            class="text-primary">58,758</strong></span>
+                      </div>
+                      <div class="switch-box">
+                        <p>검색 기준</p>
+                        <div class="switch">
+                          <span>
+                            <input type="radio" name="switch" id="switch-1" checked>
+                            <label for="switch-1">스택</label>
+                          </span>
+                          <span>
+                            <input type="radio" name="switch" id="switch-2">
+                            <label for="switch-2">스크롤</label>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search-filters">
+                      <div class="filter">
+                        <div class="filter-header">제조업체</div>
+                        <div class="filter-body">
+                          <ul class="checkable-items">
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-001">
+                              <label for="item-01-001">제조업체1</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-002" checked>
+                              <label for="item-01-002">제조업체2</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-003" disabled>
+                              <label for="item-01-003">제조업체3 disabled</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-004">
+                              <label for="item-01-004">제조업체4 긴 글 테스트 입니다. 긴 글 테스트 입니다.</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-005">
+                              <label for="item-01-005">제조업체5</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-006">
+                              <label for="item-01-006">제조업체6</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-007">
+                              <label for="item-01-007">제조업체7</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-008">
+                              <label for="item-01-008">제조업체8</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-009">
+                              <label for="item-01-009">제조업체9</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-010">
+                              <label for="item-01-010">제조업10</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-01-011">
+                              <label for="item-01-011">제조업체11</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="filter">
+                        <div class="filter-header">계열</div>
+                        <div class="filter-body">
+                          <div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm"></div>
+                          <ul class="checkable-items">
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-001">
+                              <label for="item-02-001">계열1</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-002" checked>
+                              <label for="item-02-002">계열2</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-003">
+                              <label for="item-02-003">계열3</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-004">
+                              <label for="item-02-004">계열4</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-005">
+                              <label for="item-02-005">계열5</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-006">
+                              <label for="item-02-006">계열6</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-007">
+                              <label for="item-02-007">계열7</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-008">
+                              <label for="item-02-008">계열8</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-009">
+                              <label for="item-02-009">계열9</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-010">
+                              <label for="item-02-010">계열10</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-02-011">
+                              <label for="item-02-011">계열11</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="filter">
+                        <div class="filter-header">포장</div>
+                        <div class="filter-body">
+                          <ul class="checkable-items">
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-03-001">
+                              <label for="item-03-001">포장1</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-03-002" checked>
+                              <label for="item-03-002">포장2</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-03-003">
+                              <label for="item-03-003">포장3</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-03-004">
+                              <label for="item-03-004">포장4</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-03-005">
+                              <label for="item-03-005">포장5</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="filter">
+                        <div class="filter-header">제품현황</div>
+                        <div class="filter-body">
+                          <ul class="checkable-items">
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-04-001">
+                              <label for="item-04-001">제품현황1</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-04-002" checked>
+                              <label for="item-04-002">제품현황2</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-04-003">
+                              <label for="item-04-003">제품현황3</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-04-004">
+                              <label for="item-04-004">제품현황4</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-04-005">
+                              <label for="item-04-005">제품현황5</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="filter">
+                        <div class="filter-header">검색조건</div>
+                        <div class="filter-body">
+                          <div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm"></div>
+                          <ul class="checkable-items">
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-001">
+                              <label for="item-05-001">검색조건1(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-002" checked>
+                              <label for="item-05-002">검색조건2(15)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-003">
+                              <label for="item-05-003">검색조건3(8)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-004">
+                              <label for="item-05-004">검색조건4(1)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-005">
+                              <label for="item-05-005">검색조건5(6)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-006">
+                              <label for="item-05-006">검색조건6(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-007">
+                              <label for="item-05-007">검색조건7(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-008">
+                              <label for="item-05-008">검색조건8(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-009">
+                              <label for="item-05-009">검색조건9(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-010">
+                              <label for="item-05-010">검색조건10(10)</label>
+                            </li>
+                            <li class="checkable-item">
+                              <input type="checkbox" name="" id="item-05-011">
+                              <label for="item-05-011">검색조건11(10)</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-options">
+                      <div class="options">
+                        <dl class="option">
+                          <dt>재고 옵션</dt>
+                          <dd>
+                            <input type="checkbox" name="" id="option-01-01">
+                            <label for="option-01-01">재고 있음</label>
+                          </dd>
+                          <dd>
+                            <input type="checkbox" name="" id="option-01-02">
+                            <label for="option-01-02">상시 있음</label>
+                          </dd>
+                          <dd>
+                            <input type="checkbox" name="" id="option-01-03">
+                            <label for="option-01-03">신제품</label>
+                          </dd>
+                        </dl>
+                        <dl class="option">
+                          <dt>환경 옵션</dt>
+                          <dd>
+                            <input type="checkbox" name="" id="option-02-01">
+                            <label for="option-02-01">RoHS 준수</label>
+                          </dd>
+                          <dd>
+                            <input type="checkbox" name="" id="option-02-02">
+                            <label for="option-02-02">RoHS 미준수</label>
+                          </dd>
+                        </dl>
+                        <dl class="option">
+                          <dt>미디어</dt>
+                          <dd>
+                            <input type="checkbox" name="" id="option-03-01">
+                            <label for="option-03-01">규격서</label>
+                          </dd>
+                          <dd>
+                            <input type="checkbox" name="" id="option-03-02">
+                            <label for="option-03-02">사진</label>
+                          </dd>
+                          <dd>
+                            <input type="checkbox" name="" id="option-03-03">
+                            <label for="option-03-03">EDA/CAD 모델</label>
+                          </dd>
+                        </dl>
+                        <dl class="option">
+                          <dt>MARKETPLACE 제품</dt>
+                          <dd>
+                            <input type="checkbox" name="" id="option-04-01">
+                            <label for="option-04-01">제외</label>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="button-layout align-center">
+                        <button type="submit" class="button type-point"><strong>Submit</strong></button>
+                        <p class="result-count text-rg">검색 결과 : <strong class="text-primary">58,758</strong></p>
+                      </div>
+                    </div>
+                    
+                    <div class="replacement-table-wrap">
+                      <div class="replacement-table-header">
+                        <div class="result-count">
+                          <select name="" id="" class="view-select">
+                            <option value="" selected>보기 1-25</option>
+                            <option value="">보기 1-30</option>
+                          </select>
+                          <em>/</em>
+                          <strong class="text-primary">58,758</strong>
+                          <input type="text" class="input" placeholder="가격 수량">
+                        </div>
+                        <div class="button-layout gap-md extra">
+                          <button type="button" class="button type-secondary size-sm">표 다운로드</button>
+                          <button type="button" class="button type-point size-sm">n개 제품비교</button>
+                        </div>
+                      </div>
+                      <table class="replacement-table">
+                        <colgroup>
+                          <col width="60">
+                          <col width="280" span="2">
+                          <col width="70" span="10">
+                          <col width="90" span="2">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>비교</th>
+                            <th colspan="2">제조업체 부품 번호</th>
+                            <th colspan="2">주문 가능 수량</th>
+                            <th colspan="2">가격</th>
+                            <th colspan="2">계열</th>
+                            <th colspan="2">포장</th>
+                            <th colspan="2">제품현황</th>
+                            <th colspan="2">문의하기</th>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" name="" id="check-all"></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button></td>
+                            <td><button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td colspan="2" class="text-left">
+                              <div class="product-info">
+                                <img src="" alt="">
+                                <div class="text-wrap">
+                                  <strong>제품명</strong>
+                                  <p>제품설명</p>
+                                </div>
+                                <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                              </div>
+                            </td>
+                            <td colspan="2" class="text-right">
+                              <strong>106</strong>
+                              <p>재고있음</p>
+                            </td>
+                            <td colspan="2" class="text-right">
+                              <strong>1: $157,000.0000</strong>
+                              <p>박스</p>
+                            </td>
+                            <td colspan="2">
+                              <strong>계열</strong>
+                            </td>
+                            <td colspan="2">
+                              <strong>박스</strong>
+                            </td>
+                            <td colspan="2">
+                              <strong>활성</strong>
+                            </td>
+                            <td colspan="2">
+                              <a href="#" class="button type-secondary size-sm">Detail View</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="replacement-table-footer">
+                        <div class="result-count">
+                          <select name="" id="" class="view-select">
+                            <option value="" selected>보기 1-25</option>
+                            <option value="">보기 1-30</option>
+                          </select>
+                          <em>/</em>
+                          <strong class="text-primary">58,758</strong>
+                          <div class="paging">
+                            <? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
+                          </div>
+                        </div>
+                        <div class="button-layout gap-md">
+                          <button type="button" class="button type-point size-sm">n개 제품비교</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="added-box margin-top-xxl">
+                <div class="box-header"><strong>카테고리명</strong></div>
+                <div class="box-body">카테고리 설명이 들어갑니다. 예를 들어 이 제품군에 속하는 제품은 정보를 전송 또는 저장에 적합한 형태로 패키징하거나 암호화하고 특정 형태의 변조 공정을 통해 통신 경로의 반대쪽에서 역산을 수행하는 데 사용됩니다. 예로는 디지털 데이터로부터 아날로그 비디오 신호를 생성(또는 아날로그 데이터로부터 데이터 비디오 신호를 생성)하는 장치, 원격 제어 기능을 구현하기 위해 전송 버튼 상태를 암호화하는 장치, 표준 UART를 표준 적외선 트랜시버에 연결할 수 있도록 해 주는 장치가 있습니다.</div>
+              </div>
+            </div>
+          </article>
+          <!-- //컨텐츠 내용 -->
+        </section>
+        <!-- //content -->
+      </div>
+      <!-- //middleArea -->
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <footer id="footer">
+      <a href="#wrap" class="to-top-btn"><i class="material-icons">&#xE316;</i></a>
+      <div id="footerInner" class="clearfix">
+        <!-- 푸터 상단 -->
+        <article id="footerTop" class="area02">
+          <div class=" ">
+            <!-- 푸터상단 왼쪽 -->
+            <div class="footer-top-inner clearfix">
+              <div class="footer-left-con">
+                <!-- <span class="foot-logo"><img src="/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span> -->
+                <ul class="foot-menu clearfix">
+                  <li><a href="javascript:;"
+                      onclick="javascript:layerLoad('<?=$site_url?>/service/privacy.php'); return false;"><b>개인정보처리방침</b></a>
+                  </li>
+                  <li><a href="javascript:;"
+                      onclick="javascript:layerLoad('<?=$site_url?>/service/agreement.php'); return false;">이메일무단수집거부</a>
+                  </li>
+                  <li><a href="<?=$site_url?>/media/profile.php">Company Profile</a></li>
+                </ul>
+              </div>
+              <!-- 푸터상단 오른쪽 -->
+              <div class="footer-right-con">
+                <div class="foot-sns-menu">
+                  <ul class="clearfix">
+                    <li><a href="https://blog.naver.com/mworksk" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
+                    <li><a href="https://microworkskorea.tistory.com/" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
+                    <li><a href="https://mworksk.blogspot.com/" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
+                    <li><a href="https://twitter.com/microworkskorea" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
+                    <li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
+                    <li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img
+                          src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- 푸터 하단 -->
+        <article id="footerBottom">
+          <div class="area02 clearfix">
+            <!-- 푸터 하단 왼쪽 -->
+            <article class="footer-left-con">
+              <span class="foot-logo"><img src="/images/common/footer_logo.png" alt="<?=$site_head_title?>" /></span>
+
+            </article>
+            <!-- 푸터 하단 오른쪽 -->
+            <article class="footer-right-con">
+              <div class="footer-address">
+                <p>
+                  <span class="no-line">Microworks Korea Co., Ltd. </span><span class="address">#614, Ace Gwangmyeong
+                    Tower, Haan-ro 108, Gwangmyeong-si, Gyeonggi-do, Korea 14319</span> <br>
+                  <span class="no-line"><b>T. </b>82-2-6112-7320</span><span><b>F.</b>82-2-6112-7321</span>
+                </p>
+                <div class="footer-copyright">COPYRIGHT &copy; MICROWORKSWORKS ALL RIGHTS RESERVED.</div>
+              </div>
+            </article>
+            <!-- 푸터 하단 마지막 -->
+            <article class="footer-last-con">
+              <a href="http://microworks-esc.com/kr/index.php" target="_blank"><span class="foot-logo"><img
+                    src="/images/common/footer_logo_02.png" alt="바로기기" /></span></a>
+            </article>
+          </div>
+        </article>
+      </div>
+    </footer>
+
+    <!-- 모달 레이어팝업 -->
+    <!-- S : 2024-04 추가 -->
+    <article class="modal-fixed-pop-wrapper">
+      <div class="modal-fixed-pop-inner">
+        <!-- <div class="modal-loading"><span class="loading"></span></div> -->
+        <div class="modal-inner-box">
+          <div class="modal-inner-content">
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- E : 2024-04 추가 -->
+    <!-- //footer -->
+  </div>
+  <!-- //code -->
+</body>
+
+</html>
