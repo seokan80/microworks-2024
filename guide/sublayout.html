@@ -215,8 +215,8 @@ $(document).ready(function() {
 					<div class="header-lang">
 						<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
 						<ul>
-							<li class="item01"><a href="/en/">ENGLISH</a></li>
-							<li class="item02"><a href="/cn/">CHINESE</a></li>
+							<li class="item01"><a href="<?=$site_host?>/en/">ENGLISH</a></li>
+							<li class="item02"><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 						</ul>
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
@@ -271,7 +271,8 @@ $(document).ready(function() {
 						<div class="gnb-2dep">
 							<ul>
                 <li>
-									<a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Trend</em></span></a>
+									<a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
+									<!-- S: 2024-04 추가 -->
 									<div class="gnb-3dep">
 										<ul>
 											<li><a href="#">메모리 가격동향</a></li>
@@ -279,6 +280,7 @@ $(document).ready(function() {
 											<li><a href="#">메모리 스탁재고 문의</a></li>
 										</ul>
 									</div>
+									<!-- E: 2024-04 추가 -->
 								</li>
 								<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 								<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
@@ -330,10 +332,10 @@ $(document).ready(function() {
 			<div class="header-util-menu-box">
 				<!-- 언어 선택 리스트 -->
 				<!-- <ul class="clearfix lang-select">
-					<li class="cur"><a href="/kr/">KR</a></li>
-					<li><a href="/en/">EN</a></li>
-					<li><a href="/jp/">JP</a></li>
-					<li><a href="/cn/">CH</a></li>
+					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
+					<li><a href="<?=$site_host?>/en/">EN</a></li>
+					<li><a href="<?=$site_host?>/jp/">JP</a></li>
+					<li><a href="<?=$site_host?>/cn/">CH</a></li>
 				</ul> -->
 				<!-- // -->
 				<!-- 회원메뉴 -->
@@ -374,7 +376,18 @@ $(document).ready(function() {
 						<li>
 							<a href="javascript:;">PRODUCT SEARCH</a>
 							<ul class="gnb-2dep">
-                <li><a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Trend</em></span></a></li>
+                <li>
+									<a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
+									<!-- S: 2024-04 추가 -->
+									<div class="gnb-3dep">
+										<ul>
+											<li><a href="#">메모리 가격동향</a></li>
+											<li><a href="#">메모리 대치품 검색</a></li>
+											<li><a href="#">메모리 스탁재고 문의</a></li>
+										</ul>
+									</div>
+									<!-- E: 2024-04 추가 -->
+								</li>
 								<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 								<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
 								<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
