@@ -173,7 +173,7 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 .split-container.align-center{align-items: center;}
 .split-container > :first-child{flex-grow: 1;}
 
-.margin-top-xxl{margin-top: 60px;}
+.margin-top-xxl{margin-top: 60px !important;}
 .margin-center{margin-right: auto; margin-left: auto;}
 
 .gap-sm{gap: 4px !important;}
@@ -442,7 +442,7 @@ box-sizing: border-box; }
 .no-result-box .button{width: 150px; margin-top: 40px;}
 
 /* 대치품 검색 리스트 */
-.search-utility{display: flex; align-items: center; margin-top: 16px;}
+.search-utility{display: flex; align-items: center; margin-top: 16px; gap: 16px;}
 .search-utility .search-box{flex-grow: 1; display: flex; align-items: center;}
 .search-utility .search-box .input{max-width: 260px; height: 40px;}
 .search-utility .search-box .search-button{margin:0px; border:0; min-width: 40px; padding:0 5px; height: 40px; margin-left:-4px; margin-right: 16px; background:#333; color:#fff; cursor:pointer; vertical-align:top; font-size:14px;}
@@ -474,15 +474,16 @@ box-sizing: border-box; }
 .filter-options .button{width: 150px; margin-right: 16px;}
 
 /* replacement-table-wrap */
-.replacement-table-wrap{margin-top: 60px;}
 .replacement-table-wrap .result-count{display: flex; align-items: center; font-size: 16px;}
 .replacement-table-wrap .result-count em{margin: 0 5px;}
 .replacement-table-wrap .result-count strong{margin-right: 16px;}
 .replacement-table-wrap .result-count .input{width: 160px; height: 40px;}
 .replacement-table-wrap .paging{margin: 0;  text-align: left;}
-.replacement-table-wrap .button{width: 120px;}
+.search-results-body .button{width: 120px;}
+
 .replacement-table-header{display: flex; align-items: center;}
-.replacement-table-footer{display: flex; flex-direction: column; gap: 12px; margin-top: 12px;}
+.replacement-table-footer{margin-top: 12px;}
+.replacement-table-footer .button{margin-top: 12px;}
 .view-select{border: none; font-size: 16px; font-weight: 600; color: var(--text-color-darken);}
 
 /* replacement-table */
@@ -497,8 +498,26 @@ box-sizing: border-box; }
 .replacement-table .product-info{display: flex; align-items: center; gap: 10px; max-width: 560px;}
 .replacement-table .product-info img{flex-shrink: 0; width: 55px; height: 55px; overflow: hidden; background: url('/images/content/img-no-image.png');}
 .replacement-table td p{margin-top: 8px;}
-.replacement-table .product-info .delete-button{flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 100%; background-color: var(--disabled-button-color);}
+.replacement-table .text-wrap{position: relative;}
+.replacement-table .product-info .delete-button{flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; position: absolute; top: -10px; right: -10px; transform: translateX(100%);width: 24px; height: 24px; border-radius: 100%; background-color: var(--disabled-button-color);}
 .replacement-table .product-info .delete-button i{color: #333; font-weight: bold; font-size: 14px;}
+
+.replacement-table.type-detail{width: auto;}
+.replacement-table.type-detail th{background-color: var(--bg-color-dark-gray); text-align: left; border-bottom: 1px solid #cfcfcf;}
+.replacement-table.type-detail tr:last-child th{border-color: var(--bg-color-dark-gray);}
+.replacement-table.type-detail tr:first-child th{border-top: 1px solid var(--bg-color-dark-gray);}
+.replacement-table.type-detail tr:first-child td{border-top: 1px solid var(--line-color);}
+.replacement-table.type-detail th,
+.replacement-table.type-detail td{height: unset; padding: 16px;}
+.replacement-table.type-detail tr{border: none;}
+.replacement-table.type-detail td{border-bottom: 1px solid var(--line-color);}
+.replacement-table.type-detail .product-info{position: relative; display: block;}
+.replacement-table.type-detail .product-info .delete-button{transform: none;}
 
 .added-box{width: 100%; padding: 28px 20px 32px; background-color: var(--color-light-gray); line-height: 1.5;}
 .added-box .box-header{margin-bottom: 16px; padding-bottom: 16px; font-size: 18px; border-bottom: 1px solid #333; color: var(--text-color-darken);}
+
+.search-detail-header{display: flex; align-items: center; height: 64px; border-bottom: 1px solid var(--line-color-dark); color: var(--text-color-darken);}
+.replacement-table.type-detail{margin-top: 28px;}
+.replacement-table.type-detail + .replacement-table-footer{margin-top: 32px;}
+.replacement-table.type-detail + .replacement-table-footer .button{margin-top: 0;}
