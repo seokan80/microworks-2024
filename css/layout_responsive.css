@@ -82,9 +82,9 @@
 	#navigation > li .gnb-2dep > li > a{display:block; color:#fff; font-size:14px; padding:12px 15px; opacity:0.7;filter:Alpha(opacity=70);}
 	#navigation > li .gnb-2dep > li.on > a{opacity:1.0;filter:Alpha(opacity=100); font-weight:500;}
 	/* GNB Mobile :: 메뉴영역 ::  3차 */
-	#navigation > li .gnb-2dep > li > .gnb-3dep{display:none; padding:10px; background-color:#aaa; margin:0 10px}
+	/* #navigation > li .gnb-2dep > li > .gnb-3dep{display:none; padding:10px; background-color:#aaa; margin:0 10px}
 	#navigation > li .gnb-2dep > li > .gnb-3dep > li > a{display:block; padding:8px 0; font-size:13px; color:#fff;}
-	#navigation > li .gnb-2dep > li > .gnb-3dep > li > a:before{display:inline-block; content:"-"; margin-right:5px;}
+	#navigation > li .gnb-2dep > li > .gnb-3dep > li > a:before{display:inline-block; content:"-"; margin-right:5px;} */
 	
 	/* -------- GNB Mobile :: 스타일2 (Full Style) -------- */
 	#gnbM.gnb-style-full{ 
