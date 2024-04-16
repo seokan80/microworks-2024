@@ -2,175 +2,45 @@
 <html lang="ko">
 
 <head>
-	<!-- Google Tag Manager -->
-	<script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-N45FDBW');
-	</script>
-	<!-- End Google Tag Manager -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135188412-1"></script>
-	<!-- Channel Plugin Scripts -->
-	<script>
-		(function () {
-			var w = window;
-			if (w.ChannelIO) {
-				return (window.console.error || window.console.log || function () {})('ChannelIO script included twice.');
-			}
-			var ch = function () {
-				ch.c(arguments);
-			};
-			ch.q = [];
-			ch.c = function (args) {
-				ch.q.push(args);
-			};
-			w.ChannelIO = ch;
-
-			function l() {
-				if (w.ChannelIOInitialized) {
-					return;
-				}
-				w.ChannelIOInitialized = true;
-				var s = document.createElement('script');
-				s.type = 'text/javascript';
-				s.async = true;
-				s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-				s.charset = 'UTF-8';
-				var x = document.getElementsByTagName('script')[0];
-				x.parentNode.insertBefore(s, x);
-			}
-			if (document.readyState === 'complete') {
-				l();
-			} else if (window.attachEvent) {
-				window.attachEvent('onload', l);
-			} else {
-				window.addEventListener('DOMContentLoaded', l, false);
-				window.addEventListener('load', l, false);
-			}
-		})();
-		ChannelIO('boot', {
-			"pluginKey": "32344bc6-bd6c-4221-b011-fefc31738c6c"
-		});
-	</script>
-	<!-- End Channel Plugin -->
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-135188412-1');
-	</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-
-
-	<meta name="Title" content="<?=$site_title?>">
-	<meta name="Subject" content="<?=$site_subject?>">
-	<meta name="Author" content="<?=$site_author?>">
-	<meta name="Keywords" content="<?=$site_keywords?>">
-	<meta name="Description" content="<?=$site_description?>">
-	<meta name="Robots" content="<?=$site_robots?>">
-
-	<!--
-<meta property="og:type" content="<?=$og_type?>">
-<meta property="og:title" content="<?=$og_title?>">
-<meta property="og:description" content="<?=$og_description?>">
-<meta property="og:image" content="<?=$og_image?>">
-<meta property="og:url" content="<?=$og_url?>">
--->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Microworks Korea Co.,Ltd.">
-	<meta property="og:description" content="Semiconductor Total Solution Provider">
-	<meta property="og:image" content="<?=$og_image?>/img/og_02.jpg">
-	<meta property="og:url" content="http://www.microworks.co.kr/kr/index.php">
-
-
-	<meta name="twitter:card" content="<?=$sns_card?>">
-	<meta name="twitter:title" content="<?=$sns_title?>">
-	<meta name="twitter:description" content="<?=$sns_description?>">
-	<meta name="twitter:image" content="<?=$sns_image?>">
-	<meta name="twitter:domain" content="<?=$sns_domain?>">
-	<meta name="google-site-verification" content="<?=$google_verification?>">
-	<meta name="naver-site-verification" content="<?=$naver_verification?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일사이트, 반응형사이트 제작시 사용 -->
-	<meta name="format-detection" content="telephone=no" /><!-- ios 자동전화걸기 방지 -->
-	<link rel="canonical" href="..">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
+	
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/editor.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/content.css">
-	<!-- <link rel="stylesheet" href="/css/main.css" /> -->
+	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/layout_responsive.css">
 	<link rel="stylesheet" href="/css/content_responsive.css">
-	<link rel="stylesheet" href="/css/main_responsive.css" />
+	<link rel="stylesheet" href="/css/main_responsive.css">
 	<link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
 	<link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
-	<link rel="stylesheet" href="/kr/css/language.css" />
-	<!-- <link rel="stylesheet" href="/css/member.css"> -->
-	<!-- 회원관련 폼 제작시 사용 -->
-	<!-- <link rel="stylesheet" href="/css/member_responsive.css"> -->
-	<!-- 회원관련 폼(반응형, 모바일) 제작시 사용 -->
-
+	<link rel="stylesheet" href="/kr/css/language.css">
+	
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>
-		window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.3.min.js"><\/script>')
-	</script>
-	<?=$script_content?>
-	<!--[if lt IE 9]>
-	<script src="/js/vendor/html5shiv.js"></script>
-	<script src="/js/vendor/respond.min.js"></script>
-	<link rel="stylesheet" href="/css/ie8.css">
-<![endif]-->
-
 	<script src="/js/vendor/jquery.easing.1.3.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/layer_popup.js"></script>
-
+	
 	<!-- 아이콘폰트 -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
+	
 	<!-- 슬라이드 플러그인 -->
-	<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
 	<script src="/js/plugin/slick.js"></script>
-
-	<!-- 스크롤바 커스텀 -->
-
-	<!-- 인증서 확대 모달 -->
-
-	<script>
-	</script>
+	<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 	<script type="text/javascript" src="/js/nav.js"></script>
 	<script type="text/javascript" src="/js/sub.js"></script>
-	<script>
-		$(document).ready(function () {
-			var subtit = $(".visual-tit").text();
-			var subTitFront = subtit.trim().charAt(0);
-			var subTitextra = subtit.trim().substring(1, subtit.length);
-			$(".visual-tit").html("<span>" + subTitFront + "</span>" + subTitextra);
-		});
-	</script>
-
-	<!-- new_2024 -->
+	
+	<!-- 2024-04 추가 -->
 	<link rel="stylesheet" href="/css/new_2024/contents.css">
-
+	
 </head>
 
 <body>
@@ -534,22 +404,14 @@
 							<div class="footer-right-con">
 								<div class="foot-sns-menu">
 									<ul class="clearfix">
-										<li><a href="https://blog.naver.com/mworksk" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
-										<li><a href="https://microworkskorea.tistory.com/" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
-										<li><a href="https://mworksk.blogspot.com/" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
-										<li><a href="https://twitter.com/microworkskorea" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
-										<li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
-										<li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
-										<li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
-										<li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img
-													src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
+									  <li><a href="https://blog.naver.com/mworksk" target="_blank"><img src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
+                  <li><a href="https://microworkskorea.tistory.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
+                  <li><a href="https://mworksk.blogspot.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
+                  <li><a href="https://twitter.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
 									</ul>
 								</div>
 							</div>

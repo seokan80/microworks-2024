@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
-
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/css/editor.css">
-<link rel="stylesheet" href="/css/layout.css">
-<link rel="stylesheet" href="/css/content.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/layout_responsive.css">
-<link rel="stylesheet" href="/css/content_responsive.css">
-<link rel="stylesheet" href="/css/main_responsive.css">
-<link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
-<link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
-<link rel="stylesheet" href="/kr/css/language.css">
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/vendor/jquery.easing.1.3.js"></script>
-<script src="/js/common.js"></script>
-<script src="/js/layer_popup.js"></script>
-
-<!-- 아이콘폰트 -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-
-<!-- 슬라이드 플러그인 -->
-<script src="/js/plugin/slick.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
-<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-<script type="text/javascript" src="/js/nav.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
-<!-- 2024-04 추가 -->
-<link rel="stylesheet" href="/css/new_2024/contents.css">
-
+	
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/editor.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/content.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/layout_responsive.css">
+	<link rel="stylesheet" href="/css/content_responsive.css">
+	<link rel="stylesheet" href="/css/main_responsive.css">
+	<link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
+	<link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
+	<link rel="stylesheet" href="/kr/css/language.css">
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/js/vendor/jquery.easing.1.3.js"></script>
+	<script src="/js/common.js"></script>
+	<script src="/js/layer_popup.js"></script>
+	
+	<!-- 아이콘폰트 -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	
+	<!-- 슬라이드 플러그인 -->
+	<script src="/js/plugin/slick.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="/js/nav.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	
+	<!-- 2024-04 추가 -->
+	<link rel="stylesheet" href="/css/new_2024/contents.css">
+	
 </head>
 
 <body>
+<!--[if lt IE 7]>
+<p class="cm-alert-ie">현재 웹브라우저에서는 사이트가 정상적으로 표시되지 않을 수 있습니다. <strong><a href="http://browsehappy.com/" target="_blank">여기를 클릭</a></strong>하여 웹브라우저를 업그레이드 하세요.</p>
+<![endif]-->
+<!-- accessibility -->
 <div class="cm-accessibility">
 	<a href="#mainContainer">본문바로가기</a>
 </div>
@@ -180,6 +185,21 @@
 			<h2 class="blind">주메뉴</h2>
 			<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
 			<div class="header-util-menu-box">
+				<!-- 언어 선택 리스트 -->
+				<!-- <ul class="clearfix lang-select">
+					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
+					<li><a href="<?=$site_host?>/en/">EN</a></li>
+					<li><a href="<?=$site_host?>/jp/">JP</a></li>
+					<li><a href="<?=$site_host?>/cn/">CH</a></li>
+				</ul> -->
+				<!-- // -->
+				<!-- 회원메뉴 -->
+				<!-- <ul class="clearfix member-menu-box">
+					<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+				</ul> -->
 			</div>
 			<!-- // -->
 			<div class="gnb-navigation-wrapper">
@@ -380,6 +400,187 @@
 		</script>
 		<!-- ****************** 메인컨텐츠 ********************** -->
 		<section id="mainContent">
+			<!-- ****************** 전체 검색 결과 ********************** -->
+			<!-- S : 2024-04 추가 -->
+			<article id="totalSearchResults" class="total-results-wrap">
+				<div class="area">
+					<div class="total-results">
+						<strong class="result-count">총 <span>00</span>건</strong>
+					</div>
+					<div class="flex-table-wrapper">
+						<div class="table-title">
+							<p class="title">Memory Trend</p>
+							<strong class="result-count">총 <span>00</span>건</strong>
+							<div class="extra">
+								<a href="#" class="button type-round more-view"></a>
+							</div>
+						</div>
+						<div class="flex-table">
+							<div class="row table-header pc-only">
+								<div class="col size-sm"><p>No</p></div>
+								<div class="col size-full"><p>Subject</p></div>
+								<div class="col size-lg"><p>Number of products</p></div>
+								<div class="col size-md"><p>date</p></div>
+								<div class="col size-md"><p></p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>5</p></div>
+								<div class="col size-full"><a href="#">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</a></div>
+								<div class="col size-lg"><p class="mo-only">제품수:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">등록일:</p><p>2021-08-13</p></div>
+								<div class="col size-md mo-full"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>4</p></div>
+								<div class="col size-full"><a href="#">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</a></div>
+								<div class="col size-lg"><p class="mo-only">제품수:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">등록일:</p><p>2021-08-13</p></div>
+								<div class="col size-md mo-full"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>3</p></div>
+								<div class="col size-full"><a href="#">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</a></div>
+								<div class="col size-lg"><p class="mo-only">제품수:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">등록일:</p><p>2021-08-13</p></div>
+								<div class="col size-md mo-full"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>2</p></div>
+								<div class="col size-full"><a href="#">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</a></div>
+								<div class="col size-lg"><p class="mo-only">제품수:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">등록일:</p><p>2021-08-13</p></div>
+								<div class="col size-md mo-full"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>1</p></div>
+								<div class="col size-full"><a href="#">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</a></div>
+								<div class="col size-lg"><p class="mo-only">제품수:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">등록일:</p><p>2021-08-13</p></div>
+								<div class="col size-md mo-full"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="flex-table-wrapper">
+						<div class="table-title">
+							<p class="title">Stock List</p>
+							<strong class="result-count">총 <span>00</span>건</strong>
+							<div class="extra">
+								<a href="#" class="button type-round more-view"></a>
+							</div>
+						</div>
+						<div class="flex-table">
+							<div class="row table-header pc-only">
+								<div class="col size-sm"><p>No</p></div>
+								<div class="col size-full"><p>Part#</p></div>
+								<div class="col size-md"><p>Quantity</p></div>
+								<div class="col size-md"><p>MFR</p></div>
+								<div class="col size-md"><p>D/C</p></div>
+								<div class="col size-md"><p>Remark</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>5</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>4</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>3</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>2</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>1</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="flex-table-wrapper">
+						<div class="table-title">
+							<p class="title">OEM Excess</p>
+							<strong class="result-count">총 <span>00</span>건</strong>
+							<div class="extra">
+								<a href="#" class="button type-round more-view"></a>
+							</div>
+						</div>
+						<div class="flex-table">
+							<div class="row table-header pc-only">
+								<div class="col size-sm"><p>No</p></div>
+								<div class="col size-full"><p>Part#</p></div>
+								<div class="col size-md"><p>Quantity</p></div>
+								<div class="col size-md"><p>MFR</p></div>
+								<div class="col size-md"><p>D/C</p></div>
+								<div class="col size-md"><p>Remark</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>5</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>4</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>3</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>2</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+							<div class="row">
+								<div class="col size-sm pc-only"><p>1</p></div>
+								<div class="col size-full"><a href="#">ETL-F2F1300-C</a></div>
+								<div class="col size-md"><p class="mo-only">Quantity:</p><p>216</p></div>
+								<div class="col size-md"><p class="mo-only">MFR:</p><p>ENTEC</p></div>
+								<div class="col size-md"><p class="mo-only">D/C:</p><p>N/A</p></div>
+								<div class="col size-md"><p class="mo-only">Remark:</p><p>STOCK</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- E : 2024-04 추가 -->
 			<!-- ****************** 메인컨텐츠 1 (어바웃&공지사항) ********************** -->
 			<article id="mainAbout" class="scroll-animate">
 				<div class="area02">
@@ -398,45 +599,26 @@
 						</div>
 						<div class="notice-con fade-in-right fade-in-08">
 							<div class="notice-con-inner">
-								<h4 class="notice-tit">Notice</h4>
+								<h4 class="notice-tit">공지사항</h4>
 								<ul>
-																			<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1092">
+									<?while($notice_row = mysql_fetch_array($notice_rs)){
+										$new_img =	$page->bbsNewImg( $notice_row[reg_date], 24, 'new-notice');
+									?>
+										<li>
+											<a href="/company/notice.php?bgu=view&idx=<?=$notice_row[idx]?>">
 												<div class="notice-item">
 													<div class="item-inner"> 
 														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject new-notice">
-															SAMSUNG MEMORY Product (End - Of – Life) notice : EOL														</p>
-														<span class="notice-date">24.04.16</span>
+														<p class="notice-subject <?=$new_img?>">
+															<?=$notice_row[subject]?>
+														</p>
+														<span class="notice-date"><?=$tools->strDateCut($notice_row[reg_date],8);?></span>
 													</div>
 												</div>
 											</a>
 										</li>
-																			<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1088">
-												<div class="notice-item">
-													<div class="item-inner"> 
-														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject ">
-															Holiday Notice														</p>
-														<span class="notice-date">24.04.12</span>
-													</div>
-												</div>
-											</a>
-										</li>
-																			<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1082">
-												<div class="notice-item">
-													<div class="item-inner"> 
-														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject ">
-															Industrial memory cards, essentials for safety and reliability														</p>
-														<span class="notice-date">24.04.09</span>
-													</div>
-												</div>
-											</a>
-										</li>
-																	</ul>
+									<?}?>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -558,42 +740,165 @@
 								</colgroup>
 								<thead>
 									<tr>
-										<th>Currency name</th>
-										<th>Transaction standard rate of exchange</th>
-										<th>Net change</th>
-										<th>Fluctuation rate</th>
+										<th>환율정보</th>
+										<th>매매기준율</th>
+										<th>전일대비</th>
+										<th>등락률</th>
 									</tr>
 								</thead>
+<?
+
+function get($url){
+
+	$ch = curl_init($url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+	$result = curl_exec($ch);
+	if(curl_errno($ch)){
+		throw new Exception(curl_error($ch));
+	}
+
+	curl_close($ch);
+	return $result;
+
+}
+
+$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD';
+$result = get($url);
+$data = json_decode($result,true);
+$data = $data[0];
+
+$_provider = $data['provider'];
+$_buying = $data['cashBuyingPrice'];
+$_selling = $data['cashSellingPrice'];
+$_ttselling = $data['ttSellingPrice'];
+$_ttbuyling = $data['ttBuyingPrice'];
+$_usd = $data['basePrice'];
+$_openusd = $data['openingPrice'];
+$_chusd = $data['changePrice'];
+$_scp = $data['signedChangePrice'];
+$_scr = $data['signedChangeRate'];
+$_openusd_o = $_usd - $_openusd;
+$_openusd_op = ($_chusd/$_usd)*100;
+$_openusd = round($_openusd,2);
+
+$ud = sprintf('%0.2f',$_usd);
+$p1 = explode(".",$ud);
+$p2 = number_format($p1[0]);
+$op1 = $p2.".".$p1[1];
+
+?>
+
 								<tbody>
 									<tr>
-										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_usd_icon.jpg" alt=""></span>U.S.A (USD)</p></th>
-										<td>1,393.50</td>
-										<td><p class="net-change"><span class="up-icon"></span>5</p></td>
-										<td><p class="up-down"><span class="up-icon"></span> +0.36%</p></td>
+										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_usd_icon.jpg" alt=""></span>미국 (USD)</p></th>
+										<td><?=$op1?></td>
+										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
 									</tr>
 
+<?
+
+$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWJPY';
+$result = get($url);
+$data = json_decode($result,true);
+$data = $data[0];
+
+$_provider = $data['provider'];
+$_buying = $data['cashBuyingPrice'];
+$_selling = $data['cashSellingPrice'];
+$_ttselling = $data['ttSellingPrice'];
+$_ttbuyling = $data['ttBuyingPrice'];
+$_usd = $data['basePrice'];
+$_openusd = $data['openingPrice'];
+$_chusd = $data['changePrice'];
+$_scp = $data['signedChangePrice'];
+$_scr = $data['signedChangeRate'];
+$_openusd_o = $_usd - $_openusd;
+$_openusd_op = ($_chusd/$_usd)*100;
+$_openusd = round($_openusd,2);
+
+$ud = sprintf('%0.2f',$_usd);
+$p1 = explode(".",$ud);
+$p2 = number_format($p1[0]);
+$op1 = $p2.".".$p1[1];
+
+?>
 
 									<tr class="blue-row">
-										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_jpy_icon.jpg" alt=""></span>Japan (JPY)</p></th>
-										<td>903.08</td>
-										<td><p class="net-change"><span class="up-icon"></span>2.89</p></td>
-										<td><p class="up-down"><span class="up-icon"></span> +0.32%</p></td>
+										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_jpy_icon.jpg" alt=""></span>일본 (JPY)</p></th>
+										<td><?=$op1?></td>
+										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
 									</tr>
 
+<?
+
+$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWEUR';
+$result = get($url);
+$data = json_decode($result,true);
+$data = $data[0];
+
+$_provider = $data['provider'];
+$_buying = $data['cashBuyingPrice'];
+$_selling = $data['cashSellingPrice'];
+$_ttselling = $data['ttSellingPrice'];
+$_ttbuyling = $data['ttBuyingPrice'];
+$_usd = $data['basePrice'];
+$_openusd = $data['openingPrice'];
+$_chusd = $data['changePrice'];
+$_scp = $data['signedChangePrice'];
+$_scr = $data['signedChangeRate'];
+$_openusd_o = $_usd - $_openusd;
+$_openusd_op = ($_chusd/$_usd)*100;
+$_openusd = round($_openusd,2);
+
+$ud = sprintf('%0.2f',$_usd);
+$p1 = explode(".",$ud);
+$p2 = number_format($p1[0]);
+$op1 = $p2.".".$p1[1];
+
+?>
 
 									<tr>
-										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_eur_icon.jpg" alt=""></span>EU (EUR)</p></th>
-										<td>1,478.92</td>
-										<td><p class="net-change"><span class="up-icon"></span>3.92</p></td>
-										<td><p class="up-down"><span class="up-icon"></span> +0.27%</p></td>
+										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_eur_icon.jpg" alt=""></span>유럽연합 (EUR)</p></th>
+										<td><?=$op1?></td>
+										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
 									</tr>
 
+<?
+
+$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWCNY';
+$result = get($url);
+$data = json_decode($result,true);
+$data = $data[0];
+
+$_provider = $data['provider'];
+$_buying = $data['cashBuyingPrice'];
+$_selling = $data['cashSellingPrice'];
+$_ttselling = $data['ttSellingPrice'];
+$_ttbuyling = $data['ttBuyingPrice'];
+$_usd = $data['basePrice'];
+$_openusd = $data['openingPrice'];
+$_chusd = $data['changePrice'];
+$_scp = $data['signedChangePrice'];
+$_scr = $data['signedChangeRate'];
+$_openusd_o = $_usd - $_openusd;
+$_openusd_op = ($_chusd/$_usd)*100;
+$_openusd = round($_openusd,2);
+
+$ud = sprintf('%0.2f',$_usd);
+$p1 = explode(".",$ud);
+$p2 = number_format($p1[0]);
+$op1 = $p2.".".$p1[1];
+
+?>
 
 									<tr class="blue-row">
-										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_cny_icon.jpg" alt=""></span>China (CNY)</p></th>
-										<td>191.61</td>
-										<td><p class="net-change"><span class="up-icon"></span>0.35</p></td>
-										<td><p class="up-down"><span class="up-icon"></span> +0.18%</p></td>
+										<th><p><span class="plag-icon"><img src="/images/main/main_exchange_cny_icon.jpg" alt=""></span>중국 (CNY)</p></th>
+										<td><?=$op1?></td>
+										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
 									</tr>
 								</tbody>
 							</table>
@@ -764,14 +1069,14 @@
             <div class="footer-right-con">
               <div class="foot-sns-menu">
                 <ul class="clearfix">
-                  <li><a href="https://blog.naver.com/mworksk" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
-                  <li><a href="https://microworkskorea.tistory.com/" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
-                  <li><a href="https://mworksk.blogspot.com/" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
-                  <li><a href="https://twitter.com/microworkskorea" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
-                  <li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
-                  <li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
-                  <li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img src="<?=$site_host?>/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
+									<li><a href="https://blog.naver.com/mworksk" target="_blank"><img src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
+                  <li><a href="https://microworkskorea.tistory.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
+                  <li><a href="https://mworksk.blogspot.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
+                  <li><a href="https://twitter.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
                 </ul>
               </div>
             </div>
