@@ -528,16 +528,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
 				</div>
         <div class="modal-inner-content">
-          <article class="inquiry-form">
+					<article class="contact-form">
 						<!-- 문의 폼 시작 -->
 						<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
 							<section class="bbs-write-con">
 								<article class="bbs-inquiry-agree-con">
-									<h3 class="agree-tit">Privacy Policy</h3>
+									<p class="agree-tit">개인정보처리방침</p>
 									<div class="inquiry-agreement-con editor">
 									<?
 									$page_row = $db->object("cs_page", "where page_index='privacy'");
-
 									$content = $page_row->content;
 									$content = str_replace("<p>","",$content);
 									$content = str_replace("</p>","<br/>",$content);
@@ -556,22 +555,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									<table class="bbs-write-tbl">
 										<caption>문의폼입니다.</caption>
 										<colgroup>
-											<col style="width:20%;">
+											<col style="width:25%;">
 											<col>
 										</colgroup>
 										<tbody>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span> 이름</th>
-												<td><input type="text" class="input" name="name" required="required"></td>
+												<td><input type="text" class="write-input" name="name" required="required"></td>
 											</tr>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span>이메일</th>
 												<td>
-													<fieldset class="fieldset-email">
-														<input type="text" class="input" name="email1" required="required">
-														<em>@</em>
-														<input type="text" class="input" name="email2" readonly>
-														<select name="email3" class="select" onChange="res();" required="required">
+													<fieldset class="email-fieldset">
+														<input type="text" class="write-input" name="email1" required="required">
+														<span class="hypen">@</span>
+														<input type="text" class="write-input" name="email2" readonly required="required">
+														<select name="email3" class="write-select" onChange="res();" required="required">
 															<option value="b">메일계정선택</option>
 															<option value="a">직접입력</option>
 															<option value="naver.com">naver.com</option>
@@ -592,32 +591,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											</tr>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span> 연락처</th>
-												<td>
-													<fieldset>
-														<input type="text" class="input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
-														<em>-</em>
-														<input type="text" class="input" name="phone2" title="휴대폰번호 가운데" maxlength="8" required="required">
-														<em>-</em>
-														<input type="text" class="input" name="phone3" title="휴대폰번호 마지막" maxlength="8" required="required">
-													</fieldset>
+												<td class="tel-row">
+													<input type="text" class="write-input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
+													<span class="hypen">-</span>
+													<input type="text" class="write-input" name="phone2" title="휴대폰번호 가운데" maxlength="8" required="required">
+													<span class="hypen">-</span>
+													<input type="text" class="write-input"  name="phone3" title="휴대폰번호 마지막" maxlength="8" required="required">
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">회사명</th>
-												<td><input type="text" class="input fluid" name="company"></td>
+												<th scope="row"> 회사명</th>
+												<td><input type="text" class="write-input width-full" name="company"></td>
 											</tr>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span> 파트명</th>
-												<td><input type="text" class="input fluid" name="part" required="required"></td>
+												<td><input type="text" class="write-input width-full" name="part" required="required"></td>
 											</tr>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span> 의뢰수량</th>
-												<td><input type="text" class="input" name="request-quantity" required="required"></td>
+												<td><input type="text" class="write-input" name="request-quantity" required="required"></td>
 											</tr>
 											<tr>
 												<th scope="row"><span class="essential-icon">*</span> 문의내용</th>
 												<td>
-													<select name="inquiry-content" class="select" required="required">
+													<select name="inquiry-content" class="write-select" required="required">
 														<option value="">위변조(정품비교분석)</option>
 													</select>
 												</td>
@@ -639,21 +636,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 											</tr>
 											<tr>
 												<th scope="row">상세내용</th>
-												<td>
-													<div class="textarea">
-														<textarea name="content" placeholder="문의내용 (500자 이내로 입력해주세요.)" minlength="500"></textarea>
-													</div>
+												<td class="size-full">
+													<textarea name="content" class="write-textarea"></textarea>
 												</td>
 											</tr>
 										</tbody>
 									</table>
+									<dl class="contact">
+										<dt>* CONTACT:</dt>
+										<dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
+										<dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
+									</dl>
 								</article>
-								<dl class="contact">
-									<dt>* CONTACT:</dt>
-									<dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
-									<dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
-								</dl>
-								<!--  
+								<!--
 									기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
 								-->
 								<div class="button-layout bottom-buttons">
