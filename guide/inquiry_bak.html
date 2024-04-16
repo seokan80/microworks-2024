@@ -230,34 +230,143 @@
 <body>
   <link rel="stylesheet" href="/guide/css/guide.css">
   <section class="guide">
-    <ul class="guide-list">
-      <li><a href="button.html">Button</a></li>
-      <li><a href="sublayout.html">서브 레이아웃</a></li>
-      <li><a href="ui_hp_pc_01.html">Sitemap</a></li>
-      <li><a href="search-results.html">search-results</a></li>
-      <li><a href="inquiry.html">inquiry</a></li>
-    </ul>
-  </section>
-  <section class="guide">
-    <h2>페이지</h2>
-    <small>pc 완료 시 <strong class="text-secondary">secondary컬러</strong>로 표시</small>
-    <small>전체 완료 시 <strong class="text-primary">primary컬러</strong>로 표시</small>
-    <ul class="guide-list">
-      <li class="finish"><a href="/kr/ui_hp_pc_02.html"><span>UI_HP_PC_02</span>메인</a></li>
-      <li class="finish"><a href="/kr/ui_hp_pc_03.html"><span>UI_HP_PC_03</span>메인 > 전체 검색_검색결과 없음</a></li>
-      <li class="finish"><a href="/kr/ui_hp_pc_04.html"><span>UI_HP_PC_04</span>메인 > 전체 검색_검색결과 있음</a></li>
-      <li class="finish"><a href="/kr/do/ui_hp_pc_05.html"><span>UI_HP_PC_05</span>WHAT WE DO > Quality Control(page)</a></li>
-      <li><a href="/kr/do/ui_hp_pc_06.html"><span>UI_HP_PC_06</span>WHAT WE DO > Quality Control(반도체 분석 문의 팝업)</a></li>
-      <li><a href="/kr/product/ui_hp_pc_07.html"><span>UI_HP_PC_07</span>PRODUCT SEARCH > Memory Biz > 메모리 가격 동향</a></li>
-      <li class="pc-finish"><a href="/kr/product/ui_hp_pc_08.html"><span>UI_HP_PC_08</span>PRODUCT SEARCH > Memory Biz > 메모리 대치품 검색</a></li>
-      <li class="pc-finish"><a href="/kr/product/ui_hp_pc_09.html"><span>UI_HP_PC_09</span>PRODUCT SEARCH > Memory Biz > 메모리 스탁재고 문의</a></li>
-      <li class="finish"><a href="/kr/search/ui_hp_pc_10.html"><span>UI_HP_PC_10</span>대치품 검색</a></li>
-      <li class="finish"><a href="/kr/search/ui_hp_pc_11.html"><span>UI_HP_PC_11</span>대치품 검색 - 검색결과 없음</a></li>
-      <li class="finish"><a href="/kr/search/ui_hp_pc_12.html"><span>UI_HP_PC_12</span>대치품 검색 - 검색결과 불명확한 경우</a></li>
-      <li class="finish"><a href="/kr/search/ui_hp_pc_13.html"><span>UI_HP_PC_13</span>대치품 검색 - 검색결과 있음</a></li>
-      <li class="finish"><a href="/kr/search/ui_hp_pc_14.html"><span>UI_HP_PC_14</span>대치품 검색 - 검색결과 있음 - 비교하기</a></li>
-      <li><a href="/kr/search/ui_hp_pc_15.html"><span>UI_HP_PC_15</span>대치품 검색 - 검색결과 있음 - 구매문의 팝업</a></li>
-    </ul>
+    <h2 class="guide-title">inquiry</h2>
+    <article class="inquiry-form">
+      <!-- 문의 폼 시작 -->
+      <form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
+        <section class="bbs-write-con">
+          <article class="bbs-inquiry-agree-con">
+            <h3 class="agree-tit">Privacy Policy</h3>
+            <div class="inquiry-agreement-con editor">
+            <?
+            $page_row = $db->object("cs_page", "where page_index='privacy'");
+
+            $content = $page_row->content;
+            $content = str_replace("<p>","",$content);
+            $content = str_replace("</p>","<br/>",$content);
+            $content = $tools->strHtml($content);
+            echo $content;
+            ?>
+            </div>
+            <p class="agree-txt">
+              <input type="checkbox" id="agree1">
+                <label for="agree1">개인정보처리방침에 동의합니다.
+              </label>
+            </p>
+          </article>
+          <article class="bbs-write-tbl-box">
+            <p class="inquiry-essential-txt"><span class="essential-icon">*</span> 표시는 필수 입력 항목입니다.</p>
+            <table class="bbs-write-tbl">
+              <caption>문의폼입니다.</caption>
+              <colgroup>
+                <col style="width:20%;">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 이름</th>
+                  <td><input type="text" class="input" name="name" required="required"></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span>이메일</th>
+                  <td>
+                    <fieldset class="fieldset-email">
+                      <input type="text" class="input" name="email1" required="required">
+                      <em>@</em>
+                      <input type="text" class="input" name="email2" readonly>
+                      <select name="email3" class="select" onChange="res();" required="required">
+                        <option value="b">메일계정선택</option>
+                        <option value="a">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="outlook.com">outlook.com</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="lycos.co.kr">lycos.co.kr</option>
+                        <option value="yahoo.co.kr">yahoo.co.kr</option>
+                        <option value="korea.com">korea.com</option>
+                        <option value="paran.com">paran.com</option>
+                      </select>
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 연락처</th>
+                  <td>
+                    <fieldset>
+                      <input type="text" class="input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
+                      <em>-</em>
+                      <input type="text" class="input" name="phone2" title="휴대폰번호 가운데" maxlength="8" required="required">
+                      <em>-</em>
+                      <input type="text" class="input" name="phone3" title="휴대폰번호 마지막" maxlength="8" required="required">
+                    </fieldset>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">회사명</th>
+                  <td><input type="text" class="input fluid" name="company"></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 파트명</th>
+                  <td><input type="text" class="input fluid" name="part" required="required"></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 의뢰수량</th>
+                  <td><input type="text" class="input" name="request-quantity" required="required"></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 문의내용</th>
+                  <td>
+                    <select name="inquiry-content" class="select" required="required">
+                      <option value="">위변조(정품비교분석)</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="essential-icon">*</span> 정품보유여부</th>
+                  <td>
+                    <div class="ox-group">
+                      <span class="ox">
+                        <input type="radio" name="genuine" id="genuine-y">
+                        <label for="genuine-y">예</label>
+                      </span>
+                      <span class="ox">
+                        <input type="radio" name="genuine" id="genuine-n">
+                        <label for="genuine-n">아니오</label>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">상세내용</th>
+                  <td>
+                    <div class="textarea">
+                      <textarea name="content" placeholder="문의내용 (500자 이내로 입력해주세요.)" minlength="500"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <dl class="contact">
+            <dt>* CONTACT:</dt>
+            <dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
+            <dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
+          </dl>
+          <!--  
+            기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
+          -->
+          <div class="button-layout bottom-buttons">
+            <button type="button" class="button" onClick="sendit();"><strong>작성완료</strong></button>
+            <a href="/" class="button type-secondary"><strong>취소</strong></a>
+          </div>
+        </section>
+      </form>
+      <!-- // 문의 폼 끝 -->
+    </article>
   </section>
 </body>
 </html>
