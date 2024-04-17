@@ -326,7 +326,7 @@
 				<?}?>
 				
 				<!-- 상단정보 (센터정렬) -->
-				<aside id="contentInfoCon" class="content-info-style01">
+				<aside id="contentInfoCon" class="content-info-style01 pc-only">
 					<h3 class="content-tit">
 						<?if($sub_info){?><?=$sub_info?>
 						<?}else{?><?=$page_info?>
@@ -334,7 +334,7 @@
 						대치품 검색
 					</h3>
 				</aside>
-				<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>">
+				<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only">
 					<div class="replacement-search-box">
 						<div class="replacement-search-select" >
 							<a href="javascript:;" class="cur-select">
@@ -356,10 +356,15 @@
 				<!-- content -->
 				<section id="content" class="">
 					<!-- 컨텐츠 내용 -->
-					<article class="sub-page product-page">
-            <div class="area02">
-
-            </div>
+					<article class="sub-page product-page mo-only">
+						<div class="area02">
+							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
+              <div class="quick-search">
+                <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
+                <p>빠른 검색이 필요하시면 문의주세요!</p>
+                <a href="#" class="button"><strong>문의하기</strong></a>
+              </div>
+						</div>
 					</article>
 					<!-- //컨텐츠 내용 -->
 				</section>

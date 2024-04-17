@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
-	
+
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/editor.css">
@@ -19,28 +19,28 @@
 	<link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
 	<link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
 	<link rel="stylesheet" href="/kr/css/language.css">
-	
-	
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="/js/vendor/jquery.easing.1.3.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/layer_popup.js"></script>
-	
+
 	<!-- 아이콘폰트 -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-	
+
 	<!-- 슬라이드 플러그인 -->
 	<script src="/js/plugin/slick.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
 	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 	<script type="text/javascript" src="/js/nav.js"></script>
 	<script type="text/javascript" src="/js/sub.js"></script>
-	
+
 	<!-- 2024-04 추가 -->
 	<link rel="stylesheet" href="/css/new_2024/contents.css">
-	
+
 </head>
 
 <body>
@@ -63,21 +63,24 @@
 				<!-- ****************** 헤더상단 ********************** -->
 				<div id="headerInner" class="clearfix">
 					<h1 class="logo"><a href="<?=$site_url?>/" title="메인으로">
-						<span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
-						<span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
-					</a></h1>
+							<span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
+							<span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
+						</a></h1>
 					<div class="header-util-box">
 						<!-- 외국어선택 -->
 						<div class="header-lang">
-							<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
+							<a href="javascript:;" class="lang-open-btn"><i
+									class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
 							<ul>
 								<li class="item01"><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 								<li class="item02"><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 							</ul>
 						</div>
 						<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
-						<button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
-							<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
+						<button onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;"
+							class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+							<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+							<!-- <span class="line line4"></span> -->
 						</button>
 						<!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
 						<!-- <button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
@@ -141,7 +144,8 @@
 									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
+									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -150,11 +154,16 @@
 							<div class="gnb-2dep">
 								<ul>
 									<!-- <li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li> -->
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/transcend.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/goodram.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/nexcopy.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/advantech.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/etc.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
 								</ul>
 							</div>
 						</li>
@@ -247,17 +256,23 @@
 									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
+									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+									</li>
 								</ul>
 							</li>
 							<li>
 								<a href="javascript:;">INDUSTRIAL</a>
 								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/transcend.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/goodram.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/nexcopy.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/advantech.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/etc.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
 								</ul>
 							</li>
 							<li>
@@ -326,13 +341,13 @@
 				<?}?>
 
 				<!-- S: 2024-04 추가 -->
-				<div class="tabs">
+				<div class="tabs area">
 					<a href="#" class="tab active">메모리 가격 동향</a>
 					<a href="#" class="tab">메모리 대치품 검색</a>
 					<a href="#" class="tab">메모리 스탁재고 문의</a>
 				</div>
 				<!-- E: 2024-04 추가 -->
-				
+
 				<!-- 상단정보 (센터정렬) -->
 				<aside id="contentInfoCon" class="content-info-style01">
 					<h3 class="content-tit">
@@ -352,75 +367,200 @@
 								<p class="product-tit">지난 메모리 가격동향 데이터를 확인하실 수 있습니다.</p>
 								<p class="product-tit-txt">메모리 가격동향 데이터는 정확한 액수의 표시가 아니며, 지난 데이터에 대한 평균적인 통계자료로 참고만 하시기 바랍니다.</p>
 							</article>
-
-							<!-- 
-						카테고리가 있는 게시판 리스트 START 
-						기본 게시판과 조금 다릅니다. 확인부탁드려요~!
-					-->
-							<article class="bbs-list-con product-board-con">
-								<div class="bbs-list-tbl">
-									<p class="bbs-list-head">
-										<span style="width:15.5%;">No</span>
-										<span style="width:60%;" class="board-head-title">Subject</span>
-										<span style="width:20.5%;">Number of products</span>
-										<span style="width:15.5%;">Date</span>
-										<span style="width:23.5%;"></span>
-									</p>
-									<?while($row = mysql_fetch_array($rs)){
-								$list_index++;
-								if($list_index%2==1){
-									$even_num = "even_num";
-								}else{
-									$even_num = "";
-								}
-								$new_img = $page->bbsNewImg( $row[reg_date], 24, '<span class="new-icon">N</span>');
-								$prd_cnt =$db->cnt("cs_excel","where ex_code='$row[ex_code]' and kind='3' ");
-
-							?>
-									<div class="bbs-list-row bbs-relative-row <?=$even_num?>">
-										<div class="column bbs-no-data"><?=$listNo?></div>
-										<div class="column bbs-title">
-											<a
-												href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
-												<div class="bbs-subject-con">
-													<strong class="bbs-subject-txt"><?=$row[subject]?></strong>
-													<div class="bbs-subject-icons">
-														<?=$new_img?>
+							
+							<div class="table-wrapper type-trend">
+								<article class="bbs-list-con">
+									<div class="bbs-list-tbl">
+										<div class="bbs-list-head">
+											<span style="width:6.155%;">No</span>
+											<span style="width:auto;" class="board-head-title">Subject</span>
+											<span style="width:16.924%;">Number of products</span>
+											<span style="width:12.308%;">Date</span>
+											<span style="width:12.308%;"></span>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">5</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+														<div class="bbs-subject-icons">
+															<span class="new-icon">N</span>
+														</div>
 													</div>
-												</div>
-											</a>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
 										</div>
-										<div class="column bbs-inline" data-label="제품수"><?=$prd_cnt?></div>
-										<div class="column bbs-inline" data-label="등록일"><?=$tools->strDateCut($row[reg_date],3);?></div>
-										<div class="column bbs-absolute" data-label="no">
-											<a
-												href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
-												<p class="reply-state"><span>Detail View</span></p>
-											</a>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">4</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">3</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">2</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">1</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">5</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+														<div class="bbs-subject-icons">
+															<span class="new-icon">N</span>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">4</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">3</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">2</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
+										</div>
+										<div class="bbs-list-row">
+											<div class="column bbs-no-data">1</div>
+											<div class="column bbs-title">
+												<a href="#">
+													<div class="bbs-subject-con">
+														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
+															March, 2024</p>
+													</div>
+												</a>
+											</div>
+											<div class="column bbs-inline" data-label="제품수">206</div>
+											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
+											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
+														View</strong></a></div>
 										</div>
 									</div>
-									<?$listNo--;
-							}?>
-								</div>
-								<?if(empty($totalList)){?>
-								<p class="bbs-no-list">There is no written comment.</p>
-								<?}?>
-								<div class="paging">
-									<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
-								</div>
-								<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>">
-									<div class="board-search-box">
-										<select name="search_item">
-											<option value="subject" <?if($search_item=="subject" ){echo "selected" ;}?>>Subject</option>
-										</select>
-										<input placeholder="" type="search" name="search_order" class="search-word"
-											value="<?=$search_order?>">
-										<button type="submit" class="bbs-search-btn" title="검색"><i
-												class="material-icons">&#xE8B6;</i></button>
+									<div class="paging pc-only">
+										<a href="javascript:;" class="cur">1</a>
+										<a href="#">2</a> 
+										<a href="#">3</a> 
+										<a href="#">4</a> 
+										<a href="#">5</a> 
+										<a href="#">6</a> 
+										<a href="#">7</a> 
+										<a href="#">8</a>
+										&nbsp;
+										<a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons"></i></a>
 									</div>
-								</form>
-							</article>
-							<!-- // 카테고리가 있는 게시판 리스트 END -->
+									<form name="bbs_search_form" method="get" action="/en/product/trend_list.php" class="pc-only">
+										<div class="board-search-box">
+											<select name="search_item">
+												<option value="subject">Subject</option>
+											</select>
+											<input placeholder="" type="search" name="search_order" class="search-word" value="">
+											<button type="submit" class="bbs-search-btn" title="검색"><i class="material-icons"></i></button>
+										</div>
+									</form>
+									<div class="mo-only more-list">
+										<button type="button"><i class="material-icons">&#xe5c5;</i>더보기 (1/20)</button>
+									</div>
+								</article>
+							</div>
 						</div>
 					</article>
 					<!-- //컨텐츠 내용 -->
@@ -455,14 +595,22 @@
 							<div class="footer-right-con">
 								<div class="foot-sns-menu">
 									<ul class="clearfix">
-										<li><a href="https://blog.naver.com/mworksk" target="_blank"><img src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
-										<li><a href="https://microworkskorea.tistory.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
-										<li><a href="https://mworksk.blogspot.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
-										<li><a href="https://twitter.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
-										<li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
-										<li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
-										<li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
-										<li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
+										<li><a href="https://blog.naver.com/mworksk" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
+										<li><a href="https://microworkskorea.tistory.com/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
+										<li><a href="https://mworksk.blogspot.com/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
+										<li><a href="https://twitter.com/microworkskorea" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
+										<li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
+										<li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
+										<li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
+										<li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
 									</ul>
 								</div>
 							</div>
