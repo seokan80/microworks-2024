@@ -8,7 +8,7 @@
 	<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
 	<div class="footer-inner-box">
 		<div class="footer-inner editor">
-			<iframe src="https://www.youtube.com/embed/N6UNzit9LeA?amp;vq=hd1080&rel=0&showinfo=0&autoplay=1" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/ixXYTa7ApO4?amp;vq=hd1080&rel=0&showinfo=0&autoplay=1" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </section>

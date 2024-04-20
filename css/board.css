@@ -165,7 +165,7 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .essential-icon{color:#cf0505;}
 
 /* 게시판 :: 쓰기, 문의폼 :: 작성영역 */
-/* .bbs-write-tbl{width:100%; border-top:1px solid #333;}
+.bbs-write-tbl{width:100%; border-top:1px solid #333;}
 .bbs-write-tbl th,.bbs-write-tbl td{padding:8px 10px; letter-spacing:-0.5px; border-bottom:1px solid #ddd;}
 .bbs-write-tbl th{color:#464646; font-size:14px; font-weight:500; text-align:left;}
 .bbs-write-tbl .write-input,
@@ -180,16 +180,16 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .bbs-write-tbl td input[type="file"]{height:auto; padding:10px 0;text-indent:0; border:0;}
 .bbs-write-tbl td .write-sub-txt{color:#888; margin-left:10px; font-size:11px; color:#aaa; font-family:"돋움",dotum,sans-serif; letter-spacing:-0.5px;}
 .bbs-write-tbl td .write-sub-txt2{display:block; color:#888; margin-top:5px; font-size:11px; color:#aaa; font-family:"돋움",dotum,sans-serif; letter-spacing:-0.5px;}
-.bbs-write-tbl .hypen{display:inline-block; vertical-align:middle;width:12px; margin:0 5px; text-align:center;} */
+.bbs-write-tbl .hypen{display:inline-block; vertical-align:middle;width:12px; margin:0 5px; text-align:center;}
 
 /* 게시판 :: 쓰기, 문의폼 :: 기타 */
-/* .bbs-write-tbl .input-check{padding:10px 0;}
+.bbs-write-tbl .input-check{padding:10px 0;}
 .bbs-write-tbl .input-check span{margin-right:30px;}
 .bbs-write-tbl .input-check span label{vertical-align:middle; font-size:14px;}
 .address-fieldset .write-input{margin-top:6px;}
 .address-fieldset .write-input:first-child{margin-top:0;}
 .bbs-write-tbl .address-btn{display:inline-block; min-width:114px; padding:0 10px; height:38px; border:1px solid #464646; vertical-align:middle; text-align:center; color:#464646; font-size:14px; font-weight:400; margin-left:10px;}
-.bbs-write-tbl .address-btn:hover{background-color:#464646; color:#fff;} */
+.bbs-write-tbl .address-btn:hover{background-color:#464646; color:#fff;}
 
 
 /* ****************** 게시판 :: 비밀번호입력 ********************** */
