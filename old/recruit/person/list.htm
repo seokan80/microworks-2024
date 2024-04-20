@@ -1,0 +1,26 @@
+<? /*START_BEGIN*/
+ include $_SERVER['DOCUMENT_ROOT']."/_asapro2/begin.htm";
+/*END_BEGIN*/?>
+
+<!-- 메인이미지 및 타이틀 -->
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td style="background:url(http://sampleb1659.asapro.com/image/title_bg.gif) no-repeat;padding-right:30px;" height="40"></td></tr>
+<tr>
+	<td align="right" width="706" height="14" style="font-size:11px;color:#a3a3a3;line-height:14px;padding-right:30px;"><img src="http://sampleb1659.asapro.com/company/image/tit_icon.gif" border="0" align="absmiddle"> HOME > 채용정보 > <font style="font-size:11px;color:#638b57;line-height:14px"><b>직원사진</b></font></td></tr>
+<tr>
+	<td><IMG src="http://www.sampleb1659.asapro.com/image/recruit/image/title_txt04.gif" border=0></td>
+</tr>
+</table>
+<!-- /메인이미지 및 타이틀 -->
+
+<? /*START_PHOTOLIST*/
+$code="AS1291269560";
+ include $ASAPRO2_CFG['MODULE']['PHOTO']."/cwi/list.htm";
+/*END_PHOTOLIST*/?>
+<? /*START_STAT*/
+$an="AS1291102883"; include $ASAPRO2_CFG['MODULE']['PATH']."/weblog/cwi/php/count.php";
+/*END_STAT*/?>
+<? /*START_END*/
+ include $_SERVER['DOCUMENT_ROOT']."/_asapro2/end.htm";
+/*END_END*/?>

@@ -1,0 +1,25 @@
+
+@charset "utf-8";
+/* All device */
+
+
+body { font-family: '맑은고딕','나눔고딕','nanum gothic',sans-serif; width: 100%; }
+
+header { width:100%; height: 80px; text-align: center; background-color: #3a3a3a; }
+#logo { width: 100px; margin: 15px 0 0 100px; float:left; }
+
+.menu { width:900px; height: 20px; margin: 0 auto; color: #fff; }
+.menu li { float: left; margin-left: 10%; padding-top: 33px; font-size: 0.9em; font-weight: 500; }
+.menu li a { width: 100%; }
+.menu li:hover { color: #f2c028; }
+
+.title { width: 100%; height: auto; }
+.title img { width: 100%; margin: 0 auto; }
+
+section { width: 900px; text-align: center; margin:0 auto; }
+.top_btn { position: fixed; right: -10px; bottom: 50px; transition: 0.5s ease; }
+.top_btn:hover { right:10px }
+
+/* footer */
+.footer { width:100%; height: 30px; font-size:0.7em; color:#fff; background-color: #3a3a3a; }
+.footer p { float: right; margin-right: 50px; margin-top: 10px; }

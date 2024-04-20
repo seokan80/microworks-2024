@@ -1,0 +1,192 @@
+<script language="JavaScript">
+	function zb_login_check_submit() {
+		if(!document.zb_login.user_id.value) {
+			alert("ID를 입력하여 주십시요");
+			document.zb_login.user_id.focus();
+			return false;
+		}
+		if(!document.zb_login.password.value) {
+			alert("Password를 입력하여 주십시요");
+			document.zb_login.password.focus();
+			return false;
+		}
+		return true;
+	}
+	function check_autologin() { 
+		if (document.zb_login.auto_login.checked==true) {
+			var check;
+			check = confirm("자동 로그인 기능을 사용하시겠습니까?\n\n자동 로그인 사용시 다음 접속부터는 로그인을 하실필요가 없습니다.\n\n단, 게임방, 학교등 공공장소에서 이용시 개인정보가 유출될수 있으니 주의해주세요");
+			if(check==false) {document.zb_login.auto_login.checked=false;}
+		}
+	}
+	function join()
+	{
+		window.open('/bbs/member_join.php?group_no=1','zbMemberModify','width=560,height=590,toolbars=no,resizable=yes,scrollbars=yes');
+	}
+<?
+    
+if (!$member[no]) {
+
+?>    
+function modify( ) {
+			location.href("/member/loginBig.htm");
+			}
+
+		<?
+       }
+       else {
+?>
+  function modify( ) {
+window.open('/bbs/member_modify.php?group_no=1','zbMemberModify','width=560,height=590,toolbars=no,resizable=yes,scrollbars=yes');
+}
+<?
+}
+?>
+
+	function passwd()
+	{
+		window.open('/bbs/lostid.php','lostid','top=0,left=0,width=410,height=200,toolbar=no,resize=no');
+
+	}
+function logOut()
+{
+		location.href = '/bbs/logout.php?s_url=/index.htm';
+}
+
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+	function modify()
+		{
+			<? if(!$member[no]){?>
+			window.location.href='/member/loginBig.htm';
+			<?} else {?>
+			window.open('/bbs/member_modify.php?group_no=1','zbMemberModify','width=560,height=590,toolbars=no,resizable=yes,scrollbars=yes');
+			<?}?>		
+		}	
+	function apply()
+		{
+			window.open('/bbs/member_join.php?group_no=1','zbMemberJoin','width=560,height=590,toolbars=no,resizable=yes,scrollbars=yes');
+			
+		}
+	function passwd()
+		{
+			window.open('/bbs/lostid.php','lostid','top=0,left=0,width=410,height=200,toolbar=no,resize=no');
+		}
+
+//-->
+</SCRIPT>
+<?
+//로그인 후
+if($member[no]){
+?>
+						<table border="0" cellpadding="0" cellspacing="0" width="215">
+						<tr>
+							<td width="18" rowspan="3" valign="bottom"><img src="image/login_edge01.gif"></td>
+							<td width="180" valign="bottom"><img src="image/login_tit.gif"></td>
+							<td width="17" rowspan="3" valign="bottom"><img src="image/login_edge02.gif"></td></tr>
+						<tr>
+							<td height="97" bgcolor="#fff9ed" align="right" valign="bottom">
+								<!-- 내용 -->
+								<table border="0" cellpadding="0" cellspacing="0" width="173">
+								<tr>
+									<td>
+										<!-- 타이틀 -->
+										<table border="0" cellpadding="0" cellspacing="0" width="163">
+										<tr>
+											<td height="19" valign="top"><img src="image/login_txt.gif"></td>
+											<td align="right"><input type="checkbox"><img src="image/save_txt.gif"></td></tr>
+										<tr>
+											<td height="1" bgcolor="#e6ded9" colspan="2"></td></tr>
+										<tr>
+											<td height="1" bgcolor="#e6ded9" colspan="2"></td></tr>
+										</table>
+										<!-- /타이틀 -->
+									</td></tr>
+								<tr>
+									<td>
+										<!-- 입력폼 및 버튼 -->
+										<table border="0" cellpadding="0" cellspacing="0" width="173">
+										<tr>
+											<td width="120" height="22" valign="bottom" align="center"><?= $member[name]; ?>님</td>
+											<td width="7"></td>
+											<td width="46" rowspan="3"><a href="javascript:logOut()"><img src="/image/logout.gif" border="0" alt="로그아웃"></a></td></tr>
+										<tr>
+											<td width="120" align="center">로그인 중입니다.</td>
+											<td width="7"></td></tr>
+										<tr>
+											<td height="24" align="center">
+												<!-- 버튼 -->
+												<table border="0" cellpadding="0" cellspacing="0">
+												<tr>
+													<td><a href="javascript:modify()"><img src="image/modify_01.gif" border="0" alt="정보수정"></a></td>
+													<td><a href="javascript:passwd()"><img src="image/find_btn.gif" border="0" alt="아이디,패스워드 찾기"></a></td></tr>
+												</table>
+												<!-- /버튼 -->
+											</td></tr>
+										</table>
+										<!-- /입력폼 및 버튼 -->
+									</td></tr>
+								</table>
+								<!-- /내용 -->
+							</td></tr>
+						<tr>
+							<td><img src="image/login_bottom.gif"></td></tr>
+						</table>
+<?}else{?>
+<form name="zb_login" method="post" action="/bbs/login_check.php" onsubmit="return zb_login_check_submit();">
+<input type="hidden" name="s_url" value="/index.htm">
+						<table border="0" cellpadding="0" cellspacing="0" width="215">
+						<tr>
+							<td width="18" rowspan="3" valign="bottom"><img src="image/login_edge01.gif"></td>
+							<td width="180" valign="bottom"><img src="image/login_tit.gif"></td>
+							<td width="17" rowspan="3" valign="bottom"><img src="image/login_edge02.gif"></td></tr>
+						<tr>
+							<td height="97" bgcolor="#fff9ed" align="right" valign="bottom">
+								<!-- 내용 -->
+								<table border="0" cellpadding="0" cellspacing="0" width="173">
+								<tr>
+									<td>
+										<!-- 타이틀 -->
+										<table border="0" cellpadding="0" cellspacing="0" width="163">
+										<tr>
+											<td height="19" valign="top"><img src="image/login_txt.gif"></td>
+											<td align="right"><input type="checkbox"><img src="image/save_txt.gif"></td></tr>
+										<tr>
+											<td height="1" bgcolor="#e6ded9" colspan="2"></td></tr>
+										<tr>
+											<td height="1" bgcolor="#e6ded9" colspan="2"></td></tr>
+										</table>
+										<!-- /타이틀 -->
+									</td></tr>
+								<tr>
+									<td>
+										<!-- 입력폼 및 버튼 -->
+										<table border="0" cellpadding="0" cellspacing="0" width="173">
+										<tr>
+											<td width="120" height="22" valign="bottom"><input type="text" name="user_id" style="width:120px; height:18px; font-size:11px; color:#b4b4b4; font-weight:bold; border:0px; border-bottom:solid 1px c1b2a6; background:#fff9ed"></td>
+											<td width="7"></td>
+											<td width="46" rowspan="3"><a href="#"><input type="image" src="image/login_btn.gif" border="0" alt="로그인"></a></td></tr>
+										<tr>
+											<td width="120"><input type="password" name="password" style="width:120px; height:18px; font-size:11px; color:#b4b4b4; font-weight:bold; border:0px; border-bottom:solid 1px c1b2a6; background:#fff9ed"></td>
+											<td width="7"></td></tr>
+										<tr>
+											<td height="24" align="center">
+												<!-- 버튼 -->
+												<table border="0" cellpadding="0" cellspacing="0">
+												<tr>
+													<td><a href="javascript:apply()"><img src="image/join_btn.gif" border="0" alt="회원가입"></a></td>
+													<td><a href="javascript:passwd()"><img src="image/find_btn.gif" border="0" alt="아이디,패스워드 찾기"></a></td></tr>
+												</table>
+												<!-- /버튼 -->
+											</td></tr>
+										</table>
+										<!-- /입력폼 및 버튼 -->
+									</td></tr>
+								</table>
+								<!-- /내용 -->
+							</td></tr>
+						<tr>
+							<td><img src="image/login_bottom.gif"></td></tr>
+						</table>
+	</form>
+<? } ?>

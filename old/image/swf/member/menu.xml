@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='EUC-KR'?>
+<xmlMenu>
+<!-- menui  title=메뉴타이틀 link=링크경로 target=브라우저타겟설정 -->
+<menu1  title="회원가입" link="/member/apply.htm"  target='_self' />
+<menu2  title="정보수정" link="/member/modify.htm"  target='_self' />
+<menu3  title="회원인증, 탈퇴" link="/member/passwd.htm"  target='_self' />
+<menu4  title="아이디찾기" link="/member/idfind.htm"  target='_self' />
+<menu5  title="사진변경" link="/member/myphoto.htm"  target='_self' />
+<menu6  title="회원탈퇴" link="/member/out.htm"  target='_self' />
+ </xmlMenu>

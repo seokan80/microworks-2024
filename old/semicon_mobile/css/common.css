@@ -1,0 +1,26 @@
+@charset "utf-8";
+	
+/* reset */
+* { margin:0; padding:0; outline:0; }
+ul,ol { list-style:none; }
+img { border:0; }
+a { color:inherit; text-decoration:none; }
+table { border-collapse:collapse; }
+input,button,select { vertical-align:middle; border: 0; outline: 0; }
+hr { display:none; }
+em,i,address { font-style:normal; }
+strong,b,h1,h2,h3,h4,h5,h6,th { font-weight:normal; }
+del, ins { text-decoration:none; }
+.fly { position:abolute; left:-100000em; top:-100000em; }
+input:-ms-input-placeholder { color:#a8a8a8; }
+input::-webkit-input-placeholder { color:#a8a8a8; }
+input::-moz-placeholder { color:#a8a8a8; }
+.clearfix {zoom:1;}
+.clearfix:after {content:''; display:block;clear:both; }
+
+
+body { width: 100%; max-width: 320px; background-color: #ebf9fe; }
+header a { display: inline-block; }
+.search { float: left; width:100%; margin-top: 30%; }
+.search input { border: 3px solid #2379c3; width: 170px; height: 30px; font-size: 2.0em; padding-left: 15px; float: left; margin-left: 50px; border-radius: 5px; }
+.search img { margin-left: 5px; height: 35px; border-radius:4px; }

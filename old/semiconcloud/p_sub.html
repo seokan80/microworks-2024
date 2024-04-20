@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/common_02.css">
+<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script src="css/common.js"></script>
+<script src="css/popup.js"></script>
+
+
+<title> Semicon Cloud </title>
+<style>
+.content {  height: 1200px; margin:50px auto ;  max-width: 1400px; text-align: center; }
+	/* 레이어 팝업 */
+.layer {display: none; position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 100; overflow: auto; background-color: rgba(0,0,0,.5); z-index: 50;}
+.layer_area {position:absolute; left:50%; top:50%; background:#fff; padding:20px; border:4px solid #ddd; }
+
+</style>
+</head>
+<body>
+	<!--S:header시작-->
+	<? include "header.php"; ?>
+	<!--E:header끝-->
+
+<div class="content">
+					<span><a class="layer_open"><img src="img/page/result.jpg"></a></span>
+					<div class="layer">
+							<div class="layer_area"><div class="layer_close">
+								<img src="img/page/rfq.jpg">
+							</div></div>
+					</div>
+</div>
+
+</body>
+</html>

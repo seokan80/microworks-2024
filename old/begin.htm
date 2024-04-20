@@ -1,0 +1,52 @@
+﻿<?$_zb_url = "http://microworks.co.kr/bbs";
+$_zb_path = "/iweb/mworksk/wwwhome/bbs/";
+include $_zb_path."outlogin.php";?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index">
+<meta name="author" content="마이크로웍스코리아">
+<meta name="description" content="마이크로웍스코리아">
+<meta name="keywords" content="마이크로웍스코리아,반도체,IC,마이크로웍스,Microworks,메모리,부품,대리점,해외소싱전문,쏘싱,소씽,Global Sourcing Distributor,CORERISE,SSD,COMAY,PILKOR,CORERIVER,웅진자외선, 제미츠,Zemiitz,한국단자공업,Stock Sourcing,Memory,DRAM,NAND,NOR,SD Card,FCI,Module,ERAI,Gennum,Nuvoton,Eorex,메모리전문,ASD,Actel,AMD,Allegro,Altera,AD,Benchmarq,Avantek,Brooktree,BurrBrown,CMD,Catalyst,Excel Micro,Crystal Semi,GTE/Mitel,Cirrus Logic,Elantec,Maxim/Dallas,Atmel,Exar,Fairchild,Fujitsu,GEC Plessy,,GeneralInstrument,Goldstar,Harris Semi,Hewlett Packard,Hitachi,Hyundai,IBM,Intel,IR,IPS,Isocom,ITT Canon,Lattice,Level One,LinearTech,Lucent Tech,Macronix,Micrel,Micro Linear,Micro Power,Micron,Microchip,Mitel,Mitsubishi,Mosel/Vitelic,Monolithic Momories Inc.,MPS,Motorola/Freescale,National(NSC),NEC,NMB,Oki,Panasonic(NAIS),Paradigm,Performance,Pericom,Philips(NXP),PMC/Sierra,Silicon Image,SiliconLabs,Rockwell,Rohm,Samsung,Hynix,Sanyo,Seiko,SGS Thomson(STM),Sharp,Siemens,Silicon Systems/TDK,Siliconix,SST,Sony,Supertex,Texas Instruments(TI),Toshiba,Winbond,Xicor,Xilink,Zetex,Zilog">
+<title>마이크로웍스코리아 (주) - Microworks Korea Co., Ltd. 메모리,IC 대리점, CORERISE, MPS, EON, WINBOND, GENNUM, CORERIVER</title>
+<link rel="stylesheet" href="/link.css">
+<script src="/swf/js/flashObj.js" type="text/javascript"></script>
+</head>
+<body background="image/all_bg01.gif" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="background-repeat:repeat-x" width="100%">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+<!-- 상단부분 -->
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td>
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<!-- top_menu -->
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="/image/top_menu01.gif" border="0" alt=""></td>
+					<td valign="top">
+					<table border="0" cellpadding="0" cellspacing="0" style="padding-top:12px;">
+						<tr>
+							<td width="60"><a href="/english/index.php"><img src="/image/top_menu03.gif" border="0"></a></td>
+							<td><a href="/chinese/index.htm"><img src="/image/top_menu02.gif" border="0"></a></td></tr>
+					</table>
+					</td>
+					<td><a href="/index.htm"><img src="/image/top_menu04.gif" border="0"></a></td>
+					<td><a href="/sitemap/sitemap.htm"><img src="/image/top_menu05.gif" border="0"></a></td>
+					<td><a href="mailto:info@microworks.co.kr"><img src="/image/top_menu06.gif" border="0"></a></td></tr>
+				</table>
+				<!-- /top_menu -->
+<? 
+	if($_GET["id"]=="memory"){
+	include $_SERVER['DOCUMENT_ROOT']."/memory/left.htm"; //루트의 left 부르기
+	} 
+	else if($_GET["id"]=="qna"){
+	include $_SERVER['DOCUMENT_ROOT']."/qna/left.htm"; //루트의 left 부르기
+	}
+	else if($_GET["id"]=="notice"){
+	include $_SERVER['DOCUMENT_ROOT']."/company/left.htm"; //루트의 left 부르기
+	}else { include "./left.htm";}
+?>

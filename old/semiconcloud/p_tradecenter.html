@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script src="css/common.js"></script>
+<script src="css/popup.js"></script>
+<link rel="stylesheet" type="text/css" href="css/common_02.css">
+
+
+<title> Semicon Cloud </title>
+<style>
+body { font-family:'Malgun Gothic''맑은고딕''돋움''Dotum'; }
+section { width:1000px; margin:50px auto 10px; z-index:9999; }
+table { width: 1000px; color: #2f2f2f; text-align:center; }
+th { font-size: 13px; font-weight: 800; color: #353535; padding:13px; }
+td { font-size: 12px; padding:10px; border-left: 1px solid #dadada; }
+table a { color: #199be6; font-weight: 800}
+.calign { text-align:center; }
+.selbox { padding-bottom: 20px;font-size: 12px; }
+select { width:130px; border:1px solid #d3d3d3; padding:6px; }
+.p1 { padding:15px 0 25px 30px; font-size:14px; font-weight: 700; color: #666666; }
+table tr td:nth-child(4) { text-align: left; }
+table tr td:nth-child(5) { text-align: left; }
+table tr td:nth-child(8) { text-align: right; }
+table tr td:nth-child(9) { text-align: right; }
+.minibox { width: 1046px; text-align: center; margin-top: 70px; margin-bottom:20px; }
+.minibox a { border:1px solid #f0f0f0; padding:5px 9px; font-size: 0.7em; margin:3px; }
+
+	/* 레이어 팝업 */
+.layer {display:none;position:fixed;width:100%;height:100%;left:0;top:0;z-index:100; overflow:auto;background-color:rgba(0,0,0,.5);z-index:50;}
+.layer_area {position:absolute; left:50%; top:50%; background:#fff; padding:20px; border:4px solid #ddd; }
+.layer_close p { color: #fff; background-color: #252525; font-size: 1em; font-weight: 600; height:50px; }
+
+
+</style>
+
+</head>
+<body>
+	<!--S:header시작-->
+	<? include "header.php"; ?>
+	<!--E:header끝-->
+
+<section>
+<!-- 구매오더 -->
+<img src="img/title_01.png" alt="title">
+<p class="p1"> 받은 견적 및 의뢰한 건에 대한 회신입니다. </p>
+<div class="selbox">
+	
+	<select name="ALL">
+	<option>주문확인중</option>
+	<option>결제요청</option>
+	<option>결제확인중</option>
+	<option>배송</option>
+	<option>발주거부</option>
+	</select>
+
+	<select name="ALL">
+	<option>부품번호</option>
+	<option>업체명</option>
+	<option>주문번호</option>
+	<option>수량</option>
+	<option>제조일자</option>
+	</select>
+	<input type="text" style="width:200px; border:1px solid #d3d3d3; padding:7px;">
+	<button style="margin-left:2px;"><img src="img/tc_btn01.png" alt="조회"></button>
+	<input type="checkbox" style="margin:0 5px 0 10px;"><span>삭제된 오더포함</span>
+	<button style="margin-left:240px;"><img src="img/tc_btn02.png" alt="삭제"></button>
+</div>
+<table>
+	<tr style="background-color:#ebebeb;">
+		<th><img src="img/checkbox.png" alt="box"></th>
+		<th>번 호</th>
+		<th>일 자</th>
+		<th>P/N</th>
+		<th>업체명</th>
+		<th>제조회사</th>
+		<th>제조일자</th>
+		<th>수 량</th>
+		<th>단 가</th>
+		<th>진행상황</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="">369686</a></td>
+		<td>2018-05-17</td>
+		<td><a href="">LM48100QMHX/NO...</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)유니더스테크..</a></td>
+		<td></td>
+		<td></td>
+		<td>12</td>
+		<td>1,500 WON</td>
+		<td>주문확인중</td>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="">348091</a></td>
+		<td>2018-03-07</td>
+		<td><a href="#">SN74LVC07APWR...</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)수일렉트로닉스</a></td>
+		<td></td>
+		<td>17+</td>
+		<td>35</td>
+		<td>250 WON</td>
+		<td><span><a class="layer_open">결제요청</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop01_02.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="">344209</a></td>
+		<td>2018-02-14</td>
+		<td><a href="#">MP1593DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>		
+		<td></td>
+		<td></td>
+		<td>5,000</td>
+		<td>240 WON</td>
+		<td>결제확인중</td>
+	</tr>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="">348001</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">MP1593DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td></td>
+		<td>17+</td>
+		<td>5,000</td>
+		<td>240 WON</td>
+		<td><span><a class="layer_open">배송</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop01_04.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">MP1590DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)SMT</a></td>
+		<td></td>
+		<td>15+</td>
+		<td>3,000</td>
+		<td>250 WON</td>
+		<td><span><a class="layer_open">발주거부</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop01_05.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+</table>
+
+<div class="minibox">
+	<a style="background-color: #ccebfd; font-weight:bold" >1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>...</a>
+</div>
+
+
+
+
+<!-- 판매오더 -->
+<img src="img/title_02.png" alt="title" style="margin-top: 100px">
+<p class="p1"> 보낸 견적 및 의뢰한 건에 대한 회신입니다. </p>
+<div class="selbox">
+	
+	<select name="ALL">
+	<option>주문확인</option>
+	<option>결제확인</option>
+	<option>배송</option>
+	<option>주문취소</option>
+	</select>
+
+	<select name="ALL">
+	<option>부품번호</option>
+	<option>업체명</option>
+	<option>주문번호</option>
+	<option>수량</option>
+	<option>제조일자</option>
+	</select>
+	<input type="text" style="width:200px; border:1px solid #d3d3d3; padding:7px;">
+	<button style="margin-left:2px;"><img src="img/tc_btn03.png" alt="조회"></button>
+	<input type="checkbox" style="margin:0 5px 0 10px;"><span>삭제된 오더포함</span>
+	<button style="margin-left:240px;"><img src="img/tc_btn04.png" alt="삭제"></button>
+</div>
+<table>
+	<tr style="background-color:#ebebeb;">
+		<th><img src="img/checkbox.png" alt="box"></th>
+		<th>번 호</th>
+		<th>일 자</th>
+		<th>P/N</th>
+		<th>업체명</th>
+		<th>제조회사</th>
+		<th>제조일자</th>
+		<th>수 량</th>
+		<th>단 가</th>
+		<th>진행상황</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="#">369686</a></td>
+		<td>2018-05-17</td>
+		<td><a href="#">LM48100QMHX/NO...</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)유니더스테크..</a></td>
+		<td>INFINE</td>
+		<td>13+</td>
+		<td>12</td>
+		<td>1,500 WON</td>
+		<td><span><a class="layer_open">주문확인</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_01.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="#">348091</a></td>
+		<td>2018-03-07</td>
+		<td><a href="#">SN74LVC07APWR...</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)수일렉트로닉스</a></td>
+		<td>SEIKO</td>
+		<td>08+</td>
+		<td>5,000</td>
+		<td>240 WON</td>
+		<td><span><a class="layer_open">주문확인</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_01.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="#">344209</a></td>
+		<td>2018-02-14</td>
+		<td><a href="#">MP1593DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td>WINBOND</td>
+		<td>17+</td>
+		<td>15,000</td>
+		<td>3000 WON</td>
+		<td><span><a class="layer_open">결제확인</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_02.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="#">348001</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">SN74LVCO7AP</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td>SAMSUNG</td>
+		<td>18+</td>
+		<td>5,000</td>
+		<td>230 WON</td>
+		<td><span><a class="layer_open">결제확인</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_02.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="#">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">MP1590DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td>INFINE</td>
+		<td>15+</td>
+		<td>3,000</td>
+		<td>250 WON</td>
+		<td><span><a class="layer_open">결제확인</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_02.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="#">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">SN74LVCO7AP</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td>SAMSUNG</td>
+		<td>15+</td>
+		<td>3,000</td>
+		<td>250 WON</td>
+		<td><span><a class="layer_open">배송</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_03.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="#">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">MP1590DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)우진반도체</a></td>
+		<td>SAMSUNG</td>
+		<td>15+</td>
+		<td>1,000</td>
+		<td>250 WON</td>
+		<td><span><a class="layer_open">배송</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_03.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr style="background-color:#ebebeb;">
+		<td><input type="checkbox"></td>
+		<td><a href="#">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">SN74LVCO7AP</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)SMT</a></td>
+		<td>SAMSUNG</td>
+		<td>15+</td>
+		<td>2,000</td>
+		<td>260 WON</td>
+		<td><span><a class="layer_open">주문취소</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_04.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><a href="">348096</a></td>
+		<td>2018-06-01</td>
+		<td><a href="#">MP1590DN-LF-Z</a></td>
+		<td><a href="p_vender.html" target="_blank">(주)SMT</a></td>
+		<td>SAMSUNG</td>
+		<td>15+</td>
+		<td>2,400</td>
+		<td>3,000 WON</td>
+		<td><span><a class="layer_open">주문취소</a></span>
+				<div class="layer">
+						<div class="layer_area"><div class="layer_close">
+							<img src="img/trade/pop02_04.jpg">
+						</div></div>
+				</div>
+		</td>
+	</tr>
+
+</table>
+
+<div class="minibox">
+	<a style="background-color: #fdeacc; font-weight:bold">1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>...</a>
+</div>
+
+<div class="content">
+</div>
+
+</section>
+</body>
+</html>

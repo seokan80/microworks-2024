@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='EUC-KR'?>
+<xmlMenu>
+<!-- menui  title=메뉴타이틀 link=링크경로 target=브라우저타겟설정 mCount=서브메뉴 열의 개수설정 -->
+<menu1  title="회사소개" link="/company/index.htm"  target='_self' mCount='0'>
+<sub1  title="CEO인사말" link="/company/sub1.htm"  target='_self' />
+<sub2  title="회사연혁" link="/company/"  target='_self' />
+<sub3  title="경영이념" link="/company/"  target='_self' />
+<sub4  title="조직도" link="/company/"  target='_self' />
+<sub5  title="협력업체" link="/company/"  target='_self' />
+</menu1>
+<menu2  title="제품안내" link="/product/index.htm"  target='_self' mCount='0'>
+<sub1  title="제품소개" link="/photo/list.htm?code=AS1272252212"  target='_self' />
+<sub2  title="제품비교" link="/product/"  target='_self' />
+<sub3  title="e-입체 체험관" link="/product/"  target='_self' />
+<sub4  title="개발2부" link="/product/bbb.htm"  target='_self' />
+<sub5  title="제품검색" link="/product/search1.htm"  target='_self' />
+</menu2>
+<menu3  title="고객센터" link="/customer/index.htm"  target='_self' mCount='0'>
+<sub1  title="고객의 소리" link="/customer/"  target='_self' />
+<sub2  title="서비스 센터" link="/customer/"  target='_self' />
+<sub3  title="자주하는 질문" link="/customer/"  target='_self' />
+<sub4  title="e-카탈로그 보기" link="/customer/"  target='_self' />
+<sub5  title="홍보자료" link="/customer/"  target='_self' />
+<sub6  title="광고모음" link="/customer/ad.htm"  target='_self' />
+</menu3>
+<menu4  title="채용정보" link="/recruit/index.htm"  target='_self' mCount='0'>
+<sub1  title="채용안내" link="/recruit/"  target='_self' />
+<sub2  title="채용공고" link="/recruit/"  target='_self' />
+<sub3  title="인사/복지제도" link="/recruit/"  target='_self' />
+<sub4  title="바람직한 인재상" link="/recruit/"  target='_self' />
+<sub5  title="직무소개" link="/recruit/"  target='_self' />
+<sub6  title="지원서" link="/recruit/"  target='_self' />
+<sub7  title="채용소식" link=""  target='_self' />
+</menu4>
+<menu5  title="커뮤니티" link=""  target='_self' mCount='0'>
+<sub1  title="공지사항" link=""  target='_self' />
+<sub2  title="뉴스" link=""  target='_self' />
+<sub3  title="호스팅문의" link=""  target='_self' />
+</menu5>
+<option
+xMenu='10'
+yMenu='10'
+mMenuSpace="77"
+sMenuSpace='5'
+mHeight='29'
+sHeight='29'
+targetX='-60'
+mMenuXscale='95'
+mMenuYscale='105'
+sMenuXscale='80'
+sMenuYscale='110'
+mBorderView='1'
+sBorderView='0'
+menuOutColor='FFFFFF'
+menuOverColor='B2E7F9'
+subOutColor='707070'
+subOverColor='4892BC'
+subMargin='25'
+ />
+ </xmlMenu>

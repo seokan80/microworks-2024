@@ -1,0 +1,47 @@
+
+
+#headerWrap {position:relative; width:100%; height:129px;  z-index:999;  margin:0;}
+#headerWrap .top_wrap {position:relative; width:100%; height:33px; background-color:#efefef;}
+#headerWrap .topall { position: relative; width:1100px; margin: 0 auto; }
+#headerWrap .topall ul.top {position:absolute; top: 0px; right:0;  }
+#headerWrap .topall ul.top li { float: left; }
+#headerWrap .topall ul.top li.lm { padding:0; margin:0; }
+#headerWrap .topall ul.top li a { font-size: 12px; color: #888888; }
+
+
+
+#logomenu{width:100%; padding:0; margin:0;}
+#logo { position:absolute; top:33px; left:50%; margin:0 0 0 -550px;  z-index:999;}
+
+#headerWrap .gnbWrap { position:relative; width:100%; top:52px; overflow:hidden; background: url("../img/header_bg.png") 50% 44px repeat-x; }
+#headerWrap .gnbWrap .subLine { position:absolute; left:0; top:0px; z-index:2; display:block; width:100%; height:10px; }
+#headerWrap .gnb { width:820px; height:30px; float:left; padding-left:34%; overflow:hidden;}
+#headerWrap .gnb strong { display:block; }
+#headerWrap .gnb strong a { display:block; height:30px;padding:0px 0 0 0; text-align:center; overflow:hidden; color:#5e5e5e; font-family:나눔 고딕, Nanum Barun Gothic, 맑은 고딕, Malgun Gothic, 돋움, Dotum, 굴림, Gulim, Arial, Helvetica; font-size:17px; line-height:16px; letter-spacing:0em; }/*메뉴색상변경*/
+#headerWrap .gnb .active strong a, #headerWrap .gnb strong a:hover, #headerWrap .gnb strong a:focus { height:30px; color:#00abe6; background:none; text-decoration:none;}/*메뉴색상변경*/
+
+#headerWrap .gnb li.g1 strong a { width:164px;}
+#headerWrap .gnb li.g2 strong a { width:164px;}
+#headerWrap .gnb li.g3 strong a { width:164px;}
+#headerWrap .gnb li.g4 strong a { width:164px;}
+#headerWrap .gnb li.g5 strong a { width:164px;}
+
+#headerWrap .gnb li.g1.active strong a { }
+#headerWrap .gnb li.g2.active strong a { }
+#headerWrap .gnb li.g3.active strong a { }
+#headerWrap .gnb li.g4.active strong a { }
+#headerWrap .gnb li.g5.active strong a { }
+
+#headerWrap .gnb > li { display:none; float:left; padding:0 0px 40px 0px;}
+#headerWrap .gnb > li:first-child { margin-left:0; padding-left:0;  }
+#headerWrap .gnb li.g1, #headerWrap .gnb li.g2, #headerWrap .gnb li.g3, #headerWrap .gnb li.g4, #headerWrap .gnb li.g5{ display:block; }
+#headerWrap .gnb .dep2 { display:block; margin-right:0px; width:164px; padding-top:25px; }
+#headerWrap .gnb .dep2 a > {}
+#headerWrap .gnb .dep2 > li {margin:0 0 0 0px; padding:0; display:block; text-align:center;}
+#headerWrap .gnb .dep2 > li a {font-family:나눔 고딕, Nanum Barun Gothic, 맑은 고딕, Malgun Gothic, 돋움, Dotum, 굴림, Gulim, Arial, Helvetica; font-size:12px; color:#f0fbff; line-height:30px; font-weight:bold; letter-spacing:0em;}/*서브메뉴 색상변경*/
+#headerWrap .gnb .dep2 a.active { color:#f0fbff !important; background:none; text-decoration:underline;}/*서브메뉴 색상변경*/
+#headerWrap .gnb .dep2 a:hover { color:#f0fbff !important; text-decoration:underline; }/*서브메뉴 색상변경*/
+
+
+
+

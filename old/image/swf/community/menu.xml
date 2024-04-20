@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='EUC-KR'?>
+<xmlMenu>
+<!-- menui  title=메뉴타이틀 link=링크경로 target=브라우저타겟설정 -->
+<menu1  title="공지사항" link="/board/list.htm?bn=notice"  target='_self' />
+<menu2  title="목록" link="/community/"  target='_self' />
+<menu3  title="뉴스" link="/board/list.htm?bn=news"  target='_self' />
+<menu4  title="호스팅문의" link="/board/list.htm?bn=hostingqna"  target='_self' />
+<menu5  title="호스팅" link="/community/"  target='_self' />
+ </xmlMenu>
