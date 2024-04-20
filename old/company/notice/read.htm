@@ -1,0 +1,27 @@
+<? /*START_BEGIN*/
+ include $_SERVER['DOCUMENT_ROOT']."/_asapro2/begin.htm";
+/*END_BEGIN*/?>
+<TD bgcolor="#ffffff" valign="top">
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD><!-- CEO 인사말 -->
+<TABLE height=40 cellSpacing=0 cellPadding=0 width=697 border=0>
+<TBODY>
+<TR>
+<TD style="FONT-SIZE: 11px; COLOR: #494949; PADDING-TOP: 18px; FONT-FAMILY: 돋움" vAlign=top align=right><IMG style="VERTICAL-ALIGN: middle" alt="" src="/company/image/c_img01.gif" border=0><A style="FONT-SIZE: 11px; COLOR: #494949; FONT-FAMILY: 돋움" href="/index.htm">HOME</A> &gt; 회사소개 &gt; <SPAN style="FONT-WEIGHT: bold; COLOR: #426cbd">공지사항&nbsp;&nbsp;</SPAN></TD></TR></TBODY></TABLE><!-- /CEO 인사말 --></TD></TR>
+<TR>
+<TD><IMG src="/company/image/title05.gif"></TD></TR>
+<TR>
+<TD height=40></TD></TR>
+<TR>
+<TD width=690>
+<? /*START_BOARDREAD*/
+$bn="notice"; include $ASAPRO2_CFG['MODULE']['BOARD']."/read.htm";
+/*END_BOARDREAD*/?> <BR>
+</TD></TR>
+<TR>
+<TD height=50></TD></TR></TBODY></TABLE></TD><TD valign="top"><IMG src="/company/image/c_img02.gif"></TD> </TR></TABLE></TD></TR></TABLE><!-- /중간부분 -->
+<? /*START_END*/
+ include $_SERVER['DOCUMENT_ROOT']."/_asapro2/end.htm";
+/*END_END*/?> 

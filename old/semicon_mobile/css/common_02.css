@@ -1,0 +1,29 @@
+@charset "utf-8";
+	
+/* reset */
+* { margin:0; padding:0; outline:0; }
+ul,ol { list-style:none; }
+img { border:0; }
+a { color:inherit; text-decoration:none; }
+table { border-collapse:collapse; }
+input,button,select { vertical-align:middle; border: 0; outline: 0; }
+hr { display:none; }
+em,i,address { font-style:normal; }
+strong,b,h1,h2,h3,h4,h5,h6,th { font-weight:normal; }
+del, ins { text-decoration:none; }
+.fly { position:abolute; left:-100000em; top:-100000em; }
+input:-ms-input-placeholder { color:#a8a8a8; }
+input::-webkit-input-placeholder { color:#a8a8a8; }
+input::-moz-placeholder { color:#a8a8a8; }
+.clearfix {zoom:1;}
+.clearfix:after {content:''; display:block;clear:both; }
+
+body { width: 100%; max-width: 320px; font-family: '맑은고딕','MalgunGothic','돋움','Dotum'}
+
+.menu li { width: 100%; height: 36px; background: #1e7bae; color: #fff; padding:10px 0 0 60px; }
+.menu li ul { display: none; }
+.menu li > a { font-size: 1.6em; font-weight: bold; }
+#nav ul li:hover > ul { display: block; width: 100%; }		/* hover 메뉴는 하위트리에서만 열림 */
+#nav ul li ul li:hover { color: #fff; }
+.nav { background-color: #b7ddee; }
+

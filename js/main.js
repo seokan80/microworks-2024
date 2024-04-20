@@ -62,107 +62,108 @@ jQuery(function($){
 	}
 	
 	// 메인 비주얼 zoom-out 효과
-	// $(".main-visual-items").on('init', function() {
-	// 	$(".visual-item").eq(0).addClass("active");
-	// });
-	// $(".main-visual-items").on('afterChange', function(event, slick, currentSlide){
-	// 	$(".visual-item").removeClass("active");
-	// 	$(this).find(".visual-item").eq(currentSlide).addClass("active");
-	// });
+	/*$(".main-visual-con").on('init', function(event, slick) {
+		$(".main-visual-item").eq(0).addClass("active-item");
+	});
+	$(".main-visual-con").on('afterChange', function(event, slick, currentSlide){
+        $(".main-visual-item").removeClass("active-item");
+		$(this).find(".main-visual-item").eq(currentSlide).addClass("active-item")
+    });*/
 
 	// 메인 비주얼 슬라이드
-	
-	// $('.main-visual-items').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	dots:false,
-	// 	autoplay: false,
-	// 	speed:300,
-	// 	infinite:true,
-	// 	easing: 'easeInOutQuint',
-	// 	pauseOnHover:false,
-	// 	zIndex:1,
-	// 	// draggable: false,
-	// 	// asNavFor: '.side-menu'
-	// });
-	
-	/* 기존 main-side */
-	// $('.side-menu').slick({
-		// verticalSwiping: true,
-		// slidesToShow: 4,
-		// slidesToScroll: 1,
-		// arrows: false,
-		// //fade: true,
-		// dots:false,
-		// autoplay: false,
-		// speed:800,
-		// infinite:true,
-		// autoplaySpeed: 4000,
-		// easing: 'easeInOutQuint',
-		// pauseOnHover:false,
-		// zIndex:90,
-		// //asNavFor: '.main-visual-con',
-		// responsive: [
-		// 	{
-		// 	  breakpoint: 1220,
-		// 	  settings: {
-		// 			vertical : false,
-		// 			verticalSwiping: false,
-		// 	  }
-		// 	},
-		// 	{
-		// 	  breakpoint: 640,
-		// 	  settings: {
-		// 			vertical : false,
-		// 			verticalSwiping: false,
-		// 			slidesToShow: 1,
-		// 			centerMode: true,
-		// 			centerPadding: '27.25%',
-		// 			//autoplay: true,
-		// 			autoplaySpeed: 2000,
-		// 	  }
-		// 	}
-		// ]
-	// });
-	// //메인 비주얼 사이드 컨텐츠
-	// var win_width = $(window).outerWidth();
-	// if ( $(window).width() > 800 )  {
-	// 	visualSide();
-	// }
-	// $(window).resize(function  () {
-	// 	var win_width = $(window).outerWidth();
-	// 	if (win_width > 800) {
-	// 		visualSide();
-	// 	}else {
-	// 		$(".main-visual-side .visual-side-item").off();
-	// 	}
-	// });
-
-	$(window).load(function  () {
-		// $(".main-visual .visual-item").eq(0).addClass("active-bg");
-		$(".main-visual-items .visual-item").eq(0).addClass("active");
+	/*
+	$('.main-visual-con').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		dots:false,
+		autoplay: false,
+		speed:300,
+		infinite:true,
+		easing: 'easeInOutQuint',
+		pauseOnHover:false,
+		zIndex:1,
+		//asNavFor: '.main-visual-side'
+	});
+	*/
+	$('.main-visual-side').slick({
+		vertical : true,
+		verticalSwiping: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		//fade: true,
+		dots:false,
+		autoplay: false,
+		speed:800,
+		infinite:true,
+		autoplaySpeed: 4000,
+		easing: 'easeInOutQuint',
+		pauseOnHover:false,
+		zIndex:90,
+		//asNavFor: '.main-visual-con',
+		responsive: [
+			{
+			  breakpoint: 1220,
+			  settings: {
+					vertical : false,
+					verticalSwiping: false,
+			  }
+			},
+			{
+			  breakpoint: 640,
+			  settings: {
+					vertical : false,
+					verticalSwiping: false,
+					slidesToShow: 1,
+					centerMode: true,
+					centerPadding: '27.25%',
+					//autoplay: true,
+					autoplaySpeed: 2000,
+			  }
+			}
+			]
+	});
+	//메인 비주얼 사이드 컨텐츠
+	var win_width = $(window).outerWidth();
+	if ( $(window).width() > 800 )  {
 		visualSide();
+	}
+	$(window).resize(function  () {
+		var win_width = $(window).outerWidth();
+		if (win_width > 800) {
+			visualSide();
+		}else {
+			$(".main-visual-side .visual-side-item").off();
+		}
 	});
 
+	$(window).load(function  () {
+		$(".main-visual-con .main-visual-item").eq(0).addClass("active-bg");
+		$(".main-visual-con .main-visual-item").eq(0).addClass("active-item");
+	
+	});
 	function visualSide () {
-		var $sideNav = $(".side-menu-item");
-		var $visualBg = $(".main-visual-items .visual-item");
-		$sideNav.hover(function() {
-			// $visualBg.removeClass("active-item");
-			// $visualBg.eq($(this).index()+1).addClass("active-item");
-			// bg변경
-			// $visualBg.removeClass("active-bg");
-			// $visualBg.eq($(this).index()+1).addClass("active-bg");
-			$visualBg.eq($(this).index()+1).addClass("active").siblings().removeClass("active");
+		var $sideNav = $(".main-visual-side .visual-side-item");
+		var $visualBg = $(".main-visual-con .main-visual-item");
+		$sideNav.each(function  () {
+			$(this).hover(function  () {
+				$visualBg.removeClass("active-item");
+				$visualBg.eq($(this).index()+1).addClass("active-item");
+				// bg변경
+				$visualBg.removeClass("active-bg");
+				$visualBg.eq($(this).index()+1).addClass("active-bg");
+			})
 		})
 
 		$sideNav.on("mouseleave",visual_return);
 
 		function visual_return () {
-			$visualBg.removeClass("active");
-			$visualBg.eq(0).addClass("active");
+			$visualBg.removeClass("active-bg");
+			$visualBg.eq(0).addClass("active-bg");
+			$visualBg.removeClass("active-item");
+			$visualBg.eq(0).addClass("active-item");
 		}
 	}
 
@@ -301,8 +302,8 @@ jQuery(function($){
 		$(".scroll-animate-first").addClass("scroll-active-animate");
 	},50);
 
-	let autoPlayerHandler = false;
 	$(window).scroll( function (){
+
 		$(".scroll-animate").each(function  () {
 			//var point_of_object = $(this).offset().top + $(this).outerHeight();
 			//var point_of_window = $(window).scrollTop() + ( $(window).height() / 2 );
@@ -316,62 +317,11 @@ jQuery(function($){
 			
 			if( point_of_window > point_of_object - ($(window).height()) ){
 				$(this).addClass("scroll-active-animate");
-
-				if($(this).attr("id") === "mainAbout" && autoPlayerHandler !== true){
-					autoPlayerHandler = true;
-					mainAutoPlaySlider();
-				}
 			}
-		});
-	});
 
-	const mainAutoPlaySlider = function(){
-		$(".autoplay-slider").each(function(idx, el) {
-			let autoSpeed = 3000;
-			let itemLength = $(el).find(".item").length;
-			let str = "";
-			for(var i = 0; i < itemLength; i++){
-				str += `<a href="javascript:void(0);" class="progress-bar"><span class="bar"></span></a>`;
-			}
-			$(el).find(".controller .progress-wrapper").html(str);
-
-			$(el).find(".slider").slick({
-				fade: true,
-				arrows: true,
-				infinite: true,
-				autoplay: true,
-				autoplaySpeed: autoSpeed,
-				pauseOnHover: false,
-				prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="material-icons">&#xE314;</i></button>',
-				nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="material-icons">&#xE315;</i></button>',
-			});
-
-			// $(el).find(".slider").on("beforeChange", changeBefore = function(){
-			// 	let targetIdx = $(this).find(".item.slick-active").attr("data-slick-index");
-			// 	let $target = $(el).find(".progress-bar").eq(targetIdx).find(".bar");
-			// 	if(Number($(this).find(".item.slick-active").attr("data-slick-index")) + 1 >= itemLength){
-			// 		console.log("!!!");
-			// 		$(el).find(".progress-bar").find(".bar").css({width: "0%"});
-			// 	}
-			// 	$target.animate({width: "100%"}, autoSpeed, "linear");
-
-			// 	return targetIdx;
-			// });
-
-			$(el).find(".player").on("click", function(){
-				if($(this).hasClass("play")){
-					$(this).removeClass("play").addClass("pause");
-					$(el).find(".slider").slick("slickPause");
-				} else if($(this).hasClass("pause")){
-					$(this).removeClass("pause").addClass("play");
-					$(el).find(".slider").slick("slickPlay");
-				}
-			})
+		
 		});
 	
+	});
 
-		
-
-		
-	}
 });

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='EUC-KR'?>
+<xmlMenu>
+<!-- menui  title=메뉴타이틀 link=링크경로 target=브라우저타겟설정 -->
+<menu1  title="연길아사달" link="/park/"  target='_self' />
+<menu2  title="장해양" link="/park/zhang.htm"  target='_self' />
+ </xmlMenu>

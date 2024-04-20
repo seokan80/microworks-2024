@@ -1,0 +1,6 @@
+<div class="SNBWrap">
+	<h3>前龙包府</h3>
+    <ul class="menu">
+        <? if ($sg == "1"){?><li class="snb_on"><a href="/kor/company/quality.php">前龙包府</a></li><? } else { ?><li class="snb_off" onmouseover="this.className='snb_on'" onmouseout="this.className='snb_off'"><a href="/kor/company/quality.php">前龙包府</a></li><? } ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    <!-- <? include "banner.php"; ?> -->
+</div>

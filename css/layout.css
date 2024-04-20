@@ -13,7 +13,7 @@
 body, table, th, td, button, select, input, textarea {
 	font-family:'Poppins', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
 	font-size:13px;
-	color:#626262;
+	color:#666;
 	-webkit-text-size-adjust:none;
 }
 
@@ -508,4 +508,3 @@ a:hover .over-img img{
 .sitemap-wrapper > ul > li .sitemap-2dep {padding:0 5% 20px;}
 .sitemap-wrapper > ul > li .sitemap-2dep a{display:block; padding:10px 0; color:#666; font-size:14px; font-weight:400; line-height:1.2em;}
 .sitemap-wrapper > ul > li .sitemap-2dep a:hover{color:#000; }
-

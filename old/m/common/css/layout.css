@@ -1,0 +1,105 @@
+/**************************
+파일 만든이 : 이은숙
+파일 제작일 : 2015.06.02
+파일 최종수정일 : 2018.05.11
+***************************/
+@charset "euc-kr";
+@font-face{
+	font-family:"Nanum Gothic";
+	src:url('/fonts/NanumGothic.eot');
+	src:url('/fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+	url('/fonts/NanumGothic.woff') format('woff'),
+	url('/fonts/NanumGothic.ttf') format('truetype');
+	url('/fonts/NanumGothic.svg#NanumGothic') format('svg')
+	src:local(※), url('/fonts/NanumGothic.woff') format('woff');
+}
+
+body, input, textarea, select, button, table {margin:0; font-size:12px; font-family:Sans-serif; color:#444}
+body, h1, h2, h3, h4, h5, dl, dt, dd, ul, li, ol, th, td, p, form, fieldset, legend, button { margin: 0; padding: 0; }
+img, fieldset{border:0 none}
+dl, ul, ol, li {list-style: none outside none;}
+button{border:0 none; cursor:pointer; display: block;}
+
+table, th, td, div{border-collapse:collapse}
+a,img,input {outline:none; selector-dummy:expression(this.hideFocus=true);}
+li img { vertical-align:top;}
+td img { vertical-align:middle}
+img {max-width:100%}
+
+a {text-decoration:none; color:#444;}
+a:hover, a:active, a:focus {color:444; text-decoration:none;}
+a.underline {text-decoration:none; color:#444;}
+a.underline:hover, a.underline:active, a.underline:focus {color:#dd0000; text-decoration:underline;}
+
+table a:link, table a:visited {color:#444;}
+table a:hover, table a:active {color:#000; text-decoration:underline;}
+address, caption, cite, code, dfn, em, var {font-style:normal;}
+
+strong, .strong , b { font-weight: bold; }
+.blind, legend, caption {display:none !important}
+.cursor { cursor: pointer;}
+.clear {clear:both}
+
+body {background-color:#3e3e3e; }
+#wrap {background-color:#fff; }
+
+/* margin */
+.mgT5 {margin-top:5px !important}
+.mgB20 {margin-bottom:20px !important}
+.mgB30 {margin-bottom:30px !important}
+
+/* 상단 */
+header {height:77px; background:url('/english/mobile/images/common/head_bg.gif') repeat-x left top; position:relative;}
+header h1 {float:left; margin:20px 0 0 20px; }
+header .mark {position:absolute; right:0; top:0; z-index:5; width:130px; height:77px; text-align:center; border-left:1px solid #fff;}
+header .mark span {display:block; height:100%; border-left:1px solid #cdcdcd;}
+header .mark span img {margin-top:20px;}
+
+/* 메인 */
+.contentArea {padding:0 7px;}
+
+/* 타이틀 */
+h2 { margin-bottom:20px; width: 100%; text-align: center;}
+.main {background:url('/mobile/images/main/visual.jpg') no-repeat center top; background-size:100% auto; overflow:hidden;}
+
+
+.box1, .box2, .box3, .box4, .box5, .box6 { margin: 25px 0; }
+
+/* box1 */
+.box1 p { font-size: 1.4em; font-weight: 600; margin-bottom:12px; }
+.box1 span { font-size: 1.2em; line-height: 1.5em;}
+
+/* box2 */
+.box2 table { width: 100%; margin: 13px 0; }
+.box2 table th { font-size: 14px; font-weight: 900;}
+.box2 td { font-size: .9em; }
+.line { margin:10px; }
+
+/* box3 */
+#photo { width: 100%; margin-top: 15px; }
+#photo img { margin-bottom: 10px; }
+
+/* box4 */
+.box4 { width: 100%; text-align: center; }
+
+/* box5 */
+
+/* box6 */
+.info {overflow:hidden; margin-top:20px; width: 90%; margin:0 auto;}
+.info li { margin-bottom:20px; line-height:18px; }
+.info li + li { width:50%; float:left; }
+.info li b { display:inline-block; padding:0 5px; height:27px; line-height:27px; color:#111; font-weight:bold; margin-bottom:5px;}
+
+
+.sns { text-align: center; }
+.sns p { margin-top: 13px; margin-bottom:20px; border-top:1px solid #b5b5b5; font-size: 1.2em; font-weight:700; padding-top: 20px; }
+.sns img { margin: 3px; width: 9%; }
+
+.etc { text-align: center; margin: 50px 0 13px 0; }
+.etc img { width: 12%; }
+
+
+/* 하단 */
+footer { background-color: #3e3e3e; color: #fff; border-top: 1px solid #8e8e8e; padding: 20px 20px; font-size: 11px; line-height: 17px; }
+footer .copy {font-size:11px; text-align: center;}
+.pcview { font-size:12px; border:1px solid red; padding:5px; text-align:center; color:red; font-weight:700; width:100%; display:inline-block; margin-top:20px;}

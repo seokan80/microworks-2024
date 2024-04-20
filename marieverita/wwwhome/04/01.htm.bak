@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>::: 블루키인터내셔널 (주) :::</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../bullet/main.css" type="text/css">
+<link rel="stylesheet" href="../bullet/menu.css" type="text/css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/sub.js"></script>
+<script type="text/javascript" src="../js/jquery-relation.min.js"></script>
+<script type="text/javascript" src="../js/menu.js"></script>
+
+</head>
+<body onLoad="init()" oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+<div id="wraper">
+  <!-- headerWrap -->
+  <div id="headerWrap">
+    <!-- top login--> 
+<div class="top_wrap">
+   <div class="topall">
+     <ul class="top">
+       <li><a href="../index.htm"><img src="../img/top_home.gif"></a></li>
+        <li><img src='../img/top_login.gif'></li> 
+        <li><img src='../img/top_join.gif'></li>
+        <li><a href="#" onClick="{window.external.AddFavorite('http://naver.com', '즐겨찾기')}"><img src="../img/top_book.gif" border="0"></a></li>
+    </ul>
+   </div>
+ </div>
+    <!-- top login end -->
+    
+	<!--logo+menu-->
+    <div id="logomenu"> 
+      <div id="logo"><a href="../index.htm"><img src="../img/logo.gif"></a></div>
+      <!--menu-->   
+<div id="menu" class="gnbWrap">
+   <ul class="gnb">
+      <li class="g1"><strong><a href="../01/01.htm">ABOUT</a></strong>
+        <ul class="dep2">
+          <li><a href="../01/01.htm">회사소개</a></li>
+          <li><a href="../01/02.htm">조직도</a></li>
+        </ul>
+      </li>
+      <li class="g2"><strong><a href="../02/01.htm">BUSINESS</a></strong>
+        <ul class="dep2">
+          <li><a href="../02/01.htm">사업분야</a></li>
+          <li><a href="../02/02.htm">Application</a></li>
+        </ul>
+      </li>
+      <li class="g3"><strong><a href="../03/01.htm">PARTNERS</a></strong>
+         <ul class="dep2">
+           <li><a href="../03/01.htm">파트너</a></li>
+         </ul>
+      </li>
+      <li class="g4"><strong><a href="../04/01.htm">ONLINE</a></strong>
+         <ul class="dep2">
+           <li><a href="../04/01.htm">온라인문의</a></li>
+         </ul>
+      </li>
+      <li class="g5"><strong><a href="../05/01.htm">CUSTOMER</a></strong>
+         <ul class="dep2">
+           <li><a href="mailto:info@bluekeyint.com">문의</a></li>
+           <li><a href="../05/01.htm">오시는길</a></li>
+         </ul>
+      </li>
+   </ul>
+ </div>
+  <script type="text/javascript"> 
+  page.init();
+  </script>
+      <!--end menu--> 
+	      </div>
+    <!-- end logo+menu-->
+  </div>
+  <!--end header -->
+  <!--sub -->
+  <div class="sub">
+    <div class="vBg bg1" style="left:;"></div>
+    <div class="vBg bg2" style="left:100%"></div>
+    <div class="vBg bg3" style="left:100%"></div>
+    <div class="vBg bg4" style="left:100%"></div>
+      <div class="controller2">
+        <div class="BtnD">
+          <a href="javascript:" class="rollBtn on"><img src="../bullet/btn_rollBtn_on.png" alt="" class="mr5" /></a> 
+          <a href="javascript:"><img src="../bullet/btn_rollBtn.png" alt="" class="mr5" /></a>
+          <a href="javascript:"><img src="../bullet/btn_rollBtn.png" alt="" class="mr5" /></a> 
+          <a href="javascript:"><img src="../bullet/btn_rollBtn.png" alt=""/></a> 
+        </div>
+      </div>
+  </div>
+  <!-- end sub -->
+<div id="subwraper">
+<!-- sub_all -->
+<div id="sub_all">
+  <div id="contents_all">
+    <div id="left">
+      <div id="leftColumn">
+        
+		<!-- sub_menu -->
+     <div id="navigation">
+      <div id="sub_menu">
+      <div id="sub_menu01"><img src="../img/sub_menu04.gif" alt="" /></div>
+      <div id="sub_menu02"><img src="../img/dot02.gif" />&nbsp;&nbsp;<b><a href="04.htm">온라인문의</a></b></div>
+    </div>
+   </div>
+        <!-- sub_menu end -->
+		
+        <!--Customer-->
+  <div id="sub_customer"><img src="../img/sub_customer.gif"></div>
+        <!--Customer end -->
+		
+      </div>
+    </div>
+    <div id="contentColumn">
+      <!--Title&Location-->
+      <div id="pageTitle">
+        <div id="title"><img src="../img/title04-01.gif"/></div>
+        <div id="nevi">
+          <img src="../img/dot.gif" border="0"><span class="nv"> 홈 &gt; </span><span class="nb">온라인문의</span>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <!--end Title&Location-->
+      <!--Content-->
+      <div id="content">
+	  <img src="../img/ready.jpg">
+	  </div>
+      <!--end Content-->
+    </div>   
+  </div>
+</div>
+<!-- end sub_all -->
+  <!-- footer-->
+<div id="footerwrap">
+<div id="footerall">
+<div id="footer">
+ <div id="copyright">
+   <table width="1100" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td width=valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tr>
+           <td><img src="../img/logo_bottom.gif"></td>
+         </tr>
+         <tr>
+           <td><table width="980" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+               <td class="bottom-top" style="padding:0 0 8px 6px;"><a href="../01/01/01.htm">회사소개</a>&nbsp;&nbsp;&nbsp;<a href="../01/02/01.htm">사업분야</a>&nbsp;&nbsp;&nbsp;
+      <a href="../01/03/01.htm">갤러리</a>&nbsp;&nbsp;&nbsp;<a href="../01/04/01.htm">온라인문의</a>&nbsp;&nbsp;&nbsp;<a href="../01/05/01.htm">고객센터</a>&nbsp;&nbsp;&nbsp;
+      <a href="../01/member/login.htm">회원</a></td>
+             </tr>
+             <tr>
+               <td class="bottom" style="padding:0 0 20px 6px;">주소 : 부산광역시 해운대구 좌동 273-10 | 상호 : 디자인선사인 | 사업자등록번호 : 123-456-7890<br> 
+                 Tel : 070-7155-19749 | Fax : 02-2139-1142 | E-mail : gijung23@nate.com<br>
+                 Copyright (c) sunsine.com All Rights Reserved.</td>
+             </tr>
+           </table></td>
+         </tr>
+       </table></td>
+       <td width="120px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tr>
+           <td height="30" class="bottom-top">Family Site </td>
+         </tr>
+         <tr>
+           <td height="44px" valign="bottom-top"><table width="116px" border="0" align="left" cellpadding="0" cellspacing="0">
+               <tr>
+                 <td><a href="https://www.facebook.com/" target="_blank"><img src="../img/link01.gif" border="0"></a></td>
+                 <td width="4px"></td>
+                 <td><a href="https://story.kakao.com/s/login" target="_blank"><img src="../img/link02.gif" border="0"></a></td>
+                 <td width="4px"></td>
+                 <td><a href="http://www.twitter.com/" target="_blank"><img src="../img/link03.gif" border="0"></a></td>
+               </tr>
+           </table></td>
+         </tr>
+       </table></td>
+     </tr>
+   </table>
+ </div>
+</div>
+</div>
+</div>
+  <!-- footer end --> 
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* main */
+.main {position:relative;width:100%; height:600px; overflow: hidden;  }
+.main .vBg {height:600px; margin:0 auto;  position:absolute; top:0;  left:0; width:100%; z-index:500; text-indent:-2000%; }
+.main .bg1 {background:url("../img/main01.jpg") no-repeat  center 0;}
+.main .bg2 {background:url("../img/main02.jpg") no-repeat  center 0;}
+.main .bg3 {background:url("../img/main03.jpg") no-repeat  center 0;}
+.main .bg4 {background:url("../img/main04.jpg") no-repeat  center 0;}
+
+.main .controller{width:1200px; position:relative;  z-index:600; margin:0 auto; }
+.main .controller .btns {position:absolute; top:230px; width:100%; }
+.main .controller .btns .prev {float:left;}
+.main .controller .btns .next {float:right;}
+.main .controller2{width:300px; position:relative; text-align:center; z-index:600; margin:0 auto}
+.main .controller2 .visualTxt{padding: 0 0 0 0px; }
+.main .controller2 .BtnD {position:absolute; top:550px; left:40%;}
+
+
+/* sub */
+.sub {position:relative;width:100%; height:240px; overflow: hidden;  }
+.sub .vBg {height:240px; margin:0 auto;  position:absolute; top:0;  left:0; width:100%; z-index:500; text-indent:-2000%; }
+.sub .bg1 {background:url("../img/sub01.jpg") no-repeat  center 0;}
+.sub .bg2 {background:url("../img/sub02.jpg") no-repeat  center 0;}
+.sub .bg3 {background:url("../img/sub03.jpg") no-repeat  center 0;}
+.sub .bg4 {background:url("../img/sub04.jpg") no-repeat  center 0;}
+
+.sub .controller{width:1100px; position:relative;  z-index:600; margin:0 auto; }
+.sub .controller .btns {position:absolute; top:80px; width:100%; }
+.sub .controller .btns .prev {float:left;}
+.sub .controller .btns .next {float:right;}
+.sub .controller2{width:300px; position:relative; text-align:center; z-index:600; margin:0 auto}
+.sub .controller2 .visualTxt{padding: 0 0 0 0px; }
+.sub .controller2 .BtnD {position:absolute; top:200px; left:40%;}

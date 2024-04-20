@@ -93,29 +93,29 @@
 /* ******************   게시판 :: 쓰기, 문의폼  ********************** */
 @media all and (max-width:800px){
 	/* 게시판 :: 쓰기, 문의폼 :: 개인정보취급방침 */
-	/* .bbs-inquiry-agree-con{margin-bottom:25px;}
+	.bbs-inquiry-agree-con{margin-bottom:25px;}
 	.bbs-inquiry-agree-con .agree-tit{font-size:16px;}
 	.inquiry-agreement-con{height:100px; padding:15px}
-	.bbs-inquiry-agree-con .agree-txt{font-size:13px;} */
+	.bbs-inquiry-agree-con .agree-txt{font-size:13px;}
 
 	/* 게시판 :: 쓰기, 문의폼 :: 작성영역 */
-	/* .bbs-write-tbl tr, .bbs-write-tbl th, .bbs-write-tbl td{display:block; padding:0; width:100% !important; border-bottom:0; text-indent:0;}
+	.bbs-write-tbl tr,.bbs-write-tbl th,.bbs-write-tbl td{display:block; padding:0; width:100% !important; border-bottom:0; text-indent:0;}
 	.bbs-write-tbl th{font-size:13px; padding-top:10px; font-weight:600;}
 	.bbs-write-tbl td{padding:10px 0; border-bottom:1px solid #ddd; }
 	.bbs-write-tbl td .write-input,
 	.bbs-write-tbl td .write-select,
 	.bbs-write-tbl td .write-textarea{width:100% ; height:auto; padding:10px 0; border:0; background-color:#f0f0f0; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
 	.bbs-write-tbl td .write-textarea{height:80px;}
-	.bbs-write-tbl td .write-sub-txt, .bbs-write-tbl td .write-sub-txt2{display:block; margin-left:0; margin-top:5px; text-align:right; font-size:12px; } */
+	.bbs-write-tbl td .write-sub-txt, .bbs-write-tbl td .write-sub-txt2{display:block; margin-left:0; margin-top:5px; text-align:right; font-size:12px; }
 
 	/* 게시판 :: 쓰기, 문의폼 :: 기타 */
-	/* .bbs-write-tbl .input-check{padding:5px 0;}
+	.bbs-write-tbl .input-check{padding:5px 0;}
 	.bbs-write-tbl .input-check span{margin-right:15px;}
 	.phone-fieldset .write-input,
     .phone-fieldset .write-select{width:calc(33.33% - 18px) !important;}
 	.email-fieldset .write-input{width:calc(50% - 14px) !important;}
 	.email-fieldset .write-select{width:100% !important; margin-top:5px;}
-	.bbs-write-tbl .address-btn{min-width:auto; font-size:12px; margin-left:5px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;} */
+	.bbs-write-tbl .address-btn{min-width:auto; font-size:12px; margin-left:5px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
 }
 
 /* ****************** 게시판 :: 비밀번호입력 ********************** */

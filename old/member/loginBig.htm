@@ -1,0 +1,135 @@
+<?
+$image="/community/";
+$sub_path = "../member"; 
+include $_SERVER['DOCUMENT_ROOT']."/begin.htm"; //루트의 begin 부르기
+?>
+<!-- 자바스크립트로 로그인 체크 -->
+<script language="JavaScript">
+	function zb_login_check_submit() {
+		if(!document.zb_login.user_id.value) {
+			alert("ID를 입력하여 주십시요");
+			document.zb_login.user_id.focus();
+			return false;
+		}
+		if(!document.zb_login.password.value) {
+			alert("Password를 입력하여 주십시요");
+			document.zb_login.password.focus();
+			return false;
+		}  
+		return true;
+	}
+	function check_autologin() { 
+		if (document.zb_login.auto_login.checked==true) {
+			var check;  
+			check = confirm("자동 로그인 기능을 사용하시겠습니까?\n\n자동 로그인 사용시 다음 접속부터는 로그인을 하실필요가 없습니다.\n\n단, 게임방, 학교등 공공장소에서 이용시 개인정보가 유출될수 있으니 주의해주세요");
+			if(check==false) {document.zb_login.auto_login.checked=false;}
+		}
+	}
+</script>
+<!-- /자바스크립트로 로그인 체크 -->
+				<td valign="top">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<!-- banner -->
+						<table width="742" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="742" height="241" valign="top">
+							<!--menu and submenu-->
+							<script type="text/javascript">
+								//FlashObject(swf, width, height, bgcolor, id, flashvars)
+								FlashObject("/swf/subvisual05.swf",742, 241,"#ffffff","index")
+							</script>
+							<!--/menu and submenu-->				
+							</td></tr>
+						</table>
+						<!-- /banner -->
+					</td></tr>
+				<tr>
+					<td>
+						<!-- faq -->
+						<table border="0" cellpadding="0" cellspacing="0" background="/community/image/c_bg001.gif">
+						<tr>
+							<td colspan="2" width="742" height="6"></td></tr>
+						<tr>
+							<td width="583" height="32"></td>
+							<td>
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="32"><a href="/index.htm"><img src="/community/image/c_menu01.gif" border="0" alt=""></a></td>
+									<td width="134" style="font-family:돋움; font-size:11px; color:#666666; padding-top:3px;">&nbsp;> 내정보 > <span style="font-weight:bold;">회원로그인</span></td></tr>
+								</table>
+								<!-- /faq -->
+							</td></tr>
+						</table>
+					</td></tr>
+				<tr>
+					<td height="40"></td></tr>
+				
+				<tr>
+					<td width="742" height="310" align="center" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" width="680">
+						<tr>
+							<td>
+
+	<!--내용부분-->
+		<table border="0" cellspacing="0" cellpadding="0" align="center">
+		<!-- 로그인 폼 -->
+		<form name="zb_login" method="post" action="/bbs/login_check.php" onsubmit="return zb_login_check_submit();">
+		<input type="hidden" name="s_url" value="/index.htm">
+		<tr>
+			<td height="15"></td></tr>
+		<tr><td align="center">
+				<table border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr>
+					<td width="180"><img src="image/tit_log-in.gif"></td>
+					<td rowspan="9" width="12"></td>
+					<td rowspan="9" width="400"><img src="image/bane10.jpg"></td></tr>
+				<tr>
+					<td align="center">
+					<!-- 로그인창 -->
+					<table border="0" cellspacing="0" cellpadding="1" align="center">
+					<tr>
+						<td width="65" align="left"><img src="/member/image/id.gif"></td>
+						<td><input name="user_id" type="text"  style="font-size: 9pt; border: 1px ; border-top:1px solid #dddddd ;border-bottom:1px solid #dddddd ;border-left:1px solid #dddddd ;border-right:1px solid #dddddd ;color: #454545; background-color:#FBFBFB; height:18; width:95;" tabindex="1"></td></tr>
+					<tr>
+						<td width="65" align="left"><img src="/member/image/pw.gif"></td>
+						<td><input name="password" type="password"  style="font-size: 9pt; border: 1px ; border-top:1px solid #dddddd ;border-bottom:1px solid #dddddd ;border-left:1px solid #dddddd ;border-right:1px solid #dddddd ;color: #454545; background-color:#FBFBFB; height:18; width:95;" tabindex="1"></td></tr>
+					</table>
+					<!-- /로그인창 -->
+					</td></tr>
+				<tr>
+					<td height="5"></td></tr>
+				<tr>
+					<td align="center"><input type="image" src="image/btn_login.gif" border="0" alt="로그인버튼"></td></tr>
+				<tr>
+					<td align="center"><img src="image/line.gif"></td></tr>
+				<tr>
+					<td align="center"><a href="#"
+				onclick="window.open('/bbs/member_join.php?group_no=1','zbMemberJoin','width=560,height=590,toolbars=no,resizable=yes,scrollbars=yes')"><img src="image/btn_member.gif" border="0" alt="회원가입"></a></td></tr>
+				<tr>
+					<td align="center"><img src="image/membership_txt.gif" border="0"></td></tr>
+				<tr>
+					<td align="center"><a href="#" 
+				onclick="window.open('/bbs/lostid.php','lostid','top=0,left=0,width=410,height=200,toolbar=no,resize=no');"><img src="image/btn_pwfind.gif" border="0" alt="암호재발급"></a></td></tr>
+				<tr>
+					<td align="center"><img src="image/pw_txt.gif" border="0"></td></tr>
+				</table></form></td></tr>
+		</table>
+<!--내용부분-->
+							</td></tr>
+						</table>
+					</td></tr>
+					<tr><td height="50"></td></tr>
+				</table>
+			</td>
+			<td valign="top"><img src="/community/image/right_01.gif" border="0" alt=""></td></tr>
+		</table>
+	</td></tr>
+</table>
+<!-- /중간부분 -->
+<?
+$image="/community/";
+$sub_path = "../end"; 
+include $_SERVER['DOCUMENT_ROOT']."/end.htm"; //루트의 end 부르기
+?>

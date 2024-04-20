@@ -1,0 +1,50 @@
+<?
+$_zb_url = "http://www.microworks.co.kr/bbs/"; 
+$_zb_path = "/iweb/mworksk/wwwhome/bbs/";
+include $_zb_path."outlogin.php";
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>마이크로웍스코리아 (주) - Microworks Korea Co., Ltd.</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135188412-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135188412-1');
+</script>
+
+<!-- OG 항목입력-->
+<meta name="description" content=" IC,MEMORY,전자부품 유통전문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Microworks Korea Co.,Ltd.">
+<meta property="og:description" content="IC,Memory,전자부품 유통전문">
+<meta property="og:image" content="/image/og.jpg">
+<meta property="og:url" content="http://www.microworks.co.kr">
+<!-- OG 항목입력 끝-->
+
+<script type="text/javascript">
+var tmp = 0;
+var mobileKeyWords = new Array('iPhone', 'iPad', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson', 'Opera Mini', 'Microsoft Windows', 'Opera Modi');
+for (var word in mobileKeyWords){ 
+	if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+		tmp=1;
+		break;
+	}
+}
+if(tmp==1){ //모바일인경우
+	location.href="/english/mobile";
+}
+</script>
+</head>
+<frameset rows="*,0" frameborder="0" border="0" framespacing="0">
+<frame src="/english/index.php" name="main">
+<noframes></noframes>
+</frameset>
+</html>

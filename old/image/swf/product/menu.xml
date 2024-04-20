@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='EUC-KR'?>
+<xmlMenu>
+<!-- menui  title=메뉴타이틀 link=링크경로 target=브라우저타겟설정 -->
+<menu1  title="제품소개" link="/photo/list.htm?code=AS1272252212"  target='_self' />
+<menu2  title="제품비교" link="/product/"  target='_self' />
+<menu3  title="e-입체 체험관" link="/product/"  target='_self' />
+<menu4  title="개발2부" link="/product/bbb.htm"  target='_self' />
+<menu5  title="제품검색" link="/product/search1.htm"  target='_self' />
+ </xmlMenu>
