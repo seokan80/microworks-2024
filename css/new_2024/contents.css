@@ -591,6 +591,27 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .summary-con-list dl dd .txt-box.is-icon .txt{padding-left: 32px;}
 .summary-con-list dl dd .txt-box.is-icon .txt i{font-size: 20px; top: 5px; color: var(--bg-color-dark-gray);}
 
+/* CEO 인사말 */
+.ceo-page .area{max-width: 1320px;}
+.ceo-page .greeting-wrap{display: flex; gap: 140px;}
+.ceo-page .ceo-img-con{flex: 1 1; float: none; width: auto; max-width: 548px;}
+/* .ceo-page .ceo-img-con img{max-width: unset;} */
+.ceo-page .ceo-txt-con{flex: 1 1; float: none; width: auto; padding-left: 0; padding: 32px 0;}
+.ceo-page .ceo-txt-con .tit-box{padding: 0 0 64px;}
+.ceo-page .ceo-txt-con .tit-box .tit-kor{margin-top: 20px;}
+.ceo-page .ceo-txt-con .txt-box{padding-top: 52px;}
+.ceo-page .ceo-txt-con .txt-box .txt{font-size: 18px; color: var(--text-color-darken); font-weight: 400;}
+.ceo-page .ceo-txt-con .sign-box{padding-top: 52px;}
+.ceo-page .ceo-txt-con .sign-box .sign-txt{color: var(--text-color-darken); text-align: right; font-weight: 400; font-size: 22px;}
+
+.ceo-page .company-info{display: flex; flex-direction: column; gap: 12px; margin-top: 60px;}
+.ceo-page .company-info li{display: flex; align-items: center; gap: 36px; position: relative; width: 100%; padding: 20px 36px; color: var(--text-color-darken); border: 1px solid var(--line-color); box-sizing: border-box;}
+.ceo-page .company-info li::before{content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 4px; height: 80px; background-color: var(--primary-color);}
+.ceo-page .company-info li .title{font-size: 22px; font-weight: 600;}
+.ceo-page .company-info li .desc{margin-top: 16px; font-size: 18px; line-height: 1.75;}
+
+
+
 /* media query */
 
 .mo-only{display: none !important;}
@@ -631,6 +652,9 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 	.inquiry-popup .bbs-write-tbl td.size-full{padding-right: 8px;}
 
 	.replacement-table tbody td{padding: 8px;}
+	
+	.ceo-page .greeting-wrap{gap: 50px;}
+	.ceo-page .ceo-txt-con{max-width: 50%;}
 }
 
 @media all and ( max-width: 800px ){
@@ -779,4 +803,22 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 	.summary-top-box .top-txt-box .txt br{display: block;}
 	.summary-con-list dl dd .txt-box .txt{line-height: 22px;}
 	.summary-con-list dl dd .txt-box.is-icon .txt i{top: 3px;}
+
+	.ceo-page .greeting-wrap{flex-direction: column;}
+	.ceo-page .ceo-img-con{max-width: unset;}
+	.ceo-page .ceo-txt-con{max-width: 100%;}
+	.ceo-page .ceo-txt-con .tit-box{padding-bottom: 36px;}
+	.ceo-page .ceo-txt-con .tit-box .tit-en{font-style: normal; font-weight: 600;}
+	.ceo-page .ceo-txt-con .tit-box .tit-kor{margin-top: 8px; font-size: 28px;}
+	.ceo-page .ceo-txt-con .txt-box{padding-top: 24px; font-size: 14px;}
+	.ceo-page .ceo-txt-con .sign-box{padding-top: 24px;}
+	.ceo-page .ceo-txt-con .txt-box .txt{font-size: 14px;}
+	.ceo-page .ceo-txt-con .sign-box .sign-txt{font-size: 14px;}
+
+	.ceo-page .company-info{margin-top: 50px;}
+	.ceo-page .company-info li{flex-direction: column; gap: 24px; padding-left: 24px; padding-right: 24px;}
+	.ceo-page .company-info li::before{top: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px;}
+	.ceo-page .company-info li img{width: 80px; height: 80px;}
+	.ceo-page .company-info li .title{font-size: 18px;}
+	.ceo-page .company-info li .desc{font-size: 14px; line-height: 1.5;}
 }
