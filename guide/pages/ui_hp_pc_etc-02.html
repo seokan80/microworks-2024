@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
-	
+
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/editor.css">
@@ -19,28 +19,28 @@
 	<link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
 	<link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
 	<link rel="stylesheet" href="/kr/css/language.css">
-	
-	
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="/js/vendor/jquery.easing.1.3.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/layer_popup.js"></script>
-	
+
 	<!-- 아이콘폰트 -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-	
+
 	<!-- 슬라이드 플러그인 -->
 	<script src="/js/plugin/slick.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
 	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 	<script type="text/javascript" src="/js/nav.js"></script>
 	<script type="text/javascript" src="/js/sub.js"></script>
-	
+
 	<!-- 2024-04 추가 -->
 	<link rel="stylesheet" href="/css/new_2024/contents.css">
-	
+
 </head>
 
 <body>
@@ -63,26 +63,29 @@
 				<!-- ****************** 헤더상단 ********************** -->
 				<div id="headerInner" class="clearfix">
 					<h1 class="logo"><a href="<?=$site_url?>/" title="메인으로">
-						<span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
-						<span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
-					</a></h1>
+							<span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
+							<span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
+						</a></h1>
 					<div class="header-util-box">
 						<!-- 외국어선택 -->
 						<div class="header-lang">
-							<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
+							<a href="javascript:;" class="lang-open-btn"><i
+									class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
 							<ul>
 								<li class="item01"><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 								<li class="item02"><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 							</ul>
 						</div>
 						<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
-						<button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
-							<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
+						<button onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;"
+							class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+							<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+							<!-- <span class="line line4"></span> -->
 						</button>
 						<!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
 						<!-- <button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
-							<i class="material-icons">&#xE8DE;</i>
-						</button> -->
+						<i class="material-icons">&#xE8DE;</i>
+					</button> -->
 					</div>
 				</div>
 				<!-- ****************** GNB ********************** -->
@@ -90,9 +93,9 @@
 				<nav id="gnb" class="each-menu">
 					<h2 class="blind">주메뉴</h2>
 					<!-- 
-						- 전체메뉴 : class="total-menu"
-						- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
-					-->
+					- 전체메뉴 : class="total-menu"
+					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
+				-->
 					<!-- <div id="gnbBg"></div> -->
 					<ul class="clearfix menu5 area">
 						<li class="gnb1">
@@ -141,7 +144,8 @@
 									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
+									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -150,11 +154,16 @@
 							<div class="gnb-2dep">
 								<ul>
 									<!-- <li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li> -->
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/transcend.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/goodram.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/nexcopy.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/advantech.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/etc.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
 								</ul>
 							</div>
 						</li>
@@ -180,27 +189,27 @@
 			<div class="gnb-overlay-bg-m"></div>
 			<nav id="gnbM" class="gnb-style-basic">
 				<!-- 
-					기본스타일 : .gnb-style-basic
-					Full 스타일 : .gnb-style-full
-				-->
+				기본스타일 : .gnb-style-basic
+				Full 스타일 : .gnb-style-full
+			-->
 				<h2 class="blind">주메뉴</h2>
 				<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
 				<div class="header-util-menu-box">
 					<!-- 언어 선택 리스트 -->
 					<!-- <ul class="clearfix lang-select">
-						<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
-						<li><a href="<?=$site_host?>/en/">EN</a></li>
-						<li><a href="<?=$site_host?>/jp/">JP</a></li>
-						<li><a href="<?=$site_host?>/cn/">CH</a></li>
-					</ul> -->
+					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
+					<li><a href="<?=$site_host?>/en/">EN</a></li>
+					<li><a href="<?=$site_host?>/jp/">JP</a></li>
+					<li><a href="<?=$site_host?>/cn/">CH</a></li>
+				</ul> -->
 					<!-- // -->
 					<!-- 회원메뉴 -->
 					<!-- <ul class="clearfix member-menu-box">
-						<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
-						<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
-						<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
-						<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
-					</ul> -->
+					<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+				</ul> -->
 				</div>
 				<!-- // -->
 				<div class="gnb-navigation-wrapper">
@@ -247,17 +256,23 @@
 									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
 									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
+									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a>
+									</li>
 								</ul>
 							</li>
 							<li>
 								<a href="javascript:;">INDUSTRIAL</a>
 								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/transcend.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/goodram.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/nexcopy.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/advantech.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+									<li><a href="<?=$site_url?>/industrial/etc.php"
+											onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
 								</ul>
 							</li>
 							<li>
@@ -325,147 +340,200 @@
 				<!-- // -->
 				<?}?>
 
-				
-				<!-- S: 2024-04 추가 -->
-				<div class="tabs area">
-					<a href="#" class="tab">메모리 가격 동향</a>
-					<a href="#" class="tab">메모리 대치품 검색</a>
-					<a href="#" class="tab active">메모리 스탁재고 문의</a>
-				</div>
-				<!-- E: 2024-04 추가 -->
-				
 				<!-- 상단정보 (센터정렬) -->
 				<aside id="contentInfoCon" class="content-info-style01">
-					<h3 class="content-tit">
-						<?if($sub_info){?><?=$sub_info?>
-						<?}else{?><?=$page_info?>
-						<?}?>
-						메모리 스탁재고 문의
-					</h3>
+					<h3 class="content-tit"></h3>
 				</aside>
+
 				<!-- content -->
-				<!-- 컨텐츠 내용 -->
 				<section id="content" class="">
-					<article class="product-page inquiry-page">
-						<div class="area">
-							<article class="contact-form">
-								<!-- 문의 폼 시작 -->
-								<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
-									<section class="bbs-write-con">
-										<article class="bbs-inquiry-agree-con">
-											<p class="agree-tit">개인정보처리방침</p>
-											<div class="inquiry-agreement-con editor">
-											<?
-											$page_row = $db->object("cs_page", "where page_index='privacy'");
-											$content = $page_row->content;
-											$content = str_replace("<p>","",$content);
-											$content = str_replace("</p>","<br/>",$content);
-											$content = $tools->strHtml($content);
-											echo $content;
-											?>
-											</div>
-											<p class="agree-txt">
-												<input type="checkbox" id="agree1">
-													<label for="agree1">개인정보처리방침에 동의합니다.
-												</label>
-											</p>
-										</article>
-										<article class="bbs-write-tbl-box">
-											<p class="inquiry-essential-txt"><span class="essential-icon">*</span> 표시는 필수 입력 항목입니다.</p>
-											<table class="bbs-write-tbl">
-												<caption>문의폼입니다.</caption>
-												<colgroup>
-													<col style="width:16%;">
-													<col>
-												</colgroup>
-												<tbody>
-													<tr>
-														<th scope="row"><span class="essential-icon">*</span> 이름</th>
-														<td><input type="text" class="write-input" name="name" required="required"></td>
-													</tr>
-													<tr>
-														<th scope="row"><span class="essential-icon">*</span>이메일</th>
-														<td>
-															<fieldset class="email-fieldset">
-																<input type="text" class="write-input" name="email1" required="required">
-																<span class="hypen">@</span>
-																<input type="text" class="write-input" name="email2" readonly required="required">
-																<select name="email3" class="write-select" onChange="res();" required="required">
-																	<option value="b">메일계정선택</option>
-																	<option value="a">직접입력</option>
-																	<option value="naver.com">naver.com</option>
-																	<option value="nate.com">nate.com</option>
-																	<option value="hanmail.net">hanmail.net</option>
-																	<option value="gmail.com">gmail.com</option>
-																	<option value="hotmail.com">hotmail.com</option>
-																	<option value="outlook.com">outlook.com</option>
-																	<option value="empal.com">empal.com</option>
-																	<option value="dreamwiz.com">dreamwiz.com</option>
-																	<option value="lycos.co.kr">lycos.co.kr</option>
-																	<option value="yahoo.co.kr">yahoo.co.kr</option>
-																	<option value="korea.com">korea.com</option>
-																	<option value="paran.com">paran.com</option>
-																</select>
-															</fieldset>
-														</td>
-													</tr>
-													<tr>
-														<th scope="row"><span class="essential-icon">*</span> 연락처</th>
-														<td>
-															<fieldset>
-																<input type="text" class="write-input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
-																<span class="hypen">-</span>
-																<input type="text" class="write-input" name="phone2" title="휴대폰번호 가운데" maxlength="8" required="required">
-																<span class="hypen">-</span>
-																<input type="text" class="write-input"  name="phone3" title="휴대폰번호 마지막" maxlength="8" required="required">
-															</fieldset>
-														</td>
-													</tr>
-													<tr>
-														<th scope="row"> 회사명</th>
-														<td><input type="text" class="write-input width-full" name="company"></td>
-													</tr>
-													<tr>
-														<th scope="row">부품명</th>
-														<td><input type="text" class="write-input width-full" name="part-name"></td>
-													</tr>
-													<tr>
-														<th scope="row">필요수량</th>
-														<td><input type="text" class="write-input width-full" name="request-quantity"></td>
-													</tr>
-													<tr>
-														<th scope="row">희망납기</th>
-														<td><input type="text" class="write-input width-full" name="wish-date"></td>
-													</tr>
-													<tr>
-														<th scope="row">목표단가</th>
-														<td><input type="text" class="write-input width-full" name="goal-price"></td>
-													</tr>
-													<tr>
-														<th scope="row">상세내용</th>
-														<td>
-															<textarea name="content" class="write-textarea" placeholder="문의내용 (500자 이내로 입력해주세요.)"></textarea>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-											<dl class="contact">
-												<dt>* CONTACT:</dt>
-												<dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
-												<dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
-											</dl>
-										</article>
-										<!--
-											기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
-										-->
-										<div class="button-layout bottom-buttons">
-											<button type="button" class="button" onClick="sendit();"><strong>작성완료</strong></button>
-											<a href="/" class="button type-secondary"><strong>취소</strong></a>
+					<!-- 컨텐츠 내용 -->
+					<article class="do-page control-page area">
+						<div class="industrial-prd-con">
+							<h3 class="tit">Flash Storage</h3>			
+							<div class="prd-sub-con">
+								<ul class="prd-list clearfix">
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_001.png" alt=""></span>
 										</div>
-									</section>
-								</form>
-								<!-- // 문의 폼 끝 -->
-							</article>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_002.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_003.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_004.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_005.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_006.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_007.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_008.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_009.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_010.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_011.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_012.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_013.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_014.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_015.png" alt=""></span>
+										</div>
+									</li>
+								</ul>
+							</div>							
+						</div>
+						<div class="industrial-prd-con">
+							<h3 class="tit">DRAM Modules</h3>			
+							<div class="prd-sub-con">
+								<ul class="prd-list clearfix">
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_016.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_017.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_018.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_019.png" alt=""></span>
+										</div>
+									</li>
+								</ul>
+							</div>							
+						</div>
+						<div class="industrial-prd-con">
+							<h3 class="tit">AloT Peripherals</h3>			
+							<div class="prd-sub-con">
+								<ul class="prd-list clearfix">
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_020.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_021.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_022.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_023.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_024.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_025.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_026.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_027.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_028.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_029.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_030.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_031.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_032.png" alt=""></span>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<span class="prd-img"><img src="/data/goodsImages/goods1_033.png" alt=""></span>
+										</div>
+									</li>
+								</ul>
+							</div>							
 						</div>
 					</article>
 					<!-- //컨텐츠 내용 -->
@@ -500,14 +568,22 @@
 							<div class="footer-right-con">
 								<div class="foot-sns-menu">
 									<ul class="clearfix">
-										<li><a href="https://blog.naver.com/mworksk" target="_blank"><img src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
-										<li><a href="https://microworkskorea.tistory.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
-										<li><a href="https://mworksk.blogspot.com/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
-										<li><a href="https://twitter.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
-										<li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
-										<li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
-										<li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
-										<li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
+										<li><a href="https://blog.naver.com/mworksk" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_naver_icon.png" alt="" /></a></li>
+										<li><a href="https://microworkskorea.tistory.com/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_tistory_icon.png" alt="" /></a></li>
+										<li><a href="https://mworksk.blogspot.com/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_google_icon.png" alt="" /></a></li>
+										<li><a href="https://twitter.com/microworkskorea" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_twt_icon.png" alt="" /></a></li>
+										<li><a href="https://www.linkedin.com/company/microworks-korea-co-ltd-" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_linkedin_icon.png" alt="" /></a></li>
+										<li><a href="https://www.facebook.com/microworkskorea" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_facebook_icon.png" alt="" /></a></li>
+										<li><a href="https://www.instagram.com/microworks_korea/" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_insta_icon.png" alt="" /></a></li>
+										<li><a href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg" target="_blank"><img
+													src="/images/icon/sns_icon/footer_sns_youtube_icon.png" alt="" /></a></li>
 									</ul>
 								</div>
 							</div>
@@ -544,17 +620,16 @@
 		</footer>
 
 		<!-- 모달 레이어팝업 -->
-		<!-- S : 2024-04 추가 -->
 		<article class="modal-fixed-pop-wrapper">
 			<div class="modal-fixed-pop-inner">
-				<!-- <div class="modal-loading"><span class="loading"></span></div> -->
+				<div class="modal-loading"><span class="loading"></span></div>
 				<div class="modal-inner-box">
 					<div class="modal-inner-content">
+						<!-- ajax 내용 -->
 					</div>
 				</div>
 			</div>
 		</article>
-		<!-- E : 2024-04 추가 -->
 		<!-- //footer -->
 	</div>
 	<!-- //code -->
