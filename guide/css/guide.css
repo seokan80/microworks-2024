@@ -1,4 +1,4 @@
-small{font-size: 16px;}
+small{display: block; font-size: 16px; margin-top: 8px;}
 .guide{max-width: 1500px; margin: 50px auto;}
 .guide-list li{border-bottom: 1px solid #333;}
 .guide-list li.finish a{color: var(--primary-color);}
