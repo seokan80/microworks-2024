@@ -146,21 +146,23 @@
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">신청서관리</h3>
+          <h3 class="panel-title">통계관리</h3>
         </div>
-        <a href="http://www.microworks.co.kr/gsadmin/online/online.php" class="list-group-item active">온라인 신청서</a>
-        <a href="http://www.microworks.co.kr/gsadmin/online/estimate.php" class="list-group-item ">견적 신청서</a>
-        <a href="http://www.microworks.co.kr/gsadmin/online/online_product.php" class="list-group-item ">제품문의
-          신청서(Industrial)</a>
-        <a href="#" class="list-group-item ">반도체 분석 신청서</a>
-      </div><!-- /.panel panel-default -->
+        <!-- <a href="http://www.microworks.co.kr/gsadmin/stat/crm0.php" class="list-group-item ">인기상품</a>
+					<a href="http://www.microworks.co.kr/gsadmin/stat/crm1.php" class="list-group-item ">상품별매출</a>
+					<a href="http://www.microworks.co.kr/gsadmin/stat/crm2.php" class="list-group-item ">기간별매출</a>
+					<a href="http://www.microworks.co.kr/gsadmin/stat/crm3.php" class="list-group-item ">베스트 고객</a>
+					<a href="http://www.microworks.co.kr/gsadmin/stat/crm4.php" class="list-group-item ">지역별통계</a> -->
+        <a href="http://www.microworks.co.kr/gsadmin/stat/crm5.php" class="list-group-item">접속로그</a>
+        <a href="#" class="list-group-item active">구매문의 통계</a>
+      </div>
     </div><!-- /.row -->
   </div><!-- /.col-sm-3 col-md-2 sidebar -->
 
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <!-- 테이블 위치 -->
-    <h4 class="page-header">온라인 신청서</h4>
+    <h4 class="page-header">구매문의 통계</h4>
 
     <form method="get" name="search_form" class="form-inline" action="/gsadmin/online/online.php">
       <table class="table table-bordered">
@@ -170,25 +172,37 @@
         </colgroup>
         <tbody>
           <tr>
-            <th>검색어</th>
+            <th>기간</th>
             <td>
-              <div class="form-group">
-                <div class="input-group-btn">
-                  <select name="search_item" class="form-control input-sm">
-                    <option value="">통합검색</option>
-                    <option value="name">이름</option>
-                    <option value="phone">휴대폰</option>
-                    <option value="content">내용</option>
-                  </select>
-                </div>
+              <div class="input-group datetime">
+                <input type="text" name="search_sday" class="form-control input-sm text-center" value="">
+                <span class="input-group-addon">
+                  <span class="glyphicon-calendar glyphicon"></span>
+                </span>
               </div>
-              <input type="text" name="search_order" class="form-control input-sm" value="">
+              ~
+              <div class="input-group datetime">
+                <input type="text" name="search_eday" class="form-control input-sm text-center" value="2024-04-22">
+                <span class="input-group-addon">
+                  <span class="glyphicon-calendar glyphicon"></span>
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>구분</th>
+            <td>
+              <label class="checkbox-inline"><input type="checkbox" name="category" value="" checked="">전체</label>
+              <label class="checkbox-inline"><input type="checkbox" name="category" value="">온라인 신청서</label>
+              <label class="checkbox-inline"><input type="checkbox" name="category" value="">견적 신청서</label>
+              <label class="checkbox-inline"><input type="checkbox" name="category" value="">제품문의 신청서</label>
+              <label class="checkbox-inline"><input type="checkbox" name="category" value="">반도체 분석 신청서</label>
             </td>
           </tr>
           <tr>
             <td colspan="2" class="text-center">
               <button type="submit" class="btn btn-primary btn-sm">검색</button>&nbsp;
-              <a href="/gsadmin/online/online.php" class="btn btn-default btn-sm">초기화</a>
+              <a href="/gsadmin/bbs/bbs_list.php?code=notice" class="btn btn-default btn-sm">초기화</a>
             </td>
           </tr>
         </tbody>
@@ -200,28 +214,51 @@
         <colgroup>
           <col width="5%">
           <col width="5%">
-          <col width="10%">
-          <col width="10%">
-          <col width="15%">
+          <col width="5%">
           <col width="7%">
+          <col width="15%">
+          <col width="6%">
+          <col width="6%">
+          <col width="15%">
           <col width="*">
           <col width="7%">
           <col width="7%">
         </colgroup>
         <thead>
           <tr>
-            <td><button type="button" class="btn btn-danger btn-xs btn-block ajax-checkbox" data-table="cs_online"
-                data-name="delete" data-val="">삭제</button></td>
-            <td colspan="8"></td>
+            <td colspan="11">
+              <span>총 00건</span>
+              <div class="btn-toolbar pull-right">
+                <a href="#" class="btn btn-default btn-xs">
+                  온라인 신청서 바로가기
+                  <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+                <a href="#" class="btn btn-default btn-xs">
+                  견적 신청서 바로가기
+                  <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+                <a href="#" class="btn btn-default btn-xs">
+                  제품문의 신청서 바로가기
+                  <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+                <a href="#" class="btn btn-default btn-xs">
+                  반도체 분석 신청서 바로가기
+                  <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+                <button type="button" class="btn btn-primary btn-xs active" style="margin-left: 30px;">엑셀 다운로드</button>
+              </div>
+            </td>
           </tr>
           <tr>
             <th><input type="checkbox" id="allCheck"></th>
             <th>N O</th>
-            <th>이름</th>
-            <th>휴대폰</th>
-            <th>부품명</th>
-            <th>필요수량</th>
-            <th>내용</th>
+            <th>구분</th>
+            <th>이미지</th>
+            <th>제목</th>
+            <th>우선순위</th>
+            <th>상태</th>
+            <th>게시기간</th>
+            <th>URL</th>
             <th>등록일</th>
             <th>관리하기</th>
           </tr>
@@ -230,131 +267,141 @@
           <tr>
             <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
             <td class="text-center">2100</td>
-            <td class="text-center">Roberttak&nbsp;<span class="label label-danger">New</span></td>
-            <td class="text-center">88413517158 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Прывітанне, я хацеў даведацца Ваш прайс.</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
             <td class="text-center">2024-04-23</td>
             <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3275"></td>
-            <td class="text-center">2099</td>
-            <td class="text-center">DonaldBexes</td>
-            <td class="text-center">82821992482 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>loli child porn
-
-              ==&gt; eit.tw/04G9JV &lt;==
-
-              ==&gt; url.epoch.tw/Z4RGq &lt;==</td>
-            <td class="text-center">2024-04-22</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3275"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3274"></td>
-            <td class="text-center">2098</td>
-            <td class="text-center">Masontak</td>
-            <td class="text-center">85213972627 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Salut, ech wollt Äre Präis wëssen.</td>
-            <td class="text-center">2024-04-21</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3274"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3273"></td>
-            <td class="text-center">2097</td>
-            <td class="text-center">Masonzef</td>
-            <td class="text-center">83974545-89759595-87649172 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Ciao, volevo sapere il tuo prezzo.</td>
-            <td class="text-center">2024-04-21</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3273"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3272"></td>
-            <td class="text-center">2096</td>
-            <td class="text-center">Roberttak</td>
-            <td class="text-center">85737385279 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Sawubona, bengifuna ukwazi intengo yakho.</td>
-            <td class="text-center">2024-04-20</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3272"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3271"></td>
-            <td class="text-center">2095</td>
-            <td class="text-center">Masontak</td>
-            <td class="text-center">89818537426 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Hæ, ég vildi vita verð þitt.</td>
-            <td class="text-center">2024-04-19</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3271"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3270"></td>
-            <td class="text-center">2094</td>
-            <td class="text-center">Roberttak</td>
-            <td class="text-center">81781473544 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Здравейте, исках да знам цената ви.</td>
-            <td class="text-center">2024-04-19</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3270"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3269"></td>
-            <td class="text-center">2093</td>
-            <td class="text-center">KitchenAidhsi</td>
-            <td class="text-center">82339692675 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td></td>
-            <td class="text-center">2024-04-17</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3269"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3268"></td>
-            <td class="text-center">2092</td>
-            <td class="text-center">Roberttak</td>
-            <td class="text-center">88586378511 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>Hi, kam dashur të di çmimin tuaj</td>
-            <td class="text-center">2024-04-16</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3268"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
           <tr>
-            <td class="text-center"><input type="checkbox" name="check_list" value="3267"></td>
-            <td class="text-center">2091</td>
-            <td class="text-center">김민국</td>
-            <td class="text-center">010-4163-4091 </td>
-            <td>Microworks </td>
-            <td class="text-center">45 </td>
-            <td>안녕하세요. 세창 김민국 입니다.
-
-              Nand flash XTX (XT27G02ATSIGA) 갱 라이팅이 가능 여부 확인 부탁 드립니다.
-
-              감사합니다. 수고하세요.
-
-              ─�...</td>
-            <td class="text-center">2024-04-16</td>
-            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3267"
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">좌</td>
+            <td class="text-center"><a href="">이미지</a></td>
+            <td>제목</td>
+            <td class="text-center">1</td>
+            <td class="text-center">사용중</td>
+            <td class="text-center">2024-04-23 ~ 2025-04-23</td>
+            <td class="text-center">www.microworks.com</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
                 class="btn btn-default btn-sm">상세보기</a></td>
           </tr>
         </tbody>
@@ -377,6 +424,16 @@
               aria-hidden="true">»</span></a></li>
       </ul>
     </div>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td class="text-center"><a
+              href="./bbs_write.php?returnURL=%2Fgsadmin%2Fbbs%2Fbbs_list.php%3Fcode%3Dnotice&amp;code=notice"
+              class="btn btn-primary">등록하기</a></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

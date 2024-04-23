@@ -145,80 +145,130 @@
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">신청서관리</h3>
+          <h3 class="panel-title">배너관리</h3>
         </div>
-        <a href="http://www.microworks.co.kr/gsadmin/online/online.php" class="list-group-item active">온라인 신청서</a>
-        <a href="http://www.microworks.co.kr/gsadmin/online/estimate.php" class="list-group-item ">견적 신청서</a>
-        <a href="http://www.microworks.co.kr/gsadmin/online/online_product.php" class="list-group-item ">제품문의
-          신청서(Industrial)</a>
-        <a href="#" class="list-group-item ">반도체 분석 신청서</a>
-      </div><!-- /.panel panel-default -->
+        <a href="#" class="list-group-item ">메인배너 관리</a>
+        <a href="#" class="list-group-item active">대치품 검색 배너 관리</a>
+        <a href="http://www.microworks.co.kr/gsadmin/banner/popup.php" class="list-group-item">팝업배너 관리</a>
+      </div>
     </div><!-- /.row -->
   </div><!-- /.col-sm-3 col-md-2 sidebar -->
 
 
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"><!-- 테이블 위치 -->
-    <h4 class="page-header">온라인 신청서</h4>
-  
-    <table class="table table-bordered">
-    <colgroup>
-    <col width="15%">
-    <col width="*">
-    </colgroup>
-    <tbody>
-    <tr>
-      <th>접수일</th>
-      <td>2024-04-23 03:41:55</td>
-    </tr>
-    <tr>
-      <th>이름</th>
-      <td>Roberttak</td>
-    </tr>
-    <tr>
-      <th>연락처</th>
-      <td>88413517158</td>
-    </tr>
-    <tr> 
-      <th>회사명</th>
-      <td>
-        google		</td>
-    </tr>
-    <tr>
-      <th>이메일</th>
-      <td>lucido.leinteract@gmail.com</td>
-    </tr>
-    <tr>
-      <th>부품명</th>
-      <td>부품명</td>
-    </tr>
-    <tr>
-      <th>필요수량</th>
-      <td>필요수량</td>
-    </tr>
-    <tr>
-      <th>희망납기</th>
-      <td>희망납기</td>
-    </tr>
-    <tr>
-      <th>목표단가</th>
-      <td>목표단가</td>
-    </tr>
-    <tr>
-      <th>내용</th>
-      <td>Прывітанне, я хацеў даведацца Ваш прайс.</td>
-    </tr>
-    </tbody>
-    </table>
-  
-  
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <!-- 테이블 위치 -->
+    <h4 class="page-header">배너(등록)</h4>
+
+    <form name="tx_editor_form" id="tx_editor_form" class="form-horizontal" action="bbs_write_ok.php" method="post"
+      enctype="multipart/form-data">
+      <table class="table table-bordered">
+        <colgroup>
+          <col width="15%">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>제목</th>
+            <td>
+              <input type="text" name="title" class="form-control" value="">
+            </td>
+          </tr>
+          <tr>
+            <th>구분</th>
+            <td>
+              <label class="radio-inline"><input type="radio" name="direction" value="">좌</label>
+              <label class="radio-inline"><input type="radio" name="direction" value="">우</label>
+            </td>
+          </tr>
+          <tr>
+            <th>우선순위</th>
+            <td>
+              <input type="text" name="first-order" class="form-control" value="">
+            </td>
+          </tr>
+          <tr>
+            <th>게시기간 사용여부</th>
+            <td>
+              <label class="radio-inline"><input type="radio" name="post-duration" value="">사용</label>
+              <label class="radio-inline"><input type="radio" name="post-duration" value="">미사용</label>
+            </td>
+          </tr>
+          <tr>
+            <th>게시기간</th>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="input-group datetime">
+                        <input type="text" name="duration_sday" class="form-control input-sm text-center" value="">
+                        <span class="input-group-addon">
+                          <span class="glyphicon-calendar glyphicon"></span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>~</td>
+                    <td>
+                      <div class="input-group datetime">
+                        <input type="text" name="duration_eday" class="form-control input-sm text-center"
+                          value="2024-04-22">
+                        <span class="input-group-addon">
+                          <span class="glyphicon-calendar glyphicon"></span>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th>URL</th>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <colgroup>
+                  <col width="50">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>
+                      http://
+                    </td>
+                    <td>
+                      <input type="text" name="url" class="form-control" value="">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th>이미지</th>
+            <td>
+              <input type="file" name="bbs_file">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">※ 이미지 업로드 시 링크URL을 입력하시면 이미지를 클릭할 경우 해당페이지로 이동시킵니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+
     <table class="table">
-      <tbody><tr>
-        <td class="text-center"><a href="/gsadmin/online/online.php" class="btn btn-default">목록</a></td>
-      </tr>
-    </tbody></table>
-  
-  
-      </div>
+      <tbody>
+        <tr>
+          <td class="text-center">
+            <button type="button" class="btn btn-primary" onclick="sendit();">등록</button>
+            <a href="/gsadmin/online/online.php" class="btn btn-default">목록</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <footer>
