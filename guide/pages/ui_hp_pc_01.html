@@ -45,71 +45,97 @@
 
 <body>
 
-  <section id="siteMapCon" class="footer-modal-content">
-    <a href="#none" class="modal-close-btn" title="레이어팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
-    <h1>사이트맵</h1>
-    <article class="sitemap-wrapper">
-      <!-- menu는 기본 5개로 설정 / 메뉴4개(menu4), 메뉴6개(menu6), 메뉴7개(menu7) 클래스를 붙여주세요 / 두줄로 표현해야 할 경우 li 가로값과 높이값 설정 -->
-      <ul>
-        <li>
-          <h2>COMPANY</h2>
-          <ul class="sitemap-2dep">
-            <li><a href="<?=$site_url?>/company/summary.php"><span><em>About Microworks</em></span></a></li>
-            <li><a href="<?=$site_url?>/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
-            <li><a href="<?=$site_url?>/company/org.php"><span><em>Organization</em></span></a></li>
-            <li><a href="<?=$site_url?>/company/history.php"><span><em>Milestone</em></span></a></li>
-            <li><a href="<?=$site_url?>/company/partners.php"><span><em>Partners</em></span></a></li>
-            <!-- <li><a href="<?=$site_url?>/company/notice.php"><span><em>Notice</em></span></a></li> -->
-          </ul>
-        </li>
-        <li>
-          <h2>WHAT WE DO</h2>
-          <ul class="sitemap-2dep">
-            <li><a href="<?=$site_url?>/do/memory.php"><span><em>Memory</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/disty.php"><span><em>Manufacturing</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/writing.php"><span><em>Writing Service</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/line.php"><span><em>Strong Line</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/control.php"><span><em>Quality Control</em></span></a></li>
-            <li><a href="<?=$site_url?>/do/program.php"><span><em>Verfication<br>Program</em></span></a></li>
-          </ul>
-        </li>
-        <li>
-          <h2>PRODUCT SEARCH</h2>
-          <ul class="sitemap-2dep">
-            <li>
-              <a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
-              <ul class="sitemap-3dep">
-                <li><a href="#">- 메모리 가격동향</a></li>
-                <li><a href="#">- 메모리 대치품 검색</a></li>
-                <li><a href="#">- 메모리 스탁재고 문의</a></li>
+  <article class="modal-fixed-pop-wrapper" style="display: block;">
+    <div class="modal-fixed-pop-inner">
+      <div class="modal-loading" style="display: none;"><span class="loading"></span></div>
+      <div class="modal-inner-box">
+        <div class="modal-inner-content">
+          <section id="siteMapCon" class="footer-modal-content">
+            <a href="#none" class="modal-close-btn" title="레이어팝업 닫기"><i class="material-icons"></i></a>
+            <h1>사이트맵</h1>
+            <article class="sitemap-wrapper">
+              <!-- menu는 기본 5개로 설정 / 메뉴4개(menu4), 메뉴6개(menu6), 메뉴7개(menu7) 클래스를 붙여주세요 / 두줄로 표현해야 할 경우 li 가로값과 높이값 설정 -->
+              <ul>
+                <li>
+                  <h2>COMPANY</h2>
+                  <ul class="sitemap-2dep">
+                    <li><a href="http://www.microworks.co.kr/kr/company/summary.php"><span><em>About
+                            Microworks</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/company/ceo.php"><span><em>CEO Greeting</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/company/org.php"><span><em>Organization</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/company/history.php"><span><em>Milestone</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/company/partners.php"><span><em>Partners</em></span></a>
+                    </li>
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                  </ul>
+                </li>
+                <li>
+                  <h2>WHAT WE DO</h2>
+                  <ul class="sitemap-2dep">
+                    <li><a href="http://www.microworks.co.kr/kr/do/memory.php"><span><em>Memory</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/do/disty.php"><span><em>Manufacturing</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/do/writing.php"><span><em>Writing Service</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/do/line.php"><span><em>Strong Line</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/do/control.php"><span><em>Quality Control</em></span></a>
+                    </li>
+                    <li><a
+                        href="http://www.microworks.co.kr/kr/do/program.php"><span><em>Verfication<br>Program</em></span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>PRODUCT SEARCH</h2>
+                  <ul class="sitemap-2dep">
+                    <li><a href="http://www.microworks.co.kr/kr/product/trend_list.php"><span><em>Memory Biz</em></span></a>
+                      <!-- S: 2024-04 추가 -->
+                      <ul class="sitemap-3dep">
+                        <li><a href="#">- 메모리 가격동향</a></li>
+                        <li><a href="#">- 메모리 대치품 검색</a></li>
+                        <li><a href="#">- 메모리 스탁재고 문의</a></li>
+                      </ul>
+                      <!-- E: 2024-04 추가 -->
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>대치품 검색</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend
+                            (~2019)</em></span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>MEDIA</h2>
+                  <ul class="sitemap-2dep">
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/media/media.php"><span><em>Media</em></span></a></li> -->
+                    <li><a href="http://www.microworks.co.kr/kr/media/profile.php"><span><em>Company
+                            Profile</em></span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>CONTACT US</h2>
+                  <ul class="sitemap-2dep">
+                    <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>공지사항</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/contact/miniblog.php"><span><em>Mini blog</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/media/media.php"><span><em>Media</em></span></a></li>
+                    <li><a href="http://www.microworks.co.kr/kr/contact/contact.php"><span><em>Contact Us</em></span></a>
+                    </li>
+                    <li><a href="http://www.microworks.co.kr/kr/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-            <li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
-            <li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
-            <li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-            <li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
-          </ul>
-        </li>
-        <li>
-          <h2>MEDIA</h2>
-          <ul class="sitemap-2dep">
-            <li><a href="<?=$site_url?>/media/profile.php"><span><em>Company Profile</em></span></a></li>
-          </ul>
-        </li>
-        <li>
-          <h2>CONTACT US</h2>
-          <ul class="sitemap-2dep">
-            <li><a href="<?=$site_url?>/company/notice.php"><span><em>공지사항</em></span></a></li>
-            <li><a href="<?=$site_url?>/contact/miniblog.php"><span><em>Mini blog</em></span></a></li>
-            <li><a href="<?=$site_url?>/media/media.php"><span><em>Media</em></span></a></li>
-            <li><a href="<?=$site_url?>/contact/contact.php"><span><em>Contact Us</em></span></a></li>
-            <li><a href="<?=$site_url?>/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
-          </ul>
-        </li>
-      </ul>
-    </article>
-  </section>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
 </body>
 
 </html>
