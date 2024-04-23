@@ -148,7 +148,7 @@
 									</li>
 									<li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
-									<li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>Datasheet</em></span></a>
+									<li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>대치품 검색</em></span></a>
 									</li>
 									<li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend
 													(~2019)</em></span></a></li>
@@ -285,7 +285,7 @@
 									</li>
 									<li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
 									<li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
-									<li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>Datasheet</em></span></a>
+									<li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>대치품 검색</em></span></a>
 									</li>
 									<li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend
 													(~2019)</em></span></a></li>
@@ -346,14 +346,11 @@
 		<!-- container -->
 		<div id="container">
 			<!-- visual -->
-			<section id="visual" class="sub-visual-<?=$page_section?>">
-				<div class="visual-img-con"
-					style="background:#eee url(/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
+			<section id="visual" class="sub-visual-product">
+				<div class="visual-img-con" style="background:#eee url(http://www.microworks.co.kr/images/layout/sub_visual_product.jpg) no-repeat 50% 0%"></div>
 				<div class="area visual-txt-con">
 					<div class="table-cell-layout">
-						<h2 class="visual-tit trans400">
-							<?=$page_info?>
-						</h2>
+						<h2 class="visual-tit trans400"><span>P</span>roduct search</h2>
 						<p class="visual-sub-txt">MICROWORKS KOREA</p>
 					</div>
 				</div>
@@ -361,14 +358,16 @@
 			<!-- //visual -->
 			<!-- middleArea -->
 			<div id="middleArea">
-				<?if($page_section != "search" && $sub_section != "profile"){?>
 				<!-- 서브메뉴1 -->
-				<aside id="topMenu01" class="">
-					<!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+				<aside id="topMenu01" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
 					<div class="side-menu-inner">
 						<div class="area">
-							<ul class="snb sub-menu-<?=$page_section?> clearfix">
-								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+							<ul class="snb sub-menu-product clearfix">
+								<li><a href="http://www.microworks.co.kr/kr/product/trend_list.php"><span><em>Memory Biz</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+								<li class="on"><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>대치품 검색</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -380,24 +379,23 @@
 						<!-- 2차메뉴 -->
 						<div class="menu-location  location2">
 							<a href="javascript:;" class="cur-location">
-								<span><?=$sub_info?></span>
-								<i class="material-icons arrow">&#xE313;</i>
+								<span>대치품 검색</span>
+								<i class="material-icons arrow"></i>
 							</a>
 							<ul class="location-menu-con">
-								<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-							</ul>
+								<li><a href="http://www.microworks.co.kr/kr/product/trend_list.php"><span><em>Memory Trend</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+								<li class="on"><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>대치품 검색</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>						</ul>
 						</div>
 					</div>
 				</aside>
 				<!-- // -->
-				<?}?>
 				
 				<!-- 상단정보 (센터정렬) -->
 				<aside id="contentInfoCon" class="content-info-style01 pc-only">
 					<h3 class="content-tit">
-						<?if($sub_info){?><?=$sub_info?>
-						<?}else{?><?=$page_info?>
-						<?}?>
 						대치품 검색
 					</h3>
 				</aside>
