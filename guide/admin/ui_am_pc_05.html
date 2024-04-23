@@ -1,0 +1,389 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <title>마이크로웍스 코리아(주)</title>
+
+  <link href="http://www.microworks.co.kr/gsadmin/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://www.microworks.co.kr/gsadmin/css/skin/dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="http://www.microworks.co.kr/gsadmin/js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="http://www.microworks.co.kr/gsadmin/js/assets/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://www.microworks.co.kr/gsadmin/js/bootstrap.min.js"></script>
+  <script src="http://www.microworks.co.kr/gsadmin/js/docs.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="http://www.microworks.co.kr/gsadmin/js/assets/ie10-viewport-bug-workaround.js"></script>
+
+  <!-- ETC JavaScript
+	==================================================-->
+  <script src="http://www.microworks.co.kr/gsadmin/js/admin.js"></script>
+  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+  <script charset="UTF-8" type="text/javascript"
+    src="//t1.daumcdn.net/postcode/api/core/221018/1666013742754/221018.js"></script>
+  <!-- <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script> -->
+
+  <!-- calendar 
+	 ==================================================-->
+  <link rel="stylesheet" type="text/css" media="screen"
+    href="http://www.microworks.co.kr/gsadmin/calendar/css/bootstrap-datetimepicker.min.css">
+  <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/moment.js"></script>
+  <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/bootstrap-datetimepicker.js">
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <font color="white">마이크로웍스 코리아(주)</font>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/" class="navbar-link" target="_blank">사용자 메인</a></li>
+          <li><a href="http://www.microworks.co.kr/gsadmin/ajax_progress.php?logout=1" class="navbar-link">로그아웃</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <!-- 상단메뉴 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">설정관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/basic_setup.php">관리자 기본정보</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/page.php">이용약관 설정</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/seo_setup.php">검색엔진 최적화(SEO)</a></li>
+              <!-- <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li> -->
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">게시판관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=media">Media</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=profile">Company Profile</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=notice">공지사항</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=trend_list">Memory trend</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=stock">Stock List</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=oem">OEM Excess</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=blog">Miniblog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">제품관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/product/product.php">제품관리</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/category/category.php">카테고리관리</a></li>
+              <!-- <li><a href="http://www.microworks.co.kr/gsadmin/category/category_ranking.php">카테고리 순위설정</a></li> -->
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">신청서관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/online.php">온라인 신청서</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/estimate.php">견적 신청서</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/online_product.php">제품문의 신청서(Industrial)</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">배너관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">메인배너 관리</a></li>
+              <li><a href="#">대치품 검색 배너 관리</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/banner/popup.php">팝업배너 관리</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">접속통계 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm0.php">인기상품</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm1.php">상품별매출</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm2.php">기간별매출</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm3.php">베스트 고객</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm4.php">지역별통계</a></li> -->
+              <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm5.php">접속로그</a></li>
+              <li><a href="#">구매문의 통계</a></li>
+            </ul>
+          </li>
+          <!-- //상단메뉴 -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="col-sm-3 col-md-2 sidebar">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">신청서관리</h3>
+        </div>
+        <a href="http://www.microworks.co.kr/gsadmin/online/online.php" class="list-group-item ">온라인 신청서</a>
+        <a href="http://www.microworks.co.kr/gsadmin/online/estimate.php" class="list-group-item ">견적 신청서</a>
+        <a href="http://www.microworks.co.kr/gsadmin/online/online_product.php" class="list-group-item active">제품문의
+          신청서(Industrial)</a>
+        <a href="#" class="list-group-item ">반도체 분석 신청서</a>
+      </div><!-- /.panel panel-default -->
+    </div><!-- /.row -->
+  </div><!-- /.col-sm-3 col-md-2 sidebar -->
+
+
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <!-- 테이블 위치 -->
+    <h4 class="page-header">제품문의 신청서</h4>
+
+    <form method="get" name="search_form" class="form-inline" action="/gsadmin/online/online.php">
+      <table class="table table-bordered">
+        <colgroup>
+          <col width="15%">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>검색어</th>
+            <td>
+              <div class="form-group">
+                <div class="input-group-btn">
+                  <select name="search_item" class="form-control input-sm">
+                    <option value="">통합검색</option>
+                    <option value="name">이름</option>
+                    <option value="phone">휴대폰</option>
+                    <option value="content">내용</option>
+                  </select>
+                </div>
+              </div>
+              <input type="text" name="search_order" class="form-control input-sm" value="">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-center">
+              <button type="submit" class="btn btn-primary btn-sm">검색</button>&nbsp;
+              <a href="/gsadmin/online/online.php" class="btn btn-default btn-sm">초기화</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <colgroup>
+          <col width="5%">
+          <col width="5%">
+          <col width="10%">
+          <col width="10%">
+          <col width="15%">
+          <col width="7%">
+          <col width="*">
+          <col width="7%">
+          <col width="7%">
+        </colgroup>
+        <thead>
+          <tr>
+            <td><button type="button" class="btn btn-danger btn-xs btn-block ajax-checkbox" data-table="cs_online"
+                data-name="delete" data-val="">삭제</button></td>
+            <td colspan="8"></td>
+          </tr>
+          <tr>
+            <th><input type="checkbox" id="allCheck"></th>
+            <th>N O</th>
+            <th>이름</th>
+            <th>휴대폰</th>
+            <th>부품명</th>
+            <th>필요수량</th>
+            <th>내용</th>
+            <th>등록일</th>
+            <th>관리하기</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3276"></td>
+            <td class="text-center">2100</td>
+            <td class="text-center">Roberttak&nbsp;<span class="label label-danger">New</span></td>
+            <td class="text-center">88413517158 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Прывітанне, я хацеў даведацца Ваш прайс.</td>
+            <td class="text-center">2024-04-23</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3275"></td>
+            <td class="text-center">2099</td>
+            <td class="text-center">DonaldBexes</td>
+            <td class="text-center">82821992482 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>loli child porn
+
+              ==&gt; eit.tw/04G9JV &lt;==
+
+              ==&gt; url.epoch.tw/Z4RGq &lt;==</td>
+            <td class="text-center">2024-04-22</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3275"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3274"></td>
+            <td class="text-center">2098</td>
+            <td class="text-center">Masontak</td>
+            <td class="text-center">85213972627 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Salut, ech wollt Äre Präis wëssen.</td>
+            <td class="text-center">2024-04-21</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3274"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3273"></td>
+            <td class="text-center">2097</td>
+            <td class="text-center">Masonzef</td>
+            <td class="text-center">83974545-89759595-87649172 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Ciao, volevo sapere il tuo prezzo.</td>
+            <td class="text-center">2024-04-21</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3273"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3272"></td>
+            <td class="text-center">2096</td>
+            <td class="text-center">Roberttak</td>
+            <td class="text-center">85737385279 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Sawubona, bengifuna ukwazi intengo yakho.</td>
+            <td class="text-center">2024-04-20</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3272"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3271"></td>
+            <td class="text-center">2095</td>
+            <td class="text-center">Masontak</td>
+            <td class="text-center">89818537426 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Hæ, ég vildi vita verð þitt.</td>
+            <td class="text-center">2024-04-19</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3271"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3270"></td>
+            <td class="text-center">2094</td>
+            <td class="text-center">Roberttak</td>
+            <td class="text-center">81781473544 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Здравейте, исках да знам цената ви.</td>
+            <td class="text-center">2024-04-19</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3270"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3269"></td>
+            <td class="text-center">2093</td>
+            <td class="text-center">KitchenAidhsi</td>
+            <td class="text-center">82339692675 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td></td>
+            <td class="text-center">2024-04-17</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3269"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3268"></td>
+            <td class="text-center">2092</td>
+            <td class="text-center">Roberttak</td>
+            <td class="text-center">88586378511 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>Hi, kam dashur të di çmimin tuaj</td>
+            <td class="text-center">2024-04-16</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3268"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+          <tr>
+            <td class="text-center"><input type="checkbox" name="check_list" value="3267"></td>
+            <td class="text-center">2091</td>
+            <td class="text-center">김민국</td>
+            <td class="text-center">010-4163-4091 </td>
+            <td>Microworks </td>
+            <td class="text-center">45 </td>
+            <td>안녕하세요. 세창 김민국 입니다.
+
+              Nand flash XTX (XT27G02ATSIGA) 갱 라이팅이 가능 여부 확인 부탁 드립니다.
+
+              감사합니다. 수고하세요.
+
+              ─�...</td>
+            <td class="text-center">2024-04-16</td>
+            <td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3267"
+                class="btn btn-default btn-sm">상세보기</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center">
+      <ul class="pagination">
+        <li class="active"><a href="javascript:;">1</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=10">2</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=20">3</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=30">4</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=40">5</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=50">6</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=60">7</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=70">8</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=80">9</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=90">10</a></li>
+        <li><a href="/gsadmin/online/online.php?search_item=&amp;search_order=&amp;startPage=100"><span
+              aria-hidden="true">»</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <footer>
+      <p>© 마이크로웍스 코리아(주)</p>
+    </footer>
+  </div>
+</body>
+
+</html>

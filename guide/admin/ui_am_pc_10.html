@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <title>마이크로웍스 코리아(주)</title>
+
+  <link href="http://www.microworks.co.kr/gsadmin/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://www.microworks.co.kr/gsadmin/css/skin/dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="http://www.microworks.co.kr/gsadmin/js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="http://www.microworks.co.kr/gsadmin/js/assets/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://www.microworks.co.kr/gsadmin/js/bootstrap.min.js"></script>
+  <script src="http://www.microworks.co.kr/gsadmin/js/docs.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="http://www.microworks.co.kr/gsadmin/js/assets/ie10-viewport-bug-workaround.js"></script>
+
+  <!-- ETC JavaScript
+	==================================================-->
+  <script src="http://www.microworks.co.kr/gsadmin/js/admin.js"></script>
+  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+  <script charset="UTF-8" type="text/javascript"
+    src="//t1.daumcdn.net/postcode/api/core/221018/1666013742754/221018.js"></script>
+  <!-- <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script> -->
+
+  <!-- calendar 
+	 ==================================================-->
+  <link rel="stylesheet" type="text/css" media="screen"
+    href="http://www.microworks.co.kr/gsadmin/calendar/css/bootstrap-datetimepicker.min.css">
+  <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/moment.js"></script>
+  <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/bootstrap-datetimepicker.js">
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <font color="white">마이크로웍스 코리아(주)</font>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/" class="navbar-link" target="_blank">사용자 메인</a></li>
+          <li><a href="http://www.microworks.co.kr/gsadmin/ajax_progress.php?logout=1" class="navbar-link">로그아웃</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <!-- 상단메뉴 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">설정관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/basic_setup.php">관리자 기본정보</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/page.php">이용약관 설정</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/basic/seo_setup.php">검색엔진 최적화(SEO)</a></li>
+              <!-- <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li> -->
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">게시판관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=media">Media</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=profile">Company Profile</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=notice">공지사항</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=trend_list">Memory trend</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=stock">Stock List</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=oem">OEM Excess</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/bbs/bbs_list.php?code=blog">Miniblog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">제품관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/product/product.php">제품관리</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/category/category.php">카테고리관리</a></li>
+              <!-- <li><a href="http://www.microworks.co.kr/gsadmin/category/category_ranking.php">카테고리 순위설정</a></li> -->
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">신청서관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/online.php">온라인 신청서</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/estimate.php">견적 신청서</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/online/online_product.php">제품문의 신청서(Industrial)</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">배너관리 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">메인배너 관리</a></li>
+              <li><a href="#">대치품 검색 배너 관리</a></li>
+              <li><a href="http://www.microworks.co.kr/gsadmin/banner/popup.php">팝업배너 관리</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">접속통계 <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm0.php">인기상품</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm1.php">상품별매출</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm2.php">기간별매출</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm3.php">베스트 고객</a></li>
+                    <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm4.php">지역별통계</a></li> -->
+              <li><a href="http://www.microworks.co.kr/gsadmin/stat/crm5.php">접속로그</a></li>
+              <li><a href="#">구매문의 통계</a></li>
+            </ul>
+          </li>
+          <!-- //상단메뉴 -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="col-sm-3 col-md-2 sidebar">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">배너관리</h3>
+        </div>
+        <a href="#" class="list-group-item active">메인배너 관리</a>
+        <a href="#" class="list-group-item">대치품 검색 배너 관리</a>
+        <a href="http://www.microworks.co.kr/gsadmin/banner/popup.php" class="list-group-item">팝업배너 관리</a>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.col-sm-3 col-md-2 sidebar -->
+
+
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <!-- 테이블 위치 -->
+    <h4 class="page-header">배너(등록)</h4>
+
+    <form name="tx_editor_form" id="tx_editor_form" class="form-horizontal" action="bbs_write_ok.php" method="post"
+      enctype="multipart/form-data">
+      <table class="table table-bordered">
+        <colgroup>
+          <col width="15%">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>제목</th>
+            <td>
+              <input type="text" name="title" class="form-control" value="">
+            </td>
+          </tr>
+          <tr>
+            <th>구분</th>
+            <td>
+              <label class="radio-inline"><input type="radio" name="direction" value="">좌</label>
+              <label class="radio-inline"><input type="radio" name="direction" value="">우</label>
+            </td>
+          </tr>
+          <tr>
+            <th>우선순위</th>
+            <td>
+              <input type="text" name="first-order" class="form-control" value="">
+            </td>
+          </tr>
+          <tr>
+            <th>게시기간 사용여부</th>
+            <td>
+              <label class="radio-inline"><input type="radio" name="post-duration" value="">사용</label>
+              <label class="radio-inline"><input type="radio" name="post-duration" value="">미사용</label>
+            </td>
+          </tr>
+          <tr>
+            <th>게시기간</th>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="input-group datetime">
+                        <input type="text" name="duration_sday" class="form-control input-sm text-center" value="">
+                        <span class="input-group-addon">
+                          <span class="glyphicon-calendar glyphicon"></span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>~</td>
+                    <td>
+                      <div class="input-group datetime">
+                        <input type="text" name="duration_eday" class="form-control input-sm text-center"
+                          value="2024-04-22">
+                        <span class="input-group-addon">
+                          <span class="glyphicon-calendar glyphicon"></span>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th>URL</th>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <colgroup>
+                  <col width="50">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>
+                      http://
+                    </td>
+                    <td>
+                      <input type="text" name="url" class="form-control" value="">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th>이미지</th>
+            <td>
+              <input type="file" name="bbs_file">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">※ 이미지 업로드 시 링크URL을 입력하시면 이미지를 클릭할 경우 해당페이지로 이동시킵니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td class="text-center">
+            <button type="button" class="btn btn-primary" onclick="sendit();">등록</button>
+            <a href="/gsadmin/online/online.php" class="btn btn-default">목록</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <footer>
+      <p>© 마이크로웍스 코리아(주)</p>
+    </footer>
+  </div>
+</body>
+
+</html>
