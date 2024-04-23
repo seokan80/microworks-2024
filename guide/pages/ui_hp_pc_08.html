@@ -58,223 +58,290 @@
 		<!-- header -->
 
 		<header id="header" class="">
-			<div class="gnb-overlay-bg"></div>
-			<div id="headerInnerWrap">
-				<!-- ****************** 헤더상단 ********************** -->
-				<div id="headerInner" class="clearfix">
-					<h1 class="logo"><a href="<?=$site_url?>/" title="메인으로">
-						<span class="logo-default"><img src="/images/common/logo.png" alt="<?=$site_head_title?>" /></span>
-						<span class="logo-fixed"><img src="/images/common/logo_fixed.png" alt="<?=$site_head_title?>" /></span>
-					</a></h1>
-					<div class="header-util-box">
-						<!-- 외국어선택 -->
-						<div class="header-lang">
-							<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xe80b;</i><strong>KOREAN</strong></a>
-							<ul>
-								<li class="item01"><a href="<?=$site_host?>/en/">ENGLISH</a></li>
-								<li class="item02"><a href="<?=$site_host?>/cn/">CHINESE</a></li>
-							</ul>
-						</div>
-						<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
-						<button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
-							<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
-						</button>
-						<!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
-						<!-- <button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
-							<i class="material-icons">&#xE8DE;</i>
-						</button> -->
-					</div>
-				</div>
-				<!-- ****************** GNB ********************** -->
-				<!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
-				<nav id="gnb" class="each-menu">
-					<h2 class="blind">주메뉴</h2>
-					<!-- 
-						- 전체메뉴 : class="total-menu"
-						- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
-					-->
-					<!-- <div id="gnbBg"></div> -->
-					<ul class="clearfix menu5 area">
-						<li class="gnb1">
-							<a href="<?=$site_url?>/company/summary.php">COMPANY</a>
-							<div class="gnb-2dep">
-								<ul>
-									<li><a href="<?=$site_url?>/company/summary.php"><span><em>About Microworks</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/org.php"><span><em>Organization</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/history.php"><span><em>Milestone</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/partners.php"><span><em>Partners</em></span></a></li>
-									<!-- <li><a href="<?=$site_url?>/company/notice.php"><span><em>Notice</em></span></a></li> -->
-								</ul>
-							</div>
-						</li>
-						<li class="gnb2">
-							<a href="<?=$site_url?>/do/memory.php">WHAT WE DO</a>
-							<div class="gnb-2dep">
-								<ul>
-									<li><a href="<?=$site_url?>/do/memory.php"><span><em>Memory</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/disty.php"><span><em>Manufacturing</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/writing.php"><span><em>Writing Service</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/line.php"><span><em>Strong Line</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/control.php"><span><em>Quality Control</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/program.php"><span><em>Verfication<br>Program</em></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="gnb3">
-							<a href="<?=$site_url?>/product/trend_list.php">PRODUCT SEARCH</a>
-							<div class="gnb-2dep">
-								<ul>
-									<li>
-										<a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
-										<!-- S: 2024-04 추가 -->
-										<div class="gnb-3dep">
-											<ul>
-												<li><a href="#">메모리 가격동향</a></li>
-												<li><a href="#">메모리 대치품 검색</a></li>
-												<li><a href="#">메모리 스탁재고 문의</a></li>
-											</ul>
-										</div>
-										<!-- E: 2024-04 추가 -->
-									</li>
-									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="gnb4">
-							<a href="<?=$site_url?>/industrial/transcend.php">INDUSTRIAL</a>
-							<div class="gnb-2dep">
-								<ul>
-									<!-- <li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li> -->
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="gnb5">
-							<a href="<?=$site_url?>/company/notice.php">INFORMATION</a>
-							<div class="gnb-2dep">
-								<ul>
-									<li><a href="<?=$site_url?>/company/notice.php"><span><em>공지사항</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/miniblog.php"><span><em>Mini blog</em></span></a></li>
-									<li><a href="<?=$site_url?>/media/media.php"><span><em>Media</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/contact.php"><span><em>Contact Us</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- GNB Mobile -->
-			<button class="nav-open-btn" title="네비게이션 열기">
-				<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
-			</button>
-			<div class="gnb-overlay-bg-m"></div>
-			<nav id="gnbM" class="gnb-style-basic">
-				<!-- 
-					기본스타일 : .gnb-style-basic
-					Full 스타일 : .gnb-style-full
-				-->
-				<h2 class="blind">주메뉴</h2>
-				<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
-				<div class="header-util-menu-box">
-					<!-- 언어 선택 리스트 -->
-					<!-- <ul class="clearfix lang-select">
-						<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
-						<li><a href="<?=$site_host?>/en/">EN</a></li>
-						<li><a href="<?=$site_host?>/jp/">JP</a></li>
-						<li><a href="<?=$site_host?>/cn/">CH</a></li>
-					</ul> -->
-					<!-- // -->
-					<!-- 회원메뉴 -->
-					<!-- <ul class="clearfix member-menu-box">
-						<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
-						<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
-						<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
-						<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
-					</ul> -->
-				</div>
-				<!-- // -->
-				<div class="gnb-navigation-wrapper">
-					<div class="gnb-navigation-inner">
-						<ul id="navigation">
-							<li>
-								<a href="javascript:;">COMPANY</a>
-								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/company/summary.php"><span><em>About Microworks</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/org.php"><span><em>Organization</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/history.php"><span><em>Milestone</em></span></a></li>
-									<li><a href="<?=$site_url?>/company/partners.php"><span><em>Partners</em></span></a></li>
-									<!-- <li><a href="<?=$site_url?>/company/notice.php"><span><em>Notice</em></span></a></li> -->
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:;">WHAT WE DO</a>
-								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/do/memory.php"><span><em>Memory</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/disty.php"><span><em>Manufacturing</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/writing.php"><span><em>Writing Service</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/line.php"><span><em>Strong Line</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/control.php"><span><em>Quality Control</em></span></a></li>
-									<li><a href="<?=$site_url?>/do/program.php"><span><em>Verfication<br>Program</em></span></a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:;">PRODUCT SEARCH</a>
-								<ul class="gnb-2dep">
-									<li>
-										<a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
-										<!-- S: 2024-04 추가 -->
-										<div class="gnb-3dep">
-											<ul>
-												<li><a href="#">메모리 가격동향</a></li>
-												<li><a href="#">메모리 대치품 검색</a></li>
-												<li><a href="#">메모리 스탁재고 문의</a></li>
-											</ul>
-										</div>
-										<!-- E: 2024-04 추가 -->
-									</li>
-									<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/datasheet.php"><span><em>Datasheet</em></span></a></li>
-									<li><a href="<?=$site_url?>/product/trend_before.php"><span><em>Memory Trend (~2019)</em></span></a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:;">INDUSTRIAL</a>
-								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
-									<li><a href="<?=$site_url?>/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="javascript:;">INFORMATION</a>
-								<ul class="gnb-2dep">
-									<li><a href="<?=$site_url?>/company/notice.php"><span><em>공지사항</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/miniblog.php"><span><em>Mini blog</em></span></a></li>
-									<li><a href="<?=$site_url?>/media/media.php"><span><em>Media</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/contact.php"><span><em>Contact Us</em></span></a></li>
-									<li><a href="<?=$site_url?>/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+      <div class="gnb-overlay-bg"></div>
+      <div id="headerInnerWrap">
+        <!-- ****************** 헤더상단 ********************** -->
+        <div id="headerInner" class="clearfix">
+          <h1 class="logo"><a href="http://www.microworks.co.kr/kr/" title="메인으로">
+              <span class="logo-default"><img src="http://www.microworks.co.kr/images/common/logo.png"
+                  alt="메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아"></span>
+              <span class="logo-fixed"><img src="http://www.microworks.co.kr/images/common/logo_fixed.png"
+                  alt="메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아"></span>
+            </a></h1>
+          <div class="header-util-box">
+            <!-- 외국어선택 -->
+            <div class="header-lang">
+              <a href="javascript:;" class="lang-open-btn"><i class="material-icons"></i><strong>KOREAN</strong></a>
+              <ul>
+                <li class="item01"><a href="http://www.microworks.co.kr/en/">ENGLISH</a></li>
+                <li class="item02"><a href="http://www.microworks.co.kr/cn/">CHINESE</a></li>
+              </ul>
+            </div>
+            <!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
+            <button onclick="javascript:layerLoad('http://www.microworks.co.kr/kr/service/sitemap.php'); return false;"
+              class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+              <span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+              <!-- <span class="line line4"></span> -->
+            </button>
+            <!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
+            <!-- <button  onclick="javascript:layerLoad('http://www.microworks.co.kr/kr/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
+            <i class="material-icons">&#xE8DE;</i>
+          </button> -->
+          </div>
+        </div>
+        <!-- ****************** GNB ********************** -->
+        <!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
+        <nav id="gnb" class="each-menu">
+          <h2 class="blind">주메뉴</h2>
+          <!-- 
+          - 전체메뉴 : class="total-menu"
+          - 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
+        -->
+          <!-- <div id="gnbBg"></div> -->
+          <ul class="clearfix menu5 area">
+            <li class="gnb1">
+              <a href="http://www.microworks.co.kr/kr/company/summary.php">COMPANY</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="http://www.microworks.co.kr/kr/company/summary.php"><span><em>About
+                          Microworks</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/org.php"><span><em>Organization</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/history.php"><span><em>Milestone</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/partners.php"><span><em>Partners</em></span></a></li>
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="gnb2">
+              <a href="http://www.microworks.co.kr/kr/do/memory.php">WHAT WE DO</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="http://www.microworks.co.kr/kr/do/memory.php"><span><em>Memory</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/disty.php"><span><em>Manufacturing</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/writing.php"><span><em>Writing Service</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/line.php"><span><em>Strong Line</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/control.php"><span><em>Quality Control</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/do/program.php"><span><em>Verfication<br>Program</em></span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb3">
+              <a href="http://www.microworks.co.kr/kr/product/trend_list.php">PRODUCT SEARCH</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="http://www.microworks.co.kr/kr/product/trend_list.php"><span><em>Memory Biz</em></span></a>
+                    <!-- S: 2024-04 추가 -->
+                    <div class="gnb-3dep">
+                      <ul>
+                        <li><a href="#">메모리 가격동향</a></li>
+                        <li><a href="#">메모리 대치품 검색</a></li>
+                        <li><a href="#">메모리 스탁재고 문의</a></li>
+                      </ul>
+                    </div>
+                    <!-- E: 2024-04 추가 -->
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>Datasheet</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend
+                          (~2019)</em></span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="gnb4">
+              <a href="http://www.microworks.co.kr/kr/industrial/transcend.php">INDUSTRIAL</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"><span><em>TRANSCEND</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"><span><em>GOODRAM</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"><span><em>NEXCOPY</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"><span><em>ADVANTECH</em></span></a>
+                  </li>
+                  <!-- S: 2024-04 추가 -->
+                  <li><a
+                      href="#"><span><em>INNODISK</em></span></a>
+                  </li>
+                  <!-- E: 2024-04 추가 -->
+                  <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"><span><em>INDUSTRIAL MONITOR</em></span></a></li>
+  
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                </ul>
+              </div>
+            </li>
+            <li class="gnb5">
+              <a href="http://www.microworks.co.kr/kr/company/notice.php">INFORMATION</a>
+              <div class="gnb-2dep">
+                <ul>
+                  <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>공지사항</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/miniblog.php"><span><em>Mini blog</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/media/media.php"><span><em>Media</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/contact.php"><span><em>Contact Us</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- GNB Mobile -->
+      <button class="nav-open-btn" title="네비게이션 열기">
+        <span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+      </button>
+      <div class="gnb-overlay-bg-m"></div>
+      <nav id="gnbM" class="gnb-style-basic">
+        <!-- 
+        기본스타일 : .gnb-style-basic
+        Full 스타일 : .gnb-style-full
+      -->
+        <h2 class="blind">주메뉴</h2>
+        <!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
+        <div class="header-util-menu-box">
+          <!-- 언어 선택 리스트 -->
+          <!-- <ul class="clearfix lang-select">
+          <li class="cur"><a href="http://www.microworks.co.kr/kr/">KR</a></li>
+          <li><a href="http://www.microworks.co.kr/en/">EN</a></li>
+          <li><a href="http://www.microworks.co.kr/jp/">JP</a></li>
+          <li><a href="http://www.microworks.co.kr/cn/">CH</a></li>
+        </ul> -->
+          <!-- // -->
+          <!-- 회원메뉴 -->
+          <!-- <ul class="clearfix member-menu-box">
+          <li><a href="http://www.microworks.co.kr/kr/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+          <li><a href="http://www.microworks.co.kr/kr/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+          <li style="display:none;"><a href="http://www.microworks.co.kr/kr/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+          <li style="display:none;"><a href="http://www.microworks.co.kr/kr/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+        </ul> -->
+        </div>
+        <!-- // -->
+        <div class="gnb-navigation-wrapper">
+          <div class="gnb-navigation-inner">
+            <ul id="navigation">
+              <li class="has-2dep">
+                <a href="javascript:;">COMPANY<span class="gnb-icon close-icon"><i class="material-icons"></i></span><span
+                    class="gnb-icon open-icon" style="display:none;"><i class="material-icons"></i></span></a>
+                <ul class="gnb-2dep">
+                  <li><a href="http://www.microworks.co.kr/kr/company/summary.php"><span><em>About
+                          Microworks</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/ceo.php"><span><em>CEO Greeting</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/org.php"><span><em>Organization</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/history.php"><span><em>Milestone</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/company/partners.php"><span><em>Partners</em></span></a></li>
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                </ul>
+              </li>
+              <li class="has-2dep">
+                <a href="javascript:;">WHAT WE DO<span class="gnb-icon close-icon"><i
+                      class="material-icons"></i></span><span class="gnb-icon open-icon" style="display:none;"><i
+                      class="material-icons"></i></span></a>
+                <ul class="gnb-2dep">
+                  <li><a href="http://www.microworks.co.kr/kr/do/memory.php"><span><em>Memory</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/disty.php"><span><em>Manufacturing</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/sourcing.php"><span><em>Sourcing</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/writing.php"><span><em>Writing Service</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/line.php"><span><em>Strong Line</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/do/control.php"><span><em>Quality Control</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/do/program.php"><span><em>Verfication<br>Program</em></span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-2dep">
+                <a href="javascript:;">PRODUCT SEARCH<span class="gnb-icon close-icon"><i
+                      class="material-icons"></i></span><span class="gnb-icon open-icon" style="display:none;"><i
+                      class="material-icons"></i></span></a>
+                <ul class="gnb-2dep">
+                  <li><a href="http://www.microworks.co.kr/kr/product/trend_list.php"><span><em>Memory Biz</em></span></a>
+                    <!-- S: 2024-04 추가 -->
+                    <div class="gnb-3dep">
+                      <ul>
+                        <li><a href="#">메모리 가격동향</a></li>
+                        <li><a href="#">메모리 대치품 검색</a></li>
+                        <li><a href="#">메모리 스탁재고 문의</a></li>
+                      </ul>
+                    </div>
+                    <!-- E: 2024-04 추가 -->
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/stock.php"><span><em>Stock List</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/oem.php"><span><em>OEM Excess</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/datasheet.php"><span><em>Datasheet</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/product/trend_before.php"><span><em>Memory Trend
+                          (~2019)</em></span></a></li>
+                </ul>
+              </li>
+              <li class="has-2dep">
+                <a href="javascript:;">INDUSTRIAL<span class="gnb-icon close-icon"><i
+                      class="material-icons"></i></span><span class="gnb-icon open-icon" style="display:none;"><i
+                      class="material-icons"></i></span></a>
+                <ul class="gnb-2dep">
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"><span><em>TRANSCEND</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"><span><em>GOODRAM</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"><span><em>NEXCOPY</em></span></a>
+                  </li>
+                  <li><a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"><span><em>ADVANTECH</em></span></a>
+                  </li>
+                  <!-- S: 2024-04 추가 -->
+                  <li><a
+                      href="#"><span><em>INNODISK</em></span></a>
+                  </li>
+                  <!-- E: 2024-04 추가 -->
+                  <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"><span><em>INDUSTRIAL
+                          MONITOR</em></span></a></li>
+  
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+                <li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                </ul>
+              </li>
+              <li class="has-2dep">
+                <a href="javascript:;">INFORMATION<span class="gnb-icon close-icon"><i
+                      class="material-icons"></i></span><span class="gnb-icon open-icon" style="display:none;"><i
+                      class="material-icons"></i></span></a>
+                <ul class="gnb-2dep">
+                  <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>공지사항</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/miniblog.php"><span><em>Mini blog</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/media/media.php"><span><em>Media</em></span></a></li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/contact.php"><span><em>Contact Us</em></span></a>
+                  </li>
+                  <li><a href="http://www.microworks.co.kr/kr/contact/inquiry.php"><span><em>문의하기</em></span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 		<!-- //header -->
 		<!-- container -->
 		<div id="container">
