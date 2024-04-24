@@ -289,7 +289,10 @@ section.full-height{height: 100dvh;}
 	}
 } */
 
-.main-search-box input{color: var(--text-color);}
+.main-search-box{display: flex; align-items: center; gap: 3px; max-width: 1112px;}
+.main-search-box .main-search-select{flex: 1 1; max-width: 270px; box-sizing: border-box;}
+.main-search-box input{color: var(--text-color); flex: 1 1; max-width: 100%;}
+.main-search-box button{flex: 1 1; max-width: 193px;}
 
 #mainAbout .about-con .tit-txt{color: inherit; line-height: 1.25;}
 #mainAbout .notice-con .notice-item{padding: 30px 36px 30px 20px;}
@@ -542,29 +545,31 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .view-select{border: none; font-size: 16px; font-weight: 600; color: var(--text-color-darken);}
 
 /* replacement-table */
-.replacement-table{max-width: 100%; margin-top: 12px;}
+.replacement-table{margin-top: 12px; overflow-x: auto;}
+.replacement-table table{width: 1500px; box-sizing: border-box; table-layout: auto;}
 .replacement-table thead{background-color: var(--bg-color-dark-gray);}
 .replacement-table thead tr:not(:last-child){border-bottom: 1px solid #cfcfcf;}
 .replacement-table thead td{text-align: center; vertical-align: middle; border-right: 1px solid var(--line-color);}
 .replacement-table tbody tr{border-bottom: 1px solid var(--line-color); border-left: 1px solid var(--line-color);}
 .replacement-table th{height: 56px; font-size: 14px; font-weight: 600; text-align: center; vertical-align: middle;  color: white; border-right: 1px solid #cfcfcf;}
 .replacement-table .sort-button{width: 100%; height: 32px; color: white;}
-.replacement-table tbody td{height: 56px; padding: 10px 16px; font-size: 14px; text-align: center; vertical-align: middle; border-right: 1px solid var(--line-color);}
-.replacement-table .product-info{display: inline-flex; align-items: center; gap: 10px; position: relative; max-width: 560px;padding-right: 34px;}
-.replacement-table .product-info img{flex-shrink: 0; width: 55px; height: 55px; overflow: hidden; background: url('/images/content/img-no-image.png');}
+.replacement-table tbody td{height: 56px; padding: 10px; font-size: 14px; text-align: center; vertical-align: middle; border-right: 1px solid var(--line-color); box-sizing: border-box;}
+.replacement-table .product-info{display: flex; align-items: center; gap: 10px; max-width: 560px;}
+.replacement-table .product-info .img-box{flex-shrink: 0; width: 55px; height: 55px; overflow: hidden; background: url('/images/content/img-no-image.png'); line-height: 0;}
+.replacement-table .product-info .text-wrap{position: relative; padding-right: 34px;}
 .replacement-table td p{margin-top: 8px;}
-.replacement-table .product-info .delete-button{flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; position: absolute; top: 0px; right: 0px; width: 24px; height: 24px; border-radius: 100%; background-color: var(--disabled-button-color);}
+.replacement-table .product-info .delete-button{flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; position: absolute; top: -6px; right: 0px; width: 24px; height: 24px; border-radius: 100%; background-color: var(--disabled-button-color);}
 .replacement-table .product-info .delete-button i{color: #333; font-weight: bold; font-size: 14px;}
 
-.replacement-table.type-detail{width: auto;}
-.replacement-table.type-detail th{background-color: var(--bg-color-dark-gray); text-align: left; border-bottom: 1px solid #cfcfcf;}
+.replacement-table.type-detail table{table-layout: fixed;}
+.replacement-table.type-detail th{width: 138px; background-color: var(--bg-color-dark-gray); text-align: left; border-bottom: 1px solid #cfcfcf; box-sizing: border-box;}
 .replacement-table.type-detail tr:last-child th{border-color: var(--bg-color-dark-gray);}
 .replacement-table.type-detail tr:first-child th{border-top: 1px solid var(--bg-color-dark-gray);}
 .replacement-table.type-detail tr:first-child td{border-top: 1px solid var(--line-color);}
 .replacement-table.type-detail th,
 .replacement-table.type-detail td{height: unset; padding: 16px;}
 .replacement-table.type-detail tr{border: none;}
-.replacement-table.type-detail td{border-bottom: 1px solid var(--line-color);}
+.replacement-table.type-detail td{width: 170px; border-bottom: 1px solid var(--line-color); box-sizing: border-box;}
 .replacement-table.type-detail .product-info{position: relative; display: inline-block; padding-right: 0;}
 .replacement-table.type-detail .product-info .delete-button{right: -10px; transform: translateX(100%);}
 
