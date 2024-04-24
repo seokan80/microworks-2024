@@ -231,7 +231,7 @@
 @media all and (max-width:1700px){
 	#footerBottom .footer-right-con {width: 65.34%;}
 	#footerBottom .footer-last-con {width: 15%;}
-	#footerBottom .footer-last-con .foot-logo {float:left; padding-left:0;}
+	/* #footerBottom .footer-last-con .foot-logo {float:left; padding-left:0;} */
 }
 
 @media all and (max-width:1220px){
