@@ -11,16 +11,16 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Pro:400,500i&display=swap'); /* Crimson  */
 /* layout */
 body, table, th, td, button, select, input, textarea {
-	font-family:'Poppins', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
+	font-family:'Poppins', 'Noto Sans KR', "나눔고딕", "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
 	font-size:13px;
 	color:#666;
 	-webkit-text-size-adjust:none;
 }
 
-body { background-color:#fff; }
+body { background-color:#fff;  scroll-behavior: smooth; -webkit-font-smoothing: antialiased;}
 #wrap {overflow:hidden; width:100%; min-width:320px; position:relative; } /* min-width 홈페이지 컨텐츠 가로값에 맞게 변경 */
-.font-martel {font-family:'Martel', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
-.font-crimson {font-family:'Crimson Pro', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
+.font-martel {font-family:'Martel', 'Noto Sans KR', "나눔고딕", "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
+.font-crimson {font-family:'Crimson Pro', 'Noto Sans KR', "나눔고딕", "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
 
 /* ****************** 공통클래스 ********************** */
 .area{ max-width:1300px; margin:0px auto;} /* width 홈페이지 컨텐츠 가로값에 맞게 변경 */
