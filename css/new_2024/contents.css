@@ -190,6 +190,8 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 .sitemap-wrapper > ul > li > h2,
 .sitemap-wrapper > ul > li .sitemap-2dep a em,
 .sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{font-weight: 600;}
+.sitemap-wrapper > ul > li .sitemap-2dep a{color: var(--text-color);}
+.sitemap-wrapper > ul > li .sitemap-2dep a:hover{color: var(--text-color-darken);}
 .sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep{padding: 15px 20px; background-color: var(--color-light-gray);}
 .sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li:not(:first-child){margin-top: 12px;}
 .sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{padding: unset; text-align: left;}
