@@ -155,7 +155,7 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 .contact dt{color: var(--text-color-darken); font-weight: 400;}
 
 /* result-count */
-.result-count{font-size: 14px; color: var(--text-color-darken);}
+.result-count{font-size: 16px; color: var(--text-color-darken);}
 
 /* helper */
 .extra{flex-shrink: 0; margin-left: auto;}
@@ -326,7 +326,6 @@ section.full-height{height: 100dvh;}
 .autoplay-slider .player.play .play{display: block;}
 .autoplay-slider .player.pause .pause{display: block;}
 .total-results-wrap{width: 100%; padding: 28px 0 40px; background-color: var(--color-light-gray);}
-.total-results-wrap .result-count{font-size: 16px;}
 .total-results{margin-bottom: 20px; padding: 16px 0; border-bottom: 1px solid var(--line-color); font-weight: 600;}
 
 #mainGlobalCon .global-con .global-tit span{color: var(--text-color);}
@@ -419,7 +418,7 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 
 .bbs-write-tbl{width:100%; border-top:1px solid #333;}
 .bbs-write-tbl th,.bbs-write-tbl td{padding:8px; letter-spacing:-0.5px; border-bottom:1px solid #ddd; box-sizing: border-box;}
-.bbs-write-tbl th{padding-top: 18px; padding-left: 18px; font-size:14px; font-weight:500; text-align:left; vertical-align: top;}
+.bbs-write-tbl th{padding-top: 18px; padding-left: 18px; font-size:14px; font-weight: 500; text-align:left; vertical-align: top; color: var(--text-color-darken);}
 .bbs-write-tbl td{padding-right: 6.9%;}
 .bbs-write-tbl .write-input,
 .bbs-write-tbl .write-select,
@@ -546,7 +545,8 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .replacement-table-wrap .result-count{display: flex; align-items: center; font-size: 16px;}
 .replacement-table-wrap .result-count em{margin: 0 5px;}
 .replacement-table-wrap .result-count strong{margin-right: 16px;}
-.replacement-table-wrap .result-count .input{width: 160px; height: 40px;}
+.replacement-table-wrap .result-count .input{width: 160px; height: 40px; border: 1px solid var(--input-line-color); box-sizing: border-box;}
+.replacement-table-wrap .result-count .input::placeholder{color: var(--text-color-light);}
 .replacement-table-wrap .paging{margin: 0;  text-align: left;}
 .search-results-body .button{width: 120px;}
 
@@ -647,6 +647,11 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .advantages-list .item .text-wrap{width: 100%;}
 .advantages-list .item .title{padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line-color); font-size: 24px; font-weight: 600; color: var(--text-color-darken);}
 .advantages-list .item .desc{font-size: 18px; color: var(--text-color-darken); line-height: 1.7;}
+
+/* quality-control */
+.control-con01 .img-con{background: url("/images/content/control_img_01.png") no-repeat;}
+.control-con02 .img-con{background: url("/images/content/control_img_02.png") no-repeat;}
+.control-con03 .img-con{background: url("/images/content/control_img_03.png") no-repeat;}
 
 /* media query */
 
@@ -802,8 +807,8 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 	
 	/* 게시판 :: 쓰기, 문의폼 :: 작성영역 */
 	.bbs-write-tbl tr, .bbs-write-tbl th, .bbs-write-tbl td{display:block; padding:0; width:100% !important; border-bottom:0; text-indent:0;}
-	.bbs-write-tbl th{font-size:13px; padding-top:10px; font-weight:600;}
-	.bbs-write-tbl td{padding:10px 0; border-bottom:1px solid #ddd; }
+	.bbs-write-tbl th{padding-top:8px; font-weight: 400;}
+	.bbs-write-tbl td{padding:8px 0; border-bottom:1px solid #ddd; }
 	.bbs-write-tbl td .write-input,
 	.bbs-write-tbl td .write-select,
 	.bbs-write-tbl td .write-textarea{width:100%; max-width: none; height:auto; padding:10px 0; border:0; background-color:#f0f0f0; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
