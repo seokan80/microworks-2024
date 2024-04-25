@@ -47,7 +47,10 @@
     href="http://www.microworks.co.kr/gsadmin/calendar/css/bootstrap-datetimepicker.min.css">
   <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/moment.js"></script>
   <script type="text/javascript" src="http://www.microworks.co.kr/gsadmin/calendar/js/bootstrap-datetimepicker.js">
-  </script>
+</script>
+
+  <link rel="stylesheet" href="/css/new_2024/admin.css">
+
 </head>
 
 <body>
@@ -160,7 +163,7 @@
     <!-- 테이블 위치 -->
     <h4 class="page-header">배너(등록)</h4>
 
-    <form name="tx_editor_form" id="tx_editor_form" class="form-horizontal" action="bbs_write_ok.php" method="post"
+    <form name="tx_editor_form" id="tx_editor_form" class="form-inline" action="bbs_write_ok.php" method="post"
       enctype="multipart/form-data">
       <table class="table table-bordered">
         <colgroup>
@@ -197,30 +200,22 @@
           <tr>
             <th>게시기간</th>
             <td>
-              <table border="0" cellpadding="0" cellspacing="0">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="input-group datetime">
-                        <input type="text" name="duration_sday" class="form-control input-sm text-center" value="">
-                        <span class="input-group-addon">
-                          <span class="glyphicon-calendar glyphicon"></span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>~</td>
-                    <td>
-                      <div class="input-group datetime">
-                        <input type="text" name="duration_eday" class="form-control input-sm text-center"
-                          value="2024-04-22">
-                        <span class="input-group-addon">
-                          <span class="glyphicon-calendar glyphicon"></span>
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="form-group">
+                <div class="input-group datetime">
+                  <input type="text" name="duration_sday" class="form-control input-sm text-center" value="">
+                  <span class="input-group-addon">
+                    <span class="glyphicon-calendar glyphicon"></span>
+                  </span>
+                </div>
+                ~
+                <div class="input-group datetime">
+                  <input type="text" name="duration_eday" class="form-control input-sm text-center"
+                    value="2024-04-22">
+                  <span class="input-group-addon">
+                    <span class="glyphicon-calendar glyphicon"></span>
+                  </span>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
