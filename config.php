@@ -1,7 +1,8 @@
 <?
-$DB_HOST="nild03.uhost.co.kr";
-$DB_USER="mworksk";
-$DB_PWD="tvp5150";
-$DB_NAME="mworksk";
+date_default_timezone_set('Asia/Seoul');
+$DB_HOST="db57.uhost.co.kr";
+$DB_USER="domfamcompany";
+$DB_PWD="domfam012!!";
+$DB_NAME="domfamcompany";
 $ROOT_DIR=$_SERVER['DOCUMENT_ROOT'];
 ?>
