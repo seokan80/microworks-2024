@@ -186,6 +186,7 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 #siteMapCon.footer-modal-content{max-width: 1088px;}
 #siteMapCon.footer-modal-content h1{background-color: var(--secondary-color);}
 .sitemap-wrapper{padding: 30px 28px;}
+.sitemap-wrapper > ul > li .sitemap-2dep{padding-bottom: 0;}
 .sitemap-wrapper > ul > li > h2{background-color: #dce4f9;}
 .sitemap-wrapper > ul > li > h2,
 .sitemap-wrapper > ul > li .sitemap-2dep a em,
