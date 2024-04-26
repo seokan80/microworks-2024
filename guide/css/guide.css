@@ -17,4 +17,4 @@ small{display: block; font-size: 16px; margin: 20px 0;}
 .guide > table td:first-child,
 .guide > table th:first-child{border-left: 1px solid #000;}
 
-.logo{text-align: center; padding: 30px 0;}
+.logo{text-align: center; margin: 50px 0;}
