@@ -16,3 +16,5 @@ small{display: block; font-size: 16px; margin: 20px 0;}
 .guide > table th{padding: 10px; text-align: center; vertical-align: middle; border-right: 1px solid #000; font-size: 16px;}
 .guide > table td:first-child,
 .guide > table th:first-child{border-left: 1px solid #000;}
+
+.logo{text-align: center; padding: 30px 0;}
