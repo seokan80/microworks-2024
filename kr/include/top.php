@@ -101,13 +101,13 @@
 			<?}?>
 			
 			<?if($sub_section == 'trend'){?>
-				<!-- S: 2024-04 추가 -->
+				<!-- !NOTE S: 2024-04 추가 -->
 					<div class="tabs area">
 						<a href="#" class="tab active">메모리 가격 동향</a>
 						<a href="#" class="tab">메모리 대치품 검색</a>
 						<a href="#" class="tab">메모리 스탁재고 문의</a>
 					</div>
-					<!-- E: 2024-04 추가 -->
+					<!-- !NOTE E: 2024-04 추가 -->
 			<?}?>
 
 			<!-- 상단정보 (센터정렬) -->

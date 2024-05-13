@@ -40,6 +40,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</button>
 					</div>
 				</form>
+        <!-- !NOTE : 1/3 데이터 없을 때  -->
 				<article class="sub-page product-page">
 					<div class="area02">
 						<div class="search-results">
@@ -56,6 +57,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</div>
 				</article>
+        <!-- !NOTE : 2/3 데이터 부정확 할 때 -->
 				<article class="sub-page product-page">
 						<div class="area02">
 							<div class="search-results">
@@ -72,6 +74,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</div>
 					</article>
+          <!-- !NOTE : 3/3 데이터 있을 때 -->
 					<article class="sub-page product-page">
             <div class="area02">
               <form action="" class="search-results-form">
