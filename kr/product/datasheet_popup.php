@@ -21,7 +21,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				 <!-- 모달 레이어팝업 -->
-	<!-- S : 2024-04 추가 -->
+	<!-- !NOTE S : 2024-04 추가 -->
   <article class="modal-fixed-pop-wrapper inquiry-popup" style="display: block">
     <div class="modal-fixed-pop-inner">
       <!-- <div class="modal-loading"><span class="loading"></span></div> -->
@@ -146,5 +146,5 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
       </div>
     </div>
   </article>
-	<!-- E : 2024-04 추가 -->
+	<!-- !NOTE E : 2024-04 추가 -->
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

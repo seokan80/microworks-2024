@@ -47,7 +47,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 	<div id="mainContainer">
 			<!-- ****************** 메인비주얼 ********************** -->
 			<!-- 메인 비주얼 full 높이 해제 : full-height 클래스 빼주세요  -->
-			<!-- S : 2024-04 추가 -->
+			<!-- !NOTE S : 2024-04 추가 -->
 			<section class="main-visual full-height">
 				<div class="main-visual-items">
 					<div class="visual-item">
@@ -143,7 +143,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</form>
 			</section>
-			<!-- E : 2024-04 추가 -->
+			<!-- !NOTE E : 2024-04 추가 -->
 			<script>
 				function search_sel(i) {
 					if (i == 1) {
@@ -171,7 +171,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 			<!-- ****************** 메인컨텐츠 ********************** -->
 			<section id="mainContent">
 				<!-- ****************** 전체 검색 결과 ********************** -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article id="totalSearchResults" class="total-results-wrap">
 					<div class="area">
 						<!-- 검색 결과 없음 -->
@@ -185,8 +185,8 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						</div>
 					</div>
 				</article>
-				<!-- E : 2024-04 추가 -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE E : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 			<article id="totalSearchResults" class="total-results-wrap">
 				<div class="area">
 					<div class="total-results">
@@ -473,7 +473,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</div>
 			</article>
-			<!-- E : 2024-04 추가 -->
+			<!-- !NOTE E : 2024-04 추가 -->
 				<!-- ****************** 메인컨텐츠 1 (어바웃&공지사항) ********************** -->
 				<article id="mainAbout" class="scroll-animate">
 					<div class="area02">
@@ -534,7 +534,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</div>
 							</div>
 						</div>
-						<!-- S : 2024-04 추가 -->
+						<!-- !NOTE S : 2024-04 추가 -->
 						<div class="inner">
 							<div class="about-slides fade-in-down fade-in-10">
 								<div class="autoplay-slider">
@@ -565,7 +565,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</div>
 							</div>
 						</div>
-						<!-- E : 2024-04 추가 -->
+						<!-- !NOTE E : 2024-04 추가 -->
 					</div>
 				</article>
 				<!-- ****************** 메인컨텐츠 2 (퀵메뉴) ********************** -->
@@ -720,7 +720,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</article>
 				<!-- ****************** 메인컨텐츠 4 ( 문의폼 ) ********************** -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article id="mainInquiryCon" class="scroll-animate">
 					<div class="area02 fade-in-down fade-in-03">
 						<form action="/contact/inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
@@ -834,7 +834,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						</script>
 					</div>
 				</article>
-				<!-- E : 2024-04 추가 -->
+				<!-- !NOTE E : 2024-04 추가 -->
 				<article id="mainPartnerCon">
 					<div class="area02">
 						<p class="partner-tit">협력업체</p>
