@@ -20,6 +20,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="ceo-page">
 					<div class="area">
 						<div class="inner">
@@ -91,6 +92,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</ul>
 						</div>
 					</div>
+					<!-- !NOTE E : 2024-04 추가 -->
 				</article>
 				<!-- //컨텐츠 내용 -->
 		

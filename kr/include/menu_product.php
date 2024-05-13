@@ -1,5 +1,5 @@
 								<li><a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
-									<!-- S: 2024-04 추가 -->
+									<!-- !NOTE S: 2024-04 추가 -->
 									<div class="gnb-3dep">
 										<ul>
 											<li><a href="#">메모리 가격동향</a></li>
@@ -7,7 +7,7 @@
 											<li><a href="#">메모리 스탁재고 문의</a></li>
 										</ul>
 									</div>
-									<!-- E: 2024-04 추가 -->
+									<!-- !NOTE E: 2024-04 추가 -->
 								</li>
 								<li><a href="<?=$site_url?>/product/stock.php"><span><em>Stock List</em></span></a></li>
 								<li><a href="<?=$site_url?>/product/oem.php"><span><em>OEM Excess</em></span></a></li>

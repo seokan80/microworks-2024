@@ -20,6 +20,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="industrial-top">
 						<div class="area">
 							<span class="logo"><img src="/data/bbsData/logo-innodisk.png" alt=""></span>
@@ -267,6 +268,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</article>
 					</article>
+					<!-- !NOTE E : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

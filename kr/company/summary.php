@@ -22,6 +22,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="summary-page">
 					<article class="summary-top-box">
 						<div class="top-bg clearfix" style="background-image: url('/images/content/summary_top_img.png');"></div>
@@ -121,6 +122,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 
 					</article>
 				</article>
+				<!-- !NOTE E : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

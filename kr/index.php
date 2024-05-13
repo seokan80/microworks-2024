@@ -47,7 +47,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 	<div id="mainContainer">
 			<!-- ****************** 메인비주얼 ********************** -->
 			<!-- 메인 비주얼 full 높이 해제 : full-height 클래스 빼주세요  -->
-			<!-- S : 2024-04 추가 -->
+			<!-- !NOTE S : 2024-04 추가 -->
 			<section class="main-visual full-height">
 				<div class="main-visual-items">
 					<div class="visual-item">
@@ -143,7 +143,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</form>
 			</section>
-			<!-- E : 2024-04 추가 -->
+			<!-- !NOTE E : 2024-04 추가 -->
 			<script>
 				function search_sel(i) {
 					if (i == 1) {
@@ -171,10 +171,10 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 			<!-- ****************** 메인컨텐츠 ********************** -->
 			<section id="mainContent">
 				<!-- ****************** 전체 검색 결과 ********************** -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article id="totalSearchResults" class="total-results-wrap">
+					<!-- !NOTE : 1/2 검색 결과 없음 -->
 					<div class="area">
-						<!-- 검색 결과 없음 -->
 						<div class="total-results">
 							<p class="result-count text-normal">죄송합니다. <strong class="text-primary">"ASDF"</strong>에 대한 검색 결과가 없습니다.</p>
 						</div>
@@ -185,9 +185,10 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						</div>
 					</div>
 				</article>
-				<!-- E : 2024-04 추가 -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE E : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 			<article id="totalSearchResults" class="total-results-wrap">
+				<!-- !NOTE : 2/2 검색 결과 없음 -->
 				<div class="area">
 					<div class="total-results">
 						<p class="result-count">총 <strong class="text-primary">00</strong>건</p>
@@ -197,6 +198,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">Memory Trend</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -286,6 +288,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">Stock List</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -381,6 +384,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">OEM Excess</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -473,7 +477,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</div>
 			</article>
-			<!-- E : 2024-04 추가 -->
+			<!-- !NOTE E : 2024-04 추가 -->
 				<!-- ****************** 메인컨텐츠 1 (어바웃&공지사항) ********************** -->
 				<article id="mainAbout" class="scroll-animate">
 					<div class="area02">
@@ -490,6 +494,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</p>
 								<a href="/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
 							</div>
+							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="notice-con fade-in-right fade-in-08">
 								<div class="notice-con-inner">
 									<h4 class="notice-tit">공지사항</h4>
@@ -534,7 +539,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</div>
 							</div>
 						</div>
-						<!-- S : 2024-04 추가 -->
+						<!-- !NOTE S : 2024-04 추가 -->
 						<div class="inner">
 							<div class="about-slides fade-in-down fade-in-10">
 								<div class="autoplay-slider">
@@ -555,7 +560,6 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 										<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
 										<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
 										<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
-										<!-- <div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div> -->
 									</div>
 									<div class="controller">
 										<div class="progress-wrapper"></div>
@@ -565,7 +569,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</div>
 							</div>
 						</div>
-						<!-- E : 2024-04 추가 -->
+						<!-- !NOTE E : 2024-04 추가 -->
 					</div>
 				</article>
 				<!-- ****************** 메인컨텐츠 2 (퀵메뉴) ********************** -->
@@ -643,6 +647,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 									<img src="/images/content/global_map_m.png" alt="세계지도" />
 								</div>
 							</div>
+							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="exchange-con fade-in-down fade-in-08">
 								<p class="global-tit"><strong>환율</strong><span>Exchange Rate (2024/03/25 기준 데이터)</span></p>
 								<table class="main-exchange-tbl">
@@ -720,7 +725,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</article>
 				<!-- ****************** 메인컨텐츠 4 ( 문의폼 ) ********************** -->
-				<!-- S : 2024-04 추가 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article id="mainInquiryCon" class="scroll-animate">
 					<div class="area02 fade-in-down fade-in-03">
 						<form action="/contact/inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
@@ -834,7 +839,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						</script>
 					</div>
 				</article>
-				<!-- E : 2024-04 추가 -->
+				<!-- !NOTE E : 2024-04 추가 -->
 				<article id="mainPartnerCon">
 					<div class="area02">
 						<p class="partner-tit">협력업체</p>
