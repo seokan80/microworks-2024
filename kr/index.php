@@ -173,8 +173,8 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 				<!-- ****************** 전체 검색 결과 ********************** -->
 				<!-- !NOTE S : 2024-04 추가 -->
 				<article id="totalSearchResults" class="total-results-wrap">
+					<!-- !NOTE : 1/2 검색 결과 없음 -->
 					<div class="area">
-						<!-- 검색 결과 없음 -->
 						<div class="total-results">
 							<p class="result-count text-normal">죄송합니다. <strong class="text-primary">"ASDF"</strong>에 대한 검색 결과가 없습니다.</p>
 						</div>
@@ -188,6 +188,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 				<!-- !NOTE E : 2024-04 추가 -->
 				<!-- !NOTE S : 2024-04 추가 -->
 			<article id="totalSearchResults" class="total-results-wrap">
+				<!-- !NOTE : 2/2 검색 결과 없음 -->
 				<div class="area">
 					<div class="total-results">
 						<p class="result-count">총 <strong class="text-primary">00</strong>건</p>
@@ -197,6 +198,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">Memory Trend</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -286,6 +288,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">Stock List</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -381,6 +384,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							<p class="title">OEM Excess</p>
 							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
 							<div class="extra">
+								<!-- !NOTE : 페이지 연결 해주세요 -->
 								<a href="#" class="button type-round more-view"></a>
 							</div>
 						</div>
@@ -490,6 +494,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</p>
 								<a href="/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
 							</div>
+							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="notice-con fade-in-right fade-in-08">
 								<div class="notice-con-inner">
 									<h4 class="notice-tit">공지사항</h4>
@@ -555,7 +560,6 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 										<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
 										<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
 										<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
-										<!-- <div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div> -->
 									</div>
 									<div class="controller">
 										<div class="progress-wrapper"></div>
@@ -643,6 +647,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 									<img src="/images/content/global_map_m.png" alt="세계지도" />
 								</div>
 							</div>
+							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="exchange-con fade-in-down fade-in-08">
 								<p class="global-tit"><strong>환율</strong><span>Exchange Rate (2024/03/25 기준 데이터)</span></p>
 								<table class="main-exchange-tbl">
