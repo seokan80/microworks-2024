@@ -21,6 +21,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="do-page control-page area">
 						<p class="control-page-tit">자체 반도체 불량 분석센터 운영으로 <br><b>품질관리</b>에 만전을 기하고 있습니다.</p>
 						<article class="control-con control-con01">
@@ -157,9 +158,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</article>
 						<div class="button-layout center">
+							<!-- !NOTE : control_popup.php 팝업 띄워주세요 -->
 							<button type="button" class="button size-lg margin-top-xxl"><strong>반도체 분석 문의하기</strong></button>
 						</div>
 					</article>
+					<!-- !NOTE S : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
 
