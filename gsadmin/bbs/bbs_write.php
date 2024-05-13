@@ -22,6 +22,10 @@ if($code=="trend_list"){
 }else{
 	$write_url = "bbs_write_ok.php";
 }
+
+// #202405 공지사항 추가
+$currentDate = date('Y-m-d');
+$lastDate = '2099-12-31';
 ?>
 
 
@@ -75,6 +79,35 @@ if($code=="trend_list"){
 		<th>제 목</th>
 		<td><input type="text" name="subject" class="form-control" value="<?=$subject2?>"></td>
 	</tr>
+    <!-- #202405 공지사항 추가 -->
+    <?if($code=="notice"){?>
+    <tr>
+      <th>게시기간 사용여부</th>
+      <td>
+        <input type="hidden" name="period_yn"/>
+        <label class="radio-inline"><input type="radio" name="period" value="Y" onClick="enabledDate();">사용</label>
+        <label class="radio-inline"><input type="radio" name="period" value="N" onClick="disabledDate();" checked>미사용</label>
+      </td>
+    </tr>
+    <tr>
+      <th>게시기간</th>
+      <td>
+        <div class="input-group datetime" style="display: inline-flex;">
+          <input type="text" name="period_start_date" class="form-control input-sm text-center" readonly/>
+          <span class="input-group-addon" style="display: table;">
+            <span class="glyphicon-calendar glyphicon"></span>
+          </span>
+        </div>
+        ~
+        <div class="input-group datetime" style="display: inline-flex;">
+          <input type="text" name="period_end_date" class="form-control input-sm text-center" readonly/>
+          <span class="input-group-addon" style="display: table;">
+            <span class="glyphicon-calendar glyphicon"></span>
+          </span>
+        </div>
+      </td>
+    </tr>
+    <?}?>
 	<?if($code==""){?>
 		<tr>
 			<th>Quantity</th>
@@ -260,6 +293,13 @@ if($code=="trend_list"){
 <script src="/webeditor/webeditor_config.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 <!--
+// #202405 공지사항 추가
+<?if($code=="notice"){?>
+$(document).ready(function () {
+    disabledDate();
+});
+<?}?>
+
 function validForm(editor) {
 	var validator = new Trex.Validator();
 	var content = editor.getContent();
@@ -283,11 +323,36 @@ function validForm(editor) {
 		Editor.focus();
 		return false;
 	}
+
 	ans = confirm("[등록] 하시겠습니까?");
 	if(ans==true){
+    // #202405 공지사항 추가
+    <?if($code=="notice"){?>
+        document.tx_editor_form.period_start_date.disabled = false;
+        document.tx_editor_form.period_end_date.disabled = false;
+    <?}?>
 	return true;
 	}
 }
+// #202405 공지사항 추가
+<?if($code=="notice"){?>
+    function disabledDate() {
+        document.tx_editor_form.period_yn.value = 'N';
+        document.tx_editor_form.period_start_date.value='<?=$currentDate?>';
+        document.tx_editor_form.period_end_date.value='<?=$lastDate?>';
+        document.tx_editor_form.period_start_date.disabled = true;
+        document.tx_editor_form.period_end_date.disabled = true;
+        document.tx_editor_form.period_start_date.style = 'background:#eee';
+        document.tx_editor_form.period_end_date.style = 'background:#eee';
+    }
+    function enabledDate() {
+        document.tx_editor_form.period_yn.value = 'Y';
+        document.tx_editor_form.period_start_date.disabled = false;
+        document.tx_editor_form.period_end_date.disabled = false;
+        document.tx_editor_form.period_start_date.style = 'background:#fff';
+        document.tx_editor_form.period_end_date.style = 'background:#fff';
+    }
+<?}?>
 //-->
 </script>
 <?}else{?>

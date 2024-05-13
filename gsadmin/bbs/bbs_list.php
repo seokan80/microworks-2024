@@ -1,11 +1,11 @@
 <?
-$mod	= "bbs";	
+$mod	= "bbs";
 include ("../header.php");
 include($_SERVER['DOCUMENT_ROOT']."/lib/page_class.php");
 
 // 게시판 환경
 $bbs_stat		=	$db->object("cs_bbs", "where code='$code'");
-if(!$bbs_stat->idx) { $tools->errMsg("잘못된 접근입니다");}
+ if(!$bbs_stat->idx) { $tools->errMsg("잘못된 접근입니다");}
 $colspan=1;
 ?>
 
@@ -113,17 +113,27 @@ $colspan=1;
 		<col width="10%">
 		<col width="7%">
 	<?}else{?>
-		<col width="*">
-		<col width="7%">
-		<col width="7%">
-		<col width="5%">
+	    <!-- #202405 공지사항 추가 -->
+        <?if($code=="notice"){?>
+              <col width="*">
+              <col width="7%">
+              <col width="7%">
+              <col width="5%">
+              <col width="12%">
+              <col width="5%">
+        <?}else{?>
+            <col width="*">
+            <col width="7%">
+            <col width="7%">
+            <col width="5%">
+        <?}?>
 	<?}?>
 	<col width="7%">
 	</colgroup>
 	<thead>
 	<tr>
 		<td><button type="button" class="btn btn-danger btn-xs btn-block ajax-checkbox" data-table="cs_bbs_data" data-name="delete" data-val="">삭제</button></td>
-		<td class="text-right" colspan="<?echo ceil(6+$colspan);?>">
+		<td class="text-right" colspan="<?echo ($code=="notice")? ceil(8+$colspan) : ceil(6+$colspan);?>"><!-- #202405 공지사항 추가 -->
 			<?if($bbs_stat->bbs_cate==1){?><button type="button" class="btn btn-primary btn-xs active" onClick="cate_pop('<?=$code?>');">카테고리관리</button><?}?>
 		</td>
 	</tr>
@@ -148,6 +158,11 @@ $colspan=1;
 			<th>제 목</th>
 			<th>작성자</th>
 			<th>등록일</th>
+			<!-- #202405 공지사항 추가 -->
+			<?if($code=="notice"){?>
+                <th>상태</th>
+                <th>기간</th>
+			<?}?>
 			<th>조회수</th>
 		<?}?>
 		<th>관리하기</th>
@@ -172,6 +187,24 @@ $colspan=1;
 		$read_cnt			=		$row->read_cnt;
 		$reg_date			=		$tools->strDateCut( $row->reg_date,3 );
 		$coment_cnt	=		$db->cnt("cs_bbs_coment", "where link=$row->idx");
+        // #202405 공지사항 추가 : 공지형
+        if($code == 'notice') {
+            $period_yn              =		$row->period_yn;
+            $period_start_date      =		$row->period_start_date;
+            $period_end_date        =		$row->period_end_date;
+            $period_status          =       "-";
+            $currentDate = new DateTime();
+            $start_date = DateTime::createFromFormat('Y-m-d', $period_start_date);
+            $end_date = DateTime::createFromFormat('Y-m-d', $period_end_date);
+            if($start_date > $currentDate) {
+                $period_status = "시작전";
+            } else if ($currentDate >= $start_date && $currentDate <= $end_date){
+                $period_status = "진행중";
+            } else {
+                $period_status = "종료";
+            }
+        }
+
 		if($row->lang==1){
 			$lang_txt = "국문";
 		}else if($row->lang==2){
@@ -199,6 +232,11 @@ $colspan=1;
 			</td>
 			<td class="text-center"><?=$name?></td>
 			<td class="text-center"><?=$reg_date?></td>
+            <!-- #202405 공지사항 추가 -->
+            <?if($code=="notice"){?>
+                <td class="text-center"><?=$period_status?></td>
+                <td class="text-center"><?=$period_start_date."~<br/>".$period_end_date?></td>
+            <?}?>
 			<td class="text-center"><?=$read_cnt?></td>
 			<td class="text-center"><a href="./bbs_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&code=<?=$code;?>&idx=<?=$row->idx;?>" class="btn btn-default btn-sm">수정하기</a></td>
 		</tr>
@@ -276,6 +314,24 @@ $colspan=1;
 		$reg_date				=		$tools->strDateCut( $bbs_row->reg_date,3 );
 		$reg_date_edit	=		$tools->strDateCut( $bbs_row->reg_date_edit,3 );
 		$coment_cnt		=		$db->cnt("cs_bbs_coment", "where link=$bbs_row->idx");
+		// #202405 공지사항 추가 : 게시형
+		if($code == 'notice') {
+            $period_yn              =		$bbs_row->period_yn;
+            $period_start_date      =		$bbs_row->period_start_date;
+            $period_end_date        =		$bbs_row->period_end_date;
+            $period_status          =       "-";
+            $currentDate = new DateTime();
+            $start_date = DateTime::createFromFormat('Y-m-d', $period_start_date);
+            $end_date = DateTime::createFromFormat('Y-m-d', $period_end_date);
+            if($start_date > $currentDate) {
+                $period_status = "시작전";
+            } else if ($currentDate >= $start_date && $currentDate <= $end_date){
+                $period_status = "진행중";
+            } else {
+                $period_status = "종료";
+            }
+        }
+
 		if($bbs_row->lang==1){
 			$lang_txt = "국문";
 		}else if($bbs_row->lang==2){
@@ -351,6 +407,11 @@ $colspan=1;
 				</td>
 				<td class="text-center"><?=$name?></td>
 				<td class="text-center"><?=$reg_date?></td>
+				<!-- #202405 공지사항 추가 -->
+                <?if($code=="notice"){?>
+                    <td class="text-center"><?=$period_status?></td>
+                    <td class="text-center"><?=$period_start_date."~<br/>".$period_end_date?></td>
+                <?}?>
 				<td class="text-center"><?=$read_cnt?></td>
 			<?}?>
 			<td class="text-center"><a href="./bbs_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&code=<?=$code;?>&idx=<?=$bbs_row->idx;?>" class="btn btn-default btn-sm">수정하기</a></td>

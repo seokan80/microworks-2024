@@ -1,5 +1,5 @@
 <?
-$mod	= "bbs";	
+$mod	= "bbs";
 include ("../header.php");
 
 // 게시판 환경
@@ -27,6 +27,13 @@ $email					= $bbs_stat->email;
 $display				= $bbs_stat->display;
 $reg_date				= $tools->strDateCut($bbs_stat->reg_date, 6);
 $subject				= $db->stripSlash($bbs_stat->subject);
+// #202405 공지사항 추가 : 게시형
+if($code == 'notice') {
+    $period_yn              =		$bbs_stat->period_yn;
+    $period_start_date      =		$bbs_stat->period_start_date;
+    $period_end_date        =		$bbs_stat->period_end_date;
+}
+
 if($bbs_admin_stat->editor==1){
 	$content = $bbs_stat->content;
 	$content = str_replace("<P>","",$content);
@@ -60,6 +67,19 @@ if($bbs_admin_stat->editor==1){
 		<th>제 목</th>
 		<td><?=$subject;?></td>
 	</tr>
+
+	<!-- #202405 공지사항 추가 -->
+    <?if($code=="notice"){?>
+    <tr>
+      <th>게시기간 사용여부</th>
+      <td><?echo ($period_yn == 'Y')?'사용':'미사용'?></td>
+    </tr>
+    <tr>
+      <th>게시기간</th>
+      <td><?=$period_start_date."~".$period_end_date?></td>
+    </tr>
+    <?}?>
+
 	<tr>
 		<th>작성자</th>
 		<td><?=$name;?></td>

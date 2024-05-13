@@ -244,6 +244,11 @@ $(document).ready(function  () {
 	
 	// 쿼리문 
 	$query = "select * from $table where code='$code' and notice < 1 and lang='$lang' ";
+    // #202405 공지사항 추가
+    if($code == 'notice') {
+        $query.= " and CURDATE() between period_start_date and period_end_date ";
+    }
+
 		if($cate){$query.=" and cate='$cate'";}
 
 		if($search_order){
@@ -256,6 +261,10 @@ $(document).ready(function  () {
 	$totalList = mysql_num_rows($rs);
 
 	$query = "select * from $table where code='$code' and notice < 1 and lang='$lang' ";
+	// #202405 공지사항 추가
+	if($code == 'notice') {
+	    $query.= " and CURDATE() between period_start_date and period_end_date ";
+	}
 		if($cate){$query.=" and cate='$cate'";}
 
 		if($search_order){
