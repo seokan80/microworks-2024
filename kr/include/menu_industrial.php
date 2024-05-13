@@ -5,9 +5,9 @@
 								<li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li>
 								<? } ?>		
 
-								<!-- !NOTE : INNODISK 메뉴 추가 필요 
+								<!-- !NOTE : INNODISK 메뉴 NEXCOPY와 INDUSTRIAL MONITOR메뉴 사이에 추가 필요 
 									<li><a
-											href="#"><span><em>INNODISK</em></span></a>
+											href="<?=$site_url?>/industrial/innodisk.php"><span><em>INNODISK</em></span></a>
 									</li>
 								-->		
 

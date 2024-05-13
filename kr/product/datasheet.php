@@ -51,6 +51,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="no-result-box">
 									<img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
 									<p>찾으시는 대치품에 대한 검색결과가 없으신가요?<br/>문의주시면 신속히 도와드리겠습니다!</p>
+                  <!-- !NOTE : datasheet_popup 팝업 띄워주세요 -->
 									<a href="#" class="button"><strong>문의하기</strong></a>
 								</div>
 							</div>
@@ -68,6 +69,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="no-result-box">
 										<img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
 										<p>찾으시는 대치품에 대한 검색결과가 없으신가요?<br/>문의주시면 신속히 도와드리겠습니다!</p>
+                    <!-- !NOTE : datasheet_popup 팝업 띄워주세요 -->
 										<a href="#" class="button"><strong>문의하기</strong></a>
 									</div>
 								</div>

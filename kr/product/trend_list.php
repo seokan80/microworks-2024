@@ -48,6 +48,7 @@ $list_index = 1;
 
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="sub-page product-page">
 						<div class="area">
 							<article class="product-tit-box">
@@ -252,6 +253,7 @@ $list_index = 1;
 							</div>
 						</div>
 					</article>
-				<!-- //컨텐츠 내용 -->
+					<!-- !NOTE E : 2024-04 추가 -->
+					<!-- //컨텐츠 내용 -->
 		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

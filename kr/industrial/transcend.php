@@ -107,7 +107,7 @@ $bottom_img = $row->bbs_file3;
 
 			
 		</article>
-
+		<!-- !NOTE S : 2024-04 추가 -->
 		<article class="product-page inquiry-page">
 						<div class="area">
 							<article class="contact-form">
@@ -223,6 +223,7 @@ $bottom_img = $row->bbs_file3;
 							</article>
 						</div>
 					</article>
+				<!-- !NOTE E : 2024-04 추가 -->
 
 	</article>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

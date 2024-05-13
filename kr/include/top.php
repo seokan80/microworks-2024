@@ -101,11 +101,11 @@
 			<?}?>
 			
 			<?if($sub_section == 'trend'){?>
-				<!-- !NOTE S: 2024-04 추가 -->
+				<!-- !NOTE S: 2024-04 추가 - 각 페이지에 따라 active클래스 넣어주세요 -->
 					<div class="tabs area">
-						<a href="#" class="tab active">메모리 가격 동향</a>
-						<a href="#" class="tab">메모리 대치품 검색</a>
-						<a href="#" class="tab">메모리 스탁재고 문의</a>
+						<a href="<?=$site_url?>/product/trend_list.php" class="tab active">메모리 가격 동향</a>
+						<a href="<?=$site_url?>/product/trend_list_2.php" class="tab">메모리 대치품 검색</a>
+						<a href="<?=$site_url?>/product/trend_list_3.php" class="tab">메모리 스탁재고 문의</a>
 					</div>
 					<!-- !NOTE E: 2024-04 추가 -->
 			<?}?>
