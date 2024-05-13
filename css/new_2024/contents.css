@@ -199,6 +199,8 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 .sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a::before{content:"-"; position: absolute; left: 0; top: 42%; transform: translateY(-50%); font-weight: bold;}
 .sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a:hover{color: var(--primary-color);}
 
+.side-menu-inner .gnb-3dep{display: none;}
+
 /* main */
 section{position: relative; width: 100%;}
 section.full-height{height: 100dvh;}
