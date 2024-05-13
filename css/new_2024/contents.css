@@ -190,13 +190,14 @@ table .ox{height: 38px; display: inline-flex; align-items: center;}
 .sitemap-wrapper > ul > li > h2{background-color: #dce4f9;}
 .sitemap-wrapper > ul > li > h2,
 .sitemap-wrapper > ul > li .sitemap-2dep a em,
-.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{font-weight: 600;}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a{font-weight: 600;}
 .sitemap-wrapper > ul > li .sitemap-2dep a{color: var(--text-color);}
 .sitemap-wrapper > ul > li .sitemap-2dep a:hover{color: var(--text-color-darken);}
-.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep{padding: 15px 20px; background-color: var(--color-light-gray);}
-.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li:not(:first-child){margin-top: 12px;}
-.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a{padding: unset; text-align: left;}
-.sitemap-wrapper > ul > li .sitemap-2dep .sitemap-3dep li a:hover{color: var(--primary-color);}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep{padding: 15px 20px; background-color: var(--color-light-gray);}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li:not(:first-child){margin-top: 12px;}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a{position: relative; padding: unset; padding-left: 10px; text-align: left;}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a::before{content:"-"; position: absolute; left: 0; top: 42%; transform: translateY(-50%); font-weight: bold;}
+.sitemap-wrapper > ul > li .sitemap-2dep .gnb-3dep li a:hover{color: var(--primary-color);}
 
 /* main */
 section{position: relative; width: 100%;}
@@ -671,7 +672,7 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 
 @media all and ( max-width: 1220px ){
 	#header{z-index: 9999;}
-	#navigation > li .gnb-2dep > li > .gnb-3dep{ padding:10px; background-color:#100269; margin:0 10px; color: white;}
+	#navigation > li .gnb-2dep > li > .gnb-3dep{display: block; padding:10px; background-color:#100269; margin:0 10px; color: white;}
 	#navigation > li .gnb-2dep > li > .gnb-3dep ul > li > a{position: relative; display:block; padding:8px 0; padding-left: 10px; font-size:13px; color:#fff;}
 	#navigation > li .gnb-2dep > li > .gnb-3dep ul > li > a::before{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 6px; height: 3px; background-color: var(--primary-color);}
 
