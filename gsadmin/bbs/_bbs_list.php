@@ -38,16 +38,6 @@ $colspan=1;
 		<th>검색어</th>
 		<td>
 			<div class="form-group">
-				<!-- !NOTE S : 2024-04 추가 -->
-				<div class="input-group-btn">
-					<select name="search_lang" class="form-control input-sm">
-						<option value="">전체</option>
-						<option value="1">국문</option>
-						<option value="2">영문</option>
-						<option value="3">중문</option>
-					</select>
-				</div>
-				<!-- !NOTE E : 2024-04 추가 -->
 				<div class="input-group-btn">
 					<select name="search_item"  class="form-control input-sm" >
 						<option value="">통합검색</option>
@@ -106,14 +96,12 @@ $colspan=1;
 	<div class="table-responsive">
 	<table class="table table-bordered table-hover">
 	<colgroup>
-	<!-- !NOTE S : 2024-04 변경 -->
-	<col width="4%">
-	<col width="4%">
-	<?if($code=="trend_list"){ } else { ?><col width="5%"><? } ?>
+	<col width="5%">
+	<col width="5%">
+	<?if($code=="trend_list"){ } else { ?><col width="8%"><? } ?>
 	<?if($bbs_stat->bbs_cate==1) {$colspan++;//카테고리?>
-	<col width="7%">
+	<col width="10%">
 	<?}?>
-	<!-- !NOTE E : 2024-04 변경 -->
 	<? if( $bbs_stat->bbs_type==3 ) {$colspan++;//썸네일?>
 	<col width="10%">
 	<? }?>
@@ -128,13 +116,9 @@ $colspan=1;
 		<col width="*">
 		<col width="7%">
 		<col width="7%">
-		<!-- !NOTE S : 2024-04 변경 -->
 		<col width="5%">
-		<col width="12%">
-		<col width="5%">
-		<?}?>
-		<col width="8%">
-	<!-- !NOTE E : 2024-04 변경 -->
+	<?}?>
+	<col width="7%">
 	</colgroup>
 	<thead>
 	<tr>
@@ -164,10 +148,6 @@ $colspan=1;
 			<th>제 목</th>
 			<th>작성자</th>
 			<th>등록일</th>
-	<!-- !NOTE S : 2024-04 추가 -->
-			<th>상태</th>
-			<th>기간</th>
-	<!-- !NOTE E : 2024-04 추가 -->
 			<th>조회수</th>
 		<?}?>
 		<th>관리하기</th>
@@ -219,10 +199,6 @@ $colspan=1;
 			</td>
 			<td class="text-center"><?=$name?></td>
 			<td class="text-center"><?=$reg_date?></td>
-			<!-- !NOTE S : 2024-04 추가 -->
-			<td class="text-center">종료</td>
-			<td class="text-center">2021-10-11 ~ 2021-10-11</td>
-			<!-- !NOTE E : 2024-04 추가 -->
 			<td class="text-center"><?=$read_cnt?></td>
 			<td class="text-center"><a href="./bbs_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&code=<?=$code;?>&idx=<?=$row->idx;?>" class="btn btn-default btn-sm">수정하기</a></td>
 		</tr>
@@ -375,10 +351,6 @@ $colspan=1;
 				</td>
 				<td class="text-center"><?=$name?></td>
 				<td class="text-center"><?=$reg_date?></td>
-				<!-- !NOTE S : 2024-04 추가 -->
-				<td class="text-center">종료</td>
-				<td class="text-center">2021-10-11 ~ 2021-10-11</td>
-				<!-- !NOTE E : 2024-04 추가 -->
 				<td class="text-center"><?=$read_cnt?></td>
 			<?}?>
 			<td class="text-center"><a href="./bbs_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&code=<?=$code;?>&idx=<?=$bbs_row->idx;?>" class="btn btn-default btn-sm">수정하기</a></td>

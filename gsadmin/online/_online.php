@@ -1,9 +1,9 @@
 <?
 $mod	= "online";	
-$menu	= "online_product";
+$menu	= "online";
 include("../header.php");
 
-	$table			= "cs_online_product";
+	$table			= "cs_online";
 	$listScale		= 10;
 	$pageScale	= 10;
 	if( !$startPage ) { $startPage = 0; }
@@ -33,7 +33,7 @@ include("../header.php");
 	if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalList; }
 ?>
 
-	<h4 class="page-header">제품문의 신청서</h4>
+	<h4 class="page-header">온라인 신청서</h4>
 
 	<form method="get" name="search_form" class="form-inline" action="<?=$_SERVER['PHP_SELF'];?>" >
 	<table class="table table-bordered">
@@ -71,34 +71,24 @@ include("../header.php");
 	<div class="table-responsive">
 	<table class="table table-bordered table-hover">
 	<colgroup>
-		<!-- !NOTE S : 2024-04 변경 -->
-  	<col width="5%">
-		<col width="5%">
-		<col width="10%">
-		<col width="10%">
-		<col width="15%">
-		<col width="7%">
-		<col width="*">
-		<col width="7%">
-		<col width="7%">
-		<!-- !NOTE E : 2024-04 변경 -->
+	<col width="5%">
+	<col width="5%">
+	<col width="15%">
+	<col width="10%">
+	<col width="*">
+	<col width="10%">
+	<col width="7%">
 	</colgroup>
 	<thead>
 	<tr>
 		<td><button type="button" class="btn btn-danger btn-xs btn-block ajax-checkbox" data-table="<?=$table?>" data-name="delete" data-val="">삭제</button></td>
-		<!-- !NOTE S : 2024-04 추가 -->
-		<td colspan="8"></td>
-		<!-- !NOTE E : 2024-04 추가 -->
+		<td colspan="6"></td>
 	</tr>
 	<tr>
 		<th><input type="checkbox" id="allCheck"></th>
 		<th>N O</th>
 		<th>이 름</th>
 		<th>휴대폰</th>
-		<!-- !NOTE S : 2024-04 추가 -->
-		<th>부품명</th>
-		<th>필요수량</th>
-		<!-- !NOTE E : 2024-04 추가 -->
 		<th>내 용</th>
 		<th>등록일</th>
 		<th>관리하기</th>
@@ -117,13 +107,9 @@ include("../header.php");
 		<td class="text-center"><?echo $listNo?></td>
 		<td class="text-center"><?echo $row[name]?><? if($today==$reg_date){ ?>&nbsp;<span class="label label-danger">New</span><? } ?></td>
 		<td class="text-center"><?echo $row[phone]?> </td>
-		<!-- !NOTE S : 2024-04 추가 -->
-		<td class="text-center">부품명</td>
-		<td class="text-center">필요수량</td>
-		<!-- !NOTE E : 2024-04 추가 -->
 		<td><?echo $content;?></td>
 		<td class="text-center"><?echo $reg_date?></td>
-		<td class="text-center"><a href="./online_product_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&idx=<?=$row[idx]?>" class="btn btn-default btn-sm">상세보기</a></td>
+		<td class="text-center"><a href="./online_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&idx=<?=$row[idx]?>" class="btn btn-default btn-sm">상세보기</a></td>
 	</tr>
 	<? 
 		$listNo--;

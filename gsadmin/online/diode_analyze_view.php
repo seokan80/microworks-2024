@@ -1,12 +1,13 @@
 <?
 $mod	= "online";	
-$menu	= "online";
+$menu	= "online_product";
 include("../header.php");
 
-$row = $db->object("cs_online","where idx='$idx'");
+$row = $db->object("cs_online_product","where idx='$idx'");
 ?>
 
-	<h4 class="page-header">온라인 신청서</h4>
+<!-- !NOTE : 신규 페이지 -->
+	<h4 class="page-header">반도체 분석 신청서</h4>
 
 	<table class="table table-bordered">
 	<colgroup>
@@ -29,34 +30,32 @@ $row = $db->object("cs_online","where idx='$idx'");
 	<tr> 
 		<th>회사명</th>
 		<td>
-			<?echo $row->company?>
+			<?echo $row->subject?>
 		</td>
 	</tr>
 	<tr>
 		<th>이메일</th>
 		<td><?echo $row->email?></td>
 	</tr>
-	<!-- !NOTE S : 2024-04 추가 -->
 	<tr>
-		<th>부품명</th>
-		<td>부품명</td>
+		<th>파트명</th>
+		<td>파트명</td>
 	</tr>
 	<tr>
-		<th>필요수량</th>
-		<td>필요수량</td>
+		<th>의뢰수량</th>
+		<td>의뢰수량</td>
 	</tr>
 	<tr>
-		<th>희망납기</th>
-		<td>희망납기</td>
+		<th>문의내용</th>
+		<td>문의내용</td>
 	</tr>
 	<tr>
-		<th>목표단가</th>
-		<td>목표단가</td>
+		<th>정품보유여부</th>
+		<td>정품보유여부</td>
 	</tr>
-	<!-- !NOTE E : 2024-04 추가 -->
 	<tr>
-		<th>내 용</th>
-		<td><?echo nl2br($tools->strHtmlNoBr($row->content));?></td>
+		<th>상세내용</th>
+		<td>상세내용</td>
 	</tr>
 	</tbody>
 	</table>
@@ -64,7 +63,7 @@ $row = $db->object("cs_online","where idx='$idx'");
 
 	<table class="table">
 		<tr>
-			<td class="text-center"><a href="<?echo $returnURL? $returnURL:"online.php";?>" class="btn btn-default" >목록</a></td>
+			<td class="text-center"><a href="<?echo $returnURL? $returnURL:"online_product.php";?>" class="btn btn-default" >목록</a></td>
 		</tr>
 	</table>
 

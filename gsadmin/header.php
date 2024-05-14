@@ -34,6 +34,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
 
     <link href="<?=$site_url?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=$site_url?>/css/skin/dashboard.css" rel="stylesheet">
+    <link href="<?=$site_url?>/css/new_2024/admin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="<?=$site_url?>/js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
