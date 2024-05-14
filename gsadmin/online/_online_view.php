@@ -36,24 +36,6 @@ $row = $db->object("cs_online","where idx='$idx'");
 		<th>이메일</th>
 		<td><?echo $row->email?></td>
 	</tr>
-	<!-- !NOTE S : 2024-04 추가 -->
-	<tr>
-		<th>부품명</th>
-		<td>부품명</td>
-	</tr>
-	<tr>
-		<th>필요수량</th>
-		<td>필요수량</td>
-	</tr>
-	<tr>
-		<th>희망납기</th>
-		<td>희망납기</td>
-	</tr>
-	<tr>
-		<th>목표단가</th>
-		<td>목표단가</td>
-	</tr>
-	<!-- !NOTE E : 2024-04 추가 -->
 	<tr>
 		<th>내 용</th>
 		<td><?echo nl2br($tools->strHtmlNoBr($row->content));?></td>
