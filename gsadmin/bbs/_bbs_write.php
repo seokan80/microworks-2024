@@ -75,33 +75,6 @@ if($code=="trend_list"){
 		<th>제 목</th>
 		<td><input type="text" name="subject" class="form-control" value="<?=$subject2?>"></td>
 	</tr>
-	<!-- !NOTE S : 2024-04 추가 -->
-	<tr>
-		<th>게시기간 사용여부</th>
-		<td>
-			<label class="radio-inline"><input type="radio" name="post-duration" value="" checked="">사용</label>
-			<label class="radio-inline"><input type="radio" name="post-duration" value="">미사용</label>
-		</td>
-	</tr>
-	<tr>
-		<th>게시기간</th>
-		<td>
-			<div class="input-group datetime">
-				<input type="text" name="duration_sday" class="form-control input-sm text-center" value="">
-				<span class="input-group-addon">
-					<span class="glyphicon-calendar glyphicon"></span>
-				</span>
-			</div>
-			~
-			<div class="input-group datetime">
-				<input type="text" name="duration_eday" class="form-control input-sm text-center" value="2024-04-22">
-				<span class="input-group-addon">
-					<span class="glyphicon-calendar glyphicon"></span>
-				</span>
-			</div>
-		</td>
-	</tr>
-	<!-- !NOTE E : 2024-04 추가 -->
 	<?if($code==""){?>
 		<tr>
 			<th>Quantity</th>
