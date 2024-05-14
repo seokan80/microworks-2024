@@ -21,6 +21,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+        <!-- !NOTE S : 2024-04 추가 -->
+        <!-- !NOTE : 대치품 검색 전체 페이지 서브메뉴의 대치품검색 li에 on클래스 추가해주세요 -->
 				<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="area02">
 					<div class="replacement-search-box">
 						<div class="replacement-search-select" >
@@ -831,6 +833,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
               </div>
             </div>
           </article>
+          <!-- !NOTE E : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

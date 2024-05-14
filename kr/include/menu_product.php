@@ -2,9 +2,9 @@
 									<!-- !NOTE S: 2024-04 추가 -->
 									<div class="gnb-3dep">
 										<ul>
-											<li><a href="#">메모리 가격동향</a></li>
-											<li><a href="#">메모리 대치품 검색</a></li>
-											<li><a href="#">메모리 스탁재고 문의</a></li>
+											<li><a href="<?=$site_url?>/product/trend_list.php">메모리 가격동향</a></li>
+											<li><a href="<?=$site_url?>/product/trend_list_2.php">메모리 대치품 검색</a></li>
+											<li><a href="<?=$site_url?>/product/trend_list_3.php">메모리 스탁재고 문의</a></li>
 										</ul>
 									</div>
 									<!-- !NOTE E: 2024-04 추가 -->
