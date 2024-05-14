@@ -33,6 +33,7 @@ include("../header.php");
 	if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalList; }
 ?>
 
+<!-- !NOTE : 신규페이지 입니다 -->
 	<h4 class="page-header">반도체 분석 신청서</h4>
 
 	<form method="get" name="search_form" class="form-inline" action="<?=$_SERVER['PHP_SELF'];?>" >
