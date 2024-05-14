@@ -28,12 +28,14 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<?if( !$_SESSION[ADMIN_USERID] || !$_SESSION[ADMIN_PASSWD]) { $tools->alertJavaGo('경고! 잘못된 접근입니다\n\n로그인 하세요', $site_url);}?>
+		<!-- !NOTE : 로컬 계정 정보가 없어 주석처리 해두었습니다. -->
+	<?//if( !$_SESSION[ADMIN_USERID] || !$_SESSION[ADMIN_PASSWD]) { $tools->alertJavaGo('경고! 잘못된 접근입니다\n\n로그인 하세요', $site_url);}?>
 
     <title><?=$admin_stat->shop_name;?></title>
 
     <link href="<?=$site_url?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=$site_url?>/css/skin/dashboard.css" rel="stylesheet">
+    <link href="<?=$site_url?>/css/new_2024/admin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="<?=$site_url?>/js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
