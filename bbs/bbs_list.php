@@ -244,6 +244,11 @@ $(document).ready(function  () {
 	
 	// 쿼리문 
 	$query = "select * from $table where code='$code' and notice < 1 and lang='$lang' ";
+    // #202405 공지사항 추가
+    if($code == 'notice') {
+        $query.= " and CURDATE() between period_start_date and period_end_date ";
+    }
+
 		if($cate){$query.=" and cate='$cate'";}
 
 		if($search_order){
@@ -256,6 +261,10 @@ $(document).ready(function  () {
 	$totalList = mysql_num_rows($rs);
 
 	$query = "select * from $table where code='$code' and notice < 1 and lang='$lang' ";
+	// #202405 공지사항 추가
+	if($code == 'notice') {
+	    $query.= " and CURDATE() between period_start_date and period_end_date ";
+	}
 		if($cate){$query.=" and cate='$cate'";}
 
 		if($search_order){
@@ -301,8 +310,13 @@ $(document).ready(function  () {
 			<span style="width:10%;"><?=$title_view?></span>
 		</p>
 		<?
-		$table				= "cs_bbs_data";
-		$notice_result		= $db->select( $table, "where code='$code' and notice > 0 and lang='$lang' order by idx desc" );
+		$table = "cs_bbs_data";
+		$query = "where code='$code' and notice > 0 and lang='$lang'";
+		if($code == 'notice') { // #202405 공지사항 추가
+            $query.= " and CURDATE() between period_start_date and period_end_date";
+        }
+        $query.= " order by idx desc";
+		$notice_result		= $db->select( $table, $query);
 		while( $bbs_row = mysql_fetch_object($notice_result) ) {
 			$new_check		=		$bbs_admin_stat->new_check;
 			$subject			=		$tools->strCut_utf($db->stripSlash($bbs_row->subject), 150);

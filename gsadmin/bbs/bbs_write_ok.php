@@ -33,6 +33,11 @@ if( $_POST[name] ) {
 	$attr_3 = $tools->filter($_POST[attr_3]);
 	$attr_4 = $tools->filter($_POST[attr_4]);
 	$lang = $tools->filter($_POST[lang]);
+	// #202405 공지사항 추가
+    $period_yn = ($code == 'notice')? $tools->filter($_POST[period_yn]) : null;
+    $period_start_date = ($code == 'notice')? $tools->filter($_POST[period_start_date]) : null;
+    $period_end_date = ($code == 'notice')? $tools->filter($_POST[period_end_date]) : null;
+
 	if($lang==1){
 		$name = "관리자";
 	}else if($lang==2){
@@ -119,7 +124,7 @@ if( $_POST[name] ) {
 		$sum_name 	= "";
 	}
 
-
+    // #202405 공지사항 추가 : period_yn, period_start_date, period_end_date
 	// 디비입력
 	if( $db->insert($table_name,
 		"code='$code',
@@ -148,7 +153,11 @@ if( $_POST[name] ) {
 		attr_2='$attr_2',
 		attr_3='$attr_3',
 		attr_4='$attr_4',
-		secret='$secret'") ) {
+		secret='$secret',
+		period_yn='$period_yn',
+		period_start_date='$period_start_date',
+		period_end_date='$period_end_date'"
+		)) {
 
 		################# plupload 이미지 처리 #################
 		$table_name = "cs_bbs_data";

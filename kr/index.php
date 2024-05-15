@@ -3,7 +3,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
-$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' order by ref desc, idx desc limit 3");
+$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and ((period_yn = 'Y' and period_start_date <= now() and period_end_date >= now()) OR period_yn = 'N') order by ref desc, idx desc limit 3");
 ?>
 <? if($tools->device()=="mobile"){ ?>
 
