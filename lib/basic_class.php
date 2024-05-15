@@ -541,5 +541,19 @@ function strCut_utf($str, $len, $checkmb=false, $tail='...') {
 		$today_week = date("W", $mk_date);
 		return $today_week;
 	}
+	function checkNullDate($date) {
+	    if($date === null || $date === '0000-00-00') {
+	        return null;
+	    } else {
+	        return $date;
+	    }
+	}
+	function checkDateDefault($date, $chgDate) {
+	    if($date === null || $date === '0000-00-00') {
+            return $chgDate;
+        } else {
+            return $date;
+        }
+	}
 }
 ?>

@@ -3,7 +3,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
-$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' order by ref desc, idx desc limit 3");
+$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and ((period_yn = 'Y' and period_start_date <= curdate() and period_end_date >= curdate()) OR period_yn = 'N') order by ref desc, idx desc limit 3");
 ?>
 <? if($tools->device()=="mobile"){ ?>
 
@@ -499,42 +499,23 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								<div class="notice-con-inner">
 									<h4 class="notice-tit">공지사항</h4>
 									<ul>
+										<?while($notice_row = mysql_fetch_array($notice_rs)){
+											$new_img =	$page->bbsNewImg( $notice_row[reg_date], 24, 'new-notice');
+										?>
 										<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1092">
+											<a href="<?=$site_url?>/company/notice.php?bgu=view&idx=<?=$notice_row[idx]?>">
 												<div class="notice-item">
 													<div class="item-inner">
 														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject new-notice">
-															SAMSUNG MEMORY Product (End - Of – Life) notice : EOL </p>
-														<span class="notice-date">24.04.16</span>
+														<p class="notice-subject <?=$new_img?>">
+															<?=$notice_row[subject]?>
+														</p>
+														<span class="notice-date"><?=$tools->strDateCut($notice_row[reg_date],8);?></span>
 													</div>
 												</div>
 											</a>
 										</li>
-										<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1088">
-												<div class="notice-item">
-													<div class="item-inner">
-														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject ">
-															Holiday Notice </p>
-														<span class="notice-date">24.04.12</span>
-													</div>
-												</div>
-											</a>
-										</li>
-										<li>
-											<a href="http://www.microworks.co.kr/en/company/notice.php?bgu=view&amp;idx=1082">
-												<div class="notice-item">
-													<div class="item-inner">
-														<!-- new게시물에 클래스 new-notice 붙여주세요~! -->
-														<p class="notice-subject ">
-															Industrial memory cards, essentials for safety and reliability </p>
-														<span class="notice-date">24.04.09</span>
-													</div>
-												</div>
-											</a>
-										</li>
+										<?}?>
 									</ul>
 								</div>
 							</div>
