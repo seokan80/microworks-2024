@@ -28,7 +28,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
 									<section class="bbs-write-con">
 										<article class="bbs-inquiry-agree-con">
-											<p class="agree-tit">Privacy Policy</p>
+											<h3 class="agree-tit">Privacy Policy</h3>
 											<div class="inquiry-agreement-con editor">
 												<?
 										$page_row = $db->object("cs_page", "where page_index='privacy_en'");
@@ -120,7 +120,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 													<tr>
 														<th scope="row">Content</th>
 														<td>
-															<textarea name="content" class="write-textarea" placeholder="문의내용 (500자 이내로 입력해주세요.)"></textarea>
+															<textarea name="content" class="write-textarea"></textarea>
 														</td>
 													</tr>
 												</tbody>
