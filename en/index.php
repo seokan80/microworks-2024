@@ -483,18 +483,18 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 				<div class="area02">
 					<div class="inner clearfix">
 						<div class="about-con">
-							<div class="tit-box fade-in-down fade-in-03">
+							<div class="tit-box fade-in-down fade-in-02">
 								<p class="tit-sub">About Us</p>
 								<h3 class="tit"><strong>MICROWORKS<br>KOREA</strong></h3>
 							</div>
-							<p class="tit-txt fade-in-down fade-in-05">
+							<p class="tit-txt fade-in-down fade-in-04">
 								Microworks Korea Co., Ltd. is <br>
 								Professional global IC, Memoryparts distributor<br>
 								which established in 2007.
 							</p>
-							<a href="<?=$site_url?>/company/summary.php" class="detail-btn fade-in-down fade-in-10"><span>Detail View</span></a>
+							<a href="<?=$site_url?>/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span>Detail View</span></a>
 						</div>
-						<div class="notice-con fade-in-right fade-in-09">
+						<div class="notice-con fade-in-right fade-in-08">
 							<div class="notice-con-inner">
 								<h4 class="notice-tit">Notice</h4>
 								<ul>
