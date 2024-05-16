@@ -1,13 +1,15 @@
 <?
 $page_num = "03";
 $sub_num = "01";
+//<!-- !NOTE S : 2024-04 추가 -->
 $dep3_num = "02";
+//<!-- !NOTE E : 2024-04 추가 -->
 $page_section = "product";
 //<!-- !NOTE S : 2024-04 변경 -->
 $sub_section = "memory";
 //<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "PRODUCT SEARCH";
-$sub_info = "메모리 대치품 검색";
+$sub_info = "Memory Price Trend";
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
@@ -49,7 +51,7 @@ $list_index = 1;
 
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
-				<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only area02">
+<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only area02">
 					<div class="replacement-search-box">
 						<div class="replacement-search-select" >
 							<a href="javascript:;" class="cur-select">
@@ -836,7 +838,7 @@ $list_index = 1;
               </div>
             </div>
           </article>
-          <!-- !NOTE : 모바일에서 접속 한 경우 -->
+					<!-- !NOTE : 모바일에서 접속 한 경우 -->
 					<article class="sub-page product-page mo-only">
 						<div class="area02">
 							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
@@ -848,4 +850,5 @@ $list_index = 1;
 						</div>
 					</article>
 		<!-- //컨텐츠 내용 -->
+		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

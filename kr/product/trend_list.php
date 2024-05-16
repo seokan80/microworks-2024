@@ -1,7 +1,9 @@
 <?
 $page_num = "03";
 $sub_num = "01";
+//<!-- !NOTE S : 2024-04 추가 -->
 $dep3_num = "01";
+//<!-- !NOTE E : 2024-04 추가 -->
 $page_section = "product";
 //<!-- !NOTE S : 2024-04 변경 -->
 $sub_section = "memory";
@@ -96,8 +98,11 @@ $list_index = 1;
 												</div>
 												<div class="column bbs-inline" data-label="제품수"><?=$prd_cnt?></div>
 												<div class="column bbs-inline" data-label="등록일"><?=$tools->strDateCut($row[reg_date],3);?></div>
+												<!-- !NOTE S : 2024-04 변경 -->
 												<div class="column" data-label="no"><a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>" class="button type-secondary"><strong>Detail
-															View</strong></a></div>
+															View</strong></a>
+													</div>
+													<!-- !NOTE E : 2024-04 변경 -->
 											</div>
 											<?$listNo--;
 											}?>
