@@ -3,7 +3,9 @@ $page_num = "03";
 $sub_num = "01";
 $dep3_num = "02";
 $page_section = "product";
-$sub_section = "trend";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_section = "memory";
+//<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "PRODUCT SEARCH";
 $sub_info = "메모리 대치품 검색";
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";

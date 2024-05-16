@@ -646,6 +646,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 											<th>등락률</th>
 										</tr>
 									</thead>
+									<!-- !NOTE S : 기존소스 복구 시 아래 컨텐츠가 안나오는 이슈가 있습니다. __index.php 소스 참고 부탁드립니다. -->
 									<tbody>
 										<tr>
 											<th>
@@ -699,6 +700,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 												<p class="up-down"><span class="up-icon"></span> +0.18%</p>
 											</td>
 										</tr>
+										<!-- !NOTE E : 기존소스 복구 시 아래 컨텐츠가 안나오는 이슈가 있습니다. __index.php 소스 참고 부탁드립니다. -->
 									</tbody>
 								</table>
 							</div>
