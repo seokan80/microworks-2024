@@ -9,7 +9,9 @@ $page_section = "product";
 $sub_section = "memory-biz";
 //<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "产品搜索 ";
-$sub_info = "Memory 价格趋势";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_info = "메모리 스탁재고 문의";
+//<!-- !NOTE E : 2024-04 변경 -->
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
@@ -178,5 +180,44 @@ $list_index = 1;
 					</article>
 					<!-- !NOTE E : 2024-04 추가 -->
 					<!-- //컨텐츠 내용 -->
-		
+					<script type="text/javascript">
+<!--
+function sendit() {
+	var f=document.form;
+	if(f.agree1.checked==false){
+		alert("您尚未同意隐私政策。");
+		f.agree1.focus();
+	}else if(f.name.value=="") {
+		alert("请输入一个名字。");
+		f.name.focus();
+	} else if(f.phone1.value=="") {
+		alert("请输入联系人。");
+		f.phone1.focus();
+	} else if(f.phone2.value=="") {
+		alert("请输入联系人。");
+		f.phone2.focus();
+	} else if(f.phone3.value=="") {
+		alert("请输入联系人。");
+		f.phone3.focus();
+	} else {
+		f.submit();
+	}
+}
+
+function res(){
+	var f = document.form;
+	if(f.email3.value=="a"){
+	f.email2.readOnly= false;
+	f.email2.value="";
+	f.email2.focus();
+	}else if(f.email3.value=="b"){
+	f.email2.readOnly= true;
+	f.email2.value="";
+	}else{
+	f.email2.readOnly= true;
+	f.email2.value=f.email3.value;
+	}
+}
+//-->
+</script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

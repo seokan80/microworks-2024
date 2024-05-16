@@ -9,7 +9,9 @@ $page_section = "product";
 $sub_section = "memory-biz";
 //<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "产品搜索 ";
-$sub_info = "Memory 价格趋势";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_info = "메모리 대치품 검색";
+//<!-- !NOTE E : 2024-04 변경 -->
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용

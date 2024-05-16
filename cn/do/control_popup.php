@@ -37,10 +37,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
 										<section class="bbs-write-con">
 											<article class="bbs-inquiry-agree-con">
-												<p class="agree-tit">개인정보처리방침</p>
-												<div class="inquiry-agreement-con editor">
-													<?
-										$page_row = $db->object("cs_page", "where page_index='privacy'");
+											<h3 class="agree-tit">隐私政策</h3>
+										<div class="inquiry-agreement-con editor">
+										<?
+										$page_row = $db->object("cs_page", "where page_index='privacy_cn'");
 
 										$content = $page_row->content;
 										$content = str_replace("<p>","",$content);
@@ -51,12 +51,12 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 												</div>
 												<p class="agree-txt">
 													<input type="checkbox" id="agree1">
-														<label for="agree1">개인정보처리방침에 동의합니다.
+														<label for="agree1">我接受隐私政策。
 													</label>
 												</p>
 											</article>
 											<article class="bbs-write-tbl-box">
-												<p class="inquiry-essential-txt"><span class="essential-icon">*</span>표시는 필수 입력 항목입니다.</p>
+												<p class="inquiry-essential-txt"><span class="essential-icon">*</span>表示必填项</p>
 												<table class="bbs-write-tbl">
 													<caption>문의폼입니다.</caption>
 													<colgroup>
@@ -65,19 +65,19 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 													</colgroup>
 													<tbody>
 														<tr>
-															<th scope="row"><span class="essential-icon">*</span>이름</th>
+															<th scope="row"><span class="essential-icon">*</span>名</th>
 															<td><input type="text" class="write-input" name="name" required="required"></td>
 														</tr>
 														<tr>
-															<th scope="row"><span class="essential-icon">*</span>이메일</th>
+															<th scope="row"><span class="essential-icon">*</span>电子邮件</th>
 															<td>
 																<fieldset class="email-fieldset">
 																	<input type="text" class="write-input" name="email1" required="required">
 																	<span class="hypen">@</span>
 																	<input type="text" class="write-input" name="email2" readonly required="required">
 																	<select name="email3" class="write-select" onChange="res();" required="required">
-																		<option value="b">메일계정선택</option>
-																		<option value="a">직접입력</option>
+																		<option value="b">选择邮件帐户</option>
+																		<option value="a">直接输入</option>
 																		<option value="naver.com">naver.com</option>
 																		<option value="nate.com">nate.com</option>
 																		<option value="hanmail.net">hanmail.net</option>
@@ -95,7 +95,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 															</td>
 														</tr>
 														<tr>
-															<th scope="row"><span class="essential-icon">*</span>연락처</th>
+															<th scope="row"><span class="essential-icon">*</span>手机号码</th>
 															<td>
 																<fieldset>
 																	<input type="text" class="write-input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
@@ -107,7 +107,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 															</td>
 														</tr>
 														<tr>
-															<th scope="row"> 회사명</th>
+															<th scope="row">公司名称</th>
 															<td><input type="text" class="write-input width-full" name="company"></td>
 														</tr>
 														<tr>
@@ -142,9 +142,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 															</td>
 														</tr>
 														<tr>
-															<th scope="row">상세내용</th>
+															<th scope="row">内容</th>
 															<td class="size-full">
-																<textarea name="content" class="write-textarea" placeholder="문의내용 (500자 이내로 입력해주세요.)"></textarea>
+																<textarea name="content" class="write-textarea"></textarea>
 															</td>
 														</tr>
 													</tbody>
@@ -159,8 +159,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 												기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
 											-->
 											<div class="button-layout bottom-buttons">
-												<button type="button" class="button" onClick="sendit();"><strong>작성완료</strong></button>
-												<a href="/" class="button type-secondary"><strong>취소</strong></a>
+												<button type="button" class="button" onClick="sendit();"><strong>已完成</strong></button>
+												<a href="/" class="button type-secondary"><strong>取消</strong></a>
 											</div>
 										</section>
 									</form>
@@ -171,5 +171,46 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</article>
 				<!-- !NOTE E : 2024-04 추가 -->
+
+				<script type="text/javascript">
+<!--
+function sendit() {
+	var f=document.form;
+	if(f.agree1.checked==false){
+		alert("您尚未同意隐私政策。");
+		f.agree1.focus();
+	}else if(f.name.value=="") {
+		alert("请输入一个名字。");
+		f.name.focus();
+	} else if(f.phone1.value=="") {
+		alert("请输入联系人。");
+		f.phone1.focus();
+	} else if(f.phone2.value=="") {
+		alert("请输入联系人。");
+		f.phone2.focus();
+	} else if(f.phone3.value=="") {
+		alert("请输入联系人。");
+		f.phone3.focus();
+	} else {
+		f.submit();
+	}
+}
+
+function res(){
+	var f = document.form;
+	if(f.email3.value=="a"){
+	f.email2.readOnly= false;
+	f.email2.value="";
+	f.email2.focus();
+	}else if(f.email3.value=="b"){
+	f.email2.readOnly= true;
+	f.email2.value="";
+	}else{
+	f.email2.readOnly= true;
+	f.email2.value=f.email3.value;
+	}
+}
+//-->
+</script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
 
