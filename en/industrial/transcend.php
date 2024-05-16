@@ -108,23 +108,17 @@ $bottom_img = $row->bbs_file3;
 			
 		</article>
 
-		<article class="industrial-inquiry">
-			<? if($bottom_img){ ?>
-			<div class="inquiry-banner">
-				<span class="banner-img"><img src="/data/bbsData/<?=$bottom_img?>" alt="" /></span>
-			</div>
-			<? } ?>
-			<article class="inquiry-page">
+		<!-- !NOTE S : 2024-04 추가 -->
+		<article class="product-page inquiry-page">
+						<div class="area">
 						<article class="contact-form">
-							<!-- 문의 폼 시작 -->
-
-<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
-
-								<section class="bbs-write-con">
-									<article class="bbs-inquiry-agree-con">
-										<h3 class="agree-tit">Privacy Policy</h3>
-										<div class="inquiry-agreement-con editor">
-										<?
+								<!-- 문의 폼 시작 -->
+								<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
+									<section class="bbs-write-con">
+										<article class="bbs-inquiry-agree-con">
+											<p class="agree-tit">Privacy Policy</p>
+											<div class="inquiry-agreement-con editor">
+												<?
 										$page_row = $db->object("cs_page", "where page_index='privacy_en'");
 
 										$content = $page_row->content;
@@ -133,117 +127,130 @@ $bottom_img = $row->bbs_file3;
 										$content = $tools->strHtml($content);
 										echo $content;
 										?>
+											</div>
+											<p class="agree-txt">
+												<input type="checkbox" id="agree1">
+													<label for="agree1">I agree with the privacy policy.
+												</label>
+											</p>
+										</article>
+										<article class="bbs-write-tbl-box">
+											<p class="inquiry-essential-txt">Marking<span class="essential-icon">*</span> is mandatory.</p>
+											<table class="bbs-write-tbl">
+												<caption>문의폼입니다.</caption>
+												<colgroup>
+													<col style="width:16%;">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row"><span class="essential-icon">*</span>Name</th>
+														<td><input type="text" class="write-input" name="name" required="required"></td>
+													</tr>
+													<tr>
+														<th scope="row"><span class="essential-icon">*</span>E-mail</th>
+														<td>
+															<fieldset class="email-fieldset">
+																<input type="text" class="write-input" name="email1" required="required">
+																<span class="hypen">@</span>
+																<input type="text" class="write-input" name="email2" readonly required="required">
+																<select name="email3" class="write-select" onChange="res();" required="required">
+																	<option value="b">Select mail account</option>
+																	<option value="a">Direct input</option>
+																	<option value="naver.com">naver.com</option>
+																	<option value="nate.com">nate.com</option>
+																	<option value="hanmail.net">hanmail.net</option>
+																	<option value="gmail.com">gmail.com</option>
+																	<option value="hotmail.com">hotmail.com</option>
+																	<option value="outlook.com">outlook.com</option>
+																	<option value="empal.com">empal.com</option>
+																	<option value="dreamwiz.com">dreamwiz.com</option>
+																	<option value="lycos.co.kr">lycos.co.kr</option>
+																	<option value="yahoo.co.kr">yahoo.co.kr</option>
+																	<option value="korea.com">korea.com</option>
+																	<option value="paran.com">paran.com</option>
+																</select>
+															</fieldset>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row"><span class="essential-icon">*</span>TEL</th>
+														<td>
+															<fieldset>
+																<input type="text" class="write-input" name="phone1" title="휴대폰번호 처음" maxlength="8" required="required">
+																<span class="hypen">-</span>
+																<input type="text" class="write-input" name="phone2" title="휴대폰번호 가운데" maxlength="8" required="required">
+																<span class="hypen">-</span>
+																<input type="text" class="write-input"  name="phone3" title="휴대폰번호 마지막" maxlength="8" required="required">
+															</fieldset>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">Company Name</th>
+														<td><input type="text" class="write-input width-full" name="company"></td>
+													</tr>
+													<tr>
+														<th scope="row">부품명</th>
+														<td><input type="text" class="write-input width-full" name="part-name"></td>
+													</tr>
+													<tr>
+														<th scope="row">필요수량</th>
+														<td><input type="text" class="write-input width-full" name="request-quantity"></td>
+													</tr>
+													<tr>
+														<th scope="row">희망납기</th>
+														<td><input type="text" class="write-input width-full" name="wish-date"></td>
+													</tr>
+													<tr>
+														<th scope="row">목표단가</th>
+														<td><input type="text" class="write-input width-full" name="goal-price"></td>
+													</tr>
+													<tr>
+														<th scope="row">Content</th>
+														<td>
+															<textarea name="content" class="write-textarea" placeholder="문의내용 (500자 이내로 입력해주세요.)"></textarea>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<dl class="contact">
+												<dt>* CONTACT:</dt>
+												<dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
+												<dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
+											</dl>
+										</article>
+										<!--
+											기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
+										-->
+										<div class="button-layout bottom-buttons">
+											<button type="button" class="button" onClick="sendit();"><strong>Submit</strong></button>
+											<a href="/" class="button type-secondary"><strong>Cancel</strong></a>
 										</div>
-										<p class="agree-txt">
-											<input type="checkbox" id="agree1" name="agree1">
-												<label for="agree1">I agree with the privacy policy.
-											</label>
-										</p>
-									</article>
-									<article class="bbs-write-tbl-box">
-										<p class="inquiry-essential-txt">Marking<span class="essential-icon">*</span> is mandatory.</p>
-										<table class="bbs-write-tbl">
-											<caption>문의폼입니다.</caption>
-											<colgroup>
-												<col style="width:20%;">
-												<col>
-											</colgroup>
-											<tbody>
-												<tr>
-													<th scope="row"><span class="essential-icon">*</span> Name</th>
-													<td><input type="text" class="write-input" name="name"></td>
-												</tr>
-												<tr>
-													<th scope="row">E-mail</th>
-													<td>
-														<fieldset class="email-fieldset">
-															<input type="text" class="write-input width20" name="email1">
-															<span class="hypen">@</span>
-															<input type="text" class="write-input width20" name="email2" readonly>
-															<select name="email3" class="write-select width20" onChange="res();">
-																<option value="b">Select mail account</option>
-																<option value="a">Direct input</option>
-																<option value="naver.com">naver.com</option>
-																<option value="nate.com">nate.com</option>
-																<option value="hanmail.net">hanmail.net</option>
-																<option value="gmail.com">gmail.com</option>
-																<option value="hotmail.com">hotmail.com</option>
-																<option value="outlook.com">outlook.com</option>
-																<option value="empal.com">empal.com</option>
-																<option value="dreamwiz.com">dreamwiz.com</option>
-																<option value="lycos.co.kr">lycos.co.kr</option>
-																<option value="yahoo.co.kr">yahoo.co.kr</option>
-																<option value="korea.com">korea.com</option>
-																<option value="paran.com">paran.com</option>
-															</select>
-														</fieldset>
-													</td>
-												</tr>
-												<tr>
-													<th scope="row"><span class="essential-icon">*</span> TEL</th>
-													<td class="tel-row">
-														<input type="text" class="write-input" style="max-width:150px;" name="phone1" title=" " maxlength="8">
-														<span class="hypen">-</span>
-														<input type="text" class="write-input" style="max-width:150px;" name="phone2" title=" " maxlength="8">
-														<span class="hypen">-</span>
-														<input type="text" class="write-input" style="max-width:150px;"  name="phone3" title=" " maxlength="8">
-													</td>
-												</tr>
-												<tr>
-													<th scope="row"> Company Name</th>
-													<td><input type="text" class="write-input" name="company"></td>
-												</tr>
-												<tr>
-													<th scope="row">Content</th>
-													<td>
-														<textarea name="content" class="write-textarea"></textarea>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</article>
-									<!--  
-										기본 : 센터정렬 / 좌측정렬 : cm-btn-align-left / 우측정렬 : cm-btn-align-right / 100% 버튼 : cm-btn-long-controls
-									-->
-									<div class="cm-btn-controls">
-										<button type="button" class="btn-style01" onClick="sendit();">Submit</button>
-										<a href="/" class="btn-style02">Cancel</a>
-									</div>
-
-
-								<p style="font-size:1pt; color:#fff; margin-top: 20px;"> SSD630S SSD510K SSD430K SSD450K SSD570K SSD570KI SSD420K & SSD420I SSD450K-I SSD452K & SSD452K-I PSD330 MTE550T
-								MTE510T MTE550T-I MTE352T & MTE352T-I MTE452T MTE452T-I MTE652T2 MTE652T MTE652T-I MTE662T MTE662T-I MTS460 MTS860 MTS950T MTS930T MTS550T MTS530T MTS800
-								MTS800I MTS600 MTS600I MTS400 MTS400I MTS950T-I MTS952T2 MTS952T MTS952T-I MTS550T-I MTS552T2 MTS552T & MTS552T-I MTS530T-I SATA II 3Gb/s HSD630 Half-Slim SSD		
-								SATA III 6Gb/s HSD450T Half-Slim SSD SATA III 6Gb/s HSD452T & HSD452T-I Half-Slim SSD SATA III 6Gb/s HSD370 & HSD370I Half-Slim SSD	SATA III 6Gb/s MSA370 & MSA370I mSATA SSD	SATA II 3Gb/s mSATA MSM610 Mini SSD	SATA III 6Gb/s MSA510 mSATA SSD	SATA III 6Gb/s mSATA MSM360 & MSM360I Mini SSD	SATA III 6Gb/s MSA450T mSATA SSD SATA III 6Gb/s MSA452T2 mSATA SSD SATA III 6Gb/s MSA452T & MSA452T-I mSATA SSD PTM820 PTM720 PTM520 SuperMLC USB Flash Drive SLC USB Flash Drive MLC USB Flash Drive 3D NAND USB Flash Drive		
-								USB Flash Module (Horizontal) USB Flash Module (Vertical) Secure Digital SDXC/SDHC Class 10 SDXC/SDHC Class 10 UHS-I 600배속 카드 SDXC/SDHC Class 10 UHS-I
-								SDXC UHS-I U3 카드 SDXC/SDHC10M SDHC10I SD/SDHC410M SDHC/SDXC220	SD/SDHC100I microSDXC/SDHC Class 10 microSDXC/SDHC Class 10 UHS-I micro SDHC Class 10 UHS-I 600배속 카드
-								microSD microSDHC Class 10 Card microSDHC520I microSDHC/SDXC10I	microSD/SDHC410M microSDHC220I microSDHC/SDXC230I CF100I CF170 CF180 CF200I CF220I CF300
-								CFX520I CFas 1.0 Card CFX600I CFX600 CFX720 MMCmobile MMC4 DDR1 DDR2 DDR3 DDR4 DIMM / SODIMM / M7000 SATA III M.2 22080 SSD M7000 MLC pSLC SLC microSD Industrial USB
-								Logo-EZ Printer Mobile Copy Protection USB Copy Protection 60 Target PC Connect Target Standalone ultra-fast PC Connect Pro Series
-								</p>
-
-								</section>
-
-</form>
-
+									</section>
+								</form>
+								<!-- // 문의 폼 끝 -->
+							</article>
+						</div>
+					</article>
+				<!-- //컨텐츠 내용 -->
 <script type="text/javascript">
 <!--
 function sendit() {
 	var f=document.form;
 	if(f.agree1.checked==false){
-		alert("Please agree to the privacy policy.");
+		alert("You have not agreed to the Privacy Policy.");
 		f.agree1.focus();
 	}else if(f.name.value=="") {
-		alert("Please enter your Name.");
+		alert("Input your name, please.");
 		f.name.focus();
 	} else if(f.phone1.value=="") {
-		alert("Please enter your Phone number.");
+		alert("Please enter a contact.");
 		f.phone1.focus();
 	} else if(f.phone2.value=="") {
-		alert("Please enter your Phone number.");
+		alert("Please enter a contact.");
 		f.phone2.focus();
 	} else if(f.phone3.value=="") {
-		alert("Please enter your Phone number.");
+		alert("Please enter a contact.");
 		f.phone3.focus();
 	} else {
 		f.submit();
@@ -257,20 +264,16 @@ function res(){
 	f.email2.value="";
 	f.email2.focus();
 	}else if(f.email3.value=="b"){
-	f.email2.readOnly= false;
+	f.email2.readOnly= true;
 	f.email2.value="";
 	}else{
-	f.email2.readOnly= false;
+	f.email2.readOnly= true;
 	f.email2.value=f.email3.value;
 	}
 }
 //-->
 </script>
-
-							<!-- // 문의 폼 끝 -->
-						</article>
-			</article>
-		</article>
+				<!-- !NOTE E : 2024-04 추가 -->
 
 	</article>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

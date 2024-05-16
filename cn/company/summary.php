@@ -22,40 +22,56 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
+				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="summary-page">
 					<article class="summary-top-box">
-						<div class="top-bg clearfix"><img src="<?=$site_host?>/images/content/summary_top_img.jpg" alt=""></div>
+						<div class="top-bg clearfix" style="background-image: url('/images/content/summary_top_img.png');"></div>
 						<div class="top-blue-box">
 							<div class="inner">
-								<span class="top-tit-en">公司简介</span>
-								<p class="top-tit-kr"><b>走向世界的坚实</b>企业</p>
+								<span class="top-tit-en">About Us</span>
+								<p class="top-tit-kr">마이크로웍스 <br class="pc-only"/>코리아(주)<br/><strong>글로벌 소싱 반도체<br/>전문 유통 기업</strong></p>
 								<p class="top-tit-txt">
-									MICROWORKS KOREA 成立于2007年，<br>为MEMORY及IC零组件买卖之专业贸易商。
+									마이크로웍스 코리아㈜는 2007년에<br/>
+									설립한 메모리, 반도체 토탈솔루션<br/>
+									기업입니다.
 								</p>
 							</div>
 						</div>
 						<div class="top-txt-box">
 							<p class="txt">
-								目前通过电子元器件交易领域好久积累的丰富经验，尽量努力提供给您品质及价格好。<br>
-								MICROWORKS KOREA 随时欢迎客户，将持续不断地改善并提供有关的多样化的信息和服务. 
+								마이크로웍스 코리아(주)는 20년 이상의 경험과 함께 쌓아온 빅데이터를 활용하여<br/>
+								국내외 다수의 기업과의 거래 속에 지속해서 성장하고 있습니다.<br/>
+								대형화, 온라인화되는 반도체 유통시장의 급격한 변화 속에서 당사는 탄탄한 해외 공급사 확보와 함께 온라인 거래 <br/>
+								플랫폼, 반도체 분석센터 운영으로 신속, 정확하고 확실한 정품의 정보 전달과 공급으로 고객사의 신뢰를 받고 있습니다.<br/>
+								<br/>
+								4차 산업혁명의 시작과 함께 AI를 이용한 기술 발전에 대비하여<br/>
+								융합적 사고와 적응력으로 고객의 요구를 유연하게 대처할 수 있도록 미래를 위한 기술적 변화와 혁신에 <br/>
+								끊임없이 도전하고 있습니다.<br/>
+								<br/>
+								당사 연구소를 통한 기술지원과 분석센터를 통한 품질 확인 보증으로 최상의 서비스를 제공하여<br/>
+								고객의 성장이 우리의 성장이라는 동반성장의 가치를 실현하고 있습니다.
 							</p>
 						</div>
 					</article>
+
 					<article class="summary-con summary-con01">
 						<div class="area">
-							<p class="summary-con-tit">经营理念</p>
+							<p class="summary-con-tit">경영이념</p>
 							<ul class="summary-con-list clearfix">
 								<li class="item01">
 									<div class="inner-box">
 										<div class="inner">
-											<span class="img"><img src="<?=$site_host?>/images/content/summary_icon_01.png" alt=""></span>
+											<span class="img"><img src="/images/content/summary_icon_01.png" alt=""></span>
 											<dl>
-												<dt><p class="tit">VISION</p></dt>
+												<dt><p class="tit">MISSION</p></dt>
 												<dd>
 													<div class="txt-box">
-														<p class="txt"><i class="material-icons">&#xe876</i>企业发展</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>同伴共成长</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>提高产品价格竞争力</p>
+														<p class="txt">
+															경험과 노하우를 바탕으로<br/>
+															고객사가 원활하게 생산할 수 있도록<br/>
+															최선을 다해 도와 성장시키는데<br/>
+															목표를 둔다
+														</p>
 													</div>
 												</dd>
 											</dl>
@@ -65,15 +81,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<li class="item02">
 									<div class="inner-box">
 										<div class="inner">
-											<span class="img"><img src="<?=$site_host?>/images/content/summary_icon_02.png" alt=""></span>
+											<span class="img"><img src="/images/content/summary_icon_02.png" alt=""></span>
 											<dl>
-												<dt><p class="tit">MISSION</p></dt>
+												<dt><p class="tit">VISION</p></dt>
 												<dd>
 													<div class="txt-box">
-														<p class="txt"><i class="material-icons">&#xe876</i>实力雄厚的企业</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>长寿企业</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>信赖家族般的企业</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>开创未来的企业</p>
+														<p class="txt">
+															급변하는 IT세상에<br/>
+															스타트업, 벤쳐기업, 우수기업 등<br/>
+															발굴하여 성공할수 있도록 도우며,<br/>
+															성공모델을 지속적으로 만들어낸다
+														</p>
 													</div>
 												</dd>
 											</dl>
@@ -83,16 +101,16 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<li class="item03">
 									<div class="inner-box">
 										<div class="inner">
-											<span class="img"><img src="<?=$site_host?>/images/content/summary_icon_03.png" alt=""></span>
+											<span class="img"><img src="/images/content/summary_icon_03.png" alt=""></span>
 											<dl>
 												<dt><p class="tit">CORE VALUES</p></dt>
 												<dd>
-													<div class="txt-box">
-														<p class="txt"><i class="material-icons">&#xe876</i>对客户快速的反应能力</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>具有竞争力的价格</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>企业定制化服务</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>品质管理</p>
-														<p class="txt"><i class="material-icons">&#xe876</i>新产品推荐</p>
+													<div class="txt-box is-icon">
+														<p class="txt"><i class="material-icons"></i>고객에 대한 빠른 대응력</p>
+														<p class="txt"><i class="material-icons"></i>경쟁력있는 가격제시</p>
+														<p class="txt"><i class="material-icons"></i>맞춤형 기업 서비스</p>
+														<p class="txt"><i class="material-icons"></i>최고의 품질관리</p>
+														<p class="txt"><i class="material-icons"></i>신규아이템 제안</p>
 													</div>
 												</dd>
 											</dl>
@@ -101,48 +119,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								</li>
 							</ul>
 						</div>
-					</article>
-					<article class="summary-con summary-con02">
-						<div class="area">
-							<div class="inner clearfix">
-								<div class="sales-con">
-									<dl>
-										<dt>
-											<span class="icon"><img src="<?=$site_host?>/images/content/summary_icon_04.png" alt=""></span>
-											<span class="tit">销售部</span>
-										</dt>
-										<dd>
-											<div class="txt-box">
-												<p class="txt">紧急采购</p>
-												<p class="txt">订货</p>
-												<p class="txt">R&D 支持</p>
-												<p class="txt">定做报价</p>
-												<p class="txt">交钥匙（Turnkey ）进行</p>
-											</div>
-										</dd>
-									</dl>
-								</div>
-								<div class="buy-con">
-									<dl>
-										<dt>
-											<span class="icon"><img src="<?=$site_host?>/images/content/summary_icon_05.png" alt=""></span>
-											<span class="tit">采购部</span>
-										</dt>
-										<dd>
-											<div class="txt-box">
-												<p class="txt">Vendor Verification Program 通过的卖主</p>
-												<p class="txt">严格的卖主收集</p>
-												<p class="txt">系统化数据库</p>
-												<p class="txt">OEM不用库存买入</p>
-												<p class="txt">二十年以上的积累丰富的经验</p>
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
+
 					</article>
 				</article>
+				<!-- !NOTE E : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 		
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

@@ -1,4 +1,4 @@
- <?
+<?
 $page_num = "02";
 $sub_num = "01";
 $page_section = "do";
