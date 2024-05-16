@@ -18,6 +18,10 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 	<script src="<?=$site_host?>/js/ie8_popup.js"></script>
 <![endif]-->
 <!-- <iframe src="/test.php" name="h" style="display:none;"></iframe> -->
+<!-- #202405 메인 추가 -->
+<!-- 2024-04 추가 -->
+<link href="<?=$site_host?>/css/new_2024/contents.css" rel="stylesheet" type="text/css" />
+
 <script>
 	$(function  () {
 		dep1 = 0,
@@ -124,11 +128,11 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 					<div class="main-search-wrap">
 						<div class="main-search-box">
 							<div class="main-search-select">
-								<a href="javascript:;" class="cur-select">
-									<span><em>선택해주세요</em></span>
+								<a href="javascript:search_sel(0);" class="cur-select">
+									<span><em>전체</em></span>
 								</a>
 								<ul class="main-select-con">
-									<li><a href="javascript:search_sel(0);"><span>전체</span></a></li>
+                                    <li><a href="javascript:search_sel(0);"><span>전체</span></a></li> <!-- #202405 메인 추가 -->
 									<li><a href="javascript:search_sel(1);"><span>Memory Trend</span></a></li>
 									<li><a href="javascript:search_sel(2);"><span>Stock List</span></a></li>
 									<li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
@@ -143,341 +147,18 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 					</div>
 				</form>
 			</section>
-			<!-- !NOTE E : 2024-04 추가 -->
-			<script>
-				function search_sel(i) {
-					if (i == 1) {
-						$("#search_form").attr("action", "/product/trend_list.php");
-						$("input[name=search_url]").val("/product/trend_list.php");
-					} else if (i == 2) {
-						$("#search_form").attr("action", "/product/stock.php");
-						$("input[name=search_url]").val("/product/stock.php");
-					} else if (i == 3) {
-						$("#search_form").attr("action", "/product/oem.php");
-						$("input[name=search_url]").val("/product/oem.php");
-					}
-				}
-
-				function search_send() {
-					if ($("input[name=search_url]").val() == "") {
-						alert("검색항목을 선택해주세요.");
-					} else if ($("input[name=search_order]").val() == "") {
-						alert("검색어를 입력해주세요.");
-					} else {
-						document.search_form.submit();
-					}
-				}
-			</script>
 			<!-- ****************** 메인컨텐츠 ********************** -->
 			<section id="mainContent">
 				<!-- ****************** 전체 검색 결과 ********************** -->
 				<!-- !NOTE S : 2024-04 추가 -->
-				<article id="totalSearchResults" class="total-results-wrap">
-					<!-- !NOTE : 1/2 검색 결과 없음 -->
-					<div class="area">
-						<div class="total-results">
-							<p class="result-count text-normal">죄송합니다. <strong class="text-primary">"ASDF"</strong>에 대한 검색 결과가 없습니다.</p>
-						</div>
-						<div class="no-result-box">
-							<img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
-							<p>찾으시는 대치품에 대한 검색결과가 없으신가요?<br>문의주시면 신속히 도와드리겠습니다!</p>
-							<a href="#" class="button"><strong>문의하기</strong></a>
-						</div>
-					</div>
-				</article>
-				<!-- !NOTE E : 2024-04 추가 -->
+                <!-- #202405 메인 추가 -->
+                <!-- ****************** 전체 검색 결과 ********************** -->
+                <!-- S : 2024-04 추가 -->
+                <article id="totalSearchResults" class="total-results-wrap">
+                    <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_totalSearchResults.php"; ?>
+                </article>
 				<!-- !NOTE S : 2024-04 추가 -->
-			<article id="totalSearchResults" class="total-results-wrap">
-				<!-- !NOTE : 2/2 검색 결과 없음 -->
-				<div class="area">
-					<div class="total-results">
-						<p class="result-count">총 <strong class="text-primary">00</strong>건</p>
-					</div>
-					<div class="table-wrapper">
-						<div class="table-title">
-							<p class="title">Memory Trend</p>
-							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
-							<div class="extra">
-								<!-- !NOTE : 페이지 연결 해주세요 -->
-								<a href="#" class="button type-round more-view"></a>
-							</div>
-						</div>
-
-						<article class="bbs-list-con">
-							<div class="bbs-list-tbl">
-								<div class="bbs-list-head">
-									<span style="width:6.155%;">No</span>
-									<span style="width:auto;" class="board-head-title">Subject</span>
-									<span style="width:16.924%;">Number of products</span>
-									<span style="width:12.308%;">Date</span>
-									<span style="width:12.308%;"></span>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">5</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</p>
-												<div class="bbs-subject-icons">
-													<span class="new-icon">N</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수">206</div>
-									<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-									<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">4</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수">206</div>
-									<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-									<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">3</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수">206</div>
-									<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-									<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">2</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수">206</div>
-									<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-									<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">1</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of March, 2024</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수">206</div>
-									<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-									<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail View</strong></a></div>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="table-wrapper">
-						<div class="table-title">
-							<p class="title">Stock List</p>
-							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
-							<div class="extra">
-								<!-- !NOTE : 페이지 연결 해주세요 -->
-								<a href="#" class="button type-round more-view"></a>
-							</div>
-						</div>
-
-						<article class="bbs-list-con">
-							<div class="bbs-list-tbl">
-								<div class="bbs-list-head">
-									<span style="width:6.155%;">No</span>
-									<span style="width:auto;" class="board-head-title">Part#</span>
-									<span style="width:12.308%;">Quantity</span>
-									<span style="width:12.308%;">MFR</span>
-									<span style="width:12.308%;">D/C</span>
-									<span style="width:12.308%;">Remark</span>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">5</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-												<div class="bbs-subject-icons">
-													<span class="new-icon">N</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">4</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">3</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">2</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">1</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div class="table-wrapper">
-						<div class="table-title">
-							<p class="title">OEM Excess</p>
-							<strong class="result-count">총 <span class="text-primary">00</span>건</strong>
-							<div class="extra">
-								<!-- !NOTE : 페이지 연결 해주세요 -->
-								<a href="#" class="button type-round more-view"></a>
-							</div>
-						</div>
-
-						<article class="bbs-list-con">
-							<div class="bbs-list-tbl">
-								<div class="bbs-list-head">
-									<span style="width:6.155%;">No</span>
-									<span style="width:auto;" class="board-head-title">Part#</span>
-									<span style="width:12.308%;">Quantity</span>
-									<span style="width:12.308%;">MFR</span>
-									<span style="width:12.308%;">D/C</span>
-									<span style="width:12.308%;">Remark</span>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">5</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-												<div class="bbs-subject-icons">
-													<span class="new-icon">N</span>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">4</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">3</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">2</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-								<div class="bbs-list-row">
-									<div class="column bbs-no-data">1</div>
-									<div class="column bbs-title">
-										<a href="#">
-											<div class="bbs-subject-con">
-												<p class="bbs-subject-txt">ETL-F2F1300-C</p>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="Quantity">206</div>
-									<div class="column bbs-inline" data-label="MFR">ENTEC</div>
-									<div class="column bbs-inline" data-label="D/C">N/A</div>
-									<div class="column bbs-inline" data-label="Remark">STOCK</div>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</article>
-			<!-- !NOTE E : 2024-04 추가 -->
+			    <!-- !NOTE E : 2024-04 추가 -->
 				<!-- ****************** 메인컨텐츠 1 (어바웃&공지사항) ********************** -->
 				<article id="mainAbout" class="scroll-animate">
 					<div class="area02">
