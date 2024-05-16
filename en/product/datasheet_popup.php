@@ -155,4 +155,45 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
     </div>
   </article>
 	<!-- !NOTE E : 2024-04 추가 -->
+
+  <script type="text/javascript">
+<!--
+function sendit() {
+	var f=document.form;
+	if(f.agree1.checked==false){
+		alert("You have not agreed to the Privacy Policy.");
+		f.agree1.focus();
+	}else if(f.name.value=="") {
+		alert("Input your name, please.");
+		f.name.focus();
+	} else if(f.phone1.value=="") {
+		alert("Please enter a contact.");
+		f.phone1.focus();
+	} else if(f.phone2.value=="") {
+		alert("Please enter a contact.");
+		f.phone2.focus();
+	} else if(f.phone3.value=="") {
+		alert("Please enter a contact.");
+		f.phone3.focus();
+	} else {
+		f.submit();
+	}
+}
+
+function res(){
+	var f = document.form;
+	if(f.email3.value=="a"){
+	f.email2.readOnly= false;
+	f.email2.value="";
+	f.email2.focus();
+	}else if(f.email3.value=="b"){
+	f.email2.readOnly= true;
+	f.email2.value="";
+	}else{
+	f.email2.readOnly= true;
+	f.email2.value=f.email3.value;
+	}
+}
+//-->
+</script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
