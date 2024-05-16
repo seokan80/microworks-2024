@@ -1,4 +1,4 @@
-								<li><a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Trend</em></span></a>
+								<li><a href="<?=$site_url?>/product/trend_list.php"><span><em>Memory Biz</em></span></a>
 									<!-- !NOTE S: 2024-04 추가 -->
 									<div class="gnb-3dep">
 										<ul>

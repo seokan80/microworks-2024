@@ -615,7 +615,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 				<div class="area02">
 					<div class="global-con clearfix">
 						<div class="network-con fade-in-down fade-in-03">
-							<p class="global-tit"><b>Global Network</b><!-- <span>Global Network</span> --></p>
+							<p class="global-tit"><strong>Global Network</strong><!-- <span>Global Network</span> --></p>
 							<div class="global-map-con">
 								<div class="map-pc-img"><img src="<?=$site_host?>/images/main/main_global_map_pc.png" alt="세계지도" /></div>
 								<div class="global-nation-box">
