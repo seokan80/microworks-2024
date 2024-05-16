@@ -48,6 +48,7 @@ $list_index = 1;
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 <!-- 컨텐츠 내용 -->
+<!-- !NOTE S : 2024-04 추가 -->
 <article class="product-page inquiry-page">
 						<div class="area">
 							<article class="contact-form">
@@ -163,5 +164,6 @@ $list_index = 1;
 							</article>
 						</div>
 					</article>
+					<!-- !NOTE E : 2024-04 추가 -->
 					<!-- //컨텐츠 내용 -->
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
