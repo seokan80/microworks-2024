@@ -100,7 +100,7 @@
 			<!-- // -->
 			<?}?>
 			
-			<?if($sub_section == 'memory'){?>
+			<?if($sub_section == 'memory-biz'){?>
 				<!-- !NOTE S: 2024-04 추가 -->
 					<div class="tabs area">
 						<a href="<?=$site_url?>/product/trend_list.php" class="tab <?if($dep3_num == '01'){?>active <?}?>">메모리 가격 동향</a>

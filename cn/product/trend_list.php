@@ -6,7 +6,7 @@ $dep3_num = "01";
 //<!-- !NOTE E : 2024-04 추가 -->
 $page_section = "product";
 //<!-- !NOTE S : 2024-04 변경 -->
-$sub_section = "memory";
+$sub_section = "memory-biz";
 //<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "产品搜索 ";
 $sub_info = "Memory 价格趋势";

@@ -518,38 +518,38 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 								</ul>
 							</div>
 						</div>
-						<!-- !NOTE S : 2024-04 추가 -->
-						<div class="inner">
-							<div class="about-slides fade-in-down fade-in-10">
-								<div class="autoplay-slider">
-									<div class="slider">
-										<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
-										<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
-										<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
-										<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
-									</div>
-									<div class="controller">
-										<div class="progress-wrapper"></div>
-										<a href="javascript:void(0);" class="player pause"><i class="material-icons play">&#xe037;</i><i
-												class="material-icons pause">&#xe034;</i></a>
-									</div>
+					</div>
+					<!-- !NOTE S : 2024-04 추가 -->
+					<div class="inner">
+						<div class="about-slides fade-in-down fade-in-10">
+							<div class="autoplay-slider">
+								<div class="slider">
+									<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
+									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
+									<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
+									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
 								</div>
-								<div class="autoplay-slider">
-									<div class="slider">
-										<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
-										<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
-										<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
-									</div>
-									<div class="controller">
-										<div class="progress-wrapper"></div>
-										<a href="javascript:void(0);" class="player pause"><i class="material-icons play">&#xe037;</i><i
-												class="material-icons pause">&#xe034;</i></a>
-									</div>
+								<div class="controller">
+									<div class="progress-wrapper"></div>
+									<a href="javascript:void(0);" class="player pause"><i class="material-icons play">&#xe037;</i><i
+											class="material-icons pause">&#xe034;</i></a>
+								</div>
+							</div>
+							<div class="autoplay-slider">
+								<div class="slider">
+									<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
+									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
+									<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
+								</div>
+								<div class="controller">
+									<div class="progress-wrapper"></div>
+									<a href="javascript:void(0);" class="player pause"><i class="material-icons play">&#xe037;</i><i
+											class="material-icons pause">&#xe034;</i></a>
 								</div>
 							</div>
 						</div>
-						<!-- !NOTE E : 2024-04 추가 -->
 					</div>
+					<!-- !NOTE E : 2024-04 추가 -->
 				</div>
 			</article>
 			<!-- ****************** 메인컨텐츠 2 (퀵메뉴) ********************** -->
