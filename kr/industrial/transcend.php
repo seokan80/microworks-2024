@@ -117,7 +117,15 @@ $bottom_img = $row->bbs_file3;
 										<article class="bbs-inquiry-agree-con">
 											<p class="agree-tit">개인정보처리방침</p>
 											<div class="inquiry-agreement-con editor">
-												<p>개인정보처리방침</p>
+												<?
+										$page_row = $db->object("cs_page", "where page_index='privacy'");
+
+										$content = $page_row->content;
+										$content = str_replace("<p>","",$content);
+										$content = str_replace("</p>","<br/>",$content);
+										$content = $tools->strHtml($content);
+										echo $content;
+										?>
 											</div>
 											<p class="agree-txt">
 												<input type="checkbox" id="agree1">
