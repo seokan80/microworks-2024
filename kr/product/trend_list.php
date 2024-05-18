@@ -120,7 +120,7 @@ $list_index = 1;
 											<select name="search_item">
 												<option value="subject">Subject</option>
 											</select>
-											<input placeholder="" type="search" name="search_order" class="search-word" value="">
+											<input placeholder="" type="search" name="search_order" class="search-word" value="<?=$search_order?>">
 											<button type="submit" class="bbs-search-btn" title="검색"><i class="material-icons"></i></button>
 										</div>
 									</form>
