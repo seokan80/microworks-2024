@@ -1,10 +1,17 @@
 <?
 $page_num = "03";
 $sub_num = "01";
+//<!-- !NOTE S : 2024-04 추가 -->
+$dep3_num = "01";
+//<!-- !NOTE E : 2024-04 추가 -->
 $page_section = "product";
-$sub_section = "trend";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_section = "memory-biz";
+//<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "PRODUCT SEARCH";
-$sub_info = "Memory Price Trend";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_info = "메모리 가격 동향";
+//<!-- !NOTE E : 2024-04 변경 -->
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
@@ -58,55 +65,57 @@ $list_index = 1;
 						카테고리가 있는 게시판 리스트 START 
 						기본 게시판과 조금 다릅니다. 확인부탁드려요~!
 					-->
-					<article class="bbs-list-con product-board-con">
-						<div class="bbs-list-tbl">
-							<p class="bbs-list-head">
-								<span style="width:15.5%;">No</span>
-								<span style="width:60%;" class="board-head-title">Subject</span>
-								<span style="width:20.5%;">Number of products</span>
-								<span style="width:15.5%;">Date</span>
-								<span style="width:23.5%;"></span>
-							</p>
-							<?while($row = mysql_fetch_array($rs)){
-								$list_index++;
-								if($list_index%2==1){
-									$even_num = "even_num";
-								}else{
-									$even_num = "";
-								}
-								$new_img = $page->bbsNewImg( $row[reg_date], 24, '<span class="new-icon">N</span>');
-								$prd_cnt =$db->cnt("cs_excel","where ex_code='$row[ex_code]' and kind='3' ");
-
-							?>
-								<div class="bbs-list-row bbs-relative-row <?=$even_num?>">
-									<div class="column bbs-no-data"><?=$listNo?></div>
-									<div class="column bbs-title">
-										<a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
-											<div class="bbs-subject-con">
-												<strong class="bbs-subject-txt"><?=$row[subject]?></strong>
-												<div class="bbs-subject-icons">
-													<?=$new_img?>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="column bbs-inline" data-label="제품수"><?=$prd_cnt?></div>
-									<div class="column bbs-inline" data-label="등록일"><?=$tools->strDateCut($row[reg_date],3);?></div>
-									<div class="column bbs-absolute" data-label="no">
-										<a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
-											<p class="reply-state"><span>Detail View</span></p>
-										</a>
-									</div>
+					<div class="table-wrapper type-trend">
+						<article class="bbs-list-con">
+							<div class="bbs-list-tbl">
+								<div class="bbs-list-head">
+									<!-- !NOTE S : 2024-04 변경 -->
+									<span style="width:6.155%;">No</span>
+									<span style="width:auto;" class="board-head-title">Subject</span>
+									<span style="width:16.924%;">Number of products</span>
+									<span style="width:12.308%;">Date</span>
+									<span style="width:12.308%;"></span>
+									<!-- !NOTE E : 2024-04 변경 -->
 								</div>
-							<?$listNo--;
-							}?>
-						</div>
-						<?if(empty($totalList)){?>
-							<p class="bbs-no-list">There is no written comment.</p>
-						<?}?>
-						<div class="paging">
-							<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
-						</div>
+								<?while($row = mysql_fetch_array($rs)){
+										$list_index++;
+										if($list_index%2==1){
+											$even_num = "even_num";
+										}else{
+											$even_num = "";
+										}
+										$new_img = $page->bbsNewImg( $row[reg_date], 24, '<span class="new-icon">N</span>');
+										$prd_cnt =$db->cnt("cs_excel","where ex_code='$row[ex_code]' and kind='3' ");
+
+									?>
+									<div class="bbs-list-row">
+										<div class="column bbs-no-data"><?=$listNo?></div>
+										<div class="column bbs-title">
+											<a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
+												<div class="bbs-subject-con">
+													<strong class="bbs-subject-txt"><?=$row[subject]?></strong>
+													<div class="bbs-subject-icons">
+														<?=$new_img?>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="column bbs-inline" data-label="제품수"><?=$prd_cnt?></div>
+										<div class="column bbs-inline" data-label="등록일"><?=$tools->strDateCut($row[reg_date],3);?></div>
+										<!-- !NOTE S : 2024-04 변경 -->
+										<div class="column" data-label="no"><a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>" class="button type-secondary"><strong>Detail
+													View</strong></a></div>
+													<!-- !NOTE E : 2024-04 변경 -->
+									</div>
+									<?$listNo--;
+									}?>
+								</div>
+								<?if(empty($totalList)){?>
+									<p class="bbs-no-list">There is no written comment.</p>
+								<?}?>
+								<div class="paging">
+									<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
+								</div>
 						<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>">
 							<div class="board-search-box">
 								<select name="search_item">

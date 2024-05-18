@@ -1,11 +1,17 @@
 <?
 $page_num = "03";
 $sub_num = "01";
+//<!-- !NOTE S : 2024-04 추가 -->
 $dep3_num = "01";
+//<!-- !NOTE E : 2024-04 추가 -->
 $page_section = "product";
-$sub_section = "trend";
+//<!-- !NOTE S : 2024-04 변경 -->
+$sub_section = "memory-biz";
+//<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "PRODUCT SEARCH";
+//<!-- !NOTE S : 2024-04 변경 -->
 $sub_info = "메모리 가격 동향";
+//<!-- !NOTE E : 2024-04 변경 -->
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
@@ -61,189 +67,60 @@ $list_index = 1;
 								<article class="bbs-list-con">
 									<div class="bbs-list-tbl">
 										<div class="bbs-list-head">
+											<!-- !NOTE S : 2024-04 변경 -->
 											<span style="width:6.155%;">No</span>
 											<span style="width:auto;" class="board-head-title">Subject</span>
 											<span style="width:16.924%;">Number of products</span>
 											<span style="width:12.308%;">Date</span>
 											<span style="width:12.308%;"></span>
+											<!-- !NOTE E : 2024-04 변경 -->
 										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">5</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-														<div class="bbs-subject-icons">
-															<span class="new-icon">N</span>
+										<?while($row = mysql_fetch_array($rs)){
+												$list_index++;
+												if($list_index%2==1){
+													$even_num = "even_num";
+												}else{
+													$even_num = "";
+												}
+												$new_img = $page->bbsNewImg( $row[reg_date], 24, '<span class="new-icon">N</span>');
+												$prd_cnt =$db->cnt("cs_excel","where ex_code='$row[ex_code]' and kind='3' ");
+
+											?>
+											<div class="bbs-list-row">
+												<div class="column bbs-no-data"><?=$listNo?></div>
+												<div class="column bbs-title">
+													<a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
+														<div class="bbs-subject-con">
+															<strong class="bbs-subject-txt"><?=$row[subject]?></strong>
+															<div class="bbs-subject-icons">
+																<?=$new_img?>
+															</div>
 														</div>
+													</a>
+												</div>
+												<div class="column bbs-inline" data-label="제품수"><?=$prd_cnt?></div>
+												<div class="column bbs-inline" data-label="등록일"><?=$tools->strDateCut($row[reg_date],3);?></div>
+												<!-- !NOTE S : 2024-04 변경 -->
+												<div class="column" data-label="no"><a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>" class="button type-secondary"><strong>Detail
+															View</strong></a>
 													</div>
-												</a>
+													<!-- !NOTE E : 2024-04 변경 -->
 											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
+											<?$listNo--;
+											}?>
 										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">4</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
+										<?if(empty($totalList)){?>
+											<p class="bbs-no-list">There is no written comment.</p>
+										<?}?>
+										<div class="paging">
+											<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
 										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">3</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">2</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">1</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">5</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-														<div class="bbs-subject-icons">
-															<span class="new-icon">N</span>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">4</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">3</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">2</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-										<div class="bbs-list-row">
-											<div class="column bbs-no-data">1</div>
-											<div class="column bbs-title">
-												<a href="#">
-													<div class="bbs-subject-con">
-														<p class="bbs-subject-txt">Memory <span class="text-point">Price</span> Trend /3rd week of
-															March, 2024</p>
-													</div>
-												</a>
-											</div>
-											<div class="column bbs-inline" data-label="제품수">206</div>
-											<div class="column bbs-inline" data-label="등록일">2021-08-13</div>
-											<div class="column" data-label="no"><a href="#" class="button type-secondary"><strong>Detail
-														View</strong></a></div>
-										</div>
-									</div>
-									<div class="paging pc-only">
-										<a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC3;</i></a>
-										<a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xE314;</i></a>
-										<a href="javascript:;" class="cur">1</a>
-										<a href="#">2</a> 
-										<a href="#">3</a> 
-										<a href="#">4</a> 
-										<a href="#">5</a> 
-										<a href="#">6</a> 
-										<a href="#">7</a> 
-										<a href="#">8</a>
-										<a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>
-										<a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC9;</i></a>
-									</div>
 									<form name="bbs_search_form" method="get" action="/en/product/trend_list.php" class="pc-only">
 										<div class="board-search-box">
 											<select name="search_item">
 												<option value="subject">Subject</option>
 											</select>
-											<input placeholder="" type="search" name="search_order" class="search-word" value="">
+											<input placeholder="" type="search" name="search_order" class="search-word" value="<?=$search_order?>">
 											<button type="submit" class="bbs-search-btn" title="검색"><i class="material-icons"></i></button>
 										</div>
 									</form>

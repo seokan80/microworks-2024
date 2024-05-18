@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -110,6 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="<?=$site_url?>/css/language_responsive.css" />
 <!-- <link rel="stylesheet" href="<?=$site_host?>/css/member.css"> --><!-- 회원관련 폼 제작시 사용 -->
 <!-- <link rel="stylesheet" href="<?=$site_host?>/css/member_responsive.css"> --><!-- 회원관련 폼(반응형, 모바일) 제작시 사용 -->
+<link rel="stylesheet" href="<?=$site_host?>/css/new_2024/contents.css" /><!-- !NOTE : 2024 추가된 css파일 -->
 <?=$script_content?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>

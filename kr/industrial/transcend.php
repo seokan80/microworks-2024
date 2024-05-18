@@ -117,7 +117,15 @@ $bottom_img = $row->bbs_file3;
 										<article class="bbs-inquiry-agree-con">
 											<p class="agree-tit">개인정보처리방침</p>
 											<div class="inquiry-agreement-con editor">
-												<p>개인정보처리방침</p>
+												<?
+										$page_row = $db->object("cs_page", "where page_index='privacy'");
+
+										$content = $page_row->content;
+										$content = str_replace("<p>","",$content);
+										$content = str_replace("</p>","<br/>",$content);
+										$content = $tools->strHtml($content);
+										echo $content;
+										?>
 											</div>
 											<p class="agree-txt">
 												<input type="checkbox" id="agree1">
@@ -223,6 +231,46 @@ $bottom_img = $row->bbs_file3;
 							</article>
 						</div>
 					</article>
+				<script type="text/javascript">
+<!--
+function sendit() {
+	var f=document.form;
+	if(f.agree1.checked==false){
+		alert("개인정보처리방침 동의하지 않으셨습니다.");
+		f.agree1.focus();
+	}else if(f.name.value=="") {
+		alert("이름을 입력해 주세요.");
+		f.name.focus();
+	} else if(f.phone1.value=="") {
+		alert("연락처를 입력해 주세요.");
+		f.phone1.focus();
+	} else if(f.phone2.value=="") {
+		alert("연락처를 입력해 주세요.");
+		f.phone2.focus();
+	} else if(f.phone3.value=="") {
+		alert("연락처를 입력해 주세요.");
+		f.phone3.focus();
+	} else {
+		f.submit();
+	}
+}
+
+function res(){
+	var f = document.form;
+	if(f.email3.value=="a"){
+	f.email2.readOnly= false;
+	f.email2.value="";
+	f.email2.focus();
+	}else if(f.email3.value=="b"){
+	f.email2.readOnly= true;
+	f.email2.value="";
+	}else{
+	f.email2.readOnly= true;
+	f.email2.value=f.email3.value;
+	}
+}
+//-->
+</script>
 				<!-- !NOTE E : 2024-04 추가 -->
 
 	</article>
