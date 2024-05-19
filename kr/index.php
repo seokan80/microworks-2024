@@ -17,11 +17,6 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 <!--[if lt IE 9]>
 	<script src="<?=$site_host?>/js/ie8_popup.js"></script>
 <![endif]-->
-<!-- <iframe src="/test.php" name="h" style="display:none;"></iframe> -->
-<!-- #202405 메인 추가 -->
-<!-- 2024-04 추가 -->
-<link href="<?=$site_host?>/css/new_2024/contents.css" rel="stylesheet" type="text/css" />
-
 <script>
 	$(function  () {
 		dep1 = 0,
@@ -152,7 +147,6 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 				<!-- ****************** 전체 검색 결과 ********************** -->
 				<!-- !NOTE S : 2024-04 추가 -->
                 <!-- #202405 메인 추가 -->
-                <!-- ****************** 전체 검색 결과 ********************** -->
                 <!-- S : 2024-04 추가 -->
                 <article id="totalSearchResults" class="total-results-wrap">
                     <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_totalSearchResults.php"; ?>
@@ -390,119 +384,10 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and
 				</article>
 				<!-- ****************** 메인컨텐츠 4 ( 문의폼 ) ********************** -->
 				<!-- !NOTE S : 2024-04 추가 -->
-				<article id="mainInquiryCon" class="scroll-animate">
-					<div class="area02 fade-in-down fade-in-03">
-						<form action="/contact/inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
-							<h5 class="text-white">문의</h5>
-							<div class="main-inquiry">
-								<div class="inquiry-wrapper">
-									<div class="forms required">
-										<i class="material-icons">&#xe8a6;</i>
-										<label for="user-name">이름</label>
-										<input type="text" id="user-name" placeholder="이름을 입력해주세요." name="user-name" required="required">
-									</div>
-									<div class="forms required">
-										<i class="material-icons">&#xe0e1;</i>
-										<label for="user-email">이메일</label>
-										<fieldset>
-											<input type="text" id="user-email-01" name="user-email" required="required">
-											<em>@</em>
-											<input type="text" id="user-email-02" name="user-email" readonly>
-											<select name="user-email" id="user-email-domain">
-												<option value="">naver.com</option>
-											</select>
-										</fieldset>
-									</div>
-									<!-- !NOTE : error 일 때 flag-error 클래스가 붙습니다. -->
-									<!-- <div class="forms required flag-error">
-									<i class="material-icons">&#xe0e1;</i>
-									<label for="user-email">이메일</label>
-									<fieldset>
-										<input type="text" id="user-email-01" name="user-email" required="required">
-										<em>@</em>
-										<input type="text" id="user-email-02" name="user-email" readonly>
-										<select name="user-email" id="user-email-domain">
-											<option value="">naver.com</option>
-										</select>
-									</fieldset>
-								</div> -->
-									<div class="forms required">
-										<i class="material-icons">&#xe551;</i>
-										<label for="user-contact">연락처</label>
-										<input type="text" id="user-contact" placeholder="ex)010-1234-5678" name="user-contact"
-											required="required">
-									</div>
-									<div class="forms">
-										<i class="material-icons">&#xe8f8;</i>
-										<label for="user-company">회사명</label>
-										<input type="text" id="user-company" placeholder="회사명을 입력해주세요." name="user-company">
-									</div>
-									<div class="extra-info">
-										<div class="form-group">
-											<div class="forms">
-												<label for="product-name">부품명</label>
-												<input type="text" id="product-name" placeholder="부품명을 입력해주세요." name="product-name">
-											</div>
-											<div class="forms">
-												<label for="product-needs">필요수량</label>
-												<input type="text" id="product-needs" placeholder="필요수량을 입력해주세요." name="product-needs">
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="forms">
-												<label for="delivery-date">희망납기</label>
-												<input type="text" id="delivery-date" placeholder="희망납기를 입력해주세요." name="delivery-date">
-											</div>
-											<div class="forms">
-												<label for="product-price">목표단가</label>
-												<input type="text" id="product-price" placeholder="목표단가를 입력해주세요." name="product-price">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="agreement-wrapper">
-									<div class="split-container align-center">
-										<span class="ox">
-											<input type="checkbox" id="agree1">
-											<label for="agree1"><i class="material-icons">&#xe876;</i>개인정보처리방침에 동의합니다.</label>
-										</span>
-										<a href="javascript:;" onclick="javascript:layerLoad('/service/privacy.php'); return false;"
-											class="button type-line size-sm"><strong>개인정보처리방침 보기</strong></a>
-									</div>
-									<div class="text-area">
-										<textarea name="content" class="main-textarea"></textarea>
-										<p class="main-textarea-txt"><i class="material-icons">&#xe0b7</i><strong>문의내용</strong> <span>(500자 이내로
-												입력해주세요.)</span></p>
-									</div>
-									<dl class="contact">
-										<dt>* CONTACT:</dt>
-										<dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
-										<dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
-									</dl>
-									<a href="javascript:;" onClick="sendit();"
-										class="button size-xl type-line fluid main-form-btn">작성완료</a>
-								</div>
-							</div>
-						</form>
-						<script type="text/javascript">
-							function sendit() {
-								var f = document.form;
-								if (f.agree1.checked == false) {
-									alert("개인정보처리방침 동의하지 않으셨습니다.");
-									f.agree1.focus();
-								} else if (f.name.value == "") {
-									alert("이름을 입력해 주세요.");
-									f.name.focus();
-								} else if (f.phone.value == "") {
-									alert("연락처를 입력해 주세요.");
-									f.phone.focus();
-								} else {
-									f.submit();
-								}
-							}
-						</script>
-					</div>
-				</article>
+                <!-- #202405 메인 추가 -->
+                <article id="mainInquiryCon" class="scroll-animate">
+                    <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_inquiry.php"; ?>
+                </article>
 				<!-- !NOTE E : 2024-04 추가 -->
 				<article id="mainPartnerCon">
 					<div class="area02">
