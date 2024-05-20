@@ -555,5 +555,17 @@ function strCut_utf($str, $len, $checkmb=false, $tail='...') {
             return $date;
         }
 	}
+
+	function checkSpam($sapmArr, $txt) {
+		for($i=0;$i<count($sapmArr);$i++){
+			if($sapmArr[$i]){
+				$num = substr_count($txt, $sapmArr[$i]);
+				if($num>0){
+					return "$sapmArr[$i]";
+				}
+			}
+		}
+		return null;
+	}
 }
 ?>

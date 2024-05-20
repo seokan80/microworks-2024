@@ -105,7 +105,8 @@ if($_GET[idx]){
 				<!-- //컨텐츠 내용 -->
 	<div class="cm-btn-controls" style="margin-right:360px;">
 		<div class="right-btn-controls">
-			<a href="#none" onclick="history.go(-1);" class="btn-style01">
+			<!-- #202405 메인 추가 : 목록 이동 -->
+            <a href="#none" onclick="<? echo isset($_GET['returnURL']) ? "window.location.href='" . $_GET['returnURL'] . "'" : "history.go(-1)"; ?>" class="btn-style01">
 				List
 			</a>
 		</div>
