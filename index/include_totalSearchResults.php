@@ -1,77 +1,77 @@
-<!-- #202405 메인 추가 -->
+<!-- #202405 메인 추가 : 전체검색-->
 <?
     if($lang==2){ // 영문
         // 검색 결과 실패 문구
-        $no_exist_txt_result_1 = "Sorry. <strong class='text-primary search_order'>\"ASDF\"</strong> No results were found for your search.";
-        $no_exist_txt_result_2 = "Are there no search results for the replacement product you are looking for?<br>Please contact us and we will help you quickly!";
-        $no_exist_txt_result_3 = "Contact us";
+        $searh_no_exist_txt_result_1 = "Sorry. <strong class='text-primary search_order'>\"ASDF\"</strong> No results were found for your search.";
+        $searh_no_exist_txt_result_2 = "Are there no search results for the replacement product you are looking for?<br>Please contact us and we will help you quickly!";
+        $searh_no_exist_txt_result_3 = "Contact us";
 
         // 검색 버튼 오류 문구
-        $searchSendErrArrTxt = "Please select a search item.";
-        $searchSendErrSearchOrderTxt = "Please enter a search term.";
+        $search_send_err_arr_txt = "Please select a search item.";
+        $search_send_err_search_order_txt = "Please enter a search term.";
 
         // 목록 문구
-        $total_txt_pre = "total : ";
-        $total_txt_post = "EA";
+        $search_total_txt_pre = "total : ";
+        $search_total_txt_post = "EA";
     } else if($lang==3){ // 중문
         // 검색 결과 실패 문구
-        $no_exist_txt_result_1 = "Sorry. <strong class='text-primary search_order'>\"ASDF\"</strong> No results were found for your search.";
-        $no_exist_txt_result_2 = "Are there no search results for the replacement product you are looking for?<br>Please contact us and we will help you quickly!";
-        $no_exist_txt_result_3 = "Contact us";
+        $searh_no_exist_txt_result_1 = "对不起。 <strong class='text-primary search_order'>\"ASDF\"</strong> 未找到符合您搜索的结果。";
+        $searh_no_exist_txt_result_2 = "没有您正在寻找的替代产品的搜索结果吗？<br>请联系我们，我们将尽快为您提供帮助！";
+        $searh_no_exist_txt_result_3 = "联系我们";
 
         // 검색 버튼 오류 문구
-        $searchSendErrArrTxt = "Please select a search item.";
-        $searchSendErrSearchOrderTxt = "Please enter a search term.";
+        $search_send_err_arr_txt = "请选择一个搜索项目。";
+        $search_send_err_search_order_txt = "请输入一个搜索词。";
 
         // 목록 문구
-        $total_txt_pre = "total : ";
-        $total_txt_post = "";
-    } else {
+        $search_total_txt_pre = "total : ";
+        $search_total_txt_post = "";
+    } else { // 국문
         // 검색 결과 실패 문구
-        $no_exist_txt_result_1 = "죄송합니다. <strong class='text-primary search_order'>\"ASDF\"</strong>에 대한 검색 결과가 없습니다.";
-        $no_exist_txt_result_2 = "찾으시는 대치품에 대한 검색결과가 없으신가요?<br>문의주시면 신속히 도와드리겠습니다!";
-        $no_exist_txt_result_3 = "문의하기";
+        $searh_no_exist_txt_result_1 = "죄송합니다. <strong class='text-primary search_order'>\"ASDF\"</strong>에 대한 검색 결과가 없습니다.";
+        $searh_no_exist_txt_result_2 = "찾으시는 대치품에 대한 검색결과가 없으신가요?<br>문의주시면 신속히 도와드리겠습니다!";
+        $searh_no_exist_txt_result_3 = "문의하기";
 
         // 검색 버튼 오류 문구
-        $searchSendErrArrTxt = "검색항목을 선택해주세요.";
-        $searchSendErrSearchOrderTxt = "검색어를 입력해주세요.";
+        $search_send_err_arr_txt = "검색항목을 선택해주세요.";
+        $search_send_err_search_order_txt = "검색어를 입력해주세요.";
 
         // 목록 문구
-        $total_txt_pre = "총 ";
-        $total_txt_post = "건";
+        $search_total_txt_pre = "총 ";
+        $search_total_txt_post = "건";
     }
 ?>
 <script>
-    var searchArr = ['trend_list', 'stock', 'oem'];
+    var search_select_arr = ['trend_list', 'stock', 'oem'];
     function search_sel(i){
-        searchArr = ['trend_list', 'stock', 'oem'];
+        search_select_arr = ['trend_list', 'stock', 'oem'];
         if(i==1){
-            searchArr = ['trend_list'];
+            search_select_arr = ['trend_list'];
         }else if(i==2){
-            searchArr = ['stock'];
+            search_select_arr = ['stock'];
         }else if(i==3){
-            searchArr = ['oem'];
+            search_select_arr = ['oem'];
         }
     }
 
-    var isSearchLoading = false;
+    var search_is_loading = false;
     var searched_order = '';
 
     function search_send(){
-        if (searchArr == null) {
-            alert("<?=$searchSendErrArrTxt?>"); // 검색항목을 선택해주세요.
+        if (search_select_arr == null) {
+            alert("<?=$search_send_err_arr_txt?>"); // 검색항목을 선택해주세요.
             return;
         } else if ($("input[name=search_order]").val() == "") {
-            alert("<?=$searchSendErrSearchOrderTxt?>"); // 검색어를 입력해주세요.
+            alert("<?=$search_send_err_search_order_txt?>"); // 검색어를 입력해주세요.
             return;
-        } else if(isSearchLoading) {
+        } else if(search_is_loading) {
             //alert("이전 검색 수행 중입니다.");
             return;
         }
 
         search_loading_start(); // 검색 중
 
-        if(searchArr.length == 1) {
+        if(search_select_arr.length == 1) {
             // 전체 검색이 아니면, 전체 결과 정보 삭제
             $("#totalSearchResults .exist .total-results").hide();
         } else {
@@ -86,13 +86,13 @@
         var search_order = $("input[name=search_order]").val();
         var total_cnt = 0;
         var cntArr = [];
-        for(var i=0;i<searchArr.length;i++) {
+        for(var i=0;i<search_select_arr.length;i++) {
             cntArr.push(-1);
         }
 
-        for(var i=0;i<searchArr.length;i++) {
+        for(var i=0;i<search_select_arr.length;i++) {
             (function(index) { // ajax 독립적 호출
-                var code = searchArr[i];
+                var code = search_select_arr[i];
                 $.ajax({
                     url: "<?=$returnURL?>/index/ajax_search.php",
                     type: "get",
@@ -125,11 +125,7 @@
                         $(this).remove();
                     });
                     if(data.list != null) {
-                        var length = data.list.length;
-
                         for(var i=0; i<data.list.length; i++) {
-                            console.log(data.list[i])
-
                             var html = '';
                             if(code == 'trend_list') {
                                 var subject = data.list[i].subject.replace(new RegExp(search_order, "gi"), function(match) {
@@ -210,7 +206,7 @@
     }
 
     function search_loading_start() {
-        isSearchLoading = true;
+        search_is_loading = true;
         $("#totalSearchResults .search_ing").show();    // 로딩 이미지 표시
         $("input[name=search_order]").attr('readonly', true);   // 검색 text 비활성화
         $("input[name=search_order]").css('background', '#eee');// 검색 text 비활성화
@@ -219,13 +215,13 @@
     }
 
     function search_loading_end() {
-        isSearchLoading = false;
+        search_is_loading = false;
         $("#totalSearchResults .search_ing").hide();
         $("input[name=search_order]").attr('readonly', false);  //  검색 text 활성화
         $("input[name=search_order]").css('background', '#fff');//  검색 text 활성화
     }
 
-    function go_url_postsearch(url) {
+    function search_go_url_post(url) {
         location.href = url + searched_order;
     }
 </script>
@@ -233,12 +229,12 @@
 <div class="area no_exist" style="display: none">
     <!-- 검색 결과 없음 -->
     <div class="total-results">
-        <p class="result-count text-normal"><?=$no_exist_txt_result_1?></p>
+        <p class="result-count text-normal"><?=$searh_no_exist_txt_result_1?></p>
     </div>
     <div class="no-result-box">
         <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
-        <p class="no_exist_txt_result_3"><?=$no_exist_txt_result_2?></p>
-        <a href="#" class="button"><strong class="class="no_exist_txt_result_4""><?=$no_exist_txt_result_3?></strong></a>
+        <p class="no_exist_txt_result_3"><?=$searh_no_exist_txt_result_2?></p>
+        <a href="#" class="button"><strong class="class="no_exist_txt_result_4""><?=$searh_no_exist_txt_result_3?></strong></a>
     </div>
 </div>
 <div class="area search_ing" style="display: none">
@@ -248,14 +244,14 @@
 </div>
 <div class="area exist" style="display: none">
     <div class="total-results">
-        <p class="result-count"><?=$total_txt_pre?><strong class="text-primary total_cnt">00</strong><?=$total_txt_post?></p>
+        <p class="result-count"><?=$search_total_txt_pre?><strong class="text-primary total_cnt">00</strong><?=$search_total_txt_post?></p>
     </div>
     <div class="table-wrapper trend_list_wrap">
         <div class="table-title">
             <p class="title">Memory Trend</p>
-            <strong class="result-count"><?=$total_txt_pre?><span class="text-primary trend_list_cnt">00</span><?=$total_txt_post?></strong>
+            <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary trend_list_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="go_url_postsearch('./product/trend_list.php?search_item=subject&search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/trend_list.php?search_item=subject&search_order=')" class="button type-round more-view"></a>
             </div>
         </div>
 
@@ -274,9 +270,9 @@
     <div class="table-wrapper stock_wrap">
         <div class="table-title">
             <p class="title">Stock List</p>
-            <strong class="result-count"><?=$total_txt_pre?><span class="text-primary stock_cnt">00</span><?=$total_txt_post?></strong>
+            <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary stock_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="go_url_postsearch('./product/stock.php?search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/stock.php?search_order=')" class="button type-round more-view"></a>
             </div>
         </div>
 
@@ -296,9 +292,9 @@
     <div class="table-wrapper oem_wrap">
         <div class="table-title">
             <p class="title">OEM Excess</p>
-            <strong class="result-count"><?=$total_txt_pre?><span class="text-primary oem_cnt">00</span><?=$total_txt_post?></strong>
+            <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary oem_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="go_url_postsearch('./product/oem.php?search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/oem.php?search_order=')" class="button type-round more-view"></a>
             </div>
         </div>
 
