@@ -147,7 +147,7 @@ if($lang==2){ // 영문
 						<div class="modal-inner-box">
 							<div class="modal-inner-header">
 								<p class="modal-title"><?=$control_txt_semiconductor_analysis_inquiry?></p>
-								<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
+								<a href="javascript:;" onclick="$('.modal-fixed-pop-wrapper').hide();" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
 							</div>
 							<div class="modal-inner-content">
 								<article class="contact-form inquiry-page">
