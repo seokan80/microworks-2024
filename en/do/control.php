@@ -13,7 +13,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
 <style>
 /* css */
-
 </style>
 <script>
 /* js */
@@ -157,8 +156,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</article>
 						<div class="button-layout center">
-							<!-- !NOTE : control_popup.php 팝업 띄워주세요 -->
-							<button type="button" class="button size-lg margin-top-xxl"><strong>반도체 분석 문의하기</strong></button>
+                            <!-- #202405 반도체 분석 문의하기 추가 -->
+                            <!-- !NOTE : control_popup.php 팝업 띄워주세요 -->
+                            <button type="button" class="button size-lg margin-top-xxl" onclick="javascript:layerLoad('/do/control_popup.php?lang=en'); return false;"><strong>Semiconductor Analysis Inquiry</strong></button>
 						</div>
 					</article>
 					<!-- !NOTE S : 2024-04 추가 -->

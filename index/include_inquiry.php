@@ -24,7 +24,7 @@
     } else if($lang==3){ // 중문
         // 화면 메세지
         $inquiry_txt_inquiry = "询价";
-        $inquiry_txt_name = "名";
+        $inquiry_txt_name = "姓名";
         $inquiry_txt_name_placeholder = "请输入名字。";
         $inquiry_txt_email = "电子邮件";
         $inquiry_txt_email_select_a = "直接输入";
