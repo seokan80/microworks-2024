@@ -29,27 +29,23 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="ceo-txt-con">
 									<div class="tit-box">
 										<p class="tit-en">Shared growth</p>
-										<p class="tit-kor">신뢰를 기반으로 <br><strong>동반성장</strong>해 나아갑니다.</p>
+										<p class="tit-kor"><strong>Trust</strong> is the BEST</p>
 									</div>
 									<div class="txt-box">
 										<p class="txt">
-											마이크로웍스 코리아(주)는 ‘사람이 답이다’라는 모토 아래 구성원과 성장을 함께 하는<br class="pc-only"/>
-											사람 중심의 회사입니다. 신뢰할 수 있는 기업을 목표로 2007년 창사 이래<br class="pc-only"/>
-											반도체 유통 시장을 개척, 선도하며 한 길만 걸어왔습니다.<br/>
-											디지털 기기 제조 산업부터 항공우주 방위산업까지 반도체, 메모리, 전자부품을 공급하며<br class="pc-only"/>
-											국가 경제발전에 기여해나가겠습니다.<br/>
-											<br/>
-											마이크로웍스 코리아(주)는 지속적인 혁신과 도전으로 국내를 넘어 글로벌 리딩 반도체 전문 유통기업으로 도약하겠습니다.<br/>
-											<br/>
-											AI를 활용한 거래방식 혁신으로 ‘Trade to Upgrade’라는 비전을 달성하고 <br class="pc-only"/>
-											인재 양성과 사회적 책임을 다하는 투명경영으로<br class="pc-only"/>
-											고객에게 사랑받고 사회적으로 존경받는 기업이 되기 위해 노력하겠습니다.<br/>
-											<br/>
-											감사합니다.
+										Microworks Korea Co., Ltd. is a person-centered company that shares growth with members under the motto 'Person is the answer'.<br/>
+										Since founded year 2007, we have pioneered and led the distribution of semiconductors with the aim of becoming a reliable company.<br/>
+										And we have contributed to the growth of the national economy by supplying electronic components such as semiconductors and memories from the digital device manufacturing industry to the aerospace defense industry.<br/>
+										<br/>
+										Microworks Korea Co., Ltd. will leap forward as a global leading semiconductor distributor beyond Korea through continuous innovation and challenges.<br/>
+										<br/>
+										We will strive to become a company loved and socially respected by customers through transparent management that achieves the vision of 'Trade to Upgrade' through transaction innovation using AI and cultivates talent and fulfills social responsibilities.<br/>
+										<br/>
+										Thank you.
 										</p>
 									</div>
 									<div class="sign-box">
-										<p class="sign-txt">마이크로웍스코리아㈜ <strong>대표이사 안 철</strong></p>
+										<strong class="sign-txt">Stanley Ahn, CEO of Microworks Korea Co., Ltd.</strong>
 									</div>
 								</div>
 							</div>
@@ -57,36 +53,37 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<li>
 									<img src="/images/content/img-company-info-01.png" alt="">
 									<div class="text-wrap">
-										<p class="title">정품 공급</p>
-										<p class="desc">다양한 제조사 및 유통사의 글로벌 공급망을 통해 품질이 확인된 여러 제품을 한 곳에서 구매하여 <br class="pc-only"/>고객의 시간과 비용을 절약하고 있습니다.</p>
+										<p class="title">Genuine Supply</p>
+										<p class="desc">Through the global supply chain of various manufacturers and distributors, we are saving customers time and cost by purchasing quality-checked products in one place.</p>
 									</div>
 								</li>
 								<li>
 									<img src="/images/content/img-company-info-02.png" alt="">
 									<div class="text-wrap">
-										<p class="title">기술 지원</p>
-										<p class="desc">기술적 지원을 제공하여 고객이 제품을 올바르게 선정, 사용할 수 있도록 돕고 있습니다. <br class="pc-only">고객의 제품 설계, 개발 및 제조 단계에서 발생할 수 있는 문제를 해결하고 최적의 솔루션을 제공하고 있습니다.</p>
+										<p class="title">Technical Support</p>
+										<p class="desc">We provide technical support to help customers select and use their products correctly. We solve problems that may arise during the product design, development, and manufacturing stages and provide optimal solutions.</p>
+										
 									</div>
 								</li>
 								<li>
 									<img src="/images/content/img-company-info-03.png" alt="">
 									<div class="text-wrap">
-										<p class="title">정보 제공</p>
-										<p class="desc">시장 동향 및 제품 정보를 고객에게 제공하여 고객이 최신 기술과 시장 동향을 파악하여 <br class="pc-only">더 나은 결정을 할 수 있도록 돕고 있습니다.</p>
+										<p class="title">Providing Information</p>
+										<p class="desc">We provide market trends and product information to help the customers identify the latest technologies and market trends and make better decisions.</p>
 									</div>
 								</li>
 								<li>
 									<img src="/images/content/img-company-info-04.png" alt="">
 									<div class="text-wrap">
-										<p class="title">공급망 관리</p>
-										<p class="desc">제품의 안전한 운송 및 배송을 보장하고 재고를 효율적으로 관리하여 <br class="pc-only">고객에게 신속한 서비스를 제공하고 있습니다.</p>
+										<p class="title">Supply Chain Management</p>
+										<p class="desc">We ensure safe transportation and delivery of products and efficiently manage inventory to provide prompt service to customers.</p>
 									</div>
 								</li>
 								<li>
 									<img src="/images/content/img-company-info-05.png" alt="">
 									<div class="text-wrap">
-										<p class="title">ESG 경영</p>
-										<p class="desc">환경을 생각하는 친환경 포장재 사용부터 구성원의 성장과 함께 <br class="pc-only">사회공헌 및 봉사활동, 정도경영으로 ESG 경영을 실천하고 있습니다.</p>
+										<p class="title">ESG management</p>
+										<p class="desc">Using environmental friendly packaging materials, joining social contribution and volunteer activities, these make company members grow.</p>
 									</div>
 								</li>
 							</ul>
