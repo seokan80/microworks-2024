@@ -28,28 +28,19 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<div class="top-bg clearfix" style="background-image: url('/images/content/summary_top_img.png');"></div>
 						<div class="top-blue-box">
 							<div class="inner">
-								<span class="top-tit-en">About Us</span>
-								<p class="top-tit-kr">마이크로웍스 <br class="pc-only"/>코리아(주)<br/><strong>글로벌 소싱 반도체<br/>전문 유통 기업</strong></p>
+								<span class="top-tit-en">Company Overview</span>
+								<p class="top-tit-kr"><strong>A solid company</strong><br/>in the world.</p>
 								<p class="top-tit-txt">
-									마이크로웍스 코리아㈜는 2007년에<br/>
-									설립한 메모리, 반도체 토탈솔루션<br/>
-									기업입니다.
+									Microwork Korea was established<br/>in 2007 and specializes in<br/>providing memory &<br/> semiconductor solutions.
 								</p>
 							</div>
 						</div>
 						<div class="top-txt-box">
 							<p class="txt">
-								마이크로웍스 코리아(주)는 20년 이상의 경험과 함께 쌓아온 빅데이터를 활용하여<br/>
-								국내외 다수의 기업과의 거래 속에 지속해서 성장하고 있습니다.<br/>
-								대형화, 온라인화되는 반도체 유통시장의 급격한 변화 속에서 당사는 탄탄한 해외 공급사 확보와 함께 온라인 거래 <br/>
-								플랫폼, 반도체 분석센터 운영으로 신속, 정확하고 확실한 정품의 정보 전달과 공급으로 고객사의 신뢰를 받고 있습니다.<br/>
-								<br/>
-								4차 산업혁명의 시작과 함께 AI를 이용한 기술 발전에 대비하여<br/>
-								융합적 사고와 적응력으로 고객의 요구를 유연하게 대처할 수 있도록 미래를 위한 기술적 변화와 혁신에 <br/>
-								끊임없이 도전하고 있습니다.<br/>
-								<br/>
-								당사 연구소를 통한 기술지원과 분석센터를 통한 품질 확인 보증으로 최상의 서비스를 제공하여<br/>
-								고객의 성장이 우리의 성장이라는 동반성장의 가치를 실현하고 있습니다.
+								Microworks Korea Co., Ltd. continues to grow in transactions with many domestic and foreign companies by utilizing big data accumulated with more than 20 years of experience.<br/>
+								The semiconductor distribution market is getting huge and being online, it is trusted by customers by quickly, accurately, and reliably delivering and supplying genuine information through online trading platforms and semiconductor analysis centers, along with securing solid overseas suppliers in these rapid changes.<br/>
+								With the start of the 4th Industrial Revolution, we are constantly challenging technological change and innovation for the future so that we can flexibly cope with customer needs with convergent thinking and adaptability in preparation for technological development using AI.<br/>
+								By providing the best service through the research center and quality verification guarantees through the analysis center, customers will realize the value of shared growth.
 							</p>
 						</div>
 					</article>
