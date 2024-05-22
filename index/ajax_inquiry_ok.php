@@ -1,5 +1,10 @@
 <?
+// ------------------------------------
 // 메인 문의 저장 ajax data
+// -- /kr
+// industrial 문의하기 저장 ajax data
+// -- /kr/industrial/transcend.php?part1_idx=3#
+// ------------------------------------
 include $_SERVER['DOCUMENT_ROOT']."/common.php";
 //if(!strstr($_SERVER['HTTP_REFERER'],"microworks")){ $tools->alertJavaGo("비정상적인 접근 입니다.","/"); exit; }
 
