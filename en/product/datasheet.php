@@ -44,7 +44,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</button>
 					</div>
 				</form>
-        <!-- !NOTE : 1/3 데이터 없을 때  -->
+        <!-- !NOTE : 1/4 데이터 없을 때  -->
 				<article class="sub-page product-page">
 					<div class="area02">
 						<div class="search-results">
@@ -62,7 +62,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</div>
 				</article>
-        <!-- !NOTE : 2/3 데이터 부정확 할 때 -->
+        <!-- !NOTE : 2/4 데이터 부정확 할 때 -->
 				<article class="sub-page product-page">
 						<div class="area02">
 							<div class="search-results">
@@ -80,7 +80,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</div>
 					</article>
-          <!-- !NOTE : 3/3 데이터 있을 때 -->
+          <!-- !NOTE : 3/4 데이터 있을 때 -->
 					<article class="sub-page product-page">
             <div class="area02">
               <form action="" class="search-results-form">
@@ -835,6 +835,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
               </div>
             </div>
           </article>
+          <!-- !NOTE : 4/4 모바일 접속 시 -->
+          <article class="sub-page product-page mo-only">
+						<div class="area02">
+							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
+              <div class="quick-search">
+                <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
+                <p>빠른 검색이 필요하시면 문의주세요!</p>
+                <a href="#" class="button"><strong>문의하기</strong></a>
+              </div>
+						</div>
+					</article>
           <!-- !NOTE E : 2024-04 추가 -->
 				<!-- //컨텐츠 내용 -->
 		
