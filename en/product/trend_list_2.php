@@ -75,6 +75,7 @@ $list_index = 1;
 				<!-- 컨텐츠 내용 -->
 				<article class="sub-page product-page pc-only">
             <div class="area02">
+<!-- !NOTE : 1/3 검색결과 있을 때 -->
               <form action="" class="search-results-form">
                 <div class="search-results">
                   <div class="search-results-header">
@@ -825,7 +826,7 @@ $list_index = 1;
                 <div class="box-header"><strong>카테고리명</strong></div>
                 <div class="box-body">카테고리 설명이 들어갑니다. 예를 들어 이 제품군에 속하는 제품은 정보를 전송 또는 저장에 적합한 형태로 패키징하거나 암호화하고 특정 형태의 변조 공정을 통해 통신 경로의 반대쪽에서 역산을 수행하는 데 사용됩니다. 예로는 디지털 데이터로부터 아날로그 비디오 신호를 생성(또는 아날로그 데이터로부터 데이터 비디오 신호를 생성)하는 장치, 원격 제어 기능을 구현하기 위해 전송 버튼 상태를 암호화하는 장치, 표준 UART를 표준 적외선 트랜시버에 연결할 수 있도록 해 주는 장치가 있습니다.</div>
               </div>
-              <!-- !NOTE : 검색결과 없음 -->
+              <!-- !NOTE : 2/3 검색결과 없음 -->
               <div class="search-results">
                 <div class="search-results-header">
                   <p>죄송합니다. <strong class="text-primary">"ASDF"</strong>에 대한 검색 결과가 없습니다.</p>
@@ -840,7 +841,7 @@ $list_index = 1;
               </div>
             </div>
           </article>
-					<!-- !NOTE : 모바일에서 접속 한 경우 -->
+					<!-- !NOTE : 3/3 모바일에서 접속 한 경우 -->
 					<article class="sub-page product-page mo-only">
 						<div class="area02">
 							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
