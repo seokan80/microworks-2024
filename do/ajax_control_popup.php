@@ -1,11 +1,6 @@
 <?
-// ------------------------------------
 // 메인 문의 저장 ajax data
-// -- /kr
-// industrial 문의하기 저장 ajax data
-// -- /kr/industrial/transcend.php?part1_idx=3#
-// ------------------------------------
-include $_SERVER['DOCUMENT_ROOT']."/common.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/common.php";
 //if(!strstr($_SERVER['HTTP_REFERER'],"microworks")){ $tools->alertJavaGo("비정상적인 접근 입니다.","/"); exit; }
 
 $lang = $_POST[lang];
@@ -53,26 +48,27 @@ if( $_POST[name] ) {
 
 	// 파라미터 설정
 	if($_POST[name])	{$name		= 	$tools->filter($_POST[name]);}		// 이름
-	if($_POST[company])	{$company	= 	$tools->filter($_POST[company]);}	// 회사명
 	if($_POST[email1])	{$email1	= 	$tools->filter($_POST[email1]);}	// 이메일
 	if($_POST[email2])	{$email2	= 	$tools->filter($_POST[email2]);}	// 이메일
 	if($_POST[phone])	{$phone		= 	$tools->filter($_POST[phone]);}		// 연락처
-	if($_POST[part_name])		{$part_name			=$tools->filter($_POST[part_name]);}		// 부품명
-	if($_POST[request_quantity]){$request_quantity	=$tools->filter($_POST[request_quantity]);}	// 필요수량
-	if($_POST[wish_date])		{$wish_date	=$tools->filter($_POST[wish_date]);} 				// 희망납기
-	if($_POST[goal_price])		{$goal_price	=$tools->filter($_POST[goal_price]);} 			// 목표단가
+	if($_POST[company])	{$company	= 	$tools->filter($_POST[company]);}	// 회사명
+	if($_POST[part])	{$part	=$tools->filter($_POST[part]);}				// 파트명
+	if($_POST[request_quantity]){$request_quantity	=$tools->filter($_POST[request_quantity]);}	// 의뢰수량
+	if($_POST[inquiry_content]){$inquiry_content	=$tools->filter($_POST[inquiry_content]);}	// 문의내용
+	if($_POST[genuine]){$genuine	=$tools->filter($_POST[genuine]);}	// 정품보유여부
+	if($_POST[content]){$content	=$tools->filter($_POST[content]);}	// 상세내용
 	$email	= $email1."@".$email2;
 
 	// 쿼리
 	$query	= "name='$name',
-		company='$company',
-		email='$email',
-		phone='$phone',
-		part_name='$part_name',
-		request_quantity='$request_quantity',
-		wish_date='$wish_date',
-		goal_price='$goal_price',
-		content='$_POST[content]'";
+			email='$email',
+			phone='$phone',
+			company='$company',
+			part='$part',
+			request_quantity='$request_quantity',
+			inquiry_content='$inquiry_content',
+			genuine='$genuine',
+			content='$content'";
 
 	// 스팸 확인
 	$spam_word = $tools->checkSpam($nu, $query);
@@ -82,7 +78,7 @@ if( $_POST[name] ) {
 	}
 
 	// 쿼리 실행
-	if( $db->insert("cs_inquiry", $query.", ip='$ip', reg_date=now()") ) {
+	if( $db->insert("cs_sa_inquiry", $query.", ip='$ip', reg_date=now()") ) {
 		// 쿼리 등록 성공
 		sendResult("success", $inquiryok_success_msg); //문의하기가 접수 되었습니다.
 	} else {

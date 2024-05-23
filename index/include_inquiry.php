@@ -16,6 +16,14 @@
         $inquiry_txt_content = "Content";
         $inquiry_txt_content_sub1 = "(No more than 100 characters.)";
         $inquiry_txt_send = "Submit";
+        $inquiry_txt_partname = "Part Name";
+        $inquiry_txt_partname_placeholder = "Please enter the part name.";
+        $inquiry_txt_request_quantity = "Quantity required";
+        $inquiry_txt_request_quantity_placeholder = "Please enter the required quantity.";
+        $inquiry_txt_quantity_wish_date = "Expected delivery date";
+        $inquiry_txt_quantity_wish_date_placeholder = "Please enter your desired delivery date.";
+        $inquiry_txt_quantity_goal_price = "Target unit price";
+        $inquiry_txt_quantity_goal_price_placeholder = "Please enter the target unit price.";
         // script 메세지
         $inquiry_txt_err_privay_agree_input = "You do not agree to the privacy policy.";
         $inquiry_txt_err_name_input = "Input your name, please.";
@@ -24,7 +32,7 @@
     } else if($lang==3){ // 중문
         // 화면 메세지
         $inquiry_txt_inquiry = "询价";
-        $inquiry_txt_name = "名";
+        $inquiry_txt_name = "姓名";
         $inquiry_txt_name_placeholder = "请输入名字。";
         $inquiry_txt_email = "电子邮件";
         $inquiry_txt_email_select_a = "直接输入";
@@ -37,6 +45,14 @@
         $inquiry_txt_content = "内容";
         $inquiry_txt_content_sub1 = "(请输入少于100个字符。)";
         $inquiry_txt_send = "已完成";
+        $inquiry_txt_partname = "零件名称";
+        $inquiry_txt_partname_placeholder = "请输入零件名称。";
+        $inquiry_txt_request_quantity = "所需数量";
+        $inquiry_txt_request_quantity_placeholder = "请输入所需数量。";
+        $inquiry_txt_quantity_wish_date = "预计交货日期";
+        $inquiry_txt_quantity_wish_date_placeholder = "请输入您想要的交货日期。";
+        $inquiry_txt_quantity_goal_price = "目标单价";
+        $inquiry_txt_quantity_goal_price_placeholder = "请输入目标单价。";
         // script 메세지
         $inquiry_txt_err_privay_agree_input = "您尚未同意隐私政策。";
         $inquiry_txt_err_name_input = "请输入一个名字。";
@@ -58,6 +74,14 @@
         $inquiry_txt_content = "문의내용";
         $inquiry_txt_content_sub1 = "(500자 이내로 입력해주세요.)";
         $inquiry_txt_send = "작성완료";
+        $inquiry_txt_partname = "부품명";
+        $inquiry_txt_partname_placeholder = "부품명을 입력해주세요.";
+        $inquiry_txt_request_quantity = "필요수량";
+        $inquiry_txt_request_quantity_placeholder = "필요수량을 입력해주세요.";
+        $inquiry_txt_quantity_wish_date = "희망납기";
+        $inquiry_txt_quantity_wish_date_placeholder = "희망납기를 입력해주세요.";
+        $inquiry_txt_quantity_goal_price = "목표단가";
+        $inquiry_txt_quantity_goal_price_placeholder = "목표단가를 입력해주세요.";
         // script 메세지
         $inquiry_txt_err_privay_agree_input = "개인정보처리방침 동의하지 않으셨습니다.";
         $inquiry_txt_err_name_input = "이름을 입력해 주세요.";
@@ -76,7 +100,7 @@
                 <div class="forms required">
                     <i class="material-icons">&#xe0e1;</i>
                     <label for="name"><?=$inquiry_txt_name?></label>
-                    <input type="text" id="name" placeholder="<?=$inquiry_txt_name_placeholder?>" name="name" required="required">
+                    <input type="text" id="name" placeholder="<?=$inquiry_txt_name_placeholder?>" name="name" required="required" maxlength="30">
                 </div>
                 <div class="forms required">
                     <i class="material-icons">&#xe0e1;</i>
@@ -106,33 +130,35 @@
                 <div class="forms required">
                     <i class="material-icons">&#xe551;</i>
                     <label for="user-contact"><?=$inquiry_txt_phone?></label>
-                    <input type="text" id="phone" placeholder="ex)010-1234-5678" name="phone"
-                           required="required"/>
+                    <input type="text" id="phone" placeholder="ex)010-1234-5678" name="phone" required="required" maxlength="30"/>
                 </div>
                 <div class="forms">
                     <i class="material-icons">&#xe8f8;</i>
                     <label for="company"><?=$inquiry_txt_company?></label>
                     <input type="text" id="company" placeholder="<?=$inquiry_txt_company_placeholder?>" name="company">
                 </div>
+                <?
+
+                ?>
                 <div class="extra-info">
                     <div class="form-group">
                         <div class="forms">
-                            <label for="part_name">부품명</label>
-                            <input type="text" id="part_name" placeholder="부품명을 입력해주세요." name="part_name">
+                            <label for="part_name"><?=$inquiry_txt_partname?></label>
+                            <input type="text" id="part_name" placeholder="<?=$inquiry_txt_partname_placeholder?>" name="part_name" maxlength="200">
                         </div>
                         <div class="forms">
-                            <label for="request_quantity">필요수량</label>
-                            <input type="text" id="request_quantity" placeholder="필요수량을 입력해주세요." name="request_quantity">
+                            <label for="request_quantity"><?=$inquiry_txt_request_quantity?></label>
+                            <input type="text" id="request_quantity" placeholder="<?=$inquiry_txt_request_quantity_placeholder?>" name="request_quantity" maxlength="100">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="forms">
-                            <label for="wish_date">희망납기</label>
-                            <input type="text" id="wish_date" placeholder="희망납기를 입력해주세요." name="wish_date">
+                            <label for="wish_date"><?=$inquiry_txt_quantity_wish_date?></label>
+                            <input type="text" id="wish_date" placeholder="<?=$inquiry_txt_quantity_wish_date_placeholder?>" name="wish_date" maxlength="100">
                         </div>
                         <div class="forms">
-                            <label for="goal_price">목표단가</label>
-                            <input type="text" id="goal_price" placeholder="목표단가를 입력해주세요." name="goal_price">
+                            <label for="goal_price"><?=$inquiry_txt_quantity_goal_price?></label>
+                            <input type="text" id="goal_price" placeholder="<?=$inquiry_txt_quantity_goal_price_placeholder?>" name="goal_price" maxlength="100">
                         </div>
                     </div>
                 </div>
