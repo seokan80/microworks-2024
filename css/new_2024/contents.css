@@ -508,6 +508,8 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 
 /* 메모리 대치품 검색 - search-results */
 .search-results-header{display: flex; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line-color);}
+.search-results-header.type-category{border-bottom: none;}
+.search-results-header.type-category p{font-size: 22px;}
 .search-results-header > :first-child{flex-grow: 1;}
 .search-results-header p{font-size: 16px; color: var(--text-color-darken);}
 
@@ -607,6 +609,26 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .replacement-table.type-detail + .replacement-table-footer{margin-top: 32px;}
 .replacement-table.type-detail + .replacement-table-footer .button{margin-top: 0;}
 
+/* datasheet_category */
+.category-matched{display: flex; align-items: center; margin-top: 16px; padding: 40px; border: 1px solid var(--line-color);}
+.category-matched img{width: 100px; height: 100px; overflow: hidden;}
+.category-matched .text-wrap{margin-left: 32px;}
+.category-matched .tit{font-size: 22px; color: var(--text-color-darken);}
+.category-matched .info-wrap{margin-top: 16px; font-size: 16px;}
+.category-matched .price{margin-top: 8px;}
+
+
+.category-list{display: flex; flex-wrap: wrap; gap: 24px; margin-top: 16px;}
+.category-list .item{position: relative; width: calc(25% - 24px); min-width: 330px; max-height: 366px; padding-top: calc(25% - 24px); border: 1px solid var(--line-color); box-sizing: border-box;}
+.category-list .item-inner{display: flex; flex-direction: column; justify-content: space-between; align-items: center; position: absolute; top: 48px; left: 48px; right: 48px; bottom: 48px;}
+.category-list .item-inner img{max-width: 80%; max-height: 65%;}
+.category-list .item-inner .text-wrap{min-width: 80%; max-height: 70px; margin-top: 28px;}
+.category-list .item-inner .tit{font-size: 22px; color: var(--text-color-darken); text-align: center;}
+.category-list .item-inner .divider-group{display: flex; justify-content: center; flex-wrap: wrap; margin-top: 16px; font-size: 16px; text-align: center;}
+.category-list .item-inner .divider-group span{position: relative; padding: 0 16px;}
+.category-list .item-inner .divider-group span:not(:first-child)::before{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 1px; height: 12px; background-color: var(--line-color); }
+
+
 /* 회사소개 */
 .summary-top-box .top-bg{background: url('') no-repeat center/cover;}
 .summary-top-box .top-blue-box{padding-left: 0px; top: 50px; left: 50px; width: 406px; height: 548px;}
@@ -664,6 +686,7 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .control-con-box .img-con{float: none; height: 100%; min-height: 309px;}
 
 
+
 /* media query */
 
 .mo-only{display: none !important;}
@@ -674,6 +697,8 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 	.main-inquiry .contact{display: block; font-size: 13px; line-height: 1.5;}
 	.main-inquiry .contact dt{margin-bottom: 4px;}
 	.main-inquiry .contact dd{display: inline-block;}
+
+	.category-list .item{width: calc(33% - 24px); padding-top: calc(33% - 24px); max-height: none;}
 }
 
 @media all and ( max-width: 1220px ){
@@ -709,6 +734,8 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 	
 	.ceo-page .greeting-wrap{gap: 50px;}
 	.ceo-page .ceo-txt-con{max-width: 50%;}
+
+	.category-list .item{width: calc(50% - 24px); padding-top: calc(50% - 24px); max-height: none;}
 }
 
 @media all and ( max-width: 800px ){
