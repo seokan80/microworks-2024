@@ -109,7 +109,7 @@ $bottom_img = $row->bbs_file3;
         <!-- #202405 industiral 문의하기 추가-->
         <!-- !NOTE S : 2024-04 추가 -->
         <article class="product-page inquiry-page">
-            <? include $_SERVER["DOCUMENT_ROOT"]."/industrial/include_inquiry.php"; ?>
+            <? include $_SERVER["DOCUMENT_ROOT"]."/common/include_inquiry.php"; ?>
         </article>
         <!-- !NOTE E : 2024-04 추가 -->
 
