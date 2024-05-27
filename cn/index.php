@@ -102,22 +102,23 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</div>
 				<div class="side-menu">
-					<a href="/product/trend_list.php" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_01.png" alt=""></div>
-						<p>MEMORY BUSINESS</p>
-					</a>
-					<a href="/do/line.php" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
-						<p>대치품 검색</p>
-					</a>
-					<a href="http://www.microworks-esc.com" target="_blank" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
-						<p>스탁재고 검색</p>
-					</a>
-					<a href="#" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
-						<p>반도체 분석 문의</p>
-					</a>
+                    <!-- #202405 메인 비주얼 변경 -->
+                    <a href="<?=$site_url?>/product/trend_list.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_01.png" alt=""></div>
+                        <p>MEMORY BUSINESS</p>
+                    </a>
+                    <a href="<?=$site_url?>/product/datasheet.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
+                        <p>Search for replacement</p>
+                    </a>
+                    <a href="<?=$site_url?>/contact/inquiry.php" target="_blank" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
+                        <p>Stock inventory search</p>
+                    </a>
+                    <a href="<?=$site_url?>/do/control.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
+                        <p>Semiconductor Analysis Inquiry</p>
+                    </a>
 				</div>
 				<form name="search_form" id="search_form" action="" method="get">
 					<input type="hidden" name="search_url" value="">
@@ -307,76 +308,177 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						<div class="exchange-con fade-in-down fade-in-08">
 							<p class="global-tit"><b>汇率</b><span>Exchange Rate (<?=date("Y")?>/<?=date("m")?>/<?=date("d")?> data)</span></p>
 							<table class="main-exchange-tbl">
-								<colgroup>
-									<col width="30%">
-									<col width="23.33%">
-									<col width="23.33%">
-									<col width="23.33%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>汇率</th>
-										<th>买卖基准率</th>
-										<th>全日对比</th>
-										<th>涨跌率</th>
-									</tr>
-								</thead>
-								<!-- !NOTE S : 기존소스 복구 시 아래 컨텐츠가 안나오는 이슈가 있습니다. __index.php 소스 참고 부탁드립니다. -->
-								<tbody>
-									<tr>
-											<th>
-												<p><span class="plag-icon"><img src="/images/main/main_exchange_usd_icon.jpg"
-															alt=""></span>U.S.A (USD)</p>
-											</th>
-											<td>1,393.50</td>
-											<td>
-												<p class="net-change"><span class="up-icon"></span>5</p>
-											</td>
-											<td>
-												<p class="up-down"><span class="up-icon"></span> +0.36%</p>
-											</td>
-										</tr>
-										<tr class="blue-row">
-											<th>
-												<p><span class="plag-icon"><img src="/images/main/main_exchange_jpy_icon.jpg"
-															alt=""></span>Japan (JPY)</p>
-											</th>
-											<td>903.08</td>
-											<td>
-												<p class="net-change"><span class="up-icon"></span>2.89</p>
-											</td>
-											<td>
-												<p class="up-down"><span class="up-icon"></span> +0.32%</p>
-											</td>
-										</tr>
-										<tr>
-											<th>
-												<p><span class="plag-icon"><img src="/images/main/main_exchange_eur_icon.jpg" alt=""></span>EU
-													(EUR)</p>
-											</th>
-											<td>1,478.92</td>
-											<td>
-												<p class="net-change"><span class="up-icon"></span>3.92</p>
-											</td>
-											<td>
-												<p class="up-down"><span class="up-icon"></span> +0.27%</p>
-											</td>
-										</tr>
-										<tr class="blue-row">
-											<th>
-												<p><span class="plag-icon"><img src="/images/main/main_exchange_cny_icon.jpg"
-															alt=""></span>China (CNY)</p>
-											</th>
-											<td>191.61</td>
-											<td>
-												<p class="net-change"><span class="up-icon"></span>0.35</p>
-											</td>
-											<td>
-												<p class="up-down"><span class="up-icon"></span> +0.18%</p>
-											</td>
-										</tr>
-										<!-- !NOTE E : 기존소스 복구 시 아래 컨텐츠가 안나오는 이슈가 있습니다. __index.php 소스 참고 부탁드립니다. -->
-								</tbody>
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="23.33%">
+                                    <col width="23.33%">
+                                    <col width="23.33%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>汇率</th>
+                                    <th>买卖基准率</th>
+                                    <th>全日对比</th>
+                                    <th>涨跌率</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                <?
+
+                                function get($url){
+
+                                    $ch = curl_init($url);
+                                    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                                    $result = curl_exec($ch);
+                                    if(curl_errno($ch)){
+                                        throw new Exception(curl_error($ch));
+                                    }
+
+                                    curl_close($ch);
+                                    return $result;
+
+                                }
+
+                                $url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD';
+                                $result = get($url);
+                                $data = json_decode($result,true);
+                                $data = $data[0];
+
+                                $_provider = $data['provider'];
+                                $_buying = $data['cashBuyingPrice'];
+                                $_selling = $data['cashSellingPrice'];
+                                $_ttselling = $data['ttSellingPrice'];
+                                $_ttbuyling = $data['ttBuyingPrice'];
+                                $_usd = $data['basePrice'];
+                                $_openusd = $data['openingPrice'];
+                                $_chusd = $data['changePrice'];
+                                $_scp = $data['signedChangePrice'];
+                                $_scr = $data['signedChangeRate'];
+                                $_openusd_o = $_usd - $_openusd;
+                                $_openusd_op = ($_chusd/$_usd)*100;
+                                $_openusd = round($_openusd,2);
+
+                                $ud = sprintf('%0.2f',$_usd);
+                                $p1 = explode(".",$ud);
+                                $p2 = number_format($p1[0]);
+                                $op1 = $p2.".".$p1[1];
+
+                                ?>
+
+                                <tr>
+                                    <th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_usd_icon.jpg" alt=""></span>美国 (USD)</p></th>
+                                    <td><?=$op1?></td>
+                                    <td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+                                    <td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
+                                </tr>
+
+                                <?
+
+                                $url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWJPY';
+                                $result = get($url);
+                                $data = json_decode($result,true);
+                                $data = $data[0];
+
+                                $_provider = $data['provider'];
+                                $_buying = $data['cashBuyingPrice'];
+                                $_selling = $data['cashSellingPrice'];
+                                $_ttselling = $data['ttSellingPrice'];
+                                $_ttbuyling = $data['ttBuyingPrice'];
+                                $_usd = $data['basePrice'];
+                                $_openusd = $data['openingPrice'];
+                                $_chusd = $data['changePrice'];
+                                $_scp = $data['signedChangePrice'];
+                                $_scr = $data['signedChangeRate'];
+                                $_openusd_o = $_usd - $_openusd;
+                                $_openusd_op = ($_chusd/$_usd)*100;
+                                $_openusd = round($_openusd,2);
+
+                                $ud = sprintf('%0.2f',$_usd);
+                                $p1 = explode(".",$ud);
+                                $p2 = number_format($p1[0]);
+                                $op1 = $p2.".".$p1[1];
+
+                                ?>
+
+                                <tr class="blue-row">
+                                    <th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_jpy_icon.jpg" alt=""></span>日本 (JPY)</p></th>
+                                    <td><?=$op1?></td>
+                                    <td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+                                    <td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
+                                </tr>
+
+                                <?
+
+                                $url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWEUR';
+                                $result = get($url);
+                                $data = json_decode($result,true);
+                                $data = $data[0];
+
+                                $_provider = $data['provider'];
+                                $_buying = $data['cashBuyingPrice'];
+                                $_selling = $data['cashSellingPrice'];
+                                $_ttselling = $data['ttSellingPrice'];
+                                $_ttbuyling = $data['ttBuyingPrice'];
+                                $_usd = $data['basePrice'];
+                                $_openusd = $data['openingPrice'];
+                                $_chusd = $data['changePrice'];
+                                $_scp = $data['signedChangePrice'];
+                                $_scr = $data['signedChangeRate'];
+                                $_openusd_o = $_usd - $_openusd;
+                                $_openusd_op = ($_chusd/$_usd)*100;
+                                $_openusd = round($_openusd,2);
+
+                                $ud = sprintf('%0.2f',$_usd);
+                                $p1 = explode(".",$ud);
+                                $p2 = number_format($p1[0]);
+                                $op1 = $p2.".".$p1[1];
+
+                                ?>
+
+                                <tr>
+                                    <th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_eur_icon.jpg" alt=""></span>欧洲联盟 (EUR)</p></th>
+                                    <td><?=$op1?></td>
+                                    <td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+                                    <td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
+                                </tr>
+
+                                <?
+
+                                $url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWCNY';
+                                $result = get($url);
+                                $data = json_decode($result,true);
+                                $data = $data[0];
+
+                                $_provider = $data['provider'];
+                                $_buying = $data['cashBuyingPrice'];
+                                $_selling = $data['cashSellingPrice'];
+                                $_ttselling = $data['ttSellingPrice'];
+                                $_ttbuyling = $data['ttBuyingPrice'];
+                                $_usd = $data['basePrice'];
+                                $_openusd = $data['openingPrice'];
+                                $_chusd = $data['changePrice'];
+                                $_scp = $data['signedChangePrice'];
+                                $_scr = $data['signedChangeRate'];
+                                $_openusd_o = $_usd - $_openusd;
+                                $_openusd_op = ($_chusd/$_usd)*100;
+                                $_openusd = round($_openusd,2);
+
+                                $ud = sprintf('%0.2f',$_usd);
+                                $p1 = explode(".",$ud);
+                                $p2 = number_format($p1[0]);
+                                $op1 = $p2.".".$p1[1];
+
+                                ?>
+
+                                <tr class="blue-row">
+                                    <th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_cny_icon.jpg" alt=""></span>中国 (CNY)</p></th>
+                                    <td><?=$op1?></td>
+                                    <td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
+                                    <td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
+                                </tr>
+                                </tbody>
 							</table>
 						</div>
 					</div>
