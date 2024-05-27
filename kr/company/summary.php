@@ -31,9 +31,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<span class="top-tit-en">About Us</span>
 								<p class="top-tit-kr">마이크로웍스 <br class="pc-only"/>코리아(주)<br/><strong>글로벌 소싱 반도체<br/>전문 유통 기업</strong></p>
 								<p class="top-tit-txt">
-									마이크로웍스 코리아㈜는 2007년에<br/>
-									설립한 메모리, 반도체 토탈솔루션<br/>
-									기업입니다.
+									<strong>
+										마이크로웍스 코리아㈜는 2007년에<br/>
+										설립한 메모리, 반도체 토탈솔루션<br/>
+										기업입니다.
+									</strong>
 								</p>
 							</div>
 						</div>

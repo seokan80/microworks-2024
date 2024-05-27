@@ -13,7 +13,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
 <style>
 /* css */
-
 </style>
 <script>
 /* js */
@@ -23,7 +22,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<!-- 컨텐츠 내용 -->
 				<!-- !NOTE S : 2024-04 추가 -->
 				<article class="do-page control-page area">
-						<p class="control-page-tit">자체 반도체 불량 분석센터 운영으로 <br><b>품질관리</b>에 만전을 기하고 있습니다.</p>
+						<p class="control-page-tit">Strict <b>Quality Management</b> by own Semiconductor Analysis Center.</p>
 						<article class="control-con control-con01">
 							<p class="num font-crimson">01</p>
 							<div class="control-con-box clearfix">
@@ -31,15 +30,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="text-con">
 									<dl>
 										<dt>
-											<p class="tit">입출고 검사</p>
+											<p class="tit">Incoming and Outgoing Quality Control (IQC, OQC)</p>
 										</dt>
 										<dd>
-											<p class="txt">반도체 거래 빅데이터 서버 운영 및 활용</p>
-											<p class="txt">외부 라벨, DATA SHEET 확인</p>
-											<p class="txt">바코드/QR코드 검사</p>
-											<p class="txt">포장 상태 검수(ESD, MSL)</p>
-											<p class="txt">엑스레이 검사</p>
-											<p class="txt">출고라벨 검수</p>
+											<p class="txt">Operate and Manage Semiconductor Trading Big-Data Serverㆍ Label, Datasheet Check</p>
+											<p class="txt">Barcodes, Printing Check</p>
+											<p class="txt">Packing Condition Check (ESD, MSL)</p>
+											<p class="txt">X-Ray Inspection</p>
+											<p class="txt">Issue Quality Control Passed Label</p>
 										</dd>
 									</dl>
 								</div>
@@ -52,13 +50,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="text-con">
 									<dl>
 										<dt>
-											<p class="tit">세부검사</p>
+											<p class="tit">Detailed Inspection</p>
 										</dt>
 										<dd>
-											<p class="txt">Digital Microscope 정밀검사</p>
-											<p class="txt">탑마킹 형식 및 인쇄상태 검사</p>
-											<p class="txt">패키지 표면(물리적/화학적) 검사</p>
-											<p class="txt">리드 도금 검사</p>
+											<p class="txt">Optical Inspection by Digital Microscope</p>
+											<p class="txt">Top Marking Check</p>
+											<p class="txt">Surface Inspection (Physical, Chemical)</p>
+											<p class="txt">Plating on the Leads Check</p>
 										</dd>
 									</dl>
 								</div>
@@ -107,15 +105,15 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="text-con">
 									<dl>
 										<dt>
-											<p class="tit">반도체 불량분석</p>
+											<p class="tit">Failure Analysis</p>
 										</dt>
 										<dd>
-											<p class="txt">X-ray 분석(리드프레임, DIE)</p>
-											<p class="txt">De-capsulation 분석</p>
-											<p class="txt">V-I Curve 분석</p>
-											<p class="txt">Custom 분석</p>
-											<p class="txt">Counterfeit 분석</p>
-											<p class="txt">Chemical, Physical 분석</p>
+											<p class="txt">X-Ray Inspection (Leads, Frame, Die)</p>
+											<p class="txt">De-capsulation</p>
+											<p class="txt">V-I Curve Analysis</p>
+											<p class="txt">Counterfeit Analysis</p>
+											<p class="txt">Chemical, Physical Inspection</p>
+											<p class="txt">Customized Inspection</p>
 										</dd>
 									</dl>
 								</div>
@@ -158,8 +156,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</article>
 						<div class="button-layout center">
-							<!-- !NOTE : control_popup.php 팝업 띄워주세요 -->
-							<button type="button" class="button size-lg margin-top-xxl"><strong>반도체 분석 문의하기</strong></button>
+                            <!-- #202405 반도체 분석 문의하기 추가 -->
+                            <!-- !NOTE : control_popup.php 팝업 띄워주세요 -->
+                            <button type="button" class="button size-lg margin-top-xxl" onclick="javascript:layerLoad('/do/control_popup.php?lang=en'); return false;"><strong>Semiconductor Analysis Inquiry</strong></button>
 						</div>
 					</article>
 					<!-- !NOTE S : 2024-04 추가 -->

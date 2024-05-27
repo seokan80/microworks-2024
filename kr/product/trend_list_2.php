@@ -53,6 +53,7 @@ include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
 				<!-- 컨텐츠 내용 -->
 				<article class="sub-page product-page pc-only hide" id="searchArticle">
             <div class="area02">
+<!-- !NOTE : 1/3 검색결과 있을 때 -->
               <form action="" class="search-results-form">
                 <div class="search-results">
                   <!-- 검색 완료 후 노출 -->
@@ -232,7 +233,7 @@ include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
               </div>
             </div>
           </article>
-          <!-- !NOTE : 모바일에서 접속 한 경우 -->
+          <!-- !NOTE : 3/3 모바일에서 접속 한 경우 -->
 					<article class="sub-page product-page mo-only">
 						<div class="area02">
 							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
