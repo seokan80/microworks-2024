@@ -306,7 +306,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							</div>
 						</div>
 						<div class="exchange-con fade-in-down fade-in-08">
-							<p class="global-tit"><b>汇率</b><span>Exchange Rate (<?=date("Y")?>/<?=date("m")?>/<?=date("d")?> data)</span></p>
+                            <p class="global-tit"><b>汇率</b><span>Exchange Rate (2024/03/25 기준 데이터)</span></p>
 							<table class="main-exchange-tbl">
 								<colgroup>
 									<col width="30%">
