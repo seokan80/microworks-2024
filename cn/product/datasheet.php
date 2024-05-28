@@ -3,9 +3,9 @@ $page_num = "03";
 $sub_num = "04";
 $page_section = "product";
 /* !NOTE S : 2024-04 변경 */
-$sub_section = "대치품 검색";
+$sub_section = "Search for replacement";
 $page_info = "PRODUCT SEARCH";
-$sub_info = "대치품 검색";
+$sub_info = "Search for replacement";
 /* !NOTE E : 2024-04 변경 */
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";

@@ -27,9 +27,9 @@ include "../lib/config.php";
 				</ul>
 			</li>
 			<li>
-				<h2>MEDIA</h2>
+				<h2>INDUSTRIAL</h2>
 				<ul class="sitemap-2dep">
-					<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_media.php"; ?>
+					<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_industrial.php"; ?>
 				</ul>
 			</li>
 			<li>

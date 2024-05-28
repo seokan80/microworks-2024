@@ -27,9 +27,9 @@ include "../lib/config.php";
 				</ul>
 			</li>
 			<li>
-				<h2>媒体</h2>
+				<h2>工业的</h2>
 				<ul class="sitemap-2dep">
-					<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_media.php"; ?>
+					<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_industrial.php"; ?>
 				</ul>
 			</li>
 			<li>
