@@ -61,7 +61,7 @@ include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
                     <p class="text-lg" id="searchCategoryNameTop">카테고리명</p>
                     <!-- <button type="button" class="button size-sm type-secondary extra" onclick="search_send()"><strong>검색 다시하기</strong></button> -->
                   </div> 
-                  <
+                  
                   <div class="search-results-body">
                     <div class="search-utility">
                       <div class="search-box">
