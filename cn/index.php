@@ -102,22 +102,23 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 					</div>
 				</div>
 				<div class="side-menu">
-					<a href="/product/trend_list.php" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_01.png" alt=""></div>
-						<p>MEMORY BUSINESS</p>
-					</a>
-					<a href="/do/line.php" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
-						<p>대치품 검색</p>
-					</a>
-					<a href="http://www.microworks-esc.com" target="_blank" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
-						<p>스탁재고 검색</p>
-					</a>
-					<a href="#" class="side-menu-item">
-						<div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
-						<p>반도체 분석 문의</p>
-					</a>
+                    <!-- #202405 메인 비주얼 변경 -->
+                    <a href="<?=$site_url?>/product/trend_list.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_01.png" alt=""></div>
+                        <p>MEMORY BUSINESS</p>
+                    </a>
+                    <a href="<?=$site_url?>/product/datasheet.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
+                        <p>Search for replacement</p>
+                    </a>
+                    <a href="<?=$site_url?>/contact/inquiry.php" target="_blank" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
+                        <p>Stock inventory search</p>
+                    </a>
+                    <a href="<?=$site_url?>/do/control.php" class="side-menu-item">
+                        <div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
+                        <p>Semiconductor Analysis Inquiry</p>
+                    </a>
 				</div>
 				<form name="search_form" id="search_form" action="" method="get">
 					<input type="hidden" name="search_url" value="">
@@ -305,7 +306,7 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							</div>
 						</div>
 						<div class="exchange-con fade-in-down fade-in-08">
-							<p class="global-tit"><b>汇率</b><span>Exchange Rate (<?=date("Y")?>/<?=date("m")?>/<?=date("d")?> data)</span></p>
+                            <p class="global-tit"><b>汇率</b><span>Exchange Rate (2024/03/25 기준 데이터)</span></p>
 							<table class="main-exchange-tbl">
 								<colgroup>
 									<col width="30%">
