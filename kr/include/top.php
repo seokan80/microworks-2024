@@ -111,9 +111,15 @@
 			<?}?>
 
 			<!-- 상단정보 (센터정렬) -->
-			<aside id="contentInfoCon" class="content-info-style01">
-				<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
-			</aside>
+			<?if($sub_section == '대치품 검색 상세'){?>
+				<aside id="contentInfoCon" class="content-info-style01">
+					<h3 class="content-tit no-deco">상품 이름 넣어주세요</h3>
+				</aside>
+			<?} else {?>
+				<aside id="contentInfoCon" class="content-info-style01">
+					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
+				</aside>
+			<?}?>
 			
 			
 			<!-- content -->
