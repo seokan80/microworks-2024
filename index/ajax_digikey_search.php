@@ -74,43 +74,26 @@ function createJsonArray(&$reqStr) {
 }
 
 // 토근 갱신 함수
-function refreshToken(&$clientId, &$clientSecret) {
+function refreshToken() {
 
-  $refreshData = 'grant_type=client_credentials&client_id='. $clientId .'&client_secret='. $clientSecret;
+  $url = 'http://domfamcompany.inames.kr/index/ajax_digikey_auth.php';
+  $result = get($url);
+  $responseJson = json_decode($result,true);
+  return $responseJson['access_token'];
+}
 
-  $curl = curl_init();
-  header('Content-Length: 103');
-  curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://api.digikey.com/v1/oauth2/token',
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_ENCODING => '',
-      CURLOPT_MAXREDIRS => 10,
-      CURLOPT_TIMEOUT => 30,
-      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-      CURLOPT_CUSTOMREQUEST => 'POST',
-      CURLOPT_POSTFIELDS => $refreshData,
-      CURLOPT_HTTPHEADER => array(
-          'Content-Type: application/x-www-form-urlencoded',
-          'Content-Length: 103'
-      ),
-  ));
+function get($url){
 
-  $response = curl_exec($curl);
-  $err = curl_error($curl);
-  curl_close($curl);
+	$ch = curl_init($url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+	$result = curl_exec($ch);
+	if(curl_errno($ch)){
+		throw new Exception(curl_error($ch));
+	}
 
-  if ($err) {
-      return 'Curl error: ' . $err;
-  } else {
-      $responseJson = json_decode($response, true);
+	curl_close($ch);
+	return $result;
 
-
-      if (isset($responseJson['access_token'])) {
-        return $response['access_token'];
-      } else {
-        return $response;
-      }
-  }
 }
 
 curl_setopt_array($curl, array(
@@ -139,7 +122,7 @@ $response = curl_exec($curl);
 $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 if ($httpcode == 401) { 
   // 토큰 만료 시 토큰 재발급
-  $accessToken = refreshToken($clientId, $clientSecret); // Refresh the token and update the refresh token
+  $accessToken = refreshToken(); // Refresh the token and update the refresh token
 
   header('Content-Type: application/json');
 
@@ -152,7 +135,7 @@ if ($httpcode == 401) {
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => json_encode($postData),
+    CURLOPT_POSTFIELDS => $postData,
     CURLOPT_HTTPHEADER => array(
       'X-DIGIKEY-Client-Id: '. $clientId,
       'X-DIGIKEY-Locale-Site: KR',
