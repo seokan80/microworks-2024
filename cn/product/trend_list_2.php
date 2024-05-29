@@ -90,7 +90,7 @@ $list_index = 1;
 											<p class="price"><strong>$157,000.000</strong> 박스</p>
 										</div>
 									</div>
-									<div class="extra">
+									<div class="button-layout gap-md extra">
 										<a href="#" class="button type-secondary size-sm">Detail View</a>
 										<a href="#" class="button type-primary size-sm">Contact Us</a>
 									</div>
