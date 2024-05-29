@@ -137,6 +137,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">배너관리 <span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">
+                    <li><a href="<?=$site_url?>/banner/main.php">메인배너 관리</a></li>
                     <li><a href="<?=$site_url?>/banner/popup.php">팝업배너 관리</a></li>
                </ul>
 			</li>
@@ -228,6 +229,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
 
 				<?if( $mod == "banner" ){?>
 				<div class="panel-heading"><h3 class="panel-title">배너관리</h3></div>
+                    <a href="<?=$site_url?>/banner/main.php" class="list-group-item <?if($menu=="main"){?>active<?}?>">메인배너 관리</a>
 					<a href="<?=$site_url?>/banner/popup.php" class="list-group-item <?if($menu=="popup"){?>active<?}?>">팝업배너 관리</a>
 				<?}?>
 

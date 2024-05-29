@@ -4,6 +4,8 @@ include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
 $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' order by ref desc, idx desc limit 3");
+$bannermain_l_rs = $db->select("cs_banner_main","where direction='L' and CURDATE() between period_start_date and period_end_date order by first_order asc, idx desc limit 5");
+$bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE() between period_start_date and period_end_date order by first_order asc, idx desc limit 5");
 ?>
 <? if($tools->device()=="mobile"){ ?>
 
@@ -202,10 +204,17 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 						<div class="about-slides fade-in-down fade-in-10">
 							<div class="autoplay-slider">
 								<div class="slider">
-									<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
-									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
-									<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
-									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
+                                    <?while($banner_row = mysql_fetch_array($bannermain_l_rs)){?>
+                                        <div class="item">
+                                            <?if($banner_row[link_url] != '') {?>
+                                            <a href="http://<?=$banner_row[link_url]?>">
+                                                <?}?>
+                                                <img src="<?=$banner_row[site_url]?>/data/designImages/<?=$banner_row[images_file]?>" alt="">
+                                                <?if($banner_row[link_url] != '') {?>
+                                            </a>
+                                        <?}?>
+                                        </div>
+                                    <?}?>
 								</div>
 								<div class="controller">
 									<div class="progress-wrapper"></div>
@@ -215,9 +224,17 @@ $notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' ord
 							</div>
 							<div class="autoplay-slider">
 								<div class="slider">
-									<div class="item"><img src="/images/main/main_visual_side_01.jpg" alt=""></div>
-									<div class="item"><img src="/images/main/main_visual_side_03.jpg" alt=""></div>
-									<div class="item"><img src="/images/main/main_visual_side_02.jpg" alt=""></div>
+                                    <?while($banner_row = mysql_fetch_array($bannermain_r_rs)){?>
+                                        <div class="item">
+                                            <?if($banner_row[link_url] != '') {?>
+                                            <a href="http://<?=$banner_row[link_url]?>">
+                                                <?}?>
+                                                <img src="<?=$banner_row[site_url]?>/data/designImages/<?=$banner_row[images_file]?>" alt="">
+                                                <?if($banner_row[link_url] != '') {?>
+                                            </a>
+                                        <?}?>
+                                        </div>
+                                    <?}?>
 								</div>
 								<div class="controller">
 									<div class="progress-wrapper"></div>
