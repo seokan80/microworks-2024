@@ -60,7 +60,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 											<p class="price"><strong>$157,000.000</strong> 박스</p>
 										</div>
 									</div>
-									<a href="#" class="button type-secondary size-sm extra">Detail View</a>
+									<div class="extra">
+										<a href="#" class="button type-secondary size-sm">Detail View</a>
+										<a href="#" class="button type-primary size-sm">Contact Us</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -75,98 +78,222 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<div class="search-results-body">
 								<div class="category-list">
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
