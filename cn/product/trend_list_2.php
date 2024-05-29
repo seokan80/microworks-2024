@@ -73,7 +73,7 @@ $list_index = 1;
 					</div>
 				</form>
 				<!-- 컨텐츠 내용 -->
-        <!-- !NOTE : 카테고리 페이지 -->
+        <!-- !NOTE : 카테고리 섹션 입니다. -->
         <article class="sub-page product-page pc-only">
 					<div class="area02">
             <div class="search-results">
@@ -90,7 +90,10 @@ $list_index = 1;
 											<p class="price"><strong>$157,000.000</strong> 박스</p>
 										</div>
 									</div>
-									<a href="#" class="button type-secondary size-sm extra">Detail View</a>
+									<div class="button-layout gap-md extra">
+										<a href="#" class="button type-secondary size-sm">Detail View</a>
+										<a href="#" class="button type-primary size-sm">Contact Us</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -105,98 +108,222 @@ $list_index = 1;
 							<div class="search-results-body">
 								<div class="category-list">
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
                   <a href="#" class="item">
-                    <div class="item-inner">
-											<img src="/data/goodsImages/goods1_001.png" alt="">
-											<div class="text-wrap">
-												<p class="tit">카테고리 명</p>
-												<div class="divider-group">
-													<span>케이블, 전선</span>
-													<span>32,000 품목</span>
-												</div>
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리 명</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
+											</div>
+										</div>
+                  </a>
+                  <a href="#" class="item">
+										<img src="/data/goodsImages/goods1_001.png" alt="">
+										<div class="text-wrap">
+											<p class="tit">카테고리</p>
+											<div class="info-wrap">
+												<p>케이블, 전선</p>
+												<p>32,000 품목</p>
 											</div>
 										</div>
                   </a>
@@ -619,8 +746,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -652,8 +782,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -685,8 +818,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -718,8 +854,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -751,8 +890,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -784,8 +926,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -817,8 +962,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -850,8 +998,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -883,8 +1034,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -916,8 +1070,11 @@ $list_index = 1;
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                           </tbody>
@@ -945,9 +1102,6 @@ $list_index = 1;
                             <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>
                             <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC9;</i></a>
                           </div>
-                        </div>
-                        <div class="button-layout gap-md">
-                          <button type="button" class="button type-point size-sm"><strong>n개 제품비교</strong></button>
                         </div>
                       </div>
                     </div>
