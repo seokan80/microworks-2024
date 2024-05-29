@@ -115,6 +115,7 @@ strong,
 .button-layout.align-center{align-items: center;}
 .button-layout.bottom-buttons{justify-content: center; gap: 10px; margin-top: 32px;}
 .button-layout.bottom-buttons .button{width: 150px;}
+.button-layout.type-vertical{flex-direction: column;}
 
 
 /* 테이블 */
@@ -558,6 +559,7 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .replacement-table-wrap .result-count .input::placeholder{color: var(--text-color-light);}
 .replacement-table-wrap .paging{margin: 0;  text-align: left;}
 .search-results-body .button{width: 120px;}
+.replacement-table .button-layout{flex-direction: column; align-items: center; gap: 4px;}
 
 .replacement-table-header{display: flex; align-items: center;}
 .replacement-table-footer{margin-top: 12px;}

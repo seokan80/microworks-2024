@@ -494,8 +494,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -527,8 +530,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -560,8 +566,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -593,8 +602,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -626,8 +638,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -659,8 +674,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -692,8 +710,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -725,8 +746,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -758,8 +782,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                             <tr>
@@ -791,8 +818,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                               <td>
                                 <strong>활성</strong>
                               </td>
-                              <td>
-                                <a href="#" class="button type-secondary size-sm">Detail View</a>
+                               <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
                               </td>
                             </tr>
                           </tbody>

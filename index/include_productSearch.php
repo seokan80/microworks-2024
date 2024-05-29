@@ -254,7 +254,10 @@ if($lang==2){ // 영문
             html += '    <strong>'+products[i].ProductStatus.Status+'</strong>'
             html += '    </td>'
             html += '    <td>'
-            html += '    <a href="#" class="button type-secondary size-sm">Detail View</a>'
+            html += '     <div class="button-layout">'
+            html += '       <a href="#" class="button type-secondary size-sm">Detail View</a>'
+            html += '       <a href="#" class="button type-primary size-sm">문의하기</a>'
+            html += '     </div>'
             html += '    </td>'
             html += '</tr>'
         }
