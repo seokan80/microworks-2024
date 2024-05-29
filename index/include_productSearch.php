@@ -540,7 +540,4 @@ if($lang==2){ // 영문
             <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC9;</i></a>
         </div>
     </div>
-    <div class="button-layout gap-md">
-        <button type="button" class="button type-point size-sm"><strong>n개 제품비교</strong></button>
-    </div>
 </div>
