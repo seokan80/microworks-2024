@@ -111,7 +111,8 @@
 			<?}?>
 
 			<!-- 상단정보 (센터정렬) -->
-			<?if($sub_section == '대치품 검색 상세'){?>
+			<!-- !NOTE S: 2024-04 변경 -->
+			<?if($is_detail === true){?>
 				<aside id="contentInfoCon" class="content-info-style01">
 					<h3 class="content-tit no-deco">상품 이름 넣어주세요</h3>
 				</aside>
@@ -120,6 +121,7 @@
 					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
 				</aside>
 			<?}?>
+			<!-- !NOTE E: 2024-04 변경 -->
 			
 			
 			<!-- content -->
