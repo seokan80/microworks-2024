@@ -529,6 +529,267 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" name="" id=""></td>
+                              <td class="text-left">
+                                <div class="product-info">
+                                  <div class="img-box"><img src="" alt=""></div>
+                                  <div class="text-wrap">
+                                    <strong>제품명</strong>
+                                    <p>제품설명</p>
+                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
+                              <td>
+                                <div class="button-layout">
+                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
+                                  <a href="#" class="button type-primary size-sm">문의하기</a>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
