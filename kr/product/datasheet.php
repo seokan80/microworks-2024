@@ -401,9 +401,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                         <table>
                           <colgroup>
                             <col width="59px"/>
-                            <col width="560px"/>
-                            <col width="140px" span="5"/>
-                            <col width="180px"/>
+                            <col width="260px"/>
+                            <col width="120px" span="10"/>
+                            <col width="140px"/>
                           </colgroup>
                           <thead>
                             <tr>
@@ -421,35 +421,70 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                                 </div>
                               </th>
                               <th>
-                                <div class="title">주문 가능 수량</div>
+                                <div class="title">케이블 유형</div>
                                 <div class="sort-wrap">
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
                                 </div>
                               </th>
                               <th>
-                                <div class="title">가격</div>
+                                <div class="title">컨텍터 개수</div>
                                 <div class="sort-wrap">
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
                                 </div>
                               </th>
                               <th>
-                                <div class="title">계열</div>
+                                <div class="title">전선 게이지</div>
                                 <div class="sort-wrap">
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
                                 </div>
                               </th>
                               <th>
-                                <div class="title">포장</div>
+                                <div class="title">컨텍터 가닥</div>
                                 <div class="sort-wrap">
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
                                 </div>
                               </th>
                               <th>
-                                <div class="title">제품현황</div>
+                                <div class="title">컨텍터 재료</div>
+                                <div class="sort-wrap">
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="title">재킷(절연) 재료</div>
+                                <div class="sort-wrap">
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="title">재킷(절연) 지름</div>
+                                <div class="sort-wrap">
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="title">자제 유형</div>
+                                <div class="sort-wrap">
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="title">재킷 색상</div>
+                                <div class="sort-wrap">
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
+                                  <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
+                                </div>
+                              </th>
+                              <th>
+                                <div class="title">길이</div>
                                 <div class="sort-wrap">
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
                                   <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
@@ -477,348 +512,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                                   </div>
                                 </div>
                               </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
+                              <td><strong>케이블 유형</strong></td>
+                              <td><strong>컨텍터 개수</strong></td>
+                              <td><strong>전선 게이지</strong></td>
+                              <td><strong>컨텍터 가닥</strong></td>
+                              <td><strong>컨텍터 재료</strong></td>
+                              <td><strong>재킷(절연) 재료</strong></td>
+                              <td><strong>재킷(절연) 지름</strong></td>
+                              <td><strong>자제 유형</strong></td>
+                              <td><strong>재킷 색상</strong></td>
+                              <td><strong>길이</strong></td>
                               <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                              <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                              <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
-                                <div class="button-layout">
-                                  <a href="#" class="button type-secondary size-sm">Detail View</a>
-                                  <a href="#" class="button type-primary size-sm">문의하기</a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><input type="checkbox" name="" id=""></td>
-                              <td class="text-left">
-                                <div class="product-info">
-                                  <div class="img-box"><img src="" alt=""></div>
-                                  <div class="text-wrap">
-                                    <strong>제품명</strong>
-                                    <p>제품설명</p>
-                                    <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                                  </div>
-                                </div>
-                              </td>
-                              <td class="text-right">
-                                <strong>106</strong>
-                                <p>재고있음</p>
-                              </td>
-                              <td class="text-right">
-                                <strong>1: $157,000.0000</strong>
-                                <p>박스</p>
-                              </td>
-                              <td>
-                                <strong>계열</strong>
-                              </td>
-                              <td>
-                                <strong>박스</strong>
-                              </td>
-                              <td>
-                                <strong>활성</strong>
-                              </td>
-                               <td>
                                 <div class="button-layout">
                                   <a href="#" class="button type-secondary size-sm">Detail View</a>
                                   <a href="#" class="button type-primary size-sm">문의하기</a>
