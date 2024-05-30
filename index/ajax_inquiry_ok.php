@@ -38,7 +38,7 @@ if( $_POST[name] ) {
 
 	// 스팸 IP 검증
 	$time = date("Y-m-d H:i");
-	$time_check = $db->cnt("cs_inquiry","where ip='$ip' and reg_date like '$time%'");
+	$time_check = $db->cnt("cs_online","where ip='$ip' and reg_date like '$time%'");
 	if($time_check >0){
 		sendResult("fail", $inquiryok_err_msg_retry); //잠시후 다시 시도해 주세요.
 		exit();
@@ -82,7 +82,7 @@ if( $_POST[name] ) {
 	}
 
 	// 쿼리 실행
-	if( $db->insert("cs_inquiry", $query.", ip='$ip', reg_date=now()") ) {
+	if( $db->insert("cs_online", $query.", ip='$ip', reg_date=now()") ) {
 		// 쿼리 등록 성공
 		sendResult("success", $inquiryok_success_msg); //문의하기가 접수 되었습니다.
 	} else {

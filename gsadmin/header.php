@@ -130,6 +130,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
                     <li><a href="<?=$site_url?>/online/online.php">온라인 신청서</a></li>
 					<li><a href="<?=$site_url?>/online/estimate.php">견적 신청서</a></li>
 					<li><a href="<?=$site_url?>/online/online_product.php">제품문의 신청서(Industrial)</a></li>
+					<li><a href="<?=$site_url?>/online/sa_inquiry.php">반도체 분석 신청서</a></li>
                </ul>
 			</li>
 
@@ -152,6 +153,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
                     <li><a href="<?=$site_url?>/stat/crm3.php">베스트 고객</a></li>
                     <li><a href="<?=$site_url?>/stat/crm4.php">지역별통계</a></li> -->
                     <li><a href="<?=$site_url?>/stat/crm5.php">접속로그</a></li>
+                    <li><a href="<?=$site_url?>/stat/buy_inquery_stat.php">구매문의통계</a></li>
                </ul>
 			</li>
 			 <!-- //상단메뉴 -->
@@ -224,6 +226,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
 					<a href="<?=$site_url?>/online/online.php" class="list-group-item <?if($menu=="online"){?>active<?}?>">온라인 신청서</a>
 					<a href="<?=$site_url?>/online/estimate.php" class="list-group-item <?if($menu=="estimate"){?>active<?}?>">견적 신청서</a>
 					<a href="<?=$site_url?>/online/online_product.php" class="list-group-item <?if($menu=="online_product"){?>active<?}?>">제품문의 신청서(Industrial)</a>
+					<a href="<?=$site_url?>/online/sa_inquiry.php" class="list-group-item <?if($menu=="sa_inquiry"){?>active<?}?>">반도체 분석 신청서</a>
 				<?}?>
 
 
