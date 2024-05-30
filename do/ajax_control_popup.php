@@ -33,7 +33,7 @@ if( $_POST[name] ) {
 
 	// 스팸 IP 검증
 	$time = date("Y-m-d H:i");
-	$time_check = $db->cnt("cs_online","where ip='$ip' and reg_date like '$time%'");
+	$time_check = $db->cnt("cs_sa_inquiry","where ip='$ip' and reg_date like '$time%'");
 	if($time_check >0){
 		sendResult("fail", $inquiryok_err_msg_retry); //잠시후 다시 시도해 주세요.
 		exit();
