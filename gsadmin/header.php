@@ -245,6 +245,7 @@ if($admin_stat->ip1 or $admin_stat->ip2 or $admin_stat->ip3){
 					<a href="<?=$site_url?>/stat/crm3.php" class="list-group-item <?if($menu=="crm3"){?>active<?}?>">베스트 고객</a>
 					<a href="<?=$site_url?>/stat/crm4.php" class="list-group-item <?if($menu=="crm4"){?>active<?}?>">지역별통계</a> -->
 					<a href="<?=$site_url?>/stat/crm5.php" class="list-group-item <?if($menu=="crm5"){?>active<?}?>">접속로그</a>
+					<a href="<?=$site_url?>/stat/buy_inquery_stat.php" class="list-group-item <?if($menu=="buy"){?>active<?}?>">구매문의통계</a>
 				<?}?>
 
 	

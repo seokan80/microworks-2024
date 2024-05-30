@@ -86,7 +86,7 @@ if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalL
           <tr>
             <td colspan="2" class="text-center">
               <button type="submit" class="btn btn-primary btn-sm">검색</button>&nbsp;
-              <a href="/gsadmin/bbs/bbs_list.php?code=notice" class="btn btn-default btn-sm">초기화</a>
+              <a href="/gsadmin/stat/buy_inquery_stat.php" class="btn btn-default btn-sm">초기화</a>
             </td>
           </tr>
         </tbody>
