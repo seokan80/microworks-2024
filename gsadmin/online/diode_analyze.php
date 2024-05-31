@@ -132,7 +132,7 @@ include("../header.php");
 			<td>Прывітанне, я хацеў даведацца Ваш прайс.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-23</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3276"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -149,7 +149,7 @@ include("../header.php");
 				==&gt; url.epoch.tw/Z4RGq &lt;==</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-22</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3275"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3275"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -162,7 +162,7 @@ include("../header.php");
 			<td>Salut, ech wollt Äre Präis wëssen.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-21</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3274"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3274"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -175,7 +175,7 @@ include("../header.php");
 			<td>Ciao, volevo sapere il tuo prezzo.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-21</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3273"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3273"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -188,7 +188,7 @@ include("../header.php");
 			<td>Sawubona, bengifuna ukwazi intengo yakho.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-20</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3272"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3272"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -201,7 +201,7 @@ include("../header.php");
 			<td>Hæ, ég vildi vita verð þitt.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-19</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3271"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3271"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -214,7 +214,7 @@ include("../header.php");
 			<td>Здравейте, исках да знам цената ви.</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-19</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3270"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3270"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -227,7 +227,7 @@ include("../header.php");
 			<td></td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-17</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3269"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3269"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -240,7 +240,7 @@ include("../header.php");
 			<td>Hi, kam dashur të di çmimin tuaj</td>
 			<td class="text-center">예</td>
 			<td class="text-center">2024-04-16</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3268"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3268"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 		<tr>
@@ -259,7 +259,7 @@ include("../header.php");
 				─�...</td>
 			<td class="text-center">예</td>
 				<td class="text-center">2024-04-16</td>
-			<td class="text-center"><a href="./online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3267"
+			<td class="text-center"><a href="new/online_view.php?returnURL=%2Fgsadmin%2Fonline%2Fonline.php&amp;idx=3267"
 					class="btn btn-default btn-sm">상세보기</a></td>
 		</tr>
 	</tbody>

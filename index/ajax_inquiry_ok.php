@@ -82,7 +82,7 @@ if( $_POST[name] ) {
 	}
 
 	// 쿼리 실행
-	if( $db->insert("cs_inquiry", $query.", ip='$ip', reg_date=now()") ) {
+	if( $db->insert("cs_online", $query.", ip='$ip', reg_date=now()") ) {
 		// 쿼리 등록 성공
 		sendResult("success", $inquiryok_success_msg); //문의하기가 접수 되었습니다.
 	} else {
