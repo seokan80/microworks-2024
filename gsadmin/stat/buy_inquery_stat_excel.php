@@ -5,8 +5,7 @@ $path = "trade";
 Header("Content-type: application/vnd.ms-excel");
 header('Cache-control: private');
 header('Expires: -1');
-//Header("Content-Disposition: attachment; filename=" . $domain . "_" . $path . "_".date("Y-m-d").".xls");
-header( "Content-Disposition: attachment; filename = inquery_stat_".date('Ymd').".xls" );
+header( "Content-Disposition: attachment; filename = 접속통계_".date('Ymd').".xls" );
 Header("Content-Description: PHP4 Generated Data");
 Header("Pragma: no-cache");
 
@@ -45,19 +44,34 @@ echo "<?xml version='1.0' encoding='UTF-8'?>";
 
  <Worksheet ss:Name="stat">
   <Table>
-	<Column ss:Width='50'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
-	<Column ss:Width='100'/>
+
+    <Column ss:Width='10'/>
+    <Column ss:Width='50'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='200'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+    <Column ss:Width='100'/>
+
+    <Row ss:Height="20">
+        <Cell></Cell>
+        <Cell ss:StyleID='s1'><Data ss:Type="String">기간</Data></Cell>
+        <Cell ss:StyleID='s2'><Data ss:Type="String"><?=$search_sday?>-<?=$search_sday?></Data></Cell>
+    </Row>
+
+    <Row>
+      <Cell></Cell>
+    </Row>
+
+
 
 	<Row ss:Height="20"> 
-    <Cell ss:StyleID='s1'><Data ss:Type="String">No</Data></Cell> 
+    <Cell></Cell>
+    <Cell ss:StyleID='s1'><Data ss:Type="String">No</Data></Cell>
     <Cell ss:StyleID='s1'><Data ss:Type="String">구분</Data></Cell>
     <Cell ss:StyleID='s1'><Data ss:Type="String">이름</Data></Cell>
     <Cell ss:StyleID='s1'><Data ss:Type="String">휴대폰</Data></Cell>
@@ -105,8 +119,9 @@ echo "<?xml version='1.0' encoding='UTF-8'?>";
         }
 
 ?>
-<Row ss:Height="20"> 
-    <Cell ss:StyleID='s2'><Data ss:Type="String"><?echo $intN?></Data></Cell> 
+<Row ss:Height="20">
+    <Cell></Cell>
+    <Cell ss:StyleID='s2'><Data ss:Type="String"><?echo $intN?></Data></Cell>
     <Cell ss:StyleID='s2'><Data ss:Type="String"><?echo $category_nm?></Data></Cell>
     <Cell ss:StyleID='s2'><Data ss:Type="String"><?echo $row[name]?></Data></Cell>
     <Cell ss:StyleID='s2'><Data ss:Type="String"><?echo $row[phone]?> </Data></Cell>
