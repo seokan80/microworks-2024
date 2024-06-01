@@ -1,205 +1,263 @@
+<script>
+  // var itemValueMap = {}
+  function setSearchResult(data, searchLimit, currentPage) {
+    var productsCount = numberWithCommas(data.ProductsCount);
+    if (productsCount == 0) {
+      if ($('#search-results-none').hasClass('hide')) {
+        $('#search-results-none').removeClass('hide')
+      }
+      if (!$('#categorySearchList').hasClass('hide')) {
+        $('#categorySearchList').addClass('hide')
+      }
+      if (!$('#categorySearchListPag').hasClass('hide')) {
+        $('#categorySearchListPag').addClass('hide')
+      }
+      if (!$('#searchResultCnt').hasClass('hide')) {
+        $('#searchResultCnt').addClass('hide')
+      }
+
+    } else {
+      if (!$('#search-results-none').hasClass('hide')) {
+        $('#search-results-none').addClass('hide')
+      }
+      if ($('#categorySearchList').hasClass('hide')) {
+        $('#categorySearchList').removeClass('hide')
+      }
+      if ($('#categorySearchListPag').hasClass('hide')) {
+        $('#categorySearchListPag').removeClass('hide')
+      }
+      if ($('#searchResultCnt').hasClass('hide')) {
+        $('#searchResultCnt').removeClass('hide')
+      }
+
+      setSearchResultText(data);
+      //제조업체 필터 추가
+      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true);
+      // 계열 핕터 추가
+      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions");
+      // 포장 필터 추가
+      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions");
+      // 현황 추가
+      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions");
+      // 파라미터 필터 목록 추가
+      addParametricFilters(data.FilterOptions.ParametricFilters, parametricOptions);
+      // 검색 결과 
+      addTableList(data.Products, searchLimit);
+      // 페이지네이션 설정
+      addPagination(parseInt(data.ProductsCount), searchLimit, currentPage);           
+    
+      // 필터 검색 상자 이벤트
+      $('input[type="search"]').off('input').on('input', function() {
+          var searchValue = $(this).val();
+          console.log('filter-search', searchValue)
+          var $ul = $(this).closest('.input-box').next('ul');
+          var inputName = $(this).attr('name');
+          // console.log(inputName, itemValueMap[inputName])
+          if (searchValue === '') {
+              $ul.find('.checkable-item').show();
+          } else {
+              $ul.find('.checkable-item').each(function() {
+                var labelValue = $(this).find('label').text();
+                
+                if (labelValue.indexOf(searchValue) != -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+              });
+          }
+      });
+    }
+  }
+
+  // 검색 결과 텍스트 설정
+  function setSearchResultText(data) {
+    var productsCount = numberWithCommas(data.ProductsCount);
+    
+    // 상단 카테고리명
+    $('#searchCategoryNameTop').text(data.Products[0].Category.Name);
+
+    // 검색 결과 수 셋팅
+    $('#searchResultCnt').text(productsCount);
+    $('#searchResultCnt2').text(productsCount);
+
+    // 하단 카테고리명, 설명
+    $('#searchCategoryName').text(data.Products[0].Category.Name);
+    $('#searchCategoryDesc').text(data.Products[0].Category.SeoDescription);
+
+    // 검색 결과 화면 노출
+    var $searchArticle = $('#searchArticle');
+    if ($searchArticle.hasClass('hide')) {
+        $searchArticle.removeClass('hide');
+    }
+  }
+  function resetSearchFilter(searchName) {
+    console.log(searchName)
+    $('input[name='+searchName+']').prop('checked', false);
+    option_apply();
+  }
+  function addFilter(filters, selOpts = [], searchName, isFirst = false) {
+    if (isFirst) {
+      $('.search-filters').empty();
+    }
+    var filterValuesHtml = '';
+    // var valArr = []
+    filters.forEach(function(filter) {
+      // valArr.push(filter.Value);
+        var isChecked = ( selOpts.length > 0 && selOpts.some(item => {return item.Id == filter.Id}) )? 'checked' : '';
+        filterValuesHtml += '<li class="checkable-item">' +
+                            '<input type="checkbox" name="'+searchName+'" id="manufacturer-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
+                            '<label for="manufacturer-' + filter.Id + '">' + filter.Value + '</label>' +
+                            '</li>';
+    });
+    var filtersHtml = '<div class="filter">' +
+                    '<div class="filter-header"><p>' + '제조업체' + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\''+searchName+'\')">초기화</button></div>' +
+                    '<div class="filter-body">';
+    if (filters.length > 20) {
+        filtersHtml += '<div class="input-box"><input type="search" name="'+searchName+'" id="" placeholder="검색 기준" class="input hight-sm"></div>';
+    } 
+    filtersHtml +=  '<ul class="checkable-items">' + filterValuesHtml + '</ul>' +
+                    '</div>' +
+                    '</div>';
+    // itemValueMap[searchName] = valArr;
+    $('.search-filters').append(filtersHtml);
+  }
+
+function addParametricFilters(parametricFilters, parametricOptions = []) {
+    // parameterId와 그 인덱스를 매핑하는 객체 생성
+    var parameterIdIndexMap = {};
+    parametricOptions.forEach(function(option, index) {
+        parameterIdIndexMap[option.ParameterId] = index;
+    });
+
+    parametricFilters.forEach(function(filter) {
+        if (filter.FilterValues.length <= 1) return;
+        var filterValuesHtml = '';
+        
+        filter.FilterValues.forEach(function(value) {
+            // 응답 필터링 객체에 파라미터id는 요청 검색한 필터가 반드시 포함 되므로 체크박스 활성화
+            var isChecked = parameterIdIndexMap.hasOwnProperty(filter.ParameterId) ? 'checked' : '';
+
+            filterValuesHtml += '<li class="checkable-item">' +
+                                '<input type="checkbox" name="parametricOptions-'+filter.ParameterId+'" id="filter-' + value.ValueId + '" value="'+value.ValueId+'" ' + isChecked + '>' +
+                                '<label for="filter-' + value.ValueId + '">' + value.ValueName + '</label>' +
+                                '</li>';
+        });
+
+        var filtersHtml = '<div class="filter">'+
+                            '<div class="filter-header"><p>' + filter.ParameterName + '</p><button type="button" class="button-reset">초기화</button></div>' +
+                              '<div class="filter-body">';
+                if (filter.FilterValues.length > 20) {
+                  filtersHtml += '<div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm"></div>';
+                }  
+              filtersHtml += '<ul class="checkable-items">' + filterValuesHtml + '</ul>' +
+                    '</div>' +
+                    '</div>';
+
+        $('.search-filters').append(filtersHtml);
+    });
+} 
+
+function addTableList(products) {
+  var prdLen = products.length;
+  var maxParametersProduct = products.reduce((maxProduct, currentProduct) => {
+      return currentProduct.Parameters.length > (maxProduct ? maxProduct.Parameters.length : 0) ? currentProduct : maxProduct;
+  }, null);
+
+  var parameters = maxParametersProduct.Parameters;
+
+  const colElement = document.getElementById("paraSpan");
+  if (colElement) {
+      colElement.setAttribute('span', parameters.length);
+  }
+
+
+  var theadHtml = '<tr>' +
+                    '<th>비교</th>' +
+                    '<th>제조업체 부품 번호</th>';
+  var headerParameters = [];
+  for (var i = 0; i < parameters.length; i++) {
+      theadHtml += '<th>' + parameters[i].ParameterText + '</th>';
+      headerParameters.push(parameters[i].ParameterText);
+  }
+  theadHtml += '<th>문의하기</th>' +
+                  '</tr>';
+  $('#productSearchResultHead').html(theadHtml);
+
+  var html = '';
+  for(var i=0; i<prdLen; i++) {
+      html += '<tr>'
+      html += '    <td><input type="checkbox" name="" id=""></td>'
+      html += '    <td class="text-left">'
+      html += '    <div class="product-info">'
+      html += '        <div class="img-box"><img src="'+products[i].PhotoUrl+'" alt="" height="55" width="55"></div>'
+      html += '        <div class="text-wrap">'
+      html += '        <strong>'+products[i].ManufacturerProductNumber+'</strong>'
+      html += '        <p>'+products[i].Description.ProductDescription+'</p>'
+      html += '        </div>'
+      html += '    </div>'
+      html += '    </td>'
+      var parameters = products[i].Parameters;
+      var parameterMap = {};
+      for (var j = 0; j < parameters.length; j++) {
+          parameterMap[parameters[j].ParameterText] = parameters[j].ValueText;
+      }
+      for (var j = 0; j < headerParameters.length; j++) {
+          if (parameterMap[headerParameters[j]] !== undefined) {
+              html += '<td><strong>' + parameterMap[headerParameters[j]] + '</strong></td>';
+          } else {
+              html += '<td><strong>-</strong></td>';
+          }
+      }
+
+      html += '    <td>'
+      html += '     <div class="button-layout">'
+      html += '       <a href="#" class="button type-secondary size-sm">Detail View</a>'
+      html += '       <a href="#" class="button type-primary size-sm">문의하기</a>'
+      html += '     </div>'
+      html += '    </td>'
+      html += '</tr>'
+  }
+  $("#productSearchResult").html(html);
+}
+
+function addPagination(totalProducts, searchLimit, currentPage) {
+
+  var pages = Math.ceil(totalProducts / searchLimit);
+  var paginationHtml = '';
+  var startPage = Math.floor((currentPage - 1) / 10) * 10 + 1;
+  var endPage = Math.min(startPage + 9, pages);
+
+  if (startPage > 1) {
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', '+1+')" class="paging-arrow"><i class="material-icons">&#xEAC3;</i></a>';
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + (startPage - 1) + ')" class="paging-arrow"><i class="material-icons">&#xE314;</i></a>';
+  }
+
+  for (var i = startPage; i <= endPage; i++) {
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + i + ')" class="paging-link' + (i === currentPage ? ' cur' : '') + '">' + i + '</a> ';
+  }
+  if (endPage < pages) {
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + (endPage + 1) + ')" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>'
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + pages + ')" class="paging-arrow"><i class="material-icons">&#xEAC9;</i></a>'
+  }
+
+  $('#pagination').html(paginationHtml);
+}
+
+
+</script>
 <article class="sub-page product-page pc-only hide" id="categorySearch">
   <div class="area02">
     <form action="" class="search-results-form">
       <div class="search-results">
         <div class="search-results-header">
           <p class="text-lg" id="searchCategoryNameTop"></p>
-          <button type="button" class="button size-sm type-secondary extra"><strong>검색 다시하기</strong></button>
         </div>
         <div class="search-results-body">
-          <div class="search-utility">
-            <div class="search-box">
-              <input placeholder="" type="search" name="search_order" class="input" value="">
-              <button type="submit" class="search-button" title="검색"><i class="material-icons">&#xE8B6;</i></button>
-              <span class="result-count text-darken">검색 결과 : <strong class="text-primary" id="searchResultCntTop"></strong></span>
-            </div>
-            <div class="switch-box">
-              <p>검색 기준</p>
-              <div class="switch">
-                <span>
-                  <input type="radio" name="switch" id="switch-1" checked>
-                  <label for="switch-1">스택</label>
-                </span>
-                <span>
-                  <input type="radio" name="switch" id="switch-2">
-                  <label for="switch-2">스크롤</label>
-                </span>
-              </div>
-            </div>
-          </div>
           <div class="search-filters">
-            <div class="filter">
-              <div class="filter-header">제조업체</div>
-              <div class="filter-body">
-                <ul class="checkable-items">
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-01-001">
-                    <label for="item-01-001">제조업체1</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="filter">
-              <div class="filter-header">계열</div>
-              <div class="filter-body">
-                <div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm">
-                </div>
-                <ul class="checkable-items">
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-001">
-                    <label for="item-02-001">계열1</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-002" checked>
-                    <label for="item-02-002">계열2</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-003">
-                    <label for="item-02-003">계열3</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-004">
-                    <label for="item-02-004">계열4</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-005">
-                    <label for="item-02-005">계열5</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-006">
-                    <label for="item-02-006">계열6</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-007">
-                    <label for="item-02-007">계열7</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-008">
-                    <label for="item-02-008">계열8</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-009">
-                    <label for="item-02-009">계열9</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-010">
-                    <label for="item-02-010">계열10</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-02-011">
-                    <label for="item-02-011">계열11</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="filter">
-              <div class="filter-header">포장</div>
-              <div class="filter-body">
-                <ul class="checkable-items">
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-03-001">
-                    <label for="item-03-001">포장1</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-03-002" checked>
-                    <label for="item-03-002">포장2</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-03-003">
-                    <label for="item-03-003">포장3</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-03-004">
-                    <label for="item-03-004">포장4</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-03-005">
-                    <label for="item-03-005">포장5</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="filter">
-              <div class="filter-header">제품현황</div>
-              <div class="filter-body">
-                <ul class="checkable-items">
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-04-001">
-                    <label for="item-04-001">제품현황1</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-04-002" checked>
-                    <label for="item-04-002">제품현황2</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-04-003">
-                    <label for="item-04-003">제품현황3</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-04-004">
-                    <label for="item-04-004">제품현황4</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-04-005">
-                    <label for="item-04-005">제품현황5</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="filter">
-              <div class="filter-header">검색조건</div>
-              <div class="filter-body">
-                <div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm">
-                </div>
-                <ul class="checkable-items">
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-001">
-                    <label for="item-05-001">검색조건1(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-002" checked>
-                    <label for="item-05-002">검색조건2(15)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-003">
-                    <label for="item-05-003">검색조건3(8)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-004">
-                    <label for="item-05-004">검색조건4(1)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-005">
-                    <label for="item-05-005">검색조건5(6)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-006">
-                    <label for="item-05-006">검색조건6(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-007">
-                    <label for="item-05-007">검색조건7(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-008">
-                    <label for="item-05-008">검색조건8(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-009">
-                    <label for="item-05-009">검색조건9(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-010">
-                    <label for="item-05-010">검색조건10(10)</label>
-                  </li>
-                  <li class="checkable-item">
-                    <input type="checkbox" name="" id="item-05-011">
-                    <label for="item-05-011">검색조건11(10)</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          
           </div>
+          <!--           
           <div class="filter-options">
             <div class="options">
               <dl class="option">
@@ -251,480 +309,41 @@
                 </dd>
               </dl>
             </div>
-            <div class="button-layout align-center">
-              <button type="button" class="button type-point"><strong>Submit</strong></button>
-              <p class="result-count text-rg">검색 결과 : <strong class="text-primary" id="searchResultCntTop2"></strong></p>
-            </div>
+          </div>
+           -->
+          <div class="button-layout bottom-buttons">
+            <button type="button" class="button type-point" onclick="option_apply();"><strong>적용</strong></button>
           </div>
 
           <div class="replacement-table-wrap margin-top-xxl">
             <div class="replacement-table-header">
               <div class="result-count">
-                <select name="" id="" class="view-select">
-                  <option value="25" selected>25</option>
-                  <option value="50">50</option>
-                </select>
-                <em>/</em>
                 <strong class="text-primary" id="searchResultCnt"></strong>
-                <input type="text" class="input" placeholder="가격 수량">
               </div>
               <div class="button-layout gap-md extra">
-                <button type="button" class="button type-secondary size-sm"><strong>표 다운로드</strong></button>
-                <button type="button" class="button type-point size-sm"><strong>n개 제품비교</strong></button>
+                <button type="button" class="button type-point size-sm hide"><strong id="compareProduct">n개 제품비교</strong></button>
               </div>
             </div>
-            <div class="replacement-table">
+            <div class="replacement-table" id="categorySearchList">
               <table>
                 <colgroup>
                   <col width="59px" />
                   <col width="560px" />
-                  <col width="140px" span="5" />
-                  <col width="180px" />
+                  <col width="120px" span="10" id="paraSpan"/>
+                  <col width="140px" />
                 </colgroup>
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="title">비교</div>
-                      <div class="sort-wrap">
-                        <input type="checkbox" name="" id="check-all">
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">제조업체 부품 번호</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">주문 가능 수량</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">가격</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">계열</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">포장</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">제품현황</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="title">문의하기</div>
-                      <div class="sort-wrap">
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe5cf;</i></button>
-                        <button type="button" class="sort-button"><i class="material-icons">&#xe316;</i></button>
-                      </div>
-                    </th>
-                  </tr>
+                <thead id="productSearchResultHead">
+                  
                 </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td class="text-left">
-                      <div class="product-info">
-                        <div class="img-box"><img src="" alt=""></div>
-                        <div class="text-wrap">
-                          <strong>제품명</strong>
-                          <p>제품설명</p>
-                          <button type="button" class="delete-button"><i class="material-icons">&#xe5cd;</i></button>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-right">
-                      <strong>106</strong>
-                      <p>재고있음</p>
-                    </td>
-                    <td class="text-right">
-                      <strong>1: $157,000.0000</strong>
-                      <p>박스</p>
-                    </td>
-                    <td>
-                      <strong>계열</strong>
-                    </td>
-                    <td>
-                      <strong>박스</strong>
-                    </td>
-                    <td>
-                      <strong>활성</strong>
-                    </td>
-                    <td>
-                      <div class="button-layout">
-                        <a href="#" class="button type-secondary size-sm">Detail View</a>
-                        <a href="#" class="button type-primary size-sm">문의하기</a>
-                      </div>
-                    </td>
-                  </tr>
+                <tbody id="productSearchResult">
+                  
                 </tbody>
               </table>
             </div>
-            <div class="replacement-table-footer">
+            <div class="replacement-table-footer" id="categorySearchListPag">
               <div class="result-count">
-                <select name="" id="" class="view-select">
-                  <option value="25">25</option>
-                  <option value="50">50</option>
-                </select>
-                <em>/</em>
-                <strong class="text-primary" id="searchResultCnt2"></strong>
-                <div class="paging">
-                  <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC3;</i></a>
-                  <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xE314;</i></a>
-                  <a href="javascript:;" class="cur">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#">6</a>
-                  <a href="#">7</a>
-                  <a href="#">8</a>
-                  <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>
-                  <a aref="#" onfocus="this.blur()" class="paging-arrow"><i class="material-icons">&#xEAC9;</i></a>
+                <div class="paging" id="pagination">
+                  
                 </div>
               </div>
             </div>
@@ -737,9 +356,9 @@
       <div class="box-body" id="searchCategoryDesc"></div>
     </div>
     <!-- !NOTE : 2/3 검색결과 없음 -->
-    <div class="search-results hide">
+    <div class="search-results hide" id="search-results-none">
       <div class="search-results-header">
-        <p>죄송합니다. <strong class="text-primary">"ASDF"</strong>에 대한 검색 결과가 없습니다.</p>
+        <p>죄송합니다. <strong class="text-primary" id="searchKeywordBottom"></strong>에 대한 검색 결과가 없습니다.</p>
       </div>
       <div class="search-results-body">
         <div class="no-result-box">
