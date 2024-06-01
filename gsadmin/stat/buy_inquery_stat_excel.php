@@ -57,10 +57,16 @@ echo "<?xml version='1.0' encoding='UTF-8'?>";
     <Column ss:Width='100'/>
     <Column ss:Width='100'/>
 
+    <Row>
+        <Cell></Cell>
+    </Row>
+
     <Row ss:Height="20">
         <Cell></Cell>
         <Cell ss:StyleID='s1'><Data ss:Type="String">기간</Data></Cell>
-        <Cell ss:StyleID='s2'><Data ss:Type="String"><?=$search_sday?>-<?=$search_sday?></Data></Cell>
+        <Cell ss:StyleID='s2'><Data ss:Type="String"><?=$search_sday?></Data></Cell>
+        <Cell ss:StyleID='s2'><Data ss:Type="String">-</Data></Cell>
+        <Cell ss:StyleID='s2'><Data ss:Type="String"><?=$search_eday?></Data></Cell>
     </Row>
 
     <Row>
