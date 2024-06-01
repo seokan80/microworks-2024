@@ -101,7 +101,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                           <th>계열</th>
                           <td>계열</td>
                         </tr>
-
                         <tr>
                           <th>포장</th>
                           <td>벌크</td>
@@ -109,6 +108,42 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
                         <tr>
                           <th>부품 현황</th>
                           <td>활성</td>
+                        </tr>
+                        <tr>
+                          <th>케이블 유형</th>
+                          <td>케이블 유형</td>
+                        </tr>
+                        <tr>
+                          <th>컨텍터 개수</th>
+                          <td>컨텍터 개수</td>
+                        </tr>
+                        <tr>
+                          <th>전선 게이지</th>
+                          <td>전선 게이지</td>
+                        </tr>
+                        <tr>
+                          <th>컨텍터 가닥</th>
+                          <td>컨텍터 가닥</td>
+                        </tr>
+                        <tr>
+                          <th>컨텍터 재료</th>
+                          <td>컨텍터 재료</td>
+                        </tr>
+                        <tr>
+                          <th>재킷(절연) 재료</th>
+                          <td>재킷(절연) 재료</td>
+                        </tr>
+                        <tr>
+                          <th>재킷(절연) 지름</th>
+                          <td>재킷(절연) 지름</td>
+                        </tr>
+                        <tr>
+                          <th>자제 유형</th>
+                          <td>자제 유형</td>
+                        </tr>
+                        <tr>
+                          <th>길이</th>
+                          <td>길이</td>
                         </tr>
                         <tr>
                           <th>기준 제품 번호</th>

@@ -2,7 +2,7 @@
 <?
     if($lang==2){ // 영문
         // 화면 메세지
-        $inquiry_txt_inquiry = "Online Inquiry";
+        $inquiry_txt_inquiry = "Inquiry";
         $inquiry_txt_name = "Name";
         $inquiry_txt_name_placeholder = "Please enter your name.";
         $inquiry_txt_email = "E-mail";
@@ -31,7 +31,7 @@
         $inquiry_txt_err_phone_input = "Please enter your tel number.";
     } else if($lang==3){ // 중문
         // 화면 메세지
-        $inquiry_txt_inquiry = "询价";
+        $inquiry_txt_inquiry = "询问";
         $inquiry_txt_name = "姓名";
         $inquiry_txt_name_placeholder = "请输入名字。";
         $inquiry_txt_email = "电子邮件";

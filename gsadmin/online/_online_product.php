@@ -1,5 +1,5 @@
 <?
-$mod	= "online";	
+$mod	= "online";
 $menu	= "online_product";
 include("../header.php");
 
@@ -111,7 +111,7 @@ include("../header.php");
 		<td class="text-center"><?echo $reg_date?></td>
 		<td class="text-center"><a href="./online_product_view.php?returnURL=<?=urlencode($_SERVER['REQUEST_URI'])?>&idx=<?=$row[idx]?>" class="btn btn-default btn-sm">상세보기</a></td>
 	</tr>
-	<? 
+	<?
 		$listNo--;
 		}
 	?>

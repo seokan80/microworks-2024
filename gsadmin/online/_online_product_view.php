@@ -1,5 +1,5 @@
 <?
-$mod	= "online";	
+$mod	= "online";
 $menu	= "online_product";
 include("../header.php");
 
@@ -26,7 +26,7 @@ $row = $db->object("cs_online_product","where idx='$idx'");
 		<th>연락처</th>
 		<td><?echo $row->phone?></td>
 	</tr>
-	<tr> 
+	<tr>
 		<th>회사명</th>
 		<td>
 			<?echo $row->subject?>
