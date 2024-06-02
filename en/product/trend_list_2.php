@@ -48,7 +48,7 @@ function option_apply(searchLimit = 10, currentPage = 1) {
   search_send(searchLimit, currentPage, selCategoryId);
 }
 function search_init() {
-  search_send(10, 1, 473);
+  search_send(1, 1, undefined);
 }
 function search_send(searchLimit = 1, currentPage = 1, categoryId, sortby = "None", orderby = "Ascending") {
   var isSearchLoading = false;
@@ -224,7 +224,7 @@ function setView(categoryId) {
 								<li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
 							</ul>
 						</div> -->
-						<input placeholder="검색어를 입력해주세요" type="text" name="search_order" value="cable" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
+						<input placeholder="검색어를 입력해주세요" type="text" name="search_order" id="search_order" value="cable" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
 						<button  type="button" class="replacement-search-btn" title="검색" onclick="search_init()">
 							<img src="/images/icon/stock_list_search_icon.png" alt="">
 						</button>
