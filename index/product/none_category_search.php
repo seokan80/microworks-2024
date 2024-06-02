@@ -1,4 +1,12 @@
-
+<?
+if($lang==2){ 
+    $path="en";
+} else if($lang==3){
+    $path="cn";
+} else {
+    $path="kr";
+}
+?>
 <script>
     // 정확히 일치 카드 
     function setExactMatched(ExactMatches) {
@@ -29,6 +37,15 @@
         $('#categoryList').html(html);
     }
 
+    function contactUs(part) {
+        debugger
+        if (part == undefined) {
+            part = document.getElementById('search_order').value;
+        }
+        const url = "/<?=$path?>/contact/inquiry.php?part="+part;
+        window.location.href = url;
+    }
+
 </script>
 <!-- !NOTE : 카테고리 페이지 -->
 <article class="sub-page product-page pc-only hide" id="noneCategorySearh1">
@@ -49,7 +66,7 @@
                     </div>
                     <div class="button-layout gap-md extra">
                         <a href="javascript;" onclick="alert('not ready');return;" class="button type-secondary size-sm">Detail View</a>
-                        <a href="javascript;" onclick="alert('not ready');return;" class="button type-primary size-sm">Contact Us</a>
+                        <a href="javascript:void(0);" onclick="contactUs()" return false;" class="button type-primary size-sm">Contact Us</a>
                     </div>
                 </div>
             </div>

@@ -213,7 +213,7 @@ function addTableList(products) {
       html += '    <td>'
       html += '     <div class="button-layout">'
       html += '       <a href="#" class="button type-secondary size-sm">Detail View</a>'
-      html += '       <a href="#" class="button type-primary size-sm">문의하기</a>'
+      html += '       <a href="javascript:void(0);" onclick="contactUs(\''+products[i].ManufacturerProductNumber+'\')" class="button type-primary size-sm">문의하기</a>'
       html += '     </div>'
       html += '    </td>'
       html += '</tr>'
@@ -364,7 +364,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
         <div class="no-result-box">
           <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
           <p>찾으시는 대치품에 대한 검색결과가 없으신가요?<br />문의주시면 신속히 도와드리겠습니다!</p>
-          <a href="#" class="button"><strong>문의하기</strong></a>
+          <a href="javascript:void(0);" onclick="contactUs()" class="button"><strong>문의하기</strong></a>
         </div>
       </div>
     </div>
@@ -377,7 +377,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
     <div class="quick-search">
       <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
       <p>빠른 검색이 필요하시면 문의주세요!</p>
-      <a href="#" class="button"><strong>문의하기</strong></a>
+      <a href="javascript:void(0);" onclick="contactUs()" class="button"><strong>문의하기</strong></a>
     </div>
   </div>
 </article>
