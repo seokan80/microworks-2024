@@ -84,14 +84,16 @@ $list_index = 1;
 												}
 												$new_img = $page->bbsNewImg( $row[reg_date], 24, '<span class="new-icon">N</span>');
 												$prd_cnt =$db->cnt("cs_excel","where ex_code='$row[ex_code]' and kind='3' ");
-
+                                                $subject = preg_replace_callback("/" . preg_quote($search_order, '/') . "/i", function($matches) use ($search_order) {
+                                                    return (strcasecmp($matches[0], $search_order) === 0) ? '<span class="text-point">' . $matches[0] . '</span>' : $matches[0];
+                                                }, $row[subject]);
 											?>
 											<div class="bbs-list-row">
 												<div class="column bbs-no-data"><?=$listNo?></div>
 												<div class="column bbs-title">
 													<a href="<?=$site_url?>/product/trend_view.php?idx=<?=$row[idx]?>&returnURL=<?=urlencode($_SERVER[REQUEST_URI])?>">
 														<div class="bbs-subject-con">
-															<strong class="bbs-subject-txt"><?=$row[subject]?></strong>
+															<strong class="bbs-subject-txt"><?=$subject?></strong>
 															<div class="bbs-subject-icons">
 																<?=$new_img?>
 															</div>
@@ -115,10 +117,10 @@ $list_index = 1;
 										<div class="paging">
 											<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
 										</div>
-									<form name="bbs_search_form" method="get" action="/en/product/trend_list.php" class="pc-only">
+									<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>"> class="pc-only">
 										<div class="board-search-box">
 											<select name="search_item">
-												<option value="subject">Subject</option>
+                                                <option value="subject" <?if($search_item=="subject"){echo "selected";}?>>Subject</option>
 											</select>
 											<input placeholder="" type="search" name="search_order" class="search-word" value="<?=$search_order?>">
 											<button type="submit" class="bbs-search-btn" title="검색"><i class="material-icons"></i></button>
