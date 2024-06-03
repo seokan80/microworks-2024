@@ -13,13 +13,13 @@ $pageScale	= 10;
 if( !$startPage ) { $startPage = 0; }
 $totalPage = floor($startPage / ($listScale * $pageScale));
 $query = "select t.category, t.idx, t.name, t.phone, t.part_name, t.request_quantity, t.content, t.reg_date";
-$query.= " from (select 'online' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
+$query.= " from (select 'online' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online where DATE_FORMAT(reg_date, '%Y-%m-%d') between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'estimate' as category, idx, name, phone, null as part_name, null as request_quantity, content, reg_date from cs_estimate where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
+$query.= " select 'estimate' as category, idx, name, phone, null as part_name, null as request_quantity, content, reg_date from cs_estimate where DATE_FORMAT(reg_date, '%Y-%m-%d') between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'product' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online_product where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
+$query.= " select 'product' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online_product where DATE_FORMAT(reg_date, '%Y-%m-%d') between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'inquiry' as category, idx, name, phone, part as part_name, request_quantity, content, reg_date from cs_sa_inquiry where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')) as t";
+$query.= " select 'inquiry' as category, idx, name, phone, part as part_name, request_quantity, content, reg_date from cs_sa_inquiry where DATE_FORMAT(reg_date, '%Y-%m-%d') between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')) as t";
 $unionquery = $query;
 $query.= " where 1=1";
 
