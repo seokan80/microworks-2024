@@ -13,28 +13,26 @@ $pageScale	= 10;
 if( !$startPage ) { $startPage = 0; }
 $totalPage = floor($startPage / ($listScale * $pageScale));
 $query = "select t.category, t.idx, t.name, t.phone, t.part_name, t.request_quantity, t.content, t.reg_date";
-$query.= " from (select 'online' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online";
+$query.= " from (select 'online' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'estimate' as category, idx, name, phone, null as part_name, null as request_quantity, content, reg_date from cs_estimate";
+$query.= " select 'estimate' as category, idx, name, phone, null as part_name, null as request_quantity, content, reg_date from cs_estimate where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'product' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online_product";
+$query.= " select 'product' as category, idx, name, phone, part_name, request_quantity, content, reg_date from cs_online_product where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 $query.= " union all";
-$query.= " select 'inquiry' as category, idx, name, phone, part as part_name, request_quantity, content, reg_date from cs_sa_inquiry) as t";
-$query.= " where 1=1";
+$query.= " select 'inquiry' as category, idx, name, phone, part as part_name, request_quantity, content, reg_date from cs_sa_inquiry where reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')) as t";
 $unionquery = $query;
+$query.= " where 1=1";
 
-// 기간
-$query.= " and t.reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
 // 구분
 if($category_r){
     $query.= " and '$$category_r' like concat('%', t.category, '%')";
 }
 $rs				= mysql_query($query);
-$totalList	= mysql_num_rows($rs);
+$totalList	    = mysql_num_rows($rs);
 
 $query = $unionquery;
-// 기간
-$query.= " and t.reg_date between DATE_FORMAT('$search_sday','%Y-%m-%d') and DATE_FORMAT('$search_eday','%Y-%m-%d')";
+$query.= " where 1=1";
+
 // 구분
 if($category_r){
     $query.= " and '$$category_r' like concat('%', t.category, '%')";
@@ -43,6 +41,10 @@ $query.="  order by t.reg_date desc LIMIT $startPage, $listScale";
 $result = mysql_query($query);
 
 if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalList; }
+
+$pageURL= "search_sday=".urlencode($search_sday);
+$pageURL.= "&search_eday=".urlencode($search_eday);
+$pageURL.= "&category_r=".urlencode($category_r);
 ?>
 
 <h4 class="page-header">구매문의 통계</h4>
@@ -110,7 +112,7 @@ if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalL
         <thead>
           <tr>
             <td colspan="10">
-              <span>총 00건</span>
+              <span>총 <?=$totalList?>건</span>
               <div class="btn-toolbar pull-right">
                 <a href="/gsadmin/online/online.php" class="btn btn-default btn-xs">
                   온라인 신청서 바로가기
@@ -128,7 +130,7 @@ if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalL
                   반도체 분석 신청서 바로가기
                   <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
                 </a>
-                <a href="trade_excel.php?<?=$param_url?>" class="btn btn-primary btn-xs">엑셀 다운로드</a>
+                <a href="buy_inquery_stat_excel.php?<?=$pageURL?>" class="btn btn-primary btn-xs">엑셀 다운로드</a>
               </div>
             </td>
           </tr>
@@ -154,6 +156,7 @@ if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalL
             $content = $tools->strCut_utf($tools->strHtmlNoBr($row[content]), 100);
             $category_nm = "";
             $detail_link = "";
+            // 구분
             if($row[category] == 'online') {
                 $category_nm = "온라인 신청서";
                 $detail_link = "/gsadmin/online/online_view.php";
@@ -194,10 +197,6 @@ if( $startPage ) { $listNo = $totalList - $startPage; } else { $listNo = $totalL
     <div class="text-center">
         <ul class="pagination">
             <?
-            $pageURL= "search_sday=".urlencode($search_sday);
-            $pageURL.= "&search_eday=".urlencode($search_eday);
-            $pageURL.= "&category_r=".urlencode($category_r);
-
             if( $totalList > $listScale ) {
                 if( $startPage+1 > $listScale*$pageScale ) {
                     $prePage = $startPage - $listScale * $pageScale;
