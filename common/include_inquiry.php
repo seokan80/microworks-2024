@@ -181,7 +181,7 @@
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_partname?></th>
-                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200"></td>
+                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200" id="part"></td>
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_request_quantity?></th>
@@ -222,6 +222,17 @@
     </article>
 </div>
 <script type="text/javascript">
+    // URL 파라미터를 파싱하여 객체로 반환하는 함수
+    function getUrlParams(p) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(p);
+    }
+
+    // 페이지 로드 시 URL 파라미터를 콘솔에 출력
+    window.onload = function() {
+        // 파라미터 값을 HTML 요소에 표시 (선택적)
+        document.getElementById('part').value = getUrlParams('part');
+    };
     function inquiry_sendit() {
         var f = document.inquiryform;
         if (f.agree1.checked == false) {
