@@ -97,6 +97,8 @@
         $inquiry_txt_err_email_input = "이메일을 입력해 주세요.";
         $inquiry_txt_err_phone_input = "연락처를 입력해 주세요.";
     }
+
+$productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 ?>
 <div class="area">
     <article class="contact-form">
@@ -181,7 +183,7 @@
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_partname?></th>
-                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200" id="part"></td>
+                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200" id="part" value="<?=$productNumber?>"></td>
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_request_quantity?></th>
@@ -223,16 +225,16 @@
 </div>
 <script type="text/javascript">
     // URL 파라미터를 파싱하여 객체로 반환하는 함수
-    function getUrlParams(p) {
-        const params = new URLSearchParams(window.location.search);
-        return params.get(p);
-    }
-
-    // 페이지 로드 시 URL 파라미터를 콘솔에 출력
-    window.onload = function() {
-        // 파라미터 값을 HTML 요소에 표시 (선택적)
-        document.getElementById('part').value = getUrlParams('part');
-    };
+    // function getUrlParams(p) {
+    //     const params = new URLSearchParams(window.location.search);
+    //     return params.get(p);
+    // }
+    //
+    // // 페이지 로드 시 URL 파라미터를 콘솔에 출력
+    // window.onload = function() {
+    //     // 파라미터 값을 HTML 요소에 표시 (선택적)
+    //     //document.getElementById('part').value = getUrlParams('part');
+    // };
     function inquiry_sendit() {
         var f = document.inquiryform;
         if (f.agree1.checked == false) {
@@ -273,9 +275,10 @@
                     console.log('Success:', response);
 
                     if(response.result == "success") {
-                       $('#inquiryform')[0].reset();
-                       inquiry_res();
-                       $('.main-textarea-txt').show();
+                        location.href = '<?=$_SERVER['PHP_SELF'];?>';
+                       // $('#inquiryform')[0].reset();
+                       // inquiry_res();
+                       // $('.main-textarea-txt').show();
                     }
 
                     if(response.resultMsg != null) {
@@ -314,9 +317,10 @@
 
 
     function inquiry_cancel(){
-        $('#inquiryform')[0].reset();
-        inquiry_res();
-        $('.main-textarea-txt').show();
+        // $('#inquiryform')[0].reset();
+        // inquiry_res();
+        // $('.main-textarea-txt').show();
+        location.reload();
     }
 </script>
 

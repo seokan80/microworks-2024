@@ -8,6 +8,207 @@ if($lang==2){
 }
 ?>
 <script>
+    var selCategoryId = undefined; // 선택한 카테고리
+    var manufacturerOptions = []; // 제조사 필터
+    var seriesOptions = []; // 계열 필터
+    var packagingOptions = []; // 포장 필터
+    var statusOptions = []; // 제푼현황 필터
+    // search_loading_start(); // 검색 중
+    var parametricOptions = [];
+    var data = {}
+    var search_type = '';
+    $(document).ready(function() {
+        $('#exactPhotoUrl').on('error', function() {
+            $(this).attr('src', '/images/content/img-no-image-large.png');
+        });
+
+        console.log('search_type=<?=$search_type?>');
+        console.log('search_order=<?=$search_order?>');
+        if('<?=$search_type?>') {
+            var types = '<?=$search_type?>'.split(',');
+            search_send(types[0],types[1],types[2],types[3],types[4]);
+        } else {
+            if('<?=$search_order?>') {
+                search_init();
+            }
+        }
+    });
+    /* js */
+    function option_apply(searchLimit = 10, currentPage = 1) {
+        search_send(searchLimit, currentPage, selCategoryId);
+    }
+    function search_init() {
+        if('<?=$search_order?>' == '' || '<?=$search_type?>' != '') {
+            location.href = '<?=$_SERVER['PHP_SELF'];?>?search_order=' + $("input[name=search_order]").val();
+        }
+        search_send(1, 1, undefined);
+    }
+    function search_send(searchLimit = 1, currentPage = 1, categoryId, sortby = "None", orderby = "Ascending") {
+        search_type = searchLimit + ',' + currentPage + ',' + categoryId + ',' + sortby + ',' + orderby;
+        if(categoryId != undefined && '<?=$search_type?>' == '') {
+            location.href = '<?=$_SERVER['PHP_SELF'];?>?search_order=' + $("input[name=search_order]").val()+'&search_type=' + search_type;
+        }
+        var isSearchLoading = false;
+        var keyword = $("input[name=search_order]").val();
+        $('#searchKeywordBottom').text('"'+keyword+'"');
+        if (keyword == "") {
+            alert("<?=$searchSendErrSearchOrderTxt?>"); // 검색어를 입력해주세요.
+            return;
+        } else if(isSearchLoading) {
+            alert("이전 검색 수행 중입니다.");
+            return;
+        }
+
+        // 페이징 위한 시작 인덱스
+        var offset = (currentPage - 1 ) * searchLimit;
+
+        // 제조 업체 필터
+        manufacturerOptions = getCheckedValues("manufacturerOptions");
+        // 계열 필터
+        seriesOptions = getCheckedValues("seriesOptions");
+        // 포장 필터
+        packagingOptions = getCheckedValues("packagingOptions");
+        // 제푼현황 필터
+        statusOptions = getCheckedValues("statusOptions");
+        // search_loading_start(); // 검색 중
+        parametricOptions = getGroupCheckedValues("parametricOptions");
+
+        data = {
+            "Keywords": keyword, //검색어
+            "Limit": searchLimit,
+            "Offset": offset
+        }
+        if (categoryId != undefined) {
+            data["FilterOptionsRequest"] = {
+                "CategoryFilter": [
+                    {
+                        "Id": categoryId //클릭한 카테고리 아이디
+                    }
+                ]
+            }
+        } else {
+            // 카테고리 검색 아니면 선택 옵션 초기화
+            manufacturerOptions = []
+            seriesOptions = []
+            packagingOptions = []
+            statusOptions = []
+        }
+        if (manufacturerOptions.length > 0) {
+            data["FilterOptionsRequest"]["ManufacturerFilter"] = manufacturerOptions;
+        }
+        if (seriesOptions.length > 0) {
+            data["FilterOptionsRequest"]["SeriesFilter"] = seriesOptions;
+        }
+        if (packagingOptions.length > 0) {
+            data["FilterOptionsRequest"]["PackagingFilter"] = packagingOptions;
+        }
+        if (statusOptions.length > 0) {
+            data["FilterOptionsRequest"]["StatusFilter"] = statusOptions;
+        }
+
+        console.log(data);
+
+        $.ajax({
+            url: "<?=$returnURL?>/index/product/ajax_digikey_search.php",
+            type: "post",
+            //async: false, // 비동기 설정 해제
+            data: {data: JSON.stringify(data)},
+            success: function (data) {
+                console.log(data);
+
+                setView(categoryId);
+                if (categoryId == undefined) {
+                    // 정확히 일치 카드
+                    setExactMatched(data.ExactMatches);
+                    // 상위카테고리
+                    setTopCategory(data.FilterOptions, 10, 1, sortby, orderby);
+                } else {
+
+                    selCategoryId = categoryId;
+
+                    setSearchResult(data, searchLimit, currentPage);
+                }
+            },
+            error: function (err) {
+            },
+            beforeSend: function( xhr ) {
+                $('#loading').show();
+            },
+            complete: function () {
+                $('#loading').hide();
+            },
+        }); // end of ajax
+
+    }
+
+    function getGroupCheckedValues(checkboxName) {
+        var groupedObjects = []; // 그룹화된 객체들을 저장할 배열
+
+        // 그룹 ID를 추출하고 초기화
+        var groupIds = $('input[name^="parametricOptions-"]:checked').map(function() {
+            return $(this).attr('name').split('-')[1];
+        }).get().filter(function(value, index, self) {
+            return self.indexOf(value) === index; // 중복 제거
+        });
+
+        // 각 그룹 ID에 대해 객체 생성
+        groupIds.forEach(function(groupId) {
+            var values = $('input[name="parametricOptions-' + groupId + '"]:checked').map(function() {
+                return {Id: $(this).val()};
+            }).get();
+
+            groupedObjects.push({
+                ParameterId: groupId,
+                FilterValues: values
+            });
+        });
+
+        console.log(groupedObjects); // 콘솔에 그룹화된 결과 출력
+        return groupedObjects; // 그룹화된 객체 배열 반환
+    }
+    // 선택 체크박스 값 조회
+    function getCheckedValues(checkboxName) {
+        var checkedValues = $('input[name="'+checkboxName+'"]:checked').map(function() {
+            return {Id: this.value}; // 체크된 항목의 value 속성을 가져옵니다.
+        }).get(); // .get()을 사용하여 jQuery 객체를 일반 배열로 변환합니다.
+
+        if (checkedValues.length > 0) {
+            console.log(checkedValues.toString()); // 콘솔에 출력하여 확인
+        }
+        return checkedValues; // 필요에 따라 값을 반환
+    }
+
+    function numberWithCommas(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+    }
+
+    function setView(categoryId) {
+        if (categoryId == undefined) {
+            if ($('#noneCategorySearh1').hasClass('hide')) {
+                $('#noneCategorySearh1').removeClass('hide');
+            }
+            if ($('#noneCategorySearh2').hasClass('hide')) {
+                $('#noneCategorySearh2').removeClass('hide');
+            }
+            if (!$('#categorySearch').hasClass('hide')) {
+                $('#categorySearch').addClass('hide');
+            }
+        } else {
+            if (!$('#noneCategorySearh1').hasClass('hide')) {
+                $('#noneCategorySearh1').addClass('hide');
+            }
+            if (!$('#noneCategorySearh2').hasClass('hide')) {
+                $('#noneCategorySearh2').addClass('hide');
+            }
+            if ($('#categorySearch').hasClass('hide')) {
+                $('#categorySearch').removeClass('hide');
+            }
+        }
+    }
+</script>
+<script>
     // 정확히 일치 카드 
     function setExactMatched(ExactMatches) {
         if (ExactMatches.length > 0) {
@@ -15,6 +216,7 @@ if($lang==2){
             $('#exactPrdNm').text(ExactMatches[0].ManufacturerProductNumber);
             $('#exactPrdDesc').text(ExactMatches[0].Description.ProductDescription);
             $('#exactPrdPrice').text(numberWithCommas(ExactMatches[0].ProductVariations[0].StandardPricing[0].TotalPrice));
+            $('#exactDetailView').attr('href','<?=$_SERVER['PHP_SELF'];?>?productNumber=' + ExactMatches[0].ProductVariations[0].DigiKeyProductNumber+'&returnURL=<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>');
         } else {
             // 정확히 일치 카드 숨김 처리
             $('#noneCategorySearh1').addClass('hide');
@@ -42,16 +244,38 @@ if($lang==2){
     }
 
     function contactUs(part) {
-        debugger
         if (part == undefined) {
             part = document.getElementById('search_order').value;
         }
-        const url = "/<?=$path?>/contact/inquiry.php?part="+part;
+        const url = "/<?=$path?>/contact/inquiry.php?productNumber="+part;
         window.location.href = url;
     }
 
 </script>
 <!-- !NOTE : 카테고리 페이지 -->
+<article class="sub-page product-page" id="noneCategorySearchForm">
+<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only area02">
+    <div class="replacement-search-box">
+        <!--  디지키 검색은 선택 옵션 없음
+<div class="replacement-search-select" >
+            <a href="javascript:;" class="cur-select">
+                <span><em>선택해주세요</em></span>
+            </a>
+            <ul class="replacement-select-con">
+                <li><a href="javascript:search_sel(0);"><span>전체</span></a></li>
+                <li><a href="javascript:search_sel(1);"><span>Memory Trend</span></a></li>
+                <li><a href="javascript:search_sel(2);"><span>Stock List</span></a></li>
+                <li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
+            </ul>
+        </div> -->
+        <input placeholder="검색어를 입력해주세요" type="text" name="search_order" id="search_order" value="<?=$search_order?>" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
+        <button  type="button" class="replacement-search-btn" title="검색" onclick="search_init()">
+            <img src="/images/icon/stock_list_search_icon.png" alt="">
+        </button>
+    </div>
+</form>
+</article>
+
 <article class="sub-page product-page pc-only hide" id="noneCategorySearh1">
     <div class="area02">
         <div class="search-results">
@@ -69,7 +293,7 @@ if($lang==2){
                         </div>
                     </div>
                     <div class="button-layout gap-md extra">
-                        <a href="javascript;" onclick="alert('not ready');return;" class="button type-secondary size-sm">Detail View</a>
+                        <a href="javascript;" class="button type-secondary size-sm" id="exactDetailView">Detail View</a href="javascript;">
                         <a href="javascript:void(0);" onclick="contactUs()" return false;" class="button type-primary size-sm">Contact Us</a>
                     </div>
                 </div>

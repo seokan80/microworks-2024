@@ -186,13 +186,14 @@ function addTableList(products) {
 
   var html = '';
   for(var i=0; i<prdLen; i++) {
-      html += '<tr>'
-      html += '    <td><input type="checkbox" name="" id=""></td>'
+      var detailHref = '<?=$_SERVER['PHP_SELF'];?>?productNumber=' + products[i].ProductVariations[0].DigiKeyProductNumber +'&returnURL=<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>';
+      html += '<tr>';
+      html += '    <td><input type="checkbox" name="productCk" onclick="checkProductCk(this)" value="' + products[i].ProductVariations[0].DigiKeyProductNumber + '"></td>'
       html += '    <td class="text-left">'
       html += '    <div class="product-info">'
       html += '        <div class="img-box"><img src="'+products[i].PhotoUrl+'" alt="" height="55" width="55"></div>'
       html += '        <div class="text-wrap">'
-      html += '        <strong>'+products[i].ManufacturerProductNumber+'</strong>'
+      html += '        <strong><a href="'+detailHref+'">'+products[i].ManufacturerProductNumber+'</a></strong>'
       html += '        <p>'+products[i].Description.ProductDescription+'</p>'
       html += '        </div>'
       html += '    </div>'
@@ -212,13 +213,27 @@ function addTableList(products) {
 
       html += '    <td>'
       html += '     <div class="button-layout">'
-      html += '       <a href="#" class="button type-secondary size-sm">Detail View</a>'
+      html += '       <a href="'+detailHref+'" class="button type-secondary size-sm">Detail View</a>'
       html += '       <a href="javascript:void(0);" onclick="contactUs(\''+products[i].ManufacturerProductNumber+'\')" class="button type-primary size-sm">문의하기</a>'
       html += '     </div>'
       html += '    </td>'
       html += '</tr>'
   }
   $("#productSearchResult").html(html);
+}
+
+function checkProductCk() {
+      var cnt = 0
+      $('[name=productCk]').each(function() {
+          if($(this).is(':checked')) {
+              cnt++;
+          }
+      });
+
+      if(cnt > 1) {
+          $('#compareProduct').show();
+          $('#compareProduct .cnt').text(cnt);
+      }
 }
 
 function addPagination(totalProducts, searchLimit, currentPage) {
@@ -321,7 +336,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
                 <strong class="text-primary" id="searchResultCnt"></strong>
               </div>
               <div class="button-layout gap-md extra">
-                <button type="button" class="button type-point size-sm hide"><strong id="compareProduct">n개 제품비교</strong></button>
+                  <button type="button" class="button type-point size-sm" id="compareProduct" style="display: none;" onClick="compareProductProc()"><strong><span class="cnt"></span>개 제품비교</strong></button>
               </div>
             </div>
             <div class="replacement-table" id="categorySearchList">
