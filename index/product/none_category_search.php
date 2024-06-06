@@ -7,6 +7,9 @@
             $('#exactPrdNm').text(ExactMatches[0].ManufacturerProductNumber);
             $('#exactPrdDesc').text(ExactMatches[0].Description.ProductDescription);
             $('#exactPrdPrice').text(numberWithCommas(ExactMatches[0].ProductVariations[0].StandardPricing[0].TotalPrice));
+        } else {
+            // 정확히 일치 카드 숨김 처리
+            $('#noneCategorySearh1').addClass('hide');
         }
     }
     // 카테고리 검색 결과
