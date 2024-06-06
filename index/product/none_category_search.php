@@ -107,7 +107,7 @@ if($lang==2){
         console.log(data);
 
         $.ajax({
-            url: "<?=$returnURL?>/index/product/ajax_digikey_search.php",
+            url: "<?=$returnURL?>/index/product/ajax_digikey_search.php?lang=<?=$lang?>",
             type: "post",
             //async: false, // 비동기 설정 해제
             data: {data: JSON.stringify(data)},
@@ -232,7 +232,7 @@ if($lang==2){
                         '<p class="tit">'+FilterOptions.TopCategories[i].Category.Name+'</p>' +
                         '<div class="info-wrap">' +
                         '<p>'+FilterOptions.TopCategories[i].RootCategory.Name+'</p>' +
-                        '<p>'+numberWithCommas(FilterOptions.TopCategories[i].Category.ProductCount)+' 품목</p>' +
+                        '<p>'+numberWithCommas(FilterOptions.TopCategories[i].Category.ProductCount)+'</p>' +
                         '</div>' +
                     '</div>' +
                     '</a>'
@@ -278,7 +278,7 @@ if($lang==2){
     <div class="area02">
         <div class="search-results">
             <div class="search-results-header type-category">
-                <p>정확히 일치</p>
+                <p>ExactMatched</p>
             </div>
             <div class="search-results-body">
                 <div class="category-matched">
@@ -304,7 +304,7 @@ if($lang==2){
     <div class="area02">
         <div class="search-results">
             <div class="search-results-header type-category">
-                <p>상위검색 결과</p>
+                <p>Top Category</p>
             </div>
             <div class="search-results-body">
                 <div class="category-list" id="categoryList">
