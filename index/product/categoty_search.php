@@ -236,7 +236,7 @@ function checkProductCk() {
       }
 }
 
-function addPagination(totalProducts, searchLimit, currentPage) {
+function addPagination(totalProducts, searchLimit, currentPage = 1) {
 
   var pages = Math.ceil(totalProducts / searchLimit);
   var paginationHtml = '';
@@ -249,7 +249,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
   }
 
   for (var i = startPage; i <= endPage; i++) {
-      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + i + ')" class="paging-link' + (i === currentPage ? ' cur' : '') + '">' + i + '</a> ';
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + i + ')" class="paging-link' + (i == currentPage ? ' cur' : '') + '">' + i + '</a> ';
   }
   if (endPage < pages) {
       paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + (endPage + 1) + ')" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>'
