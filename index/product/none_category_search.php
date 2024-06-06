@@ -22,8 +22,6 @@ if($lang==2){
             $(this).attr('src', '/images/content/img-no-image-large.png');
         });
 
-        console.log('search_type=<?=$search_type?>');
-        console.log('search_order=<?=$search_order?>');
         if('<?=$search_type?>') {
             var types = '<?=$search_type?>'.split(',');
             search_send(types[0],types[1],types[2],types[3],types[4]);
@@ -216,7 +214,7 @@ if($lang==2){
             $('#exactPrdNm').text(ExactMatches[0].ManufacturerProductNumber);
             $('#exactPrdDesc').text(ExactMatches[0].Description.ProductDescription);
             $('#exactPrdPrice').text(numberWithCommas(ExactMatches[0].ProductVariations[0].StandardPricing[0].TotalPrice));
-            $('#exactDetailView').attr('href','<?=$_SERVER['PHP_SELF'];?>?productNumber=' + ExactMatches[0].ProductVariations[0].DigiKeyProductNumber+'&returnURL=<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>');
+            $('#exactDetailView').attr('href','<?=$_SERVER['PHP_SELF'];?>?productNumber=' + ExactMatches[0].ProductVariations[0].DigiKeyProductNumber+'&returnURL='+encodeURIComponent('<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>'));
         } else {
             // 정확히 일치 카드 숨김 처리
             $('#noneCategorySearh1').addClass('hide');

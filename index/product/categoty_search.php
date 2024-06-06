@@ -186,7 +186,7 @@ function addTableList(products) {
 
   var html = '';
   for(var i=0; i<prdLen; i++) {
-      var detailHref = '<?=$_SERVER['PHP_SELF'];?>?productNumber=' + products[i].ProductVariations[0].DigiKeyProductNumber +'&returnURL=<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>';
+      var detailHref = '<?=$_SERVER['PHP_SELF'];?>?productNumber=' + products[i].ProductVariations[0].DigiKeyProductNumber +'&returnURL='+encodeURIComponent('<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>');
       html += '<tr>';
       html += '    <td><input type="checkbox" name="productCk" onclick="checkProductCk(this)" value="' + products[i].ProductVariations[0].DigiKeyProductNumber + '"></td>'
       html += '    <td class="text-left">'
