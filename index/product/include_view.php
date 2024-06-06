@@ -3,7 +3,7 @@
         $('.area02').hide();
 
         $.ajax({
-            url: "/index/product/ajax_digikey_prduct_detail.php?lang<?=$lang?>",
+            url: "/index/product/ajax_digikey_prduct_detail.php?lang=<?=$lang?>",
             type: "get",
             dataType:"json",
             data: {productNumber: '<?=$productNumber?>'},
@@ -15,7 +15,7 @@
                 $('#area02DigiKeyProductNumber').text(data.Product.ProductVariations[0].DigiKeyProductNumber);
                 $('#area02Manufacturer').text(data.Product.Manufacturer.Name);
                 $('#area02ManufacturerProductNumber').text(data.Product.ManufacturerProductNumber);
-                $('#area02ManufacturerLeadWeeks').text(data.Product.ManufacturerLeadWeeks + '주');
+                $('#area02ManufacturerLeadWeeks').text(data.Product.ManufacturerLeadWeeks + ' <?=$lang==2? "weeks" : ($lang==3? "周" : "주") ?>');
                 $('#area02DatasheetUrl').attr('href', data.Product.DatasheetUrl);
                 $('#area02ProductDescription').text(data.Product.Description.ProductDescription);
 
@@ -25,7 +25,7 @@
                         area03Category += '<br/>' + data.Product.Category.ChildCategories[i].Name;
                     }
                 }
-                $('#area03type').text('제품요약'); // 제품상세 - 제품요약
+                $('#area03type').text('<?=$lang==2? "Product Summary" : ($lang==3? "产品概要" : "제품 요약") ?>'); // 제품상세 - 제품요약
                 $('#area03Category').html(area03Category); // 제품상세 - 종류
                 $('#area03PackageType').text(data.Product.ProductVariations[0].PackageType.Name);
                 $('#area03Series').text(data.Product.Series.Name); // 제품상세 - 계열
@@ -44,7 +44,7 @@
                 }
             },
             error: function (err) {
-                if(confirm('화면을 불러오지 못했습니다. 재 요청 하시겠습니까?')) {
+                if(confirm('<?=$lang==2? "Failed to load the screen. Would you like to retry?" : ($lang==3? "加载屏幕失败。您想要重试吗？" : "화면을 불러오지 못했습니다. 재 요청 하시겠습니까?") ?>')) {
                     location.reload();
                 } else {
                     history.back();
@@ -68,19 +68,19 @@
                 <img id="area02Img" src="/images/content/img-no-image-large.png" alt="">
                 <div class="info-list">
                     <dl>
-                        <dt>Microworks 제품번호</dt>
+                        <dt><?=$lang==2 ? "Microworks Product Number" : ($lang==3? "Microworks 产品编号" : "Microworks 제품번호") ?></dt>
                         <dd id="area02DigiKeyProductNumber"></dd>
                     </dl>
                     <dl>
-                        <dt>제조업체</dt>
+                        <dt><?=$lang==2? "Manufacturer" : ($lang==3? "制造商" : "제조업체") ?></dt>
                         <dd id="area02Manufacturer"><a href="#"></a></dd>
                     </dl>
                     <dl>
-                        <dt>제조업체 제품 번호</dt>
+                        <dt><?=$lang==2? "Manufacturer Product Number" : ($lang==3? "制造商产品编号" : "제조업체 제품 번호") ?></dt>
                         <dd id="area02ManufacturerProductNumber"></dd>
                     </dl>
                     <dl>
-                        <dt>제조업체 표준 리드 타임</dt>
+                        <dt><?=$lang==2? "Manufacturer Standard Lead Time" : ($lang==3? "制造商标准交货时间" : "제조업체 표준 리드 타임") ?></dt>
                         <dd id="area02ManufacturerLeadWeeks"></dd>
                     </dl>
 <!--                    <dl>--> <!-- 입력 받은 후 처리 부가 없음 -->
@@ -88,12 +88,12 @@
 <!--                        <dd><input type="text" name="" id="" title="고객 참조 번호"></dd>-->
 <!--                    </dl>-->
                     <dl>
-                        <dt>제품 세부 정보</dt>
+                        <dt><?=$lang==2? "Product Detail" : ($lang==3? "产品详细信息" : "제품 세부 정보") ?></dt>
                         <dd id="area02ProductDescription"></dd>
                     </dl>
                     <dl>
-                        <dt>규격서</dt>
-                        <dd><img src="/images/icon/icon-pdf.png" alt="" class="icon"><a href="#" id="area02DatasheetUrl" target="_blank">규격서</a></dd>
+                        <dt><?=$lang==2? "Datasheet" : ($lang==3? "数据表" : "규격서") ?></dt>
+                        <dd><img src="/images/icon/icon-pdf.png" alt="" class="icon"><a href="#" id="area02DatasheetUrl" target="_blank"><?=$lang==2? "Datasheet" : ($lang==3? "数据表" : "규격서") ?></a></dd>
                     </dl>
 <!--                    <dl>--> <!-- 디지키에 없음 -->
 <!--                        <dt>EDA/CAD 모델</dt>-->
@@ -104,7 +104,7 @@
             <hr class="hr">
             <div class="replacement-table-wrap">
                 <div class="search-results-header type-category">
-                    <p>제품 특성</p>
+                    <p><?=$lang==2? "Product Feature" : ($lang==3? "产品特性" : "제품 특성") ?></p>
                 </div>
                 <div class="replacement-table type-info">
                     <table id="area03">
@@ -114,28 +114,28 @@
                         </colgroup>
                         <tbody>
                         <tr>
-                            <th>유형</th>
+                            <th><?=$lang==2? "Type" : ($lang==3? "类型" : "유형") ?></th>
                             <td id="area03type"></td>
                         </tr>
                         <tr>
-                            <th>종류</th>
+                            <th><?=$lang==2? "Type" : ($lang==3? "类型" : "유형") ?></th>
                             <td id="area03Category"></td> <!-- 카테고리 상세 페이지가 없어서 링크 삭제-->
                         </tr>
                         <tr>
-                            <th>제조업체</th>
+                            <th><?=$lang==2? "Manufacturer" : ($lang==3? "制造商" : "제조업체") ?></th>
                             <td id="area03Supplier"></td>
                         </tr>
                         <tr>
-                            <th>계열</th>
+                            <th><?=$lang==2? "Series" : ($lang==3? "系列" : "계열") ?></th>
                             <td id="area03Series"></td>
                         </tr>
 
                         <tr>
-                            <th>포장</th>
+                            <th><?=$lang==2? "Packaging" : ($lang==3? "包装" : "포장") ?></th>
                             <td id="area03PackageType"></td>
                         </tr>
                         <tr>
-                            <th>부품 현황</th>
+                            <th><?=$lang==2? "Part Status" : ($lang==3? "部件状态" : "부품 현황") ?></th>
                             <td id="area03ProductStatus"></td>
                         </tr>
                         </tbody>
@@ -144,8 +144,8 @@
             </div>
         </div>
         <div class="replacement-detail-buttons">
-            <button type="button" onclick="location.href='<?=$returnURL?>'" class="button type-secondary size-sm">목록으로</a>
-            <button type="button" onclick="location.href='<?=$site_url?>/contact/inquiry.php?productNumber=<?=$productNumber?>';" class="button type-primary size-sm">문의하기</button>
+            <button type="button" onclick="location.href='<?=$returnURL?>'" class="button type-secondary size-sm"><?=$lang==2? "List" : ($lang==3? "列表" : "목록으로") ?></a>
+            <button type="button" onclick="location.href='<?=$site_url?>/contact/inquiry.php?productNumber=<?=$productNumber?>';" class="button type-primary size-sm"><?=$lang==2? "Inquiry" : ($lang==3? "询问" : "문의하기") ?></button>
         </div>
     </div>
 </article>

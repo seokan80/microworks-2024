@@ -269,7 +269,7 @@ if($lang==2){
                 <li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
             </ul>
         </div> -->
-        <input placeholder="<?=$searchPlaceholder=?>" type="text" name="search_order" id="search_order" value="<?=$search_order?>" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
+        <input placeholder="<?=$searchPlaceholder?>" type="text" name="search_order" id="search_order" value="<?=$search_order?>" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
         <button  type="button" class="replacement-search-btn" title="검색" onclick="search_init()">
             <img src="/images/icon/stock_list_search_icon.png" alt="">
         </button>
