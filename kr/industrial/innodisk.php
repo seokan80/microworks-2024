@@ -31,22 +31,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									</div>
 									<div class="top-txt-box">
 										<p class="txt">
-											Innodisk is a service-driven provider of flash memory, DRAM modules, embedded peripherals,
-											and software solutions for industrial and enterprise applications. With satisfied customers
-											across the embedded, server, in-vehicle, cloud storage markets, and more, we have set
-											ourselves apart from the competition with a commitment to dependable products and
-											unparalleled service quality. The result is solutions designed to supplement existing industrial
-											solutions and high IOPS flash arrays for industrial and enterprise applications. The expanded
-											business lines lead our next steps as a comprehensive solutions and service provider in the
-											industrial storage industry, and we look forward to working with our customers and partners,
-											jointly Building an Intelligent World.<br/>
+											Innodisk는 산업용 및 기업용 애플리케이션을 위한 플래시 메모리, DRAM 모듈, 내장형 주변기기, 소프트웨어 솔루션을 제공하는 서비스 중심 공급업체입니다. 임베디드, 서버, 차량 내, 클라우드 스토리지 시장 등의 고객 만족을 바탕으로 당사는 신뢰할 수 있는 제품과 비교할 수 없는 서비스 품질에 대한 약속을 통해 경쟁업체와 차별화되었습니다. 그 결과 산업 및 기업 애플리케이션을 위한 기존 산업용 솔루션과 높은 IOPS 플래시 어레이를 보완하도록 설계된 솔루션이 탄생했습니다. 확장된 비즈니스 라인은 산업용 스토리지 업계의 종합 솔루션 및 서비스 제공업체로서 당사의 다음 단계를 주도하고 있으며 고객 및 파트너와 협력하여 지능형 세계를 공동으로 구축할 수 있기를 기대합니다.
 											<br/>
-											Founded in 2005 and headquartered in Taipei, Taiwan, Innodisk services clients globally with
-											engineering experts and sales teams in China, Japan, France, the Netherlands, and the United
-											States. With abundant experience and unrivaled knowledge of the memory industry, Innodisk
-											develops products with excellent quality, remarkable performance, and the highest reliability.<br/>
 											<br/>
-											For more information about Innodisk, please visit https://www.innodisk.com.
+											2005년에 설립되어 대만 타이베이에 본사를 둔 Innodisk는 중국, 일본, 프랑스, ​​네덜란드 및 미국의 엔지니어링 전문가 및 영업팀과 함께 전 세계 고객에게 서비스를 제공합니다. Innodisk는 메모리 산업에 대한 풍부한 경험과 독보적인 지식을 바탕으로 우수한 품질, 놀라운 성능, 최고의 신뢰성을 갖춘 제품을 개발합니다.
+											<br/>
+											<br/>
+											Innodisk에 대한 자세한 내용을 알아보려면 https://www.innodisk.com을 방문하세요.
 										</p>
 									</div>
 								</article>
@@ -55,27 +46,27 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<article class="industrial-content area">
 						<article class="industrial-prd">
 							<div class="industrial-prd-con">
-								<h3 class="tit">Our Advantages</h3>
+								<h3 class="tit">우리의 장점</h3>
 								<ul class="advantages-list">
 									<li class="item">
 										<img src="/images/content/img-advantage-01.png" alt="">
 										<div class="text-wrap">
 											<p class="title">Technical Aptitude by Design</p>
-											<p class="desc">Our advantage lies in our portfolio of hardware, software, and firmware <br class="pc-only"/>technology and how we arrange these basic building blocks into innovations.</p>
+											<p class="desc">우리의 장점은 하드웨어, 소프트웨어, 펌웨어 기술 포트폴리오와 <br class="pc-only"/>이러한 기본 구성 요소를 혁신으로 배열하는 방법에 있습니다.</p>
 										</div>
 									</li>
 									<li class="item">
 										<img src="/images/content/img-advantage-02.png" alt="">
 										<div class="text-wrap">
 											<p class="title">Deeply Rooted in the Market</p>
-											<p class="desc">Our awareness of the pitfalls and opportunities in vertical markets allows us to <br class="pc-only"/>see the whole picture when crafting the optimal solution.</p>
+											<p class="desc">수직 시장의 함정과 기회에 대한 우리의 인식을 통해 <br class="pc-only"/>최적의 솔루션을 만들 때 전체 그림을 볼 수 있습니다.</p>
 										</div>
 									</li>
 									<li class="item">
 										<img src="/images/content/img-advantage-03.png" alt="">
 										<div class="text-wrap">
 											<p class="title">We Are in It Together</p>
-											<p class="desc">To reach the optimal solution, working together with our partner from day one <br class="pc-only"/>is paramount. The best possible outcome is always managed by developing solutions jointly.</p>
+											<p class="desc">최적의 솔루션에 도달하려면 처음부터 파트너와 협력하는 것이 무엇보다 중요합니다.<br class="pc-only"/>최상의 결과는 항상 공동으로 솔루션을 개발함으로써 관리됩니다.</p>
 										</div>
 									</li>
 								</ul>
