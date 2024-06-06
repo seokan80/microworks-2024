@@ -144,7 +144,7 @@
             </div>
         </div>
         <div class="replacement-detail-buttons">
-            <button type="button" onclick="location.href='<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>'" class="button type-secondary size-sm">목록으로</a>
+            <button type="button" onclick="location.href='<?=$returnURL?>'" class="button type-secondary size-sm">목록으로</a>
             <button type="button" onclick="location.href='<?=$site_url?>/contact/inquiry.php?productNumber=<?=$productNumber?>';" class="button type-primary size-sm">문의하기</button>
         </div>
     </div>
