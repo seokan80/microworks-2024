@@ -3,6 +3,19 @@
 $curl = curl_init();
 // $data = isset($_POST['data']) ? $_POST['data'] : '';
 $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
+$lang = isset($_GET['lang']) ? $_GET['lang'] : '';
+$site="KR";
+$locale="ko";
+$currency="KRW";
+if($lang==2){ 
+  $site="EN";
+  $locale="en";
+  $currency="USD";
+} else if($lang==3){
+  $site="CN";
+  $locale="zhs";
+  $currency="CNY";
+}
 // $json = file_get_contents('php://input');
 
 // JSON 데이터를 디코드하여 PHP 배열로 변환합니다.
@@ -46,9 +59,9 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => $data,
   CURLOPT_HTTPHEADER => array(
     'X-DIGIKEY-Client-Id: '. $clientId,
-    'X-DIGIKEY-Locale-Site: KR',
-    'X-DIGIKEY-Locale-Language: ko',
-    'X-DIGIKEY-Locale-Currency: KRW',
+    'X-DIGIKEY-Locale-Site: '. $site,
+    'X-DIGIKEY-Locale-Language: '. $locale,
+    'X-DIGIKEY-Locale-Currency: '. $currency,
     'X-DIGIKEY-Customer-Id: 0',
     'Content-Type: application/json',
     'Accept: application/json',
@@ -75,9 +88,9 @@ if ($httpcode == 401) {
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_HTTPHEADER => array(
       'X-DIGIKEY-Client-Id: '. $clientId,
-      'X-DIGIKEY-Locale-Site: KR',
-      'X-DIGIKEY-Locale-Language: ko',
-      'X-DIGIKEY-Locale-Currency: KRW',
+      'X-DIGIKEY-Locale-Site: '. $site,
+      'X-DIGIKEY-Locale-Language: '. $locale,
+      'X-DIGIKEY-Locale-Currency: '. $currency,
       'X-DIGIKEY-Customer-Id: 0',
       'Content-Type: application/json',
       'Accept: application/json',

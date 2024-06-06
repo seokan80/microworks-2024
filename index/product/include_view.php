@@ -3,7 +3,7 @@
         $('.area02').hide();
 
         $.ajax({
-            url: "/index/product/ajax_digikey_prduct_detail.php",
+            url: "/index/product/ajax_digikey_prduct_detail.php?lang<?=$lang?>",
             type: "get",
             dataType:"json",
             data: {productNumber: '<?=$productNumber?>'},
