@@ -24,7 +24,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
     <!-- #202405 Information 문의 추가 -->
     <!-- !NOTE S : 2024-04 추가 -->
     <article class="product-page inquiry-page">
+        <?if ($productNumber == '') { ?>
         <? include $_SERVER["DOCUMENT_ROOT"]."/common/include_inquiry.php"; ?>
+        <? } else { ?>
+        <? include $_SERVER["DOCUMENT_ROOT"]."/common/include_industrial_inquiry.php"; ?>
+        <? } ?>
     </article>
     <!-- !NOTE E : 2024-04 추가 -->
     <!-- //컨텐츠 내용 -->
