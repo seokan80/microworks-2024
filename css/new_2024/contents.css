@@ -341,7 +341,7 @@ section.full-height{height: 100dvh;}
 #mainGlobalCon .global-con .global-tit span{color: var(--text-color);}
 
 /* 메인 문의하기 */
-.main-inquiry{display: flex; gap: 70px; margin-top: 32px;}
+.main-inquiry{display: flex; gap: 70px; margin-top: 32px; color: white;}
 .main-inquiry .inquiry-wrapper{flex: 1 1; max-width: 680px;}
 .main-inquiry .inquiry-wrapper .extra-info{margin-top: 20px;}
 
@@ -355,6 +355,7 @@ section.full-height{height: 100dvh;}
 .main-inquiry .forms i{display: inline-block; font-size: 24px; color: white; margin-right: 30px;}
 .main-inquiry .forms input,
 .main-inquiry .forms select{flex: 1 1; background-color: transparent; border:0; height: 38px; padding: 6px 0; font-size: 16px; color: white; box-sizing: border-box;}
+.main-inquiry .forms select option{color: var(--text-color);}
 .main-inquiry .forms input::placeholder {color: rgba(255,255,255,0.5); font-size:16px; letter-spacing:-0.5px;}
 .main-inquiry .forms input::-webkit-input-placeholder  {color: rgba(255,255,255,0.5); font-size:16px; letter-spacing:-0.5px;}
 .main-inquiry .forms input::-ms-input-placeholder {color: rgba(255,255,255,0.5); font-size:16px; letter-spacing:-0.5px;}
