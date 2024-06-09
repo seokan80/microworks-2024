@@ -146,23 +146,25 @@ if($lang==2){
         var groupedObjects = []; // 그룹화된 객체들을 저장할 배열
 
         // 그룹 ID를 추출하고 초기화
-        var groupIds = $('input[name^="parametricOptions-"]:checked').map(function() {
-            return $(this).attr('name').split('-')[1];
-        }).get().filter(function(value, index, self) {
-            return self.indexOf(value) === index; // 중복 제거
-        });
-
-        // 각 그룹 ID에 대해 객체 생성
-        groupIds.forEach(function(groupId) {
-            var values = $('input[name="parametricOptions-' + groupId + '"]:checked').map(function() {
-                return {Id: $(this).val()};
-            }).get();
-
-            groupedObjects.push({
-                ParameterId: groupId,
-                FilterValues: values
+        if ($('input[name^="parametricOptions-"]:checked').length > 0) {
+            var groupIds = $('input[name^="parametricOptions-"]:checked').map(function() {
+                return $(this).attr('name').split('-')[1];
+            }).get().filter(function(value, index, self) {
+                return self.indexOf(value) === index; // 중복 제거
             });
-        });
+
+            // 각 그룹 ID에 대해 객체 생성
+            groupIds.forEach(function(groupId) {
+                var values = $('input[name="parametricOptions-' + groupId + '"]:checked').map(function() {
+                    return {Id: $(this).val()};
+                }).get();
+
+                groupedObjects.push({
+                    ParameterId: groupId,
+                    FilterValues: values
+                });
+            });
+        }
 
         console.log(groupedObjects); // 콘솔에 그룹화된 결과 출력
         return groupedObjects; // 그룹화된 객체 배열 반환
@@ -281,7 +283,7 @@ if($lang==2){
     <div class="area02">
         <div class="search-results">
             <div class="search-results-header type-category">
-                <p>ExactMatched</p>
+                <p><?=$lang==2 ? "ExactMatched":($lang==3 ? "请输入搜索词":"정확히 일치한 제품") ?></p>
             </div>
             <div class="search-results-body">
                 <div class="category-matched">
@@ -307,7 +309,7 @@ if($lang==2){
     <div class="area02">
         <div class="search-results">
             <div class="search-results-header type-category">
-                <p>Top Category</p>
+                <p><?=$lang==2 ? "Top Category":($lang==3 ? "请输入搜索词":"상위 카테고리") ?></p>
             </div>
             <div class="search-results-body">
                 <div class="category-list" id="categoryList">

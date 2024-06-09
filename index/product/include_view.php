@@ -67,7 +67,7 @@
             <div class="info-wrapper">
                 <img id="area02Img" src="/images/content/img-no-image-large.png" alt="">
                 <div class="info-list">
-                    <dl>
+                    <dl><?=$is_detail?><?=$is_detail?><?=$is_detail?><?=$is_detail?><?=$is_detail?><?=$is_detail?>
                         <dt><?=$lang==2 ? "Microworks Product Number" : ($lang==3? "Microworks 产品编号" : "Microworks 제품번호") ?></dt>
                         <dd id="area02DigiKeyProductNumber"></dd>
                     </dl>

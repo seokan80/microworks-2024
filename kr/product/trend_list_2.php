@@ -38,13 +38,13 @@ include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
     <?
     } else {
     ?>
-    <article class="sub-page product-page" id="trend_list_2">
+    <!-- <article class="sub-page product-page" id="trend_list_2"> -->
         <!-- 컨텐츠 내용 -->
         <? include $_SERVER["DOCUMENT_ROOT"]."/index/product/none_category_search.php"; ?>
         <? include $_SERVER["DOCUMENT_ROOT"]."/index/product/categoty_search.php"; ?>
         <!-- //컨텐츠 내용 -->
         <? include $_SERVER["DOCUMENT_ROOT"]."/index/product/include_compare.php"; ?>
-    </article>
+    <!-- </article> -->
     <?
     }
     ?>

@@ -32,13 +32,13 @@
 
       setSearchResultText(data);
       //제조업체 필터 추가
-      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true);
+      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true, "제조업체");
       // 계열 핕터 추가
-      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions");
+      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions", false, "계열");
       // 포장 필터 추가
-      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions");
+      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions", false, "포장");
       // 현황 추가
-      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions");
+      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions", false, "현황");
       // 파라미터 필터 목록 추가
       addParametricFilters(data.FilterOptions.ParametricFilters, parametricOptions);
       // 검색 결과 
@@ -96,7 +96,7 @@
     $('input[name='+searchName+']').prop('checked', false);
     option_apply();
   }
-  function addFilter(filters, selOpts = [], searchName, isFirst = false) {
+  function addFilter(filters, selOpts = [], searchName, isFirst = false, headerName = '') {
     if (isFirst) {
       $('.search-filters').empty();
     }
@@ -106,12 +106,12 @@
       // valArr.push(filter.Value);
         var isChecked = ( selOpts.length > 0 && selOpts.some(item => {return item.Id == filter.Id}) )? 'checked' : '';
         filterValuesHtml += '<li class="checkable-item">' +
-                            '<input type="checkbox" name="'+searchName+'" id="manufacturer-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
-                            '<label for="manufacturer-' + filter.Id + '">' + filter.Value + '</label>' +
+                            '<input type="checkbox" name="'+searchName+'" id="'+searchName+'-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
+                            '<label for="'+searchName+'-' + filter.Id + '">' + filter.Value + '</label>' +
                             '</li>';
     });
     var filtersHtml = '<div class="filter">' +
-                    '<div class="filter-header"><p>' + '제조업체' + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\''+searchName+'\')">초기화</button></div>' +
+                    '<div class="filter-header"><p>' + headerName + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\''+searchName+'\')">초기화</button></div>' +
                     '<div class="filter-body">';
     if (filters.length > 20) {
         filtersHtml += '<div class="input-box"><input type="search" name="'+searchName+'" id="" placeholder="검색 기준" class="input hight-sm"></div>';

@@ -117,7 +117,8 @@
 </script>
 <!-- 컨텐츠 내용 -->
 <!-- !NOTE S : 2024-04 추가 -->
-<div class="hide" id="areaCompare">
+<div class="sub-page product-page hide" id="areaCompare">
+<div class="area02">
     <div class="search-detail">
         <div class="search-detail-header">
             <p onclick="compareProductCancel()"><i class="material-icons">&#xe15e;</i>검색 결과로 돌아가기</p>
@@ -125,7 +126,7 @@
         <div class="search-detail-body">
             <div class="search-utility">
                 <p class="text-xl"><strong class="text-primary" id="areaCompareCnt"></strong>개 제품</p>
-                <span type="button" class="button type-secondary size-sm" onclick="sameCharacteristicProc();">공유 특성&nbsp;<span class="sameCharacteristicText">숨기기</span>(<span class="sameCharacteristicCnt"></span>개)</span>
+                <button type="button" class="button type-secondary size-sm" onclick="sameCharacteristicProc();">공유 특성&nbsp;<span class="sameCharacteristicText">숨기기</span>(<span class="sameCharacteristicCnt"></span>개)</button>
             </div>
             <div class="replacement-table-wrap">
                 <div class="replacement-table type-detail">
@@ -174,11 +175,12 @@
                     </table>
                 </div>
                 <div class="replacement-table-footer">
-                    <span type="button" class="button type-secondary size-sm" onclick="sameCharacteristicProc();">공유 특성&nbsp;<span class="sameCharacteristicText">숨기기</span>(<span class="sameCharacteristicCnt"></span>개)</span>
+                    <button type="button" class="button type-secondary size-sm" onclick="sameCharacteristicProc();">공유 특성&nbsp;<span class="sameCharacteristicText">숨기기</span>(<span class="sameCharacteristicCnt"></span>개)</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <!-- !NOTE E : 2024-04 추가 -->
 <!-- //컨텐츠 내용 -->
