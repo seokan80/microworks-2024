@@ -1,8 +1,9 @@
 <?php
 
 $curl = curl_init();
+// $data = isset($_POST['data']) ? $_POST['data'] : '';
+$productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 $lang = isset($_GET['lang']) ? $_GET['lang'] : '';
-$data = isset($_POST['data']) ? $_POST['data'] : '';
 $site="KR";
 $locale="ko";
 $currency="KRW";
@@ -47,14 +48,14 @@ function get($url){
 }
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.digikey.com/products/v4/search/keyword',
+  CURLOPT_URL => 'https://api.digikey.com/products/v4/search/'.$productNumber.'/productdetails',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 0,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_POSTFIELDS => $data,
   CURLOPT_HTTPHEADER => array(
     'X-DIGIKEY-Client-Id: '. $clientId,
@@ -77,15 +78,14 @@ if ($httpcode == 401) {
   header('Content-Type: application/json');
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://api.digikey.com/products/v4/search/keyword',
+    CURLOPT_URL => 'https://api.digikey.com/products/v4/search/'.$productNumber.'/productdetails',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 0,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => $data,
+    CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_HTTPHEADER => array(
       'X-DIGIKEY-Client-Id: '. $clientId,
       'X-DIGIKEY-Locale-Site: '. $site,
@@ -105,4 +105,5 @@ curl_close($curl);
 
 header('Content-Type: application/json');
 echo $response;
+// echo 'https://api.digikey.com/products/v4/search/'.$productNumber.'/productdetails'
 ?>

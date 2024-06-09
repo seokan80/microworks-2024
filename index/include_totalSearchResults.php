@@ -13,6 +13,7 @@
         // 목록 문구
         $search_total_txt_pre = "total : ";
         $search_total_txt_post = "EA";
+        $path="en";
     } else if($lang==3){ // 중문
         // 검색 결과 실패 문구
         $searh_no_exist_txt_result_1 = "对不起。 <strong class='text-primary search_order'>\"ASDF\"</strong> 未找到符合您搜索的结果。";
@@ -26,6 +27,7 @@
         // 목록 문구
         $search_total_txt_pre = "total : ";
         $search_total_txt_post = "";
+        $path="cn";
     } else { // 국문
         // 검색 결과 실패 문구
         $searh_no_exist_txt_result_1 = "죄송합니다. <strong class='text-primary search_order'>\"ASDF\"</strong>에 대한 검색 결과가 없습니다.";
@@ -39,6 +41,7 @@
         // 목록 문구
         $search_total_txt_pre = "총 ";
         $search_total_txt_post = "건";
+        $path="kr";
     }
 ?>
 <script>
@@ -234,7 +237,7 @@
     <div class="no-result-box">
         <img src="/images/icon/img-no-result.png" alt="검색 결과 없음 이미지">
         <p class="no_exist_txt_result_3"><?=$searh_no_exist_txt_result_2?></p>
-        <a href="#" class="button"><strong class="class="no_exist_txt_result_4""><?=$searh_no_exist_txt_result_3?></strong></a>
+        <a href="/<?=$path?>/contact/inquiry.php" class="button"><strong class="class="no_exist_txt_result_4""><?=$searh_no_exist_txt_result_3?></strong></a>
     </div>
 </div>
 <div class="area search_ing" style="display: none">
