@@ -593,6 +593,10 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .replacement-table .product-info .delete-button{flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; position: absolute; top: -6px; right: 0px; width: 24px; height: 24px; border-radius: 100%; background-color: var(--disabled-button-color);}
 .replacement-table .product-info .delete-button i{color: #333; font-weight: bold; font-size: 14px;}
 
+.replacement-table tr.current-result{background-color: #F7F7F7; border-bottom-color: var(--text-color-darken);}
+.replacement-table tr.current-result .product-info strong{color: var(--primary-color);}
+
+
 .replacement-table.type-detail th{width: 138px; background-color: var(--bg-color-dark-gray); text-align: left; border-bottom: 1px solid #cfcfcf; box-sizing: border-box; color: white;}
 .replacement-table.type-detail tr:last-child th{border-color: var(--bg-color-dark-gray);}
 .replacement-table.type-detail tr:first-child th{border-top: 1px solid var(--bg-color-dark-gray);}
