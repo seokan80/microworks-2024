@@ -97,8 +97,6 @@
         $inquiry_txt_err_email_input = "이메일을 입력해 주세요.";
         $inquiry_txt_err_phone_input = "연락처를 입력해 주세요.";
     }
-
-$productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 ?>
 <div class="area">
     <article class="contact-form">
@@ -183,7 +181,7 @@ $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_partname?></th>
-                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200" id="part" value="<?=$productNumber?>"></td>
+                            <td><input type="text" class="write-input width-full" name="part_name" maxlength="200" id="part"></td>
                         </tr>
                         <tr>
                             <th scope="row"><?=$inquiry_txt_request_quantity?></th>
@@ -225,16 +223,16 @@ $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 </div>
 <script type="text/javascript">
     // URL 파라미터를 파싱하여 객체로 반환하는 함수
-    // function getUrlParams(p) {
-    //     const params = new URLSearchParams(window.location.search);
-    //     return params.get(p);
-    // }
-    //
-    // // 페이지 로드 시 URL 파라미터를 콘솔에 출력
-    // window.onload = function() {
-    //     // 파라미터 값을 HTML 요소에 표시 (선택적)
-    //     //document.getElementById('part').value = getUrlParams('part');
-    // };
+    function getUrlParams(p) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(p);
+    }
+
+    // 페이지 로드 시 URL 파라미터를 콘솔에 출력
+    window.onload = function() {
+        // 파라미터 값을 HTML 요소에 표시 (선택적)
+        document.getElementById('part').value = getUrlParams('part');
+    };
     function inquiry_sendit() {
         var f = document.inquiryform;
         if (f.agree1.checked == false) {
@@ -266,7 +264,7 @@ $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 
             // AJAX 요청을 보냅니다.
             $.ajax({
-                url: "<?=$returnURL?>/index/ajax_inquiry_ok.php",
+                url: "<?=$returnURL?>/index/ajax_industrial_inquiry_ok.php",
                 type: 'POST',
                 data: formData,
                 dataType: 'json',
@@ -275,10 +273,9 @@ $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
                     console.log('Success:', response);
 
                     if(response.result == "success") {
-                        location.href = '<?=$_SERVER['PHP_SELF'];?>';
-                       // $('#inquiryform')[0].reset();
-                       // inquiry_res();
-                       // $('.main-textarea-txt').show();
+                       $('#inquiryform')[0].reset();
+                       inquiry_res();
+                       $('.main-textarea-txt').show();
                     }
 
                     if(response.resultMsg != null) {
@@ -317,10 +314,9 @@ $productNumber = isset($_GET['productNumber']) ? $_GET['productNumber'] : '';
 
 
     function inquiry_cancel(){
-        // $('#inquiryform')[0].reset();
-        // inquiry_res();
-        // $('.main-textarea-txt').show();
-        location.reload();
+        $('#inquiryform')[0].reset();
+        inquiry_res();
+        $('.main-textarea-txt').show();
     }
 </script>
 

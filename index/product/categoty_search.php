@@ -32,13 +32,13 @@
 
       setSearchResultText(data);
       //제조업체 필터 추가
-      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true);
+      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true, "제조업체");
       // 계열 핕터 추가
-      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions");
+      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions", false, "계열");
       // 포장 필터 추가
-      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions");
+      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions", false, "포장");
       // 현황 추가
-      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions");
+      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions", false, "현황");
       // 파라미터 필터 목록 추가
       addParametricFilters(data.FilterOptions.ParametricFilters, parametricOptions);
       // 검색 결과 
@@ -96,7 +96,7 @@
     $('input[name='+searchName+']').prop('checked', false);
     option_apply();
   }
-  function addFilter(filters, selOpts = [], searchName, isFirst = false) {
+  function addFilter(filters, selOpts = [], searchName, isFirst = false, headerName = '') {
     if (isFirst) {
       $('.search-filters').empty();
     }
@@ -106,12 +106,12 @@
       // valArr.push(filter.Value);
         var isChecked = ( selOpts.length > 0 && selOpts.some(item => {return item.Id == filter.Id}) )? 'checked' : '';
         filterValuesHtml += '<li class="checkable-item">' +
-                            '<input type="checkbox" name="'+searchName+'" id="manufacturer-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
-                            '<label for="manufacturer-' + filter.Id + '">' + filter.Value + '</label>' +
+                            '<input type="checkbox" name="'+searchName+'" id="'+searchName+'-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
+                            '<label for="'+searchName+'-' + filter.Id + '">' + filter.Value + '</label>' +
                             '</li>';
     });
     var filtersHtml = '<div class="filter">' +
-                    '<div class="filter-header"><p>' + '제조업체' + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\''+searchName+'\')">초기화</button></div>' +
+                    '<div class="filter-header"><p>' + headerName + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\''+searchName+'\')">초기화</button></div>' +
                     '<div class="filter-body">';
     if (filters.length > 20) {
         filtersHtml += '<div class="input-box"><input type="search" name="'+searchName+'" id="" placeholder="검색 기준" class="input hight-sm"></div>';
@@ -186,13 +186,14 @@ function addTableList(products) {
 
   var html = '';
   for(var i=0; i<prdLen; i++) {
-      html += '<tr>'
-      html += '    <td><input type="checkbox" name="" id=""></td>'
+      var detailHref = '<?=$_SERVER['PHP_SELF'];?>?lang=<?=$lang?>&productNumber=' + products[i].ProductVariations[0].DigiKeyProductNumber +'&returnURL='+encodeURIComponent('<?=$_SERVER['PHP_SELF'];?>?search_order=<?=$search_order?>&search_type=<?=$search_type?>');
+      html += '<tr>';
+      html += '    <td><input type="checkbox" name="productCk" onclick="checkProductCk(this)" value="' + products[i].ProductVariations[0].DigiKeyProductNumber + '"></td>'
       html += '    <td class="text-left">'
       html += '    <div class="product-info">'
       html += '        <div class="img-box"><img src="'+products[i].PhotoUrl+'" alt="" height="55" width="55"></div>'
       html += '        <div class="text-wrap">'
-      html += '        <strong>'+products[i].ManufacturerProductNumber+'</strong>'
+      html += '        <strong><a href="'+detailHref+'">'+products[i].ManufacturerProductNumber+'</a></strong>'
       html += '        <p>'+products[i].Description.ProductDescription+'</p>'
       html += '        </div>'
       html += '    </div>'
@@ -212,7 +213,7 @@ function addTableList(products) {
 
       html += '    <td>'
       html += '     <div class="button-layout">'
-      html += '       <a href="#" class="button type-secondary size-sm">Detail View</a>'
+      html += '       <a href="'+detailHref+'" class="button type-secondary size-sm">Detail View</a>'
       html += '       <a href="javascript:void(0);" onclick="contactUs(\''+products[i].ManufacturerProductNumber+'\')" class="button type-primary size-sm">문의하기</a>'
       html += '     </div>'
       html += '    </td>'
@@ -221,7 +222,21 @@ function addTableList(products) {
   $("#productSearchResult").html(html);
 }
 
-function addPagination(totalProducts, searchLimit, currentPage) {
+function checkProductCk() {
+      var cnt = 0
+      $('[name=productCk]').each(function() {
+          if($(this).is(':checked')) {
+              cnt++;
+          }
+      });
+
+      if(cnt > 1) {
+          $('#compareProduct').show();
+          $('#compareProduct .cnt').text(cnt);
+      }
+}
+
+function addPagination(totalProducts, searchLimit, currentPage = 1) {
 
   var pages = Math.ceil(totalProducts / searchLimit);
   var paginationHtml = '';
@@ -234,7 +249,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
   }
 
   for (var i = startPage; i <= endPage; i++) {
-      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + i + ')" class="paging-link' + (i === currentPage ? ' cur' : '') + '">' + i + '</a> ';
+      paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + i + ')" class="paging-link' + (i == currentPage ? ' cur' : '') + '">' + i + '</a> ';
   }
   if (endPage < pages) {
       paginationHtml += '<a href="javascript:;" onclick="option_apply(' + searchLimit + ', ' + (endPage + 1) + ')" class="paging-arrow"><i class="material-icons">&#xE315;</i></a>'
@@ -321,7 +336,7 @@ function addPagination(totalProducts, searchLimit, currentPage) {
                 <strong class="text-primary" id="searchResultCnt"></strong>
               </div>
               <div class="button-layout gap-md extra">
-                <button type="button" class="button type-point size-sm hide"><strong id="compareProduct">n개 제품비교</strong></button>
+                  <button type="button" class="button type-point size-sm" id="compareProduct" style="display: none;" onClick="compareProductProc()"><strong><span class="cnt"></span>개 제품비교</strong></button>
               </div>
             </div>
             <div class="replacement-table" id="categorySearchList">
