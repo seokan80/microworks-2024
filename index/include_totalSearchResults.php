@@ -72,6 +72,7 @@
             return;
         }
 
+        $('#totalSearchResults').show();
         search_loading_start(); // 검색 중
 
         if(search_select_arr.length == 1) {

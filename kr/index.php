@@ -151,7 +151,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 				<!-- !NOTE S : 2024-04 추가 -->
                 <!-- #202405 메인 추가 -->
                 <!-- S : 2024-04 추가 -->
-                <article id="totalSearchResults" class="total-results-wrap">
+                <article id="totalSearchResults" class="total-results-wrap" style="display: none">
                     <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_totalSearchResults.php"; ?>
                 </article>
 				<!-- !NOTE S : 2024-04 추가 -->
