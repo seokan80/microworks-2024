@@ -585,7 +585,7 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
 .replacement-table thead th{height: 56px; text-align: center; vertical-align: middle; font-size: 14px; font-weight: 600; border-right: 1px solid #cfcfcf; color: white;}
 .replacement-table thead th:first-child{border-left: 1px solid var(--bg-color-dark-gray);}
 .replacement-table thead th:last-child{border-right: 1px solid var(--bg-color-dark-gray);}
-.replacement-table tbody td{height: 56px; padding: 10px; font-size: 14px; text-align: center; vertical-align: middle; border-right: 1px solid var(--line-color); box-sizing: border-box;}
+.replacement-table tbody td{height: 56px; padding: 10px; font-size: 14px; text-align: center; vertical-align: middle; border-right: 1px solid var(--line-color); word-break: break-all; box-sizing: border-box;}
 .replacement-table .product-info{display: flex; align-items: center; gap: 10px; max-width: 560px;}
 .replacement-table .product-info .img-box{flex-shrink: 0; width: 55px; height: 55px; overflow: hidden; background: url('/images/content/img-no-image02.png'); line-height: 0;}
 .replacement-table .product-info .text-wrap{position: relative; padding-right: 34px;}
