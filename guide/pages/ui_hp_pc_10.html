@@ -399,28 +399,25 @@
 						대치품 검색
 					</h3>
 				</aside>
-				<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only area02">
-					<div class="replacement-search-box">
-						<div class="replacement-search-select" >
-							<a href="javascript:;" class="cur-select">
-								<span><em>선택해주세요</em></span>
-							</a>
-							<ul class="replacement-select-con">
-								<li><a href="javascript:search_sel(0);"><span>전체</span></a></li>
-								<li><a href="javascript:search_sel(1);"><span>Memory Trend</span></a></li>
-								<li><a href="javascript:search_sel(2);"><span>Stock List</span></a></li>
-								<li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
-							</ul>
-						</div>
-						<input placeholder="검색어를 입력해주세요" type="text" name="search_order" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
-						<button  type="button" class="replacement-search-btn" title="검색" onclick="search_send()">
-							<img src="/images/icon/stock_list_search_icon.png" alt="">
-						</button>
-					</div>
-				</form>
 				<!-- content -->
 				<section id="content" class="">
 					<!-- 컨텐츠 내용 -->
+					<!-- !NOTE S : 2024-06 변경 -->
+					<article class="sub-page product-page">
+            <article class="product-tit-box">
+              <p class="product-tit">부품 유사점과 차이점을 손쉽게 비교할 수 있습니다.</p>
+              <p class="product-tit-txt">예제: LM358M/NOPB, NCP551SN33T1G 또는 B37872K9105K62</p>
+            </article>
+            <form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only area02">
+              <div class="replacement-search-box">
+                <input placeholder="제품번호를 입력하세요" type="text" name="search_order" class="search-word" onKeypress="if(event.keyCode ==13){search_send();return false;}">
+                <button  type="button" class="replacement-search-btn" title="검색" onclick="search_send()">
+                  <img src="/images/icon/stock_list_search_icon.png" alt="">
+                </button>
+              </div>
+            </form>
+          </article>
+					<!-- !NOTE E : 2024-06 변경 -->
 					<article class="sub-page product-page mo-only">
 						<div class="area02">
 							<p class="text-xs text-center text-darken">대치품 검색은 태블릿 기기 또는 PC에서만 가능합니다.</p>
