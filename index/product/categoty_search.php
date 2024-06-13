@@ -333,7 +333,7 @@ function addPagination(totalProducts, searchLimit, currentPage = 1) {
           <div class="replacement-table-wrap margin-top-xxl">
             <div class="replacement-table-header">
               <div class="result-count">
-                <strong class="text-primary" id="searchResultCnt"></strong>
+                <strong><?=$total_txt_pre?><span class="text-primary" id="searchResultCnt"></span><?=$total_txt_post?></strong>
               </div>
               <div class="button-layout gap-md extra">
                   <button type="button" class="button type-point size-sm" id="compareProduct" style="display: none;" onClick="compareProductProc()"><strong><span class="cnt"></span>개 제품비교</strong></button>
