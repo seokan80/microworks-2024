@@ -120,6 +120,9 @@ if($lang==2){ // 영문
     // var valArr = []
     filters.forEach(function(filter) {
       // valArr.push(filter.Value);
+        if (filter.Value.includes('Digi')) {
+          return;
+        }
         var isChecked = ( selOpts.length > 0 && selOpts.some(item => {return item.Id == filter.Id}) )? 'checked' : '';
         filterValuesHtml += '<li class="checkable-item">' +
                             '<input type="checkbox" name="'+searchName+'" id="'+searchName+'-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
