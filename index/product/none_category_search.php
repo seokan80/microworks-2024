@@ -120,9 +120,13 @@ if($lang==2){
                 setView(categoryId);
                 if (categoryId == undefined) {
                     // 정확히 일치 카드
-                    setExactMatched(data.ExactMatches);
+                    if (data.ExactMatches) {
+                        setExactMatched(data.ExactMatches);
+                    }
                     // 상위카테고리
-                    setTopCategory(data.FilterOptions, 10, 1, sortby, orderby);
+                    if (data.FilterOptions.TopCategories) {
+                        setTopCategory(data.FilterOptions, 10, 1, sortby, orderby);
+                    }
                 } else {
 
                     selCategoryId = categoryId;
