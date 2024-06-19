@@ -38,6 +38,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_05.png" alt=""></span></li>
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_06.png" alt=""></span></li>
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_07.png" alt=""></span></li>
+								<li><span><img src="<?=$site_host?>/images/content/line_logo_08.png" alt=""></span></li>
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_09.png" alt=""></span></li>
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_10.png" alt=""></span></li>
 								<li><span><img src="<?=$site_host?>/images/content/line_logo_11.png" alt=""></span></li>
