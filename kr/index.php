@@ -136,7 +136,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 									<li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
 								</ul>
 							</div>
-							<input placeholder="검색어를 입력해주세요" type="text" name="search_order" class="search-word"
+							<input placeholder="부품명을 입력해주세요" type="text" name="search_order" class="search-word"
 								onKeypress="if(event.keyCode ==13){search_send();return false;}">
 							<button type="button" class="main-search-btn" title="검색" onclick="search_send()">
 								<img src="/images/icon/stock_list_search_icon.png" alt="">
