@@ -128,16 +128,16 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 						<div class="main-search-box">
 							<div class="main-search-select">
                                 <a href="javascript:search_sel(0);" class="cur-select">
-                                    <span><em>View all</em></span>
+                                    <span><em>Choose one…</em></span>
                                 </a>
                                 <ul class="main-select-con">
-                                    <li><a href="javascript:search_sel(0);"><span>View all</span></a></li> <!-- #202405 메인 추가 -->
+                                    <li><a href="javascript:search_sel(0);"><span>Choose one…</span></a></li> <!-- #202405 메인 추가 -->
                                     <li><a href="javascript:search_sel(1);"><span>Memory Trend</span></a></li>
                                     <li><a href="javascript:search_sel(2);"><span>Stock List</span></a></li>
                                     <li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
                                 </ul>
 							</div>
-							<input placeholder="Please enter your search term." type="text" name="search_order" class="search-word"
+							<input placeholder="Keyword Search…" type="text" name="search_order" class="search-word"
 								onKeypress="if(event.keyCode ==13){search_send();return false;}">
 							<button type="button" class="main-search-btn" title="검색" onclick="search_send()">
 								<img src="/images/icon/stock_list_search_icon.png" alt="">
