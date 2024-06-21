@@ -3,7 +3,7 @@
 									<div class="gnb-3dep">
 										<ul>
 											<li><a href="<?=$site_url?>/product/trend_list.php">Memory price trends</a></li>
-											<li><a href="<?=$site_url?>/product/trend_list_2.php">Search for memory replacement</a></li>
+											<li><a href="<?=$site_url?>/product/trend_list_2.php">Search for memory by specification</a></li>
 											<li><a href="<?=$site_url?>/product/trend_list_3.php">Memory stock inventory inquiry</a></li>
 										</ul>
 									</div>
