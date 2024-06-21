@@ -9,6 +9,7 @@
         $inquiry_txt_email_select_a = "Direct input";
         $inquiry_txt_email_select_b = "Select mail account";
         $inquiry_txt_phone = "Tel";
+        $inquiry_txt_tel = "Tel";
         $inquiry_txt_company = "Company";
         $inquiry_txt_company_placeholder = "Please enter your company name.";
         $inquiry_txt_agree = "I agree with the privacy policy.";
@@ -16,14 +17,14 @@
         $inquiry_txt_content = "Content";
         $inquiry_txt_content_sub1 = "(No more than 100 characters.)";
         $inquiry_txt_send = "Submit";
-        $inquiry_txt_partname = "Part Name";
-        $inquiry_txt_partname_placeholder = "Please enter the part name.";
-        $inquiry_txt_request_quantity = "Quantity required";
-        $inquiry_txt_request_quantity_placeholder = "Please enter the required quantity.";
-        $inquiry_txt_quantity_wish_date = "Expected delivery date";
-        $inquiry_txt_quantity_wish_date_placeholder = "Please enter your desired delivery date.";
-        $inquiry_txt_quantity_goal_price = "Target unit price";
-        $inquiry_txt_quantity_goal_price_placeholder = "Please enter the target unit price.";
+        $inquiry_txt_partname = "Part#";
+        $inquiry_txt_partname_placeholder = "Please enter Part#.";
+        $inquiry_txt_request_quantity = "Quantity";
+        $inquiry_txt_request_quantity_placeholder = "Please enter Quantity.";
+        $inquiry_txt_quantity_wish_date = "Request Delivery Date";
+        $inquiry_txt_quantity_wish_date_placeholder = "Please enter Request Delivery Date.";
+        $inquiry_txt_quantity_goal_price = "Target Price";
+        $inquiry_txt_quantity_goal_price_placeholder = "Please enter Target Price.";
         // script 메세지
         $inquiry_txt_err_privay_agree_input = "You do not agree to the privacy policy.";
         $inquiry_txt_err_name_input = "Input your name, please.";
@@ -38,6 +39,7 @@
         $inquiry_txt_email_select_a = "直接输入";
         $inquiry_txt_email_select_b = "选择邮件帐户";
         $inquiry_txt_phone = "手机号码";
+        $inquiry_txt_tel = "致电询问";
         $inquiry_txt_company = "公司名称";
         $inquiry_txt_company_placeholder = "请输入公司名。";
         $inquiry_txt_agree = "我接受隐私政策。";
@@ -67,6 +69,7 @@
         $inquiry_txt_email_select_a = "직접입력";
         $inquiry_txt_email_select_b = "메일계정선택";
         $inquiry_txt_phone = "연락처";
+        $inquiry_txt_tel = "문의전화";
         $inquiry_txt_company = "회사명";
         $inquiry_txt_company_placeholder = "회사명을 입력해주세요.";
         $inquiry_txt_agree = "개인정보처리방침에 동의합니다.";
@@ -178,8 +181,8 @@
                 </div>
                 <dl class="contact">
                     <dt>* CONTACT:</dt>
-                    <dd>이메일 <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
-                    <dd>문의전화 <a href="tel:02-6112-7328">02-6112-7328</a></dd>
+                    <dd><?=$inquiry_txt_email?> <a href="mailto:info@microworks.co.kr">info@microworks.co.kr</a></dd>
+                    <dd><?=$inquiry_txt_tel?> <a href="tel:02-6112-7328">02-6112-7328</a></dd>
                 </dl>
                 <a href="javascript:;" onClick="inquiry_sendit();"
                    class="button size-xl type-line fluid main-form-btn"><?=$inquiry_txt_send?></a>

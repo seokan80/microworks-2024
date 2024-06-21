@@ -47,7 +47,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 
 					<article class="summary-con summary-con01">
 						<div class="area">
-							<p class="summary-con-tit">경영이념</p>
+							<p class="summary-con-tit">Management Philosophy</p>
 							<ul class="summary-con-list clearfix">
 								<li class="item01">
 									<div class="inner-box">
