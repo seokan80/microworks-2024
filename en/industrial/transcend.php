@@ -11,7 +11,7 @@ if($part1_idx==""){ $part1_idx = 1; }
 $row = $db->object("cs_part","where idx='$part1_idx'");
 
 $sub_num = "0".$part1_idx;
-
+if($part1_idx=="5"){ $sub_num = "06"; }
 $sub_info = $row->part_name;
 
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
