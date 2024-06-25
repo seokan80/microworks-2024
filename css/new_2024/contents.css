@@ -2276,6 +2276,34 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
   text-align: left;
 }
 
+/* apex connector */
+.industrial-top .summary-plt {
+  max-width: 730px;
+  margin: 55px auto 0;
+  font-size: 17px;
+  line-height: 2;
+  color: var(--text-color-darken);
+  font-weight: 500;
+}
+
+.industrial-top .summary-plt.en {
+  text-align: left;
+}
+
+.prd-sub-con .desc {
+  margin-bottom: 44px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 2;
+  color: var(--text-color-light);
+}
+
+.industrial-prd-con .prd-sub-con .prd-list.connector li .inner {
+  padding: 0;
+  border: none;
+}
+
 .advantages-list {
   display: flex;
   flex-direction: column;
