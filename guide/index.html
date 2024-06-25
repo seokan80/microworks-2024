@@ -1,151 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
-  
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/editor.css">
-  <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/content.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/layout_responsive.css">
-  <link rel="stylesheet" href="/css/content_responsive.css">
-  <link rel="stylesheet" href="/css/main_responsive.css">
-  <link rel="stylesheet" href="/css/board.css"> <!-- 게시판 제작시 사용 -->
-  <link rel="stylesheet" href="/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
-  <link rel="stylesheet" href="/kr/css/language.css">
-  
-  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="/js/vendor/jquery.easing.1.3.js"></script>
-  <script src="/js/common.js"></script>
-  <script src="/js/layer_popup.js"></script>
-  
-  <!-- 아이콘폰트 -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  
-  <!-- 슬라이드 플러그인 -->
-  <script src="/js/plugin/slick.js"></script>
-  <link rel="stylesheet" type="text/css" href="/css/plugin/slick.css">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">  
-  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-  <script type="text/javascript" src="/js/nav.js"></script>
-  <script type="text/javascript" src="/js/sub.js"></script>
-  <script type="text/javascript" src="/js/main.js"></script>
-  
-  <!-- 2024-04 추가 -->
-  <link rel="stylesheet" href="/css/new_2024/contents.css">
-  
-</head>
-<body>
-  <link rel="stylesheet" href="/guide/css/guide.css">
-  <div class="logo"><img src="/images/common/footer_logo.png" alt=""></div>
-  <section class="guide">
-    <ul class="guide-list">
-      <li><a href="button.html">Button</a></li>
-      <li><a href="sublayout.html">서브 레이아웃</a></li>
-      <li><a href="pages/ui_hp_pc_01.html">Sitemap</a></li>
-      <li><a href="search-results.html">search-results</a></li>
-      <li><a href="inquiry.html">inquiry</a></li>
-    </ul>
-  </section>
-  <section class="guide">
-    <h2>페이지</h2>
-    <small><strong class="text-darken">css/new_2024/contents.css 참조하고 있습니다.</strong></small>
-    <ul class="guide-list">
-      <li><a href="pages/ui_hp_pc_01.html"><span>UI_HP_PC_01</span>[only-pc]사이트맵</a></li>
-      <li><a href="pages/ui_hp_pc_02.html"><span>UI_HP_PC_02</span>메인</a></li>
-      <li><a href="pages/ui_hp_pc_03.html"><span>UI_HP_PC_03</span>메인 > 전체 검색_검색결과 없음</a></li>
-      <li><a href="pages/ui_hp_pc_04.html"><span>UI_HP_PC_04</span>메인 > 전체 검색_검색결과 있음</a></li>
-      <li><a href="pages/ui_hp_pc_05.html"><span>UI_HP_PC_05</span>WHAT WE DO > Quality Control(page)</a></li>
-      <li><a href="pages/ui_hp_pc_06.html"><span>UI_HP_PC_06</span>WHAT WE DO > Quality Control(반도체 분석 문의 팝업)</a></li>
-      <li><a href="pages/ui_hp_pc_07.html"><span>UI_HP_PC_07</span>PRODUCT SEARCH > Memory Biz > 메모리 가격 동향</a></li>
-      <li><a href="pages/ui_hp_pc_08.html"><span>UI_HP_PC_08</span>PRODUCT SEARCH > Memory Biz > 메모리 대치품 검색</a></li>
-      <li><a href="pages/ui_hp_pc_09.html"><span>UI_HP_PC_09</span>PRODUCT SEARCH > Memory Biz > 메모리 스탁재고 문의</a></li>
-      <li><a href="pages/ui_hp_pc_10.html"><span>UI_HP_PC_10</span>[only-pc]대치품 검색</a></li>
-      <li><a href="pages/ui_hp_pc_11.html"><span>UI_HP_PC_11</span>[only-pc]대치품 검색 - 검색결과 없음</a></li>
-      <li><a href="pages/ui_hp_pc_12.html"><span>UI_HP_PC_12</span>[only-pc]대치품 검색 - 검색결과 불명확한 경우</a></li>
-      <li><a href="pages/ui_hp_pc_13.html"><span>UI_HP_PC_13</span>[only-pc]대치품 검색 - 검색결과 있음</a></li>
-      <li><a href="pages/ui_hp_pc_14.html"><span>UI_HP_PC_14</span>[only-pc]대치품 검색 - 검색결과 있음 - 비교하기</a></li>
-      <li><a href="pages/ui_hp_pc_15.html"><span>UI_HP_PC_15</span>[only-pc]대치품 검색 - 검색결과 있음 - 구매문의 팝업</a></li>
-      <li><a href="pages/ui_hp_pc_16.html"><span>UI_HP_PC_16</span>INDUSTRIAL > 하단 폼 (페이지 id 16~20까지 동일)</a></li>
-      <li><a href="pages/ui_hp_pc_21.html"><span>UI_HP_PC_21</span>INFORMATION > 문의하기</a></li>
-      <li><a href="pages/ui_hp_pc_22.html"><span>UI_HP_PC_22</span>COMPANY > 회사소개</a></li>
-      <li><a href="pages/ui_hp_pc_23.html"><span>UI_HP_PC_23</span>COMPANY > CEO 인사말</a></li>
-      <li><a href="pages/ui_hp_pc_24.html"><span>UI_HP_PC_24</span>INDUSTRIAL > INNODISK</a></li>
-      <li><a href="pages/ui_hp_pc_25.html"><span>UI_HP_PC_25</span>대치품 검색 추가 페이지 PRODUCT > 대치품 검색 카테고리 페이지</a></li>
-      <li><a href="pages/ui_hp_pc_26.html"><span>UI_HP_PC_26</span>대치품 검색 추가 페이지 PRODUCT > 대치품 검색 제품 상세 페이지</a></li>
-    </ul>
-  </section>
-  <section class="guide">
-    <h2>페이지+php</h2>
-    <small>국문: /kr(기본)<br/>영문: /en<br/>중문: /cn</small>
-    <ul class="guide-list">
-      <li class="finish"><a href="javascript:void(0);"><span>UI_HP_PC_01</span>[only-pc]사이트맵 (모든 페이지)</a></li>
-      <li class="finish"><a href="../kr/index.php"><span>UI_HP_PC_02~04</span>메인</a></li>
-      <li class="finish"><a href="../kr/do/control.php"><span>UI_HP_PC_05</span>WHAT WE DO > Quality Control(page)</a></li>
-      <li class="finish"><a href="../kr/do/control_popup.php"><span>UI_HP_PC_06</span>WHAT WE DO > Quality Control(반도체 분석 문의 팝업)</a></li>
-      <li class="finish"><a href="../kr/product/trend_list.php"><span>UI_HP_PC_07</span>PRODUCT SEARCH > Memory Biz > 메모리 가격 동향</a></li>
-      <li class="finish"><a href="../kr/product/trend_list_2.php"><span>UI_HP_PC_08</span>PRODUCT SEARCH > Memory Biz > 메모리 대치품 검색</a></li>
-      <li class="finish"><a href="../kr/product/trend_list_3.php"><span>UI_HP_PC_09</span>PRODUCT SEARCH > Memory Biz > 메모리 스탁재고 문의</a></li>
-      <li class="finish"><a href="../kr/product/datasheet.php"><span>UI_HP_PC_10</span>[only-pc]대치품 검색</a></li>
-      <li class="finish"><a href="../kr/product/datasheet_view.php"><span>UI_HP_PC_14</span>[only-pc]대치품 검색 - 검색결과 있음 - 비교하기</a></li>
-      <li class="finish"><a href="../kr/product/datasheet_popup.php"><span>UI_HP_PC_15</span>[only-pc]대치품 검색 - 검색결과 있음 - 구매문의 팝업</a></li>
-      <li class="finish"><a href="../kr/industrial/transcend.php"><span>UI_HP_PC_16</span>INDUSTRIAL > transcend</a></li>
-      <li class="finish"><a href="../kr/industrial/goodram.php"><span>UI_HP_PC_17</span>INDUSTRIAL > goodram</a></li>
-      <li class="finish"><a href="../kr/industrial/nexcopy.php"><span>UI_HP_PC_18</span>INDUSTRIAL > nexcopy</a></li>
-      <li class="finish"><a href="../kr/industrial/advantech.php"><span>UI_HP_PC_19</span>INDUSTRIAL > advantech</a></li>
-      <li class="finish"><a href="../kr/industrial/etc.php"><span>UI_HP_PC_20</span>INDUSTRIAL > industrial monitor</a></li>
-      <li class="finish"><a href="../kr/contact/inquiry.php"><span>UI_HP_PC_21</span>INFORMATION > 문의하기</a></li>
-      <li class="finish"><a href="../kr/company/summary.php"><span>UI_HP_PC_22</span>COMPANY > 회사소개</a></li>
-      <li class="finish"><a href="../kr/company/ceo.php"><span>UI_HP_PC_23</span>COMPANY > CEO 인사말</a></li>
-      <li class="finish"><a href="../kr/industrial/innodisk.php"><span>UI_HP_PC_24</span>INDUSTRIAL > INNODISK</a></li>
-      <li class="finish"><a href="../kr/product/datasheet_category.php"><span>대치품 검색 추가 페이지</span>PRODUCT > datasheet_category</a></li>
-      <li class="finish"><a href="../kr/product/datasheet_detail.php"><span>대치품 검색 상세 페이지</span>PRODUCT > datasheet_detail</a></li>
-    </ul>
-  </section>
-  <section class="guide">
-    <h2>관리자 페이지</h2>
-    <small><strong class="text-darken">css/new_2024/admin.css 참조하고 있습니다.</strong></small>
-    <ul class="guide-list">
-      <li><a href="admin/ui_am_pc_01.html"><span>UI_AM_PC_01</span>게시판관리 > 공지사항</a></li>
-      <li><a href="admin/ui_am_pc_02.html"><span>UI_AM_PC_02</span>게시판관리 > 공지사항 > 공지사항 상세/등록/수정</a></li>
-      <li><a href="admin/ui_am_pc_03.html"><span>UI_AM_PC_03</span>신청서관리 > 온라인 신청서</a></li>
-      <li><a href="admin/ui_am_pc_04.html"><span>UI_AM_PC_04</span>신청서관리 > 온라인 신청서 상세</a></li>
-      <li><a href="admin/ui_am_pc_05.html"><span>UI_AM_PC_05</span>신청서관리 > 제품문의 신청서</a></li>
-      <li><a href="admin/ui_am_pc_06.html"><span>UI_AM_PC_06</span>신청서관리 > 제품문의 신청서 상세</a></li>
-      <li><a href="admin/ui_am_pc_07.html"><span>UI_AM_PC_07</span>신청서관리 > 반도체 분석 신청서</a></li>
-      <li><a href="admin/ui_am_pc_08.html"><span>UI_AM_PC_08</span>신청서관리 > 반도체 분석 신청서 상세</a></li>
-      <li><a href="admin/ui_am_pc_09.html"><span>UI_AM_PC_09</span>배너관리 > 메인 배너 관리</a></li>
-      <li><a href="admin/ui_am_pc_10.html"><span>UI_AM_PC_10</span>배너관리 > 메인 배너 관리 > 배너 등록/수정</a></li>
-      <li><a href="admin/ui_am_pc_11.html"><span>UI_AM_PC_11</span>배너관리 > 대치품 검색 배너 관리</a></li>
-      <li><a href="admin/ui_am_pc_12.html"><span>UI_AM_PC_12</span>배너관리 > 대치품 검색 배너 관리 > 배너 등록/수정</a></li>
-      <li><a href="admin/ui_am_pc_13.html"><span>UI_AM_PC_13</span>접속통계 > 구매문의통계</a></li>
-    </ul>
-  </section>
-  <section class="guide">
-    <h2>관리자 페이지+php</h2>
-    <small><strong class="text-darken">링크 대신 경로로 표시했습니다.</strong></small>
-    <ul class="guide-list">
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_01</span>게시판관리 > 공지사항 <strong class="text-primary">/bbs/bbs_list.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_02</span>게시판관리 > 공지사항 > 공지사항 상세/등록/수정 <strong class="text-primary">/bbs/bbs_write.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_03</span>신청서관리 > 온라인 신청서 <strong class="text-primary">/online/online.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_04</span>신청서관리 > 온라인 신청서 상세 <strong class="text-primary">/online/online_view.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_05</span>신청서관리 > 제품문의 신청서 <strong class="text-primary">/online/online_product.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_06</span>신청서관리 > 제품문의 신청서 상세 <strong class="text-primary">/online/online_product_view.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_07</span>신청서관리 > 반도체 분석 신청서 <strong class="text-primary">/online/diode_analyze.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_08</span>신청서관리 > 반도체 분석 신청서 상세 <strong class="text-primary">/online/diode_analyze_view.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_09</span>배너관리 > 메인 배너 관리 <strong class="text-primary">/banner/banner_main.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_10</span>배너관리 > 메인 배너 관리 > 배너 등록/수정 <strong class="text-primary">/banner/banner_add.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_11</span>배너관리 > 대치품 검색 배너 관리 <strong class="text-primary">/banner/banner_replacement_product.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_12</span>배너관리 > 대치품 검색 배너 관리 > 배너 등록/수정 <strong class="text-primary">/banner/banner_add.php</strong></a></li>
-      <li><a href="javascript:void(0);"><span>UI_AM_PC_13</span>접속통계 > 구매문의통계 <strong class="text-primary">/stat/buy_inquery_stat.php</strong></a></li>
-    </ul>
-  </section>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/editor.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/content.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/layout_responsive.css" />
+    <link rel="stylesheet" href="/css/content_responsive.css" />
+    <link rel="stylesheet" href="/css/main_responsive.css" />
+    <link rel="stylesheet" href="/css/board.css" />
+    <!-- 게시판 제작시 사용 -->
+    <link rel="stylesheet" href="/css/board_responsive.css" />
+    <!-- 게시판(반응형, 모바일) 제작시 사용 -->
+    <link rel="stylesheet" href="/kr/css/language.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/layer_popup.js"></script>
+
+    <!-- 아이콘폰트 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+
+    <!-- 슬라이드 플러그인 -->
+    <script src="/js/plugin/slick.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/plugin/slick.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"
+    />
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/nav.js"></script>
+    <script type="text/javascript" src="/js/sub.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <!-- 2024-04 추가 -->
+    <link rel="stylesheet" href="/css/new_2024/contents.css" />
+  </head>
+  <body>
+    <link rel="stylesheet" href="/guide/css/guide.css" />
+    <div class="logo"><img src="/images/common/footer_logo.png" alt="" /></div>
+    <section class="guide">
+      <ul class="guide-list">
+        <li><a href="button.html">Button</a></li>
+        <li><a href="sublayout.html">서브 레이아웃</a></li>
+        <li><a href="pages/ui_hp_pc_01.html">Sitemap</a></li>
+        <li><a href="search-results.html">search-results</a></li>
+        <li><a href="inquiry.html">inquiry</a></li>
+      </ul>
+    </section>
+    <section class="guide">
+      <h2>페이지</h2>
+      <small
+        ><strong class="text-darken"
+          >css/new_2024/contents.css 참조하고 있습니다.</strong
+        ></small
+      >
+      <ul class="guide-list">
+        <li>
+          <a href="pages/ui_hp_pc_01.html"
+            ><span>UI_HP_PC_01</span>[only-pc]사이트맵</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_02.html"><span>UI_HP_PC_02</span>메인</a>
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_03.html"
+            ><span>UI_HP_PC_03</span>메인 > 전체 검색_검색결과 없음</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_04.html"
+            ><span>UI_HP_PC_04</span>메인 > 전체 검색_검색결과 있음</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_05.html"
+            ><span>UI_HP_PC_05</span>WHAT WE DO > Quality Control(page)</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_06.html"
+            ><span>UI_HP_PC_06</span>WHAT WE DO > Quality Control(반도체 분석
+            문의 팝업)</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_07.html"
+            ><span>UI_HP_PC_07</span>PRODUCT SEARCH > Memory Biz > 메모리 가격
+            동향</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_08.html"
+            ><span>UI_HP_PC_08</span>PRODUCT SEARCH > Memory Biz > 메모리 대치품
+            검색</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_09.html"
+            ><span>UI_HP_PC_09</span>PRODUCT SEARCH > Memory Biz > 메모리
+            스탁재고 문의</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_10.html"
+            ><span>UI_HP_PC_10</span>[only-pc]대치품 검색</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_11.html"
+            ><span>UI_HP_PC_11</span>[only-pc]대치품 검색 - 검색결과 없음</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_12.html"
+            ><span>UI_HP_PC_12</span>[only-pc]대치품 검색 - 검색결과 불명확한
+            경우</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_13.html"
+            ><span>UI_HP_PC_13</span>[only-pc]대치품 검색 - 검색결과 있음</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_14.html"
+            ><span>UI_HP_PC_14</span>[only-pc]대치품 검색 - 검색결과 있음 -
+            비교하기</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_15.html"
+            ><span>UI_HP_PC_15</span>[only-pc]대치품 검색 - 검색결과 있음 -
+            구매문의 팝업</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_16.html"
+            ><span>UI_HP_PC_16</span>INDUSTRIAL > 하단 폼 (페이지 id 16~20까지
+            동일)</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_21.html"
+            ><span>UI_HP_PC_21</span>INFORMATION > 문의하기</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_22.html"
+            ><span>UI_HP_PC_22</span>COMPANY > 회사소개</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_23.html"
+            ><span>UI_HP_PC_23</span>COMPANY > CEO 인사말</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_24.html"
+            ><span>UI_HP_PC_24</span>INDUSTRIAL > INNODISK</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_25.html"
+            ><span>UI_HP_PC_25</span>대치품 검색 추가 페이지 PRODUCT > 대치품
+            검색 카테고리 페이지</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_26.html"
+            ><span>UI_HP_PC_26</span>대치품 검색 추가 페이지 PRODUCT > 대치품
+            검색 제품 상세 페이지</a
+          >
+        </li>
+        <li>
+          <a href="pages/ui_hp_pc_27.html"
+            ><span>UI_HP_PC_27</span>APEX CONNECTOR 추가 페이지 INDUSTRIAL >
+            APEX CONNECTOR</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="guide">
+      <h2>페이지+php</h2>
+      <small>국문: /kr(기본)<br />영문: /en<br />중문: /cn</small>
+      <ul class="guide-list">
+        <li class="finish">
+          <a href="javascript:void(0);"
+            ><span>UI_HP_PC_01</span>[only-pc]사이트맵 (모든 페이지)</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/index.php"><span>UI_HP_PC_02~04</span>메인</a>
+        </li>
+        <li class="finish">
+          <a href="../kr/do/control.php"
+            ><span>UI_HP_PC_05</span>WHAT WE DO > Quality Control(page)</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/do/control_popup.php"
+            ><span>UI_HP_PC_06</span>WHAT WE DO > Quality Control(반도체 분석
+            문의 팝업)</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/trend_list.php"
+            ><span>UI_HP_PC_07</span>PRODUCT SEARCH > Memory Biz > 메모리 가격
+            동향</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/trend_list_2.php"
+            ><span>UI_HP_PC_08</span>PRODUCT SEARCH > Memory Biz > 메모리 대치품
+            검색</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/trend_list_3.php"
+            ><span>UI_HP_PC_09</span>PRODUCT SEARCH > Memory Biz > 메모리
+            스탁재고 문의</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/datasheet.php"
+            ><span>UI_HP_PC_10</span>[only-pc]대치품 검색</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/datasheet_view.php"
+            ><span>UI_HP_PC_14</span>[only-pc]대치품 검색 - 검색결과 있음 -
+            비교하기</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/datasheet_popup.php"
+            ><span>UI_HP_PC_15</span>[only-pc]대치품 검색 - 검색결과 있음 -
+            구매문의 팝업</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/transcend.php"
+            ><span>UI_HP_PC_16</span>INDUSTRIAL > transcend</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/goodram.php"
+            ><span>UI_HP_PC_17</span>INDUSTRIAL > goodram</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/nexcopy.php"
+            ><span>UI_HP_PC_18</span>INDUSTRIAL > nexcopy</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/advantech.php"
+            ><span>UI_HP_PC_19</span>INDUSTRIAL > advantech</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/etc.php"
+            ><span>UI_HP_PC_20</span>INDUSTRIAL > industrial monitor</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/contact/inquiry.php"
+            ><span>UI_HP_PC_21</span>INFORMATION > 문의하기</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/company/summary.php"
+            ><span>UI_HP_PC_22</span>COMPANY > 회사소개</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/company/ceo.php"
+            ><span>UI_HP_PC_23</span>COMPANY > CEO 인사말</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/industrial/innodisk.php"
+            ><span>UI_HP_PC_24</span>INDUSTRIAL > INNODISK</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/datasheet_category.php"
+            ><span>대치품 검색 추가 페이지</span>PRODUCT > datasheet_category</a
+          >
+        </li>
+        <li class="finish">
+          <a href="../kr/product/datasheet_detail.php"
+            ><span>대치품 검색 상세 페이지</span>PRODUCT > datasheet_detail</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="guide">
+      <h2>관리자 페이지</h2>
+      <small
+        ><strong class="text-darken"
+          >css/new_2024/admin.css 참조하고 있습니다.</strong
+        ></small
+      >
+      <ul class="guide-list">
+        <li>
+          <a href="admin/ui_am_pc_01.html"
+            ><span>UI_AM_PC_01</span>게시판관리 > 공지사항</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_02.html"
+            ><span>UI_AM_PC_02</span>게시판관리 > 공지사항 > 공지사항
+            상세/등록/수정</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_03.html"
+            ><span>UI_AM_PC_03</span>신청서관리 > 온라인 신청서</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_04.html"
+            ><span>UI_AM_PC_04</span>신청서관리 > 온라인 신청서 상세</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_05.html"
+            ><span>UI_AM_PC_05</span>신청서관리 > 제품문의 신청서</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_06.html"
+            ><span>UI_AM_PC_06</span>신청서관리 > 제품문의 신청서 상세</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_07.html"
+            ><span>UI_AM_PC_07</span>신청서관리 > 반도체 분석 신청서</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_08.html"
+            ><span>UI_AM_PC_08</span>신청서관리 > 반도체 분석 신청서 상세</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_09.html"
+            ><span>UI_AM_PC_09</span>배너관리 > 메인 배너 관리</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_10.html"
+            ><span>UI_AM_PC_10</span>배너관리 > 메인 배너 관리 > 배너
+            등록/수정</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_11.html"
+            ><span>UI_AM_PC_11</span>배너관리 > 대치품 검색 배너 관리</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_12.html"
+            ><span>UI_AM_PC_12</span>배너관리 > 대치품 검색 배너 관리 > 배너
+            등록/수정</a
+          >
+        </li>
+        <li>
+          <a href="admin/ui_am_pc_13.html"
+            ><span>UI_AM_PC_13</span>접속통계 > 구매문의통계</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="guide">
+      <h2>관리자 페이지+php</h2>
+      <small
+        ><strong class="text-darken"
+          >링크 대신 경로로 표시했습니다.</strong
+        ></small
+      >
+      <ul class="guide-list">
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_01</span>게시판관리 > 공지사항
+            <strong class="text-primary">/bbs/bbs_list.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_02</span>게시판관리 > 공지사항 > 공지사항
+            상세/등록/수정
+            <strong class="text-primary">/bbs/bbs_write.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_03</span>신청서관리 > 온라인 신청서
+            <strong class="text-primary">/online/online.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_04</span>신청서관리 > 온라인 신청서 상세
+            <strong class="text-primary">/online/online_view.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_05</span>신청서관리 > 제품문의 신청서
+            <strong class="text-primary">/online/online_product.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_06</span>신청서관리 > 제품문의 신청서 상세
+            <strong class="text-primary"
+              >/online/online_product_view.php</strong
+            ></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_07</span>신청서관리 > 반도체 분석 신청서
+            <strong class="text-primary">/online/diode_analyze.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_08</span>신청서관리 > 반도체 분석 신청서 상세
+            <strong class="text-primary"
+              >/online/diode_analyze_view.php</strong
+            ></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_09</span>배너관리 > 메인 배너 관리
+            <strong class="text-primary">/banner/banner_main.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_10</span>배너관리 > 메인 배너 관리 > 배너 등록/수정
+            <strong class="text-primary">/banner/banner_add.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_11</span>배너관리 > 대치품 검색 배너 관리
+            <strong class="text-primary"
+              >/banner/banner_replacement_product.php</strong
+            ></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_12</span>배너관리 > 대치품 검색 배너 관리 > 배너
+            등록/수정
+            <strong class="text-primary">/banner/banner_add.php</strong></a
+          >
+        </li>
+        <li>
+          <a href="javascript:void(0);"
+            ><span>UI_AM_PC_13</span>접속통계 > 구매문의통계
+            <strong class="text-primary">/stat/buy_inquery_stat.php</strong></a
+          >
+        </li>
+      </ul>
+    </section>
+  </body>
 </html>
