@@ -52,7 +52,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 							<div class="search-results-body">
 								<div class="category-matched">
-									<img src="/images/content/img-no-image-large.png" alt="">
+									<img src="/images/content/no-img.svg" alt="">
 									<div class="text-wrap">
 										<strong class="tit">제품명</strong>
 										<div class="info-wrap">

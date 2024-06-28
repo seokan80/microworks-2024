@@ -11,7 +11,7 @@ if($part1_idx==""){ $part1_idx = 1; }
 $row = $db->object("cs_part","where idx='$part1_idx'");
 
 $sub_num = "0".$part1_idx;
-if($part1_idx=="5"){ $sub_num = "06"; }
+if($part1_idx=="5"){ $sub_num = "07"; }
 $sub_info = $row->part_name;
 
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
@@ -109,6 +109,11 @@ $bottom_img = $row->bbs_file3;
         <!-- #202405 industiral 문의하기 추가-->
         <!-- !NOTE S : 2024-04 추가 -->
         <article class="product-page inquiry-page">
+			<? if($bottom_img){ ?>
+			<div class="inquiry-banner">
+				<span class="banner-img"><img src="/data/bbsData/<?=$bottom_img?>" alt="" /></span>
+			</div>
+			<? } ?>
             <? include $_SERVER["DOCUMENT_ROOT"]."/common/include_industrial_inquiry.php"; ?>
         </article>
         <!-- !NOTE E : 2024-04 추가 -->
