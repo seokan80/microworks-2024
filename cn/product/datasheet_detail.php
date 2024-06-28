@@ -31,7 +31,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<div class="area02">
 							<div class="replacement-detail">
                 <div class="info-wrapper">
-                  <img src="/images/content/img-no-image-large.png" alt="">
+                  <img src="/images/content/no-img.svg" alt="">
                   <div class="info-list">
                     <dl>
                       <dt>Microworks 제품번호</dt>

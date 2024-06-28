@@ -24,7 +24,7 @@ body { background-color:#fff;  scroll-behavior: smooth; -webkit-font-smoothing: 
 .font-crimson {font-family:'Crimson Pro', 'Noto Sans KR', "나눔고딕", "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
 
 /* ****************** 공통클래스 ********************** */
-.area{ max-width:1300px; margin:0px auto;} /* width 홈페이지 컨텐츠 가로값에 맞게 변경 */
+.area{ max-width:1400px; margin:0px auto;} /* width 홈페이지 컨텐츠 가로값에 맞게 변경 */
 .area02 {max-width:1500px; margin:0px auto;}
 .area-box{ max-width:1600px; margin:0px auto;}
 .clearfix{*zoom:1;}
