@@ -170,7 +170,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 									반도체 개발,제조,유통의 종합적인 솔루션을 제공하는<br>
 									토탈솔루션 기업입니다.
 								</p>
-								<a href="/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
+								<a href="<?=$site_url?>/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
 							</div>
 							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="notice-con fade-in-right fade-in-08">
