@@ -2357,6 +2357,12 @@ fieldset em{margin-left: 5.5px; margin-right: 2.5px; font-weight: 600; letter-sp
   height: 100%;
   min-height: 309px;
 }
+.control-item-list li:nth-child(n + 5) {
+  margin-top: 24px;
+}
+.control-item-list li:nth-child(4n + 1) {
+  border-left: 1px solid #e0e0e0;
+}
 
 /* to-top-btn */
 .to-top-btn {

@@ -152,6 +152,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 											</dd>
 										</dl>
 									</li>
+									<li class="item05">
+										<dl>
+											<dt><span class="item-img"><img src="/images/content/control_item_img_09.png" alt=""></span></dt>
+											<dd>
+												<p class="item-name"><span>QR코드 해독분석</span></p>
+											</dd>
+										</dl>
+									</li>
 								</ul>
 							</div>
 						</article>
