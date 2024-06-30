@@ -1,7 +1,7 @@
 <?
 include $_SERVER['DOCUMENT_ROOT']."/common.php";
 
-$site_host	= "http://" . $_SERVER['HTTP_HOST'];
+$site_host	= "https://" . $_SERVER['HTTP_HOST'];
 $site_url	= $site_host."/gsadmin";
 $admin_stat = $db->object("cs_admin", "");
 
