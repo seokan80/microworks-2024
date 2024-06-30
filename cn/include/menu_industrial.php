@@ -2,9 +2,9 @@
 								$rsc = $db->select("cs_part","where part_display_check='1' and part_index='1' order by part_ranking asc, idx asc");
 								while($rowc = mysql_fetch_object($rsc)){
 								?>
-									<?if ($rowc->idx == '42') { ?>
+									<?if ($rowc->idx == '43') { ?>
 									<li><a href="<?=$site_url?>/industrial/innodisk.php"><span><em><?=$rowc->part_name?></em></span></a></li>
-									<? } else if (($rowc->idx == '43')){ ?>
+									<? } else if (($rowc->idx == '44')){ ?>
 									<li><a href="<?=$site_url?>/industrial/apex.php"><span><em><?=$rowc->part_name?></em></span></a></li>
 									<? } else { ?>
 									<li><a href="<?=$site_url?>/industrial/transcend.php?part1_idx=<?=$rowc->idx?>"><span><em><?=$rowc->part_name?></em></span></a></li>
