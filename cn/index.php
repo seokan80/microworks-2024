@@ -58,7 +58,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">Microworks Korea Co., Ltd. is Professional global IC, Memory <br /> parts distributor which established in 2007.</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -68,7 +68,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">Memory Price Trend, Product Search, Request for Quotation</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -78,7 +78,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">Quick and easy search by specification</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -88,7 +88,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">One stop RFQ</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -98,7 +98,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">Semiconductor Failure Analysis,<br class="mo-only" /> Counterfeit part distinction,<br class="mo-only" /> Issuing the Analysis Report</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -111,11 +111,11 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
                     </a>
                     <a href="<?=$site_url?>/product/datasheet.php" class="side-menu-item">
                         <div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
-                        <p>Search for replacement</p>
+                        <p>Search by specification</p>
                     </a>
                     <a href="<?=$site_url?>/contact/inquiry.php" target="_blank" class="side-menu-item">
                         <div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
-                        <p>Stock inventory search</p>
+                        <p>Stock inventory inquiry</p>
                     </a>
                     <a href="<?=$site_url?>/do/control.php" class="side-menu-item">
                         <div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
@@ -153,7 +153,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
             <!-- !NOTE S : 2024-04 추가 -->
             <!-- #202405 메인 추가 -->
             <!-- S : 2024-04 추가 -->
-            <article id="totalSearchResults" class="total-results-wrap">
+            <article id="totalSearchResults" class="total-results-wrap" style="display: none">
                 <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_totalSearchResults.php"; ?>
             </article>
             <!-- !NOTE S : 2024-04 추가 -->

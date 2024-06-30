@@ -1,13 +1,13 @@
 <?
 if($lang==2){ 
     $path="en";
-    $searchPlaceholder="Search Keyword";
+    $searchPlaceholder="Please enter the part name.";
 } else if($lang==3){
     $path="cn";
-    $searchPlaceholder="请输入搜索词";
+    $searchPlaceholder="请输入部件名称。";
 } else {
     $path="kr";
-    $searchPlaceholder="검색어를 입력해주세요";
+    $searchPlaceholder="부품명을 입력해주세요.";
 }
 ?>
 <script>
@@ -22,7 +22,7 @@ if($lang==2){
     var search_type = '';
     $(document).ready(function() {
         $('#exactPhotoUrl').on('error', function() {
-            $(this).attr('src', '/images/content/img-no-image-large.png');
+            $(this).attr('src', '/images/content/no-img.svg');
         });
 
         if('<?=$search_type?>') {
@@ -120,9 +120,13 @@ if($lang==2){
                 setView(categoryId);
                 if (categoryId == undefined) {
                     // 정확히 일치 카드
-                    setExactMatched(data.ExactMatches);
+                    if (data.ExactMatches) {
+                        setExactMatched(data.ExactMatches);
+                    }
                     // 상위카테고리
-                    setTopCategory(data.FilterOptions, 10, 1, sortby, orderby);
+                    if (data.FilterOptions.TopCategories) {
+                        setTopCategory(data.FilterOptions, 10, 1, sortby, orderby);
+                    }
                 } else {
 
                     selCategoryId = categoryId;
@@ -178,7 +182,7 @@ if($lang==2){
         if (checkedValues.length > 0) {
             console.log(checkedValues.toString()); // 콘솔에 출력하여 확인
         }
-        return checkedValues; // 필요에 따라 값을 반환
+        return checkedValues; // 필요에 따라 값�� 반환
     }
 
     function numberWithCommas(x) {
@@ -287,7 +291,7 @@ if($lang==2){
             </div>
             <div class="search-results-body">
                 <div class="category-matched">
-                    <img src="/images/content/img-no-image-large.png" alt="" id="exactPhotoUrl">
+                    <img src="/images/content/no-img.svg" alt="" id="exactPhotoUrl">
                     <div class="text-wrap">
                         <strong class="tit" id="exactPrdNm"></strong>
                         <div class="info-wrap">

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/editor.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/content.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/layout_responsive.css" />
+    <link rel="stylesheet" href="/css/content_responsive.css" />
+    <link rel="stylesheet" href="/css/main_responsive.css" />
+    <link rel="stylesheet" href="/css/board.css" />
+    <!-- 게시판 제작시 사용 -->
+    <link rel="stylesheet" href="/css/board_responsive.css" />
+    <!-- 게시판(반응형, 모바일) 제작시 사용 -->
+    <link rel="stylesheet" href="/kr/css/language.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/layer_popup.js"></script>
+
+    <!-- 아이콘폰트 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+
+    <!-- 슬라이드 플러그인 -->
+    <script src="/js/plugin/slick.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/plugin/slick.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"
+    />
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/nav.js"></script>
+    <script type="text/javascript" src="/js/sub.js"></script>
+
+    <!-- 2024-04 추가 -->
+    <link rel="stylesheet" href="/css/new_2024/contents.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="cm-alert-ie">
+        현재 웹브라우저에서는 사이트가 정상적으로 표시되지 않을 수 있습니다.
+        <strong
+          ><a href="http://browsehappy.com/" target="_blank"
+            >여기를 클릭</a
+          ></strong
+        >하여 웹브라우저를 업그레이드 하세요.
+      </p>
+    <![endif]-->
+    <!-- accessibility -->
+    <div class="cm-accessibility">
+      <a href="#container">본문바로가기</a>
+    </div>
+    <!-- //accessibility -->
+
+    <!-- code -->
+    <div id="wrap">
+      <!-- header -->
+
+      <header id="header" class="">
+        <div class="gnb-overlay-bg"></div>
+        <div id="headerInnerWrap">
+          <!-- ****************** 헤더상단 ********************** -->
+          <div id="headerInner" class="clearfix">
+            <h1 class="logo">
+              <a href="http://www.microworks.co.kr/kr/" title="메인으로">
+                <span class="logo-default"
+                  ><img
+                    src="/images/common/logo.png"
+                    alt="메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아"
+                /></span>
+                <span class="logo-fixed"
+                  ><img
+                    src="/images/common/logo_fixed.png"
+                    alt="메모리 반도체 토탈솔루션 전문기업 마이크로웍스 코리아"
+                /></span>
+              </a>
+            </h1>
+            <div class="header-util-box">
+              <!-- 외국어선택 -->
+              <div class="header-lang">
+                <a href="javascript:;" class="lang-open-btn"
+                  ><i class="material-icons"></i><strong>KOREAN</strong></a
+                >
+                <ul>
+                  <li class="item01">
+                    <a href="http://www.microworks.co.kr/en/">ENGLISH</a>
+                  </li>
+                  <li class="item02">
+                    <a href="http://www.microworks.co.kr/cn/">CHINESE</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
+              <button
+                onclick="javascript:layerLoad('http://www.microworks.co.kr/kr/service/sitemap.php'); return false;"
+                class="sitemap-line-btn sitemap-open-btn"
+                title="사이트맵 열기"
+              >
+                <span class="line line1"></span><span class="line line2"></span
+                ><span class="line line3"></span>
+                <!-- <span class="line line4"></span> -->
+              </button>
+              <!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
+              <!-- <button  onclick="javascript:layerLoad('http://www.microworks.co.kr/kr/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
+						<i class="material-icons">&#xE8DE;</i>
+					</button> -->
+            </div>
+          </div>
+          <!-- ****************** GNB ********************** -->
+          <!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
+          <nav id="gnb" class="each-menu">
+            <h2 class="blind">주메뉴</h2>
+            <!-- 
+					- 전체메뉴 : class="total-menu"
+					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
+				-->
+            <!-- <div id="gnbBg"></div> -->
+            <ul class="clearfix menu5 area">
+              <li class="gnb1">
+                <a href="http://www.microworks.co.kr/kr/company/summary.php"
+                  >COMPANY</a
+                >
+                <div class="gnb-2dep">
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/summary.php"
+                        ><span><em>About Microworks</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/company/ceo.php"
+                        ><span><em>CEO Greeting</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/company/org.php"
+                        ><span><em>Organization</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/history.php"
+                        ><span><em>Milestone</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/partners.php"
+                        ><span><em>Partners</em></span></a
+                      >
+                    </li>
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                  </ul>
+                </div>
+              </li>
+              <li class="gnb2">
+                <a href="http://www.microworks.co.kr/kr/do/memory.php"
+                  >WHAT WE DO</a
+                >
+                <div class="gnb-2dep">
+                  <ul>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/memory.php"
+                        ><span><em>Memory</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/disty.php"
+                        ><span><em>Manufacturing</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/sourcing.php"
+                        ><span><em>Sourcing</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/writing.php"
+                        ><span><em>Writing Service</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/line.php"
+                        ><span><em>Strong Line</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/control.php"
+                        ><span><em>Quality Control</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/program.php"
+                        ><span
+                          ><em>Verfication<br />Program</em></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="gnb3">
+                <a href="http://www.microworks.co.kr/kr/product/trend_list.php"
+                  >PRODUCT SEARCH</a
+                >
+                <div class="gnb-2dep">
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/trend_list.php"
+                        ><span><em>Memory Biz</em></span></a
+                      >
+                      <!-- !NOTE S: 2024-04 추가 -->
+                      <div class="gnb-3dep">
+                        <ul>
+                          <li><a href="#">메모리 가격동향</a></li>
+                          <li><a href="#">메모리 대치품 검색</a></li>
+                          <li><a href="#">메모리 스탁재고 문의</a></li>
+                        </ul>
+                      </div>
+                      <!-- !NOTE E: 2024-04 추가 -->
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/product/stock.php"
+                        ><span><em>Stock List</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/product/oem.php"
+                        ><span><em>OEM Excess</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/datasheet.php"
+                        ><span><em>대치품 검색</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/trend_before.php"
+                        ><span><em>Memory Trend (~2019)</em></span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="gnb4">
+                <a
+                  href="http://www.microworks.co.kr/kr/industrial/transcend.php"
+                  >INDUSTRIAL</a
+                >
+                <div class="gnb-2dep">
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"
+                        ><span><em>TRANSCEND</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"
+                        ><span><em>GOODRAM</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"
+                        ><span><em>NEXCOPY</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"
+                        ><span><em>ADVANTECH</em></span></a
+                      >
+                    </li>
+                    <!-- !NOTE S: 2024-04 추가 -->
+                    <li>
+                      <a href="#"
+                        ><span><em>INNODISK</em></span></a
+                      >
+                    </li>
+                    <!-- !NOTE E: 2024-04 추가 -->
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"
+                        ><span><em>INDUSTRIAL MONITOR</em></span></a
+                      >
+                    </li>
+
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                  </ul>
+                </div>
+              </li>
+              <li class="gnb5">
+                <a href="http://www.microworks.co.kr/kr/company/notice.php"
+                  >INFORMATION</a
+                >
+                <div class="gnb-2dep">
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/notice.php"
+                        ><span><em>공지사항</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/miniblog.php"
+                        ><span><em>Mini blog</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/media/media.php"
+                        ><span><em>Media</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/contact.php"
+                        ><span><em>Contact Us</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/inquiry.php"
+                        ><span><em>문의하기</em></span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- GNB Mobile -->
+        <button class="nav-open-btn" title="네비게이션 열기">
+          <span class="line line1"></span><span class="line line2"></span
+          ><span class="line line3"></span>
+        </button>
+        <div class="gnb-overlay-bg-m"></div>
+        <nav id="gnbM" class="gnb-style-basic">
+          <!-- 
+				기본스타일 : .gnb-style-basic
+				Full 스타일 : .gnb-style-full
+			-->
+          <h2 class="blind">주메뉴</h2>
+          <!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
+          <div class="header-util-menu-box">
+            <!-- 언어 선택 리스트 -->
+            <!-- <ul class="clearfix lang-select">
+					<li class="cur"><a href="http://www.microworks.co.kr/kr/">KR</a></li>
+					<li><a href="http://www.microworks.co.kr/en/">EN</a></li>
+					<li><a href="http://www.microworks.co.kr/jp/">JP</a></li>
+					<li><a href="http://www.microworks.co.kr/cn/">CH</a></li>
+				</ul> -->
+            <!-- // -->
+            <!-- 회원메뉴 -->
+            <!-- <ul class="clearfix member-menu-box">
+					<li><a href="http://www.microworks.co.kr/kr/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+					<li><a href="http://www.microworks.co.kr/kr/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+					<li style="display:none;"><a href="http://www.microworks.co.kr/kr/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+					<li style="display:none;"><a href="http://www.microworks.co.kr/kr/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+				</ul> -->
+          </div>
+          <!-- // -->
+          <div class="gnb-navigation-wrapper">
+            <div class="gnb-navigation-inner">
+              <ul id="navigation">
+                <li class="has-2dep">
+                  <a href="javascript:;"
+                    >COMPANY<span class="gnb-icon close-icon"
+                      ><i class="material-icons"></i></span
+                    ><span class="gnb-icon open-icon" style="display: none"
+                      ><i class="material-icons"></i></span
+                    ></a
+                  >
+                  <ul class="gnb-2dep">
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/summary.php"
+                        ><span><em>About Microworks</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/company/ceo.php"
+                        ><span><em>CEO Greeting</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/company/org.php"
+                        ><span><em>Organization</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/history.php"
+                        ><span><em>Milestone</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/partners.php"
+                        ><span><em>Partners</em></span></a
+                      >
+                    </li>
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/company/notice.php"><span><em>Notice</em></span></a></li> -->
+                  </ul>
+                </li>
+                <li class="has-2dep">
+                  <a href="javascript:;"
+                    >WHAT WE DO<span class="gnb-icon close-icon"
+                      ><i class="material-icons"></i></span
+                    ><span class="gnb-icon open-icon" style="display: none"
+                      ><i class="material-icons"></i></span
+                    ></a
+                  >
+                  <ul class="gnb-2dep">
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/memory.php"
+                        ><span><em>Memory</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/disty.php"
+                        ><span><em>Manufacturing</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/sourcing.php"
+                        ><span><em>Sourcing</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/writing.php"
+                        ><span><em>Writing Service</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/line.php"
+                        ><span><em>Strong Line</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/control.php"
+                        ><span><em>Quality Control</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/do/program.php"
+                        ><span
+                          ><em>Verfication<br />Program</em></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="has-2dep">
+                  <a href="javascript:;"
+                    >PRODUCT SEARCH<span class="gnb-icon close-icon"
+                      ><i class="material-icons"></i></span
+                    ><span class="gnb-icon open-icon" style="display: none"
+                      ><i class="material-icons"></i></span
+                    ></a
+                  >
+                  <ul class="gnb-2dep">
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/trend_list.php"
+                        ><span><em>Memory Biz</em></span></a
+                      >
+                      <!-- !NOTE S: 2024-04 추가 -->
+                      <div class="gnb-3dep">
+                        <ul>
+                          <li><a href="#">메모리 가격동향</a></li>
+                          <li><a href="#">메모리 대치품 검색</a></li>
+                          <li><a href="#">메모리 스탁재고 문의</a></li>
+                        </ul>
+                      </div>
+                      <!-- !NOTE E: 2024-04 추가 -->
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/product/stock.php"
+                        ><span><em>Stock List</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/product/oem.php"
+                        ><span><em>OEM Excess</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/datasheet.php"
+                        ><span><em>대치품 검색</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/product/trend_before.php"
+                        ><span><em>Memory Trend (~2019)</em></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="has-2dep">
+                  <a href="javascript:;"
+                    >INDUSTRIAL<span class="gnb-icon close-icon"
+                      ><i class="material-icons"></i></span
+                    ><span class="gnb-icon open-icon" style="display: none"
+                      ><i class="material-icons"></i></span
+                    ></a
+                  >
+                  <ul class="gnb-2dep">
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"
+                        ><span><em>TRANSCEND</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"
+                        ><span><em>GOODRAM</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"
+                        ><span><em>NEXCOPY</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"
+                        ><span><em>ADVANTECH</em></span></a
+                      >
+                    </li>
+                    <!-- !NOTE S: 2024-04 추가 -->
+                    <li>
+                      <a href="#"
+                        ><span><em>INNODISK</em></span></a
+                      >
+                    </li>
+                    <!-- !NOTE E: 2024-04 추가 -->
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"
+                        ><span><em>INDUSTRIAL MONITOR</em></span></a
+                      >
+                    </li>
+
+                    <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                  </ul>
+                </li>
+                <li class="has-2dep">
+                  <a href="javascript:;"
+                    >INFORMATION<span class="gnb-icon close-icon"
+                      ><i class="material-icons"></i></span
+                    ><span class="gnb-icon open-icon" style="display: none"
+                      ><i class="material-icons"></i></span
+                    ></a
+                  >
+                  <ul class="gnb-2dep">
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/company/notice.php"
+                        ><span><em>공지사항</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/miniblog.php"
+                        ><span><em>Mini blog</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.microworks.co.kr/kr/media/media.php"
+                        ><span><em>Media</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/contact.php"
+                        ><span><em>Contact Us</em></span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.microworks.co.kr/kr/contact/inquiry.php"
+                        ><span><em>문의하기</em></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- //header -->
+      <!-- container -->
+      <div id="container">
+        <!-- visual -->
+        <section id="visual" class="sub-visual-industrial">
+          <div
+            class="visual-img-con"
+            style="
+              background: #eee url(/images/layout/sub_visual_industrial.jpg)
+                no-repeat 50% 0%;
+            "
+          ></div>
+          <div class="area visual-txt-con">
+            <div class="table-cell-layout">
+              <h2 class="visual-tit trans400"><span>I</span>NDUSTRIAL</h2>
+              <p class="visual-sub-txt">MICROWORKS KOREA</p>
+            </div>
+          </div>
+        </section>
+        <!-- //visual -->
+        <!-- middleArea -->
+        <div id="middleArea">
+          <!-- 서브메뉴1 -->
+          <aside id="topMenu01" class="">
+            <!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+            <div class="side-menu-inner">
+              <div class="area">
+                <ul class="snb sub-menu-industrial clearfix">
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"
+                      ><span><em>TRANSCEND</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"
+                      ><span><em>GOODRAM</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"
+                      ><span><em>NEXCOPY</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"
+                      ><span><em>ADVANTECH</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span><em>INNODISK</em></span></a
+                    >
+                  </li>
+                  <li class="on">
+                    <a href="#"
+                      ><span><em>APEX CONNECTOR</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"
+                      ><span><em>INDUSTRIAL MONITOR</em></span></a
+                    >
+                  </li>
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <!-- // -->
+          <!-- 모바일 서브메뉴 2 -->
+          <aside id="topMenuM02" class="cm-top-menu clearfix">
+            <div class="side-menu-inner clearfix">
+              <!-- 2차메뉴 -->
+              <div class="menu-location location2">
+                <a href="javascript:;" class="cur-location">
+                  <span>APEX CONNECTOR</span>
+                  <i class="material-icons arrow"></i>
+                </a>
+                <ul class="location-menu-con">
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=1"
+                      ><span><em>TRANSCEND</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=2"
+                      ><span><em>GOODRAM</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=3"
+                      ><span><em>NEXCOPY</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=4"
+                      ><span><em>ADVANTECH</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span><em>INNODISK</em></span></a
+                    >
+                  </li>
+                  <li class="on">
+                    <a href="#"
+                      ><span><em>APEX CONNECTOR</em></span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.microworks.co.kr/kr/industrial/transcend.php?part1_idx=5"
+                      ><span><em>INDUSTRIAL MONITOR</em></span></a
+                    >
+                  </li>
+                  <!-- <li><a href="http://www.microworks.co.kr/kr/industrial/transcend.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Transcend</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/goodram.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Goodram</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/nexcopy.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Nexcopy</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/advantech.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Advantech</em></span></a></li>
+								<li><a href="http://www.microworks.co.kr/kr/industrial/etc.php" onclick="javascript:alert('준비 중 입니다.'); return false;"><span><em>Etc.</em></span></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <!-- // -->
+
+          <!-- 상단정보 (센터정렬) -->
+          <aside id="contentInfoCon" class="content-info-style01">
+            <h3 class="content-tit">APEX CONNECTOR</h3>
+          </aside>
+
+          <!-- content -->
+          <section id="content" class="">
+            <article class="industrial-top">
+              <div class="area">
+                <span class="logo"
+                  ><img src="/data/bbsData/logo-plt.png" alt=""
+                /></span>
+                <p class="summary-plt">
+                  에이펙스는 1978년 설립되어 40년이 넘는 기간 동안<br
+                    class="pc-only"
+                  />
+                  산업용 커넥터를 제조해 온 대만의 OEM, ODM 전문 업체입니다.<br />
+                  “신뢰와 책임, 지속 가능한 운영”이라는 이념 아래 미래를 위한
+                  다양한 변화에 도전하고 있습니다.<br />
+                  해외 시장 개척으로 80% 이상의 매출을 해외에서 올리고 있으며<br
+                    class="pc-only"
+                  />
+                  AS 9100D, IATF 16949, ISO 9001, ISO 14001의 품질 인증을
+                  보유하고 있습니다.
+                </p>
+                <!-- !NOTE : 영문 입니다. en클래스 추가 부탁드립니다. -->
+                <p class="summary-plt en">
+                  Sincethe establishment in 1978, the Company continues to
+                  uphold the concept of “Trust and Responsibility, Sustainable
+                  Operations”. The Company has undergone several internal
+                  adjustments and reconstructions in light of facing future
+                  changes and challenges.<br />
+                  With the efforts of all employees, APEX has successfully
+                  developed its own line of products and has been deeply rooted
+                  in Taiwan with global distribution while stepping toward the
+                  field of diverse products and international business
+                  operations.<br />
+                  We have always believed that the mission of an enterprise is
+                  to upgrade the living quality of mankind in order to create a
+                  comfortable and refreshing environment as well as a convenient
+                  living style.<br />
+                  Accordingly, APEX has developed a thorough review and
+                  prospective planning in order to make further improvements in
+                  the aspects of the research and development of products,
+                  manufacturing process rationalization, automation, marketing,
+                  services, etc. With the spirit of innovation demanding
+                  continuous improvement, we believe that maintaining the
+                  current status without improvement is in a way similar to
+                  stepping backward without innovations.<br />
+                  APEX looks forward to demonstrating the outcomes of research
+                  and development in the field of technology products with
+                  extensive capabilities and strong ambitions in order to allow
+                  the products to be implemented in the daily lives of various
+                  types of industries and promoted worldwide. This is a
+                  peaceful, healthy and mutually caring society, and we look
+                  forward to excel with you in order to jointly create the
+                  greatest achievement for human living and to achieve the
+                  notion of enterprise sustainable operations.
+                </p>
+              </div>
+            </article>
+            <article class="industrial-content area">
+              <article class="industrial-prd">
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Connector</h3>
+                  <div class="prd-sub-con">
+                    <p class="desc">
+                      Used in electrical / electronics, power supply, machinery,
+                      transportation,<br class="pc-only" />
+                      LED Lighting, solar energy, medical, military and
+                      communication etc.
+                    </p>
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_001.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_002.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_003.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_004.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_005.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_006.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_007.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_008.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_009.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_010.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_011.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_012.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Waterproof</h3>
+                  <div class="prd-sub-con">
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_013.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_014.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_015.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_016.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">IPO / OEM / ODM Series</h3>
+                  <div class="prd-sub-con">
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_017.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_018.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_019.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_020.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_021.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_022.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_023.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_024.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_025.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_026.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_027.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_028.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Coolant hoses in metal</h3>
+                  <div class="prd-sub-con">
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_029.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Quick-release couplings</h3>
+                  <div class="prd-sub-con">
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_030.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Precision Molds & proccerssing parts</h3>
+                  <div class="prd-sub-con">
+                    <p class="desc">
+                      Stamping / plastic injection molding / die casting /<br
+                        class="pc-only"
+                      />
+                      CNC turning & milling /Progressive / Press /<br
+                        class="pc-only"
+                      />
+                      rubber. silcon. bakelite injection molding.
+                    </p>
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_031.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_032.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_033.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_034.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_035.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_036.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_037.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_038.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_039.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_040.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_041.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_042.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Cable Assembly / Auto controller</h3>
+                  <div class="prd-sub-con">
+                    <p class="desc">
+                      · Cable assembly with liquid tight flexible conduit, nylon
+                      tube, explosion-proof flexible metal conduit and other
+                      housing components.<br />
+                      · knobs. Cable glands. Cable chain
+                    </p>
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_043.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_044.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_045.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_046.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_047.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_048.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_049.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_050.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_051.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_052.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_053.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_054.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_055.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_056.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Wireless Communication</h3>
+                  <div class="prd-sub-con">
+                    <p class="desc">
+                      · Antenna, earphone and other peripheral parts. Various
+                      high-gain antenna for transceiver,<br class="pc-only" />
+                      special earphone for wireless radio communication
+                      equipment, Automotive antenna base,<br class="pc-only" />
+                      wireless interphone data transceiver, heavy motorcycle
+                      wireless radio intercom.
+                    </p>
+                  </div>
+                </div>
+                <div class="industrial-prd-con">
+                  <h3 class="tit">Electronic equipment / Battery</h3>
+                  <div class="prd-sub-con">
+                    <p class="desc">
+                      · Voltage transformer, audio host and assembly peripheral
+                      parts of stereo, microphone<br class="pc-only" />
+                      input transformer, PA broadcast engineering, bug zapper<br
+                        class="pc-only"
+                      />
+                      LED emergency lighting, torch, battery, voltage
+                      transformer.
+                    </p>
+                    <ul class="prd-list connector clearfix">
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_057.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_058.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_059.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_060.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_061.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_062.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_063.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_064.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_065.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_066.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="inner">
+                          <span class="prd-img"
+                            ><img
+                              src="/data/goodsImages/connector_067.png"
+                              alt=""
+                          /></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </article>
+          </section>
+          <!-- //content -->
+        </div>
+        <!-- //middleArea -->
+      </div>
+      <!-- //container -->
+      <!-- footer -->
+      <footer id="footer">
+        <a href="#wrap" class="to-top-btn"
+          ><i class="material-icons">&#xE316;</i></a
+        >
+        <div id="footerInner" class="clearfix">
+          <!-- 푸터 상단 -->
+          <article id="footerTop" class="area02">
+            <div class=" ">
+              <!-- 푸터상단 왼쪽 -->
+              <div class="footer-top-inner clearfix">
+                <div class="footer-left-con">
+                  <!-- <span class="foot-logo"><img src="/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span> -->
+                  <ul class="foot-menu clearfix">
+                    <li>
+                      <a
+                        href="javascript:;"
+                        onclick="javascript:layerLoad('<?=$site_url?>/service/privacy.php'); return false;"
+                        ><b>개인정보처리방침</b></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:;"
+                        onclick="javascript:layerLoad('<?=$site_url?>/service/agreement.php'); return false;"
+                        >이메일무단수집거부</a
+                      >
+                    </li>
+                    <li>
+                      <a href="<?=$site_url?>/media/profile.php"
+                        >Company Profile</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- 푸터상단 오른쪽 -->
+                <div class="footer-right-con">
+                  <div class="foot-sns-menu">
+                    <ul class="clearfix">
+                      <li>
+                        <a href="https://blog.naver.com/mworksk" target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_naver_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://microworkskorea.tistory.com/"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_tistory_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="https://mworksk.blogspot.com/" target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_google_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://twitter.com/microworkskorea"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_twt_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/company/microworks-korea-co-ltd-"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_linkedin_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.facebook.com/microworkskorea"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_facebook_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/microworks_korea/"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_insta_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UCqcaSf8a5tUjfzR144qIxQg"
+                          target="_blank"
+                          ><img
+                            src="/images/icon/sns_icon/footer_sns_youtube_icon.png"
+                            alt=""
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 푸터 하단 -->
+          <article id="footerBottom">
+            <div class="area02 clearfix">
+              <!-- 푸터 하단 왼쪽 -->
+              <article class="footer-left-con">
+                <span class="foot-logo"
+                  ><img
+                    src="/images/common/footer_logo.png"
+                    alt="<?=$site_head_title?>"
+                /></span>
+              </article>
+              <!-- 푸터 하단 오른쪽 -->
+              <article class="footer-right-con">
+                <div class="footer-address">
+                  <p>
+                    <span class="no-line">Microworks Korea Co., Ltd. </span
+                    ><span class="address"
+                      >#614, Ace Gwangmyeong Tower, Haan-ro 108, Gwangmyeong-si,
+                      Gyeonggi-do, Korea 14319</span
+                    >
+                    <br />
+                    <span class="no-line"><b>T. </b>82-2-6112-7320</span
+                    ><span><b>F.</b>82-2-6112-7321</span>
+                  </p>
+                  <div class="footer-copyright">
+                    COPYRIGHT &copy; MICROWORKSWORKS ALL RIGHTS RESERVED.
+                  </div>
+                </div>
+              </article>
+              <!-- 푸터 하단 마지막 -->
+              <article class="footer-last-con">
+                <a href="http://microworks-esc.com/kr/index.php" target="_blank"
+                  ><span class="foot-logo"
+                    ><img
+                      src="/images/common/footer_logo_02.png"
+                      alt="바로기기" /></span
+                ></a>
+              </article>
+            </div>
+          </article>
+        </div>
+      </footer>
+
+      <!-- 모달 레이어팝업 -->
+      <article class="modal-fixed-pop-wrapper">
+        <div class="modal-fixed-pop-inner">
+          <div class="modal-loading"><span class="loading"></span></div>
+          <div class="modal-inner-box">
+            <div class="modal-inner-content">
+              <!-- ajax 내용 -->
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- //footer -->
+    </div>
+    <!-- //code -->
+  </body>
+</html>

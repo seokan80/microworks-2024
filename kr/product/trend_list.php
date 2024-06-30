@@ -117,7 +117,7 @@ $list_index = 1;
 										<div class="paging">
 											<? $page->var_Page($totalPage,$totalList, $listScale, $pageScale, $startPage,$paging_queryString);?>
 										</div>
-									<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>"> class="pc-only">
+									<form name="bbs_search_form" method="get" action="<?=$_SERVER['PHP_SELF'];?>" class="pc-only">
 										<div class="board-search-box">
 											<select name="search_item">
                                                 <option value="subject" <?if($search_item=="subject"){echo "selected";}?>>Subject</option>

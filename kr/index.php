@@ -67,7 +67,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">메모리 가격 동향, 제품 검색, 재고문의를 <br class="mo-only" />한 번에 확인하실 수 있습니다.</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -77,7 +77,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">간편하게 필요하신 제품의 사양으로 <br class="mo-only" />검색할 수 있습니다.</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -87,7 +87,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">필요한 전자부품 재고를 문의하실 수 있습니다.</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -97,7 +97,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 							<img src="/images/icon/main_visual_icon.png" alt="" class="deco-icon">
 							<p class="sub-title"><span class="text-primary">MICROWORKS</span> KOREA CO.,LTD.</p>
 							<h3>SEMICONDUCTOR TOTAL SOLUTION PROVIDER</h3>
-							<p class="desc">마이크로웍스 코리아(주)는 2007년 설립한,<br class="mo-only" /> 반도체 개발,제조,유통의 종합적인 솔루션을 제공하는 기업입니다.</p>
+							<p class="desc">반도체 불량분석, 위조품 판단, 분석리포트 발행</p>
 							<span class="line"></span>
 						</div>
 					</div>
@@ -110,11 +110,11 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 					</a>
 					<a href="<?=$site_url?>/product/datasheet.php" class="side-menu-item">
 						<div class="item-bg"><img src="/images/main/main_visual_side_02.png" alt=""></div>
-						<p>대치품 검색</p>
+						<p>SPEC 검색</p>
 					</a>
 					<a href="<?=$site_url?>/contact/inquiry.php" target="_blank" class="side-menu-item">
 						<div class="item-bg"><img src="/images/main/main_visual_side_03.png" alt=""></div>
-						<p>스탁재고 검색</p>
+						<p>스탁재고 문의</p>
 					</a>
 					<a href="<?=$site_url?>/do/control.php" class="side-menu-item">
 						<div class="item-bg"><img src="/images/main/main_visual_side_04.png" alt=""></div>
@@ -136,7 +136,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 									<li><a href="javascript:search_sel(3);"><span>OEM Excess</span></a></li>
 								</ul>
 							</div>
-							<input placeholder="검색어를 입력해주세요" type="text" name="search_order" class="search-word"
+							<input placeholder="부품명을 입력해주세요" type="text" name="search_order" class="search-word"
 								onKeypress="if(event.keyCode ==13){search_send();return false;}">
 							<button type="button" class="main-search-btn" title="검색" onclick="search_send()">
 								<img src="/images/icon/stock_list_search_icon.png" alt="">
@@ -151,7 +151,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 				<!-- !NOTE S : 2024-04 추가 -->
                 <!-- #202405 메인 추가 -->
                 <!-- S : 2024-04 추가 -->
-                <article id="totalSearchResults" class="total-results-wrap">
+                <article id="totalSearchResults" class="total-results-wrap" style="display: none">
                     <? include $_SERVER["DOCUMENT_ROOT"]."/index/include_totalSearchResults.php"; ?>
                 </article>
 				<!-- !NOTE S : 2024-04 추가 -->
@@ -170,7 +170,7 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 									반도체 개발,제조,유통의 종합적인 솔루션을 제공하는<br>
 									토탈솔루션 기업입니다.
 								</p>
-								<a href="/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
+								<a href="<?=$site_url?>/company/summary.php" class="detail-btn fade-in-down fade-in-06"><span class="strong">자세히</span></a>
 							</div>
 							<!-- !NOTE : 기존소스 참고해주세요 -->
 							<div class="notice-con fade-in-right fade-in-08">

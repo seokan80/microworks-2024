@@ -11,7 +11,7 @@ $sub_section = "memory-biz";
 //<!-- !NOTE E : 2024-04 변경 -->
 $page_info = "PRODUCT SEARCH";
 //<!-- !NOTE S : 2024-04 변경 -->
-$sub_info = "메모리 대치품 검색";
+$sub_info = "메모리 SPEC 검색";
 //<!-- !NOTE E : 2024-04 변경 -->
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include $_SERVER['DOCUMENT_ROOT']."/etc/loading.php";

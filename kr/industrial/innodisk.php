@@ -1,6 +1,6 @@
 <?
 $page_num = "04";
-$sub_num = "01";/* !NOTE : INNODISK 메뉴 추가 후 변경 해야함 */
+$sub_num = "05";/* !NOTE : INNODISK 메뉴 추가 후 변경 해야함 */
 $page_section = "industrial";
 $sub_section = "innodisk";
 $page_info = "INDUSTRIAL";

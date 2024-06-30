@@ -1,3 +1,19 @@
+<?
+if($lang==2){ // 영문
+    // 목록 문구
+    $total_txt_pre = "total : ";
+    $total_txt_post = "EA";
+} else if($lang==3){ // 중문
+    // 목록 문구
+    $total_txt_pre = "total : ";
+    $total_txt_post = "";
+} else {
+    // 목록 문구
+    $total_txt_pre = "총 ";
+    $total_txt_post = "건";
+}
+?>
+
 <script>
   // var itemValueMap = {}
   function setSearchResult(data, searchLimit, currentPage) {
@@ -15,6 +31,7 @@
       if (!$('#searchResultCnt').hasClass('hide')) {
         $('#searchResultCnt').addClass('hide')
       }
+      $('#replacement-table-wrap').addClass('hide')
 
     } else {
       if (!$('#search-results-none').hasClass('hide')) {
@@ -29,18 +46,34 @@
       if ($('#searchResultCnt').hasClass('hide')) {
         $('#searchResultCnt').removeClass('hide')
       }
+      $('#replacement-table-wrap').removeClass('hide')
 
       setSearchResultText(data);
+      var firstFilter = true;
       //제조업체 필터 추가
-      addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", true, "제조업체");
+      if (data.FilterOptions.Manufacturers) {
+        addFilter(data.FilterOptions.Manufacturers, manufacturerOptions, "manufacturerOptions", firstFilter, "제조업체");
+        firstFilter = false;
+      }
       // 계열 핕터 추가
-      addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions", false, "계열");
+      if (data.FilterOptions.Series) {
+        addFilter(data.FilterOptions.Series, seriesOptions, "seriesOptions", firstFilter, "계열");
+        firstFilter = false;
+      }
       // 포장 필터 추가
-      addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions", false, "포장");
+      if (data.FilterOptions.Packaging) {
+        addFilter(data.FilterOptions.Packaging, packagingOptions, "packagingOptions", firstFilter, "포장");
+        firstFilter = false;
+      }
       // 현황 추가
-      addFilter(data.FilterOptions.Status, statusOptions, "statusOptions", false, "현황");
+      if (data.FilterOptions.Status) {
+        addFilter(data.FilterOptions.Status, statusOptions, "statusOptions", firstFilter, "현황");
+        firstFilter = false;
+      }
       // 파라미터 필터 목록 추가
-      addParametricFilters(data.FilterOptions.ParametricFilters, parametricOptions);
+      if (data.FilterOptions.ParametricFilters) {
+        addParametricFilters(data.FilterOptions.ParametricFilters, parametricOptions);
+      }
       // 검색 결과 
       addTableList(data.Products, searchLimit);
       // 페이지네이션 설정
@@ -92,7 +125,7 @@
     }
   }
   function resetSearchFilter(searchName) {
-    console.log(searchName)
+    // console.log(searchName)
     $('input[name='+searchName+']').prop('checked', false);
     option_apply();
   }
@@ -104,6 +137,9 @@
     // var valArr = []
     filters.forEach(function(filter) {
       // valArr.push(filter.Value);
+        if (filter.Value.includes('Digi')) {
+          return;
+        }
         var isChecked = ( selOpts.length > 0 && selOpts.some(item => {return item.Id == filter.Id}) )? 'checked' : '';
         filterValuesHtml += '<li class="checkable-item">' +
                             '<input type="checkbox" name="'+searchName+'" id="'+searchName+'-' + filter.Id + '" value="'+filter.Id+'" ' + isChecked + '>' +
@@ -136,7 +172,14 @@ function addParametricFilters(parametricFilters, parametricOptions = []) {
         
         filter.FilterValues.forEach(function(value) {
             // 응답 필터링 객체에 파라미터id는 요청 검색한 필터가 반드시 포함 되므로 체크박스 활성화
-            var isChecked = parameterIdIndexMap.hasOwnProperty(filter.ParameterId) ? 'checked' : '';
+            var selectedFilter = [];
+            if (parametricOptions[parameterIdIndexMap[filter.ParameterId]] && parametricOptions[parameterIdIndexMap[filter.ParameterId]].FilterValues) {
+              
+                // console.log(parametricOptions[parameterIdIndexMap[filter.ParameterId]])
+                selectedFilter = parametricOptions[parameterIdIndexMap[filter.ParameterId]].FilterValues.map(item => item.Id);
+            }
+            // console.log(selectedFilter)
+            var isChecked = selectedFilter.includes(value.ValueId) ? 'checked' : '';
 
             filterValuesHtml += '<li class="checkable-item">' +
                                 '<input type="checkbox" name="parametricOptions-'+filter.ParameterId+'" id="filter-' + value.ValueId + '" value="'+value.ValueId+'" ' + isChecked + '>' +
@@ -145,7 +188,7 @@ function addParametricFilters(parametricFilters, parametricOptions = []) {
         });
 
         var filtersHtml = '<div class="filter">'+
-                            '<div class="filter-header"><p>' + filter.ParameterName + '</p><button type="button" class="button-reset">초기화</button></div>' +
+                            '<div class="filter-header"><p>' + filter.ParameterName + '</p><button type="button" class="button-reset" onclick="resetSearchFilter(\'parametricOptions-'+filter.ParameterId+'\')">초기화</button></div>' +
                               '<div class="filter-body">';
                 if (filter.FilterValues.length > 20) {
                   filtersHtml += '<div class="input-box"><input type="search" name="" id="" placeholder="검색 기준" class="input hight-sm"></div>';
@@ -191,7 +234,11 @@ function addTableList(products) {
       html += '    <td><input type="checkbox" name="productCk" onclick="checkProductCk(this)" value="' + products[i].ProductVariations[0].DigiKeyProductNumber + '"></td>'
       html += '    <td class="text-left">'
       html += '    <div class="product-info">'
-      html += '        <div class="img-box"><img src="'+products[i].PhotoUrl+'" alt="" height="55" width="55"></div>'
+      html += '        <div class="img-box">'
+      if (products[i].PhotoUrl) {
+        html += '           <img src="'+products[i].PhotoUrl+'" alt="" height="55" width="55">'
+      }
+      html += '         </div>'
       html += '        <div class="text-wrap">'
       html += '        <strong><a href="'+detailHref+'">'+products[i].ManufacturerProductNumber+'</a></strong>'
       html += '        <p>'+products[i].Description.ProductDescription+'</p>'
@@ -330,10 +377,10 @@ function addPagination(totalProducts, searchLimit, currentPage = 1) {
             <button type="button" class="button type-point" onclick="option_apply();"><strong>적용</strong></button>
           </div>
 
-          <div class="replacement-table-wrap margin-top-xxl">
+          <div class="replacement-table-wrap margin-top-xxl" id="replacement-table-wrap">
             <div class="replacement-table-header">
               <div class="result-count">
-                <strong class="text-primary" id="searchResultCnt"></strong>
+                <strong><?=$total_txt_pre?><span class="text-primary" id="searchResultCnt"></span><?=$total_txt_post?></strong>
               </div>
               <div class="button-layout gap-md extra">
                   <button type="button" class="button type-point size-sm" id="compareProduct" style="display: none;" onClick="compareProductProc()"><strong><span class="cnt"></span>개 제품비교</strong></button>

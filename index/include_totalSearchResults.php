@@ -13,6 +13,9 @@
         // 목록 문구
         $search_total_txt_pre = "total : ";
         $search_total_txt_post = "EA";
+
+        // 더보기 문구
+        $search_results_more_view = "More";
         $path="en";
     } else if($lang==3){ // 중문
         // 검색 결과 실패 문구
@@ -27,6 +30,9 @@
         // 목록 문구
         $search_total_txt_pre = "total : ";
         $search_total_txt_post = "";
+
+        // 더보기 문구
+        $search_results_more_view = "More";
         $path="cn";
     } else { // 국문
         // 검색 결과 실패 문구
@@ -41,6 +47,9 @@
         // 목록 문구
         $search_total_txt_pre = "총 ";
         $search_total_txt_post = "건";
+
+        // 더보기 문구
+        $search_results_more_view = "더 보기";
         $path="kr";
     }
 ?>
@@ -72,6 +81,7 @@
             return;
         }
 
+        $('#totalSearchResults').show();
         search_loading_start(); // 검색 중
 
         if(search_select_arr.length == 1) {
@@ -137,12 +147,12 @@
                                 html += '<div class="bbs-list-row">';
                                 html += '    <div class="column bbs-no-data">'+(data.list.length - i)+'</div>';
                                 html += '    <div class="column bbs-title">';
-                                html += '        <a href="#">';
+                                // html += '        <a href="#">';
                                 html += '            <div class="bbs-subject-con">';
                                 html += '                <p class="bbs-subject-txt">'+subject+'</p>';
                                 html += '                <div class="bbs-subject-icons">'+data.list[i].new_img+'</div>';
                                 html += '            </div>';
-                                html += '        </a>';
+                                // html += '        </a>';
                                 html += '    </div>';
                                 html += '    <div class="column bbs-inline" data-label="제품수">'+data.list[i].prd_cnt+'</div>';
                                 html += '    <div class="column bbs-inline" data-label="등록일">'+data.list[i].reg_date+'</div>';
@@ -155,11 +165,11 @@
                                 html += '<div class="bbs-list-row">';
                                 html += '    <div class="column bbs-no-data">'+(data.list.length - i)+'</div>';
                                 html += '    <div class="column bbs-title">';
-                                html += '        <a href="#">';
+                                // html += '        <a href="#">';
                                 html += '            <div class="bbs-subject-con">';
                                 html += '                <p class="bbs-subject-txt">'+subject+'</p>';
                                 html += '            </div>';
-                                html += '        </a>';
+                                // html += '        </a>';
                                 html += '    </div>';
                                 html += '    <div class="column bbs-inline" data-label="Quantity">'+data.list[i].attr_2+'</div>';
                                 html += '    <div class="column bbs-inline" data-label="MFR">'+data.list[i].attr_3+'</div>';
@@ -173,11 +183,11 @@
                                  html += '<div class="bbs-list-row">';
                                  html += '    <div class="column bbs-no-data">'+(data.list.length - i)+'</div>';
                                  html += '    <div class="column bbs-title">';
-                                 html += '        <a href="#">';
+                                //  html += '        <a href="#">';
                                  html += '            <div class="bbs-subject-con">';
                                  html += '                <p class="bbs-subject-txt">'+subject+'</p>';
                                  html += '            </div>';
-                                 html += '        </a>';
+                                //  html += '        </a>';
                                  html += '    </div>';
                                  html += '    <div class="column bbs-inline" data-label="Quantity">'+data.list[i].attr_2+'</div>';
                                  html += '    <div class="column bbs-inline" data-label="MFR">'+data.list[i].attr_3+'</div>';
@@ -254,7 +264,7 @@
             <p class="title">Memory Trend</p>
             <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary trend_list_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="search_go_url_post('./product/trend_list.php?search_item=subject&search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/trend_list.php?search_item=subject&search_order=')" class="button size-sm"><?=$search_results_more_view?></a>
             </div>
         </div>
 
@@ -275,7 +285,7 @@
             <p class="title">Stock List</p>
             <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary stock_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="search_go_url_post('./product/stock.php?search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/stock.php?search_order=')" class="button size-sm"><?=$search_results_more_view?></a>
             </div>
         </div>
 
@@ -297,7 +307,7 @@
             <p class="title">OEM Excess</p>
             <strong class="result-count"><?=$search_total_txt_pre?><span class="text-primary oem_cnt">00</span><?=$search_total_txt_post?></strong>
             <div class="extra">
-                <a href="#" onclick="search_go_url_post('./product/oem.php?search_order=')" class="button type-round more-view"></a>
+                <a href="#" onclick="search_go_url_post('./product/oem.php?search_order=')" class="button size-sm"><?=$search_results_more_view?></a>
             </div>
         </div>
 
