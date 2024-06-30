@@ -1,3 +1,3 @@
 <?
-$site_host = "http://".$_SERVER["HTTP_HOST"];
+$site_host = "https://".$_SERVER["HTTP_HOST"];
 ?>
