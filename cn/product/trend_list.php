@@ -58,8 +58,8 @@ $list_index = 1;
 				<article class="sub-page product-page">
 						<div class="area">
 							<article class="product-tit-box">
-								<p class="product-tit">지난 메모리 가격동향 데이터를 확인하실 수 있습니다.</p>
-								<p class="product-tit-txt">메모리 가격동향 데이터는 정확한 액수의 표시가 아니며, 지난 데이터에 대한 평균적인 통계자료로 참고만 하시기 바랍니다.</p>
+                                <p class="product-tit">您可以查看过去的内存价格趋势数据。</p>
+                                <p class="product-tit-txt">内存价格趋势数据不代表具体金额，仅作为过去数据的平均统计数据。</p>
 							</article>
 							
 							<div class="table-wrapper type-trend">
