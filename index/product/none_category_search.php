@@ -219,7 +219,7 @@ if($lang==2){
     // 정확히 일치 카드 
     function setExactMatched(ExactMatches) {
         if (ExactMatches.length > 0) {
-            $('#exactPhotoUrl').attr('src', ExactMatches[0].PhotoUrl);
+            $('#exactPhotoUrl').attr('src', ExactMatches[0].PhotoUrl == null ? '/images/common/no-img.png' : ExactMatches[0].PhotoUrl);
             $('#exactPrdNm').text(ExactMatches[0].ManufacturerProductNumber);
             $('#exactPrdDesc').text(ExactMatches[0].Description.ProductDescription);
             $('#exactPrdPrice').text(numberWithCommas(ExactMatches[0].ProductVariations[0].StandardPricing[0].TotalPrice));

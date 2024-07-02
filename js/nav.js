@@ -97,10 +97,15 @@ jQuery(function($){
 
 	// 서브메뉴에서 해당메뉴 on
 	if ( dep1 > 0 && dep2 > 0) {
+		// debugger
 		$gnbList.children("li").eq(dep1-1).addClass("active");
 		$gnbMList.eq(dep1-1).addClass("on");
 		$snb.each(function  () {
-			$(this).find("li").eq(dep2-1).addClass("on");
+			if (dep2 == 1) {
+				$(this).find('li').first().addClass("on");
+			} else {
+				$(this).find('li').first().siblings("li").eq(dep2-2).addClass("on");
+			}
 		});
 	}
 	
