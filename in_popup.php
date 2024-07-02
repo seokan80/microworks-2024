@@ -24,8 +24,8 @@ while($popup_row=@mysql_fetch_object($popup_result)) {
 
 <? } else if($popup_row->kind==1){ ?>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />  
-<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />  
+<script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 
 <!-- 레이어POPUP 시작-->
 <?
@@ -79,7 +79,7 @@ $(document).ready(function() {
 			<?=$tools->strHtml($popup_row->content);?>
 		<?} else if($popup_row->display==1) {?>
 			<? if($popup_row->link_url) {?>
-				<a href="http://<?=$popup_row->link_url;?>">
+				<a href="https://<?=$popup_row->link_url;?>">
 					<img src='/data/designImages/<?=$popup_row->popup_images;?>' border='0'>
 				</a>
 			<?} else {?>
