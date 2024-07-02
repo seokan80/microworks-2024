@@ -292,7 +292,7 @@
 }
 
 /* ****************** SUB LAYOUT ********************** */
-@media all and (max-width:1220px){
+@media all and (max-width:1420px){
 	/*  SUB LAYOUT :: 비주얼 */
 	#visual .visual-txt-con{padding:0}
 	/*  SUB LAYOUT :: 서브메뉴(스타일3) */

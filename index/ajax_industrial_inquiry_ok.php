@@ -5,7 +5,11 @@
 // industrial 문의하기 저장 ajax data
 // -- /kr/industrial/transcend.php?part1_idx=3#
 // ------------------------------------
+header("Content-type: text/html; charset=utf-8");
 include $_SERVER['DOCUMENT_ROOT']."/common.php";
+
+if(!strstr($_SERVER['HTTP_REFERER'],"microworks")){ $tools->alertJavaGo("비정상적인 접근 입니다.","/"); exit; }
+
 //if(!strstr($_SERVER['HTTP_REFERER'],"microworks")){ $tools->alertJavaGo("비정상적인 접근 입니다.","/"); exit; }
 
 $lang = $_POST[lang];
@@ -83,6 +87,40 @@ if( $_POST[name] ) {
 
 	// 쿼리 실행
 	if( $db->insert("cs_online_product", $query.", ip='$ip', reg_date=now()") ) {
+		//메일보내기(시작)
+
+		include $_SERVER['DOCUMENT_ROOT']."/lib/mail_class.php";
+		$mail = new my_mime_mail();
+		$admin_stat = $db->object("cs_admin","");
+		$mail_row = $db->object("cs_mailform","where code='online'");
+
+		$mail_from_name	= $admin_stat->shop_name;
+		$mail_subject			= $mail_row->subject;
+		$mail_content			= $mail_row->content;
+
+		$mail_subject = str_replace("[{SHOP_NAME}]", $admin_stat->shop_name, $mail_subject);
+
+		$mail_content = str_replace("[{SHOP_NAME}]", $admin_stat->shop_name, $mail_content);
+		$mail_content = str_replace("[{USER_NAME}]", $name, $mail_content);
+
+		$mail_content = str_replace("[{USER_TEL}]", $phone, $mail_content);
+		$mail_content = str_replace("[{USER_COMPANY}]", $company, $mail_content);
+		$mail_content = str_replace("[{USER_EMAIL}]", $email, $mail_content);
+		$mail_content = str_replace("[{USER_CONTENT}]", nl2br($_POST[content]), $mail_content);
+		$mail_content = str_replace("[{SHOP_DOMAIN}]", "https://".$_SERVER['HTTP_HOST'], $mail_content);
+
+		$conf['charset'] = "UTF-8";
+		$mail_to_name		= "=?$conf[charset]?B?".base64_encode($name) . "?=";
+		$mail_from_name	= "=?$conf[charset]?B?".base64_encode($mail_from_name) . "?=";
+		$mail_subject			= "=?$conf[charset]?B?".base64_encode($mail_subject) . "?=";
+
+		$mail->to =  $mail_from_name." <".$admin_stat->shop_email.">";
+		$mail->from = $mail_from_name." <".$admin_stat->shop_email.">";
+		$mail->subject = $mail_subject;
+		$mail->body = $mail_content;
+		$mail->send();
+
+		//메일보내기(종료)
 		// 쿼리 등록 성공
 		sendResult("success", $inquiryok_success_msg); //문의하기가 접수 되었습니다.
 	} else {

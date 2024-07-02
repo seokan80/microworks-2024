@@ -3,7 +3,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 include $_SERVER['DOCUMENT_ROOT']."/lib/page_class.php";
-$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' order by ref desc, idx desc limit 3");
+$notice_rs = $db->select("cs_bbs_data","where code='notice' and lang='$lang' and ((period_yn = 'Y' and period_start_date <= curdate() and period_end_date >= curdate()) OR period_yn = 'N') order by ref desc, idx desc limit 3");
 $bannermain_l_rs = $db->select("cs_banner_main","where direction='L' and CURDATE() between period_start_date and period_end_date order by first_order asc, idx desc limit 5");
 $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE() between period_start_date and period_end_date order by first_order asc, idx desc limit 5");
 ?>
@@ -322,181 +322,181 @@ $bannermain_r_rs = $db->select("cs_banner_main","where direction='R' and CURDATE
 								<img src="<?=$site_host?>/images/content/global_map_m.png" alt="세계지도" />
 							</div>
 						</div>
-						<div class="exchange-con fade-in-down fade-in-08">
-							<p class="global-tit"><b>Exchange Rate</b><span> (<?=date("Y")?>/<?=date("m")?>/<?=date("d")?> data)</span></p>
-							<table class="main-exchange-tbl">
-								<colgroup>
-									<col width="30%">
-									<col width="23.33%">
-									<col width="23.33%">
-									<col width="23.33%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>Currency name</th>
-										<th>Transaction standard rate of exchange</th>
-										<th>Net change</th>
-										<th>Fluctuation rate</th>
-									</tr>
-								</thead>
-								<tbody>
-<?
+<!--						<div class="exchange-con fade-in-down fade-in-08">-->
+<!--							<p class="global-tit"><b>Exchange Rate</b><span> (--><?php //=date("Y")?><!--/--><?php //=date("m")?><!--/--><?php //=date("d")?><!-- data)</span></p>-->
+<!--							<table class="main-exchange-tbl">-->
+<!--								<colgroup>-->
+<!--									<col width="30%">-->
+<!--									<col width="23.33%">-->
+<!--									<col width="23.33%">-->
+<!--									<col width="23.33%">-->
+<!--								</colgroup>-->
+<!--								<thead>-->
+<!--									<tr>-->
+<!--										<th>Currency name</th>-->
+<!--										<th>Transaction standard rate of exchange</th>-->
+<!--										<th>Net change</th>-->
+<!--										<th>Fluctuation rate</th>-->
+<!--									</tr>-->
+<!--								</thead>-->
+<!--								<tbody>-->
+<?//
+//
+//function get($url){
+//
+//	$ch = curl_init($url);
+//	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//	$result = curl_exec($ch);
+//	if(curl_errno($ch)){
+//		throw new Exception(curl_error($ch));
+//	}
+//
+//	curl_close($ch);
+//	return $result;
+//
+//}
+//
+//$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD';
+//$result = get($url);
+//$data = json_decode($result,true);
+//$data = $data[0];
+//
+//$_provider = $data['provider'];
+//$_buying = $data['cashBuyingPrice'];
+//$_selling = $data['cashSellingPrice'];
+//$_ttselling = $data['ttSellingPrice'];
+//$_ttbuyling = $data['ttBuyingPrice'];
+//$_usd = $data['basePrice'];
+//$_openusd = $data['openingPrice'];
+//$_chusd = $data['changePrice'];
+//$_scp = $data['signedChangePrice'];
+//$_scr = $data['signedChangeRate'];
+//$_openusd_o = $_usd - $_openusd;
+//$_openusd_op = ($_chusd/$_usd)*100;
+//$_openusd = round($_openusd,2);
+//
+//$ud = sprintf('%0.2f',$_usd);
+//$p1 = explode(".",$ud);
+//$p2 = number_format($p1[0]);
+//$op1 = $p2.".".$p1[1];
+//
+//?>
+<!---->
+<!--								<tbody>-->
+<!--									<tr>-->
+<!--										<th><p><span class="plag-icon"><img src="--><?php //=$site_host?><!--/images/main/main_exchange_usd_icon.jpg" alt=""></span>U.S.A (USD)</p></th>-->
+<!--										<td>--><?php //=$op1?><!--</td>-->
+<!--										<td><p class="net-change"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span>--><?php //=$_scp?><!--</p></td>-->
+<!--										<td><p class="up-down"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span> --><?// if($_scp>0){ ?><!--+--><?// } else if($_scp<0){ ?><!-----><?// } ?><!----><?php //=sprintf('%0.2f',$_openusd_op)?><!--%</p></td>-->
+<!--									</tr>-->
+<!---->
+<?//
+//
+//$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWJPY';
+//$result = get($url);
+//$data = json_decode($result,true);
+//$data = $data[0];
+//
+//$_provider = $data['provider'];
+//$_buying = $data['cashBuyingPrice'];
+//$_selling = $data['cashSellingPrice'];
+//$_ttselling = $data['ttSellingPrice'];
+//$_ttbuyling = $data['ttBuyingPrice'];
+//$_usd = $data['basePrice'];
+//$_openusd = $data['openingPrice'];
+//$_chusd = $data['changePrice'];
+//$_scp = $data['signedChangePrice'];
+//$_scr = $data['signedChangeRate'];
+//$_openusd_o = $_usd - $_openusd;
+//$_openusd_op = ($_chusd/$_usd)*100;
+//$_openusd = round($_openusd,2);
+//
+//$ud = sprintf('%0.2f',$_usd);
+//$p1 = explode(".",$ud);
+//$p2 = number_format($p1[0]);
+//$op1 = $p2.".".$p1[1];
+//
+//?>
+<!---->
+<!--									<tr class="blue-row">-->
+<!--										<th><p><span class="plag-icon"><img src="--><?php //=$site_host?><!--/images/main/main_exchange_jpy_icon.jpg" alt=""></span>Japan (JPY)</p></th>-->
+<!--										<td>--><?php //=$op1?><!--</td>-->
+<!--										<td><p class="net-change"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span>--><?php //=$_scp?><!--</p></td>-->
+<!--										<td><p class="up-down"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span> --><?// if($_scp>0){ ?><!--+--><?// } else if($_scp<0){ ?><!-----><?// } ?><!----><?php //=sprintf('%0.2f',$_openusd_op)?><!--%</p></td>-->
+<!--									</tr>-->
+<!---->
+<?//
+//
+//$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWEUR';
+//$result = get($url);
+//$data = json_decode($result,true);
+//$data = $data[0];
+//
+//$_provider = $data['provider'];
+//$_buying = $data['cashBuyingPrice'];
+//$_selling = $data['cashSellingPrice'];
+//$_ttselling = $data['ttSellingPrice'];
+//$_ttbuyling = $data['ttBuyingPrice'];
+//$_usd = $data['basePrice'];
+//$_openusd = $data['openingPrice'];
+//$_chusd = $data['changePrice'];
+//$_scp = $data['signedChangePrice'];
+//$_scr = $data['signedChangeRate'];
+//$_openusd_o = $_usd - $_openusd;
+//$_openusd_op = ($_chusd/$_usd)*100;
+//$_openusd = round($_openusd,2);
+//
+//$ud = sprintf('%0.2f',$_usd);
+//$p1 = explode(".",$ud);
+//$p2 = number_format($p1[0]);
+//$op1 = $p2.".".$p1[1];
+//
+//?>
+<!---->
+<!--									<tr>-->
+<!--										<th><p><span class="plag-icon"><img src="--><?php //=$site_host?><!--/images/main/main_exchange_eur_icon.jpg" alt=""></span>EU (EUR)</p></th>-->
+<!--										<td>--><?php //=$op1?><!--</td>-->
+<!--										<td><p class="net-change"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span>--><?php //=$_scp?><!--</p></td>-->
+<!--										<td><p class="up-down"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span> --><?// if($_scp>0){ ?><!--+--><?// } else if($_scp<0){ ?><!-----><?// } ?><!----><?php //=sprintf('%0.2f',$_openusd_op)?><!--%</p></td>-->
+<!--									</tr>-->
+<!---->
+<?//
+//
+//$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWCNY';
+//$result = get($url);
+//$data = json_decode($result,true);
+//$data = $data[0];
+//
+//$_provider = $data['provider'];
+//$_buying = $data['cashBuyingPrice'];
+//$_selling = $data['cashSellingPrice'];
+//$_ttselling = $data['ttSellingPrice'];
+//$_ttbuyling = $data['ttBuyingPrice'];
+//$_usd = $data['basePrice'];
+//$_openusd = $data['openingPrice'];
+//$_chusd = $data['changePrice'];
+//$_scp = $data['signedChangePrice'];
+//$_scr = $data['signedChangeRate'];
+//$_openusd_o = $_usd - $_openusd;
+//$_openusd_op = ($_chusd/$_usd)*100;
+//$_openusd = round($_openusd,2);
+//
+//$ud = sprintf('%0.2f',$_usd);
+//$p1 = explode(".",$ud);
+//$p2 = number_format($p1[0]);
+//$op1 = $p2.".".$p1[1];
+//
+//?>
 
-function get($url){
-
-	$ch = curl_init($url);
-	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-	$result = curl_exec($ch);
-	if(curl_errno($ch)){
-		throw new Exception(curl_error($ch));
-	}
-
-	curl_close($ch);
-	return $result;
-
-}
-
-$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD';
-$result = get($url);
-$data = json_decode($result,true);
-$data = $data[0];
-
-$_provider = $data['provider'];
-$_buying = $data['cashBuyingPrice'];
-$_selling = $data['cashSellingPrice'];
-$_ttselling = $data['ttSellingPrice'];
-$_ttbuyling = $data['ttBuyingPrice'];
-$_usd = $data['basePrice'];
-$_openusd = $data['openingPrice'];
-$_chusd = $data['changePrice'];
-$_scp = $data['signedChangePrice'];
-$_scr = $data['signedChangeRate'];
-$_openusd_o = $_usd - $_openusd;
-$_openusd_op = ($_chusd/$_usd)*100;
-$_openusd = round($_openusd,2);
-
-$ud = sprintf('%0.2f',$_usd);
-$p1 = explode(".",$ud);
-$p2 = number_format($p1[0]);
-$op1 = $p2.".".$p1[1];
-
-?>
-
-								<tbody>
-									<tr>
-										<th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_usd_icon.jpg" alt=""></span>U.S.A (USD)</p></th>
-										<td><?=$op1?></td>
-										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
-										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
-									</tr>
-
-<?
-
-$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWJPY';
-$result = get($url);
-$data = json_decode($result,true);
-$data = $data[0];
-
-$_provider = $data['provider'];
-$_buying = $data['cashBuyingPrice'];
-$_selling = $data['cashSellingPrice'];
-$_ttselling = $data['ttSellingPrice'];
-$_ttbuyling = $data['ttBuyingPrice'];
-$_usd = $data['basePrice'];
-$_openusd = $data['openingPrice'];
-$_chusd = $data['changePrice'];
-$_scp = $data['signedChangePrice'];
-$_scr = $data['signedChangeRate'];
-$_openusd_o = $_usd - $_openusd;
-$_openusd_op = ($_chusd/$_usd)*100;
-$_openusd = round($_openusd,2);
-
-$ud = sprintf('%0.2f',$_usd);
-$p1 = explode(".",$ud);
-$p2 = number_format($p1[0]);
-$op1 = $p2.".".$p1[1];
-
-?>
-
-									<tr class="blue-row">
-										<th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_jpy_icon.jpg" alt=""></span>Japan (JPY)</p></th>
-										<td><?=$op1?></td>
-										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
-										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
-									</tr>
-
-<?
-
-$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWEUR';
-$result = get($url);
-$data = json_decode($result,true);
-$data = $data[0];
-
-$_provider = $data['provider'];
-$_buying = $data['cashBuyingPrice'];
-$_selling = $data['cashSellingPrice'];
-$_ttselling = $data['ttSellingPrice'];
-$_ttbuyling = $data['ttBuyingPrice'];
-$_usd = $data['basePrice'];
-$_openusd = $data['openingPrice'];
-$_chusd = $data['changePrice'];
-$_scp = $data['signedChangePrice'];
-$_scr = $data['signedChangeRate'];
-$_openusd_o = $_usd - $_openusd;
-$_openusd_op = ($_chusd/$_usd)*100;
-$_openusd = round($_openusd,2);
-
-$ud = sprintf('%0.2f',$_usd);
-$p1 = explode(".",$ud);
-$p2 = number_format($p1[0]);
-$op1 = $p2.".".$p1[1];
-
-?>
-
-									<tr>
-										<th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_eur_icon.jpg" alt=""></span>EU (EUR)</p></th>
-										<td><?=$op1?></td>
-										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
-										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
-									</tr>
-
-<?
-
-$url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWCNY';
-$result = get($url);
-$data = json_decode($result,true);
-$data = $data[0];
-
-$_provider = $data['provider'];
-$_buying = $data['cashBuyingPrice'];
-$_selling = $data['cashSellingPrice'];
-$_ttselling = $data['ttSellingPrice'];
-$_ttbuyling = $data['ttBuyingPrice'];
-$_usd = $data['basePrice'];
-$_openusd = $data['openingPrice'];
-$_chusd = $data['changePrice'];
-$_scp = $data['signedChangePrice'];
-$_scr = $data['signedChangeRate'];
-$_openusd_o = $_usd - $_openusd;
-$_openusd_op = ($_chusd/$_usd)*100;
-$_openusd = round($_openusd,2);
-
-$ud = sprintf('%0.2f',$_usd);
-$p1 = explode(".",$ud);
-$p2 = number_format($p1[0]);
-$op1 = $p2.".".$p1[1];
-
-?>
-
-									<tr class="blue-row">
-										<th><p><span class="plag-icon"><img src="<?=$site_host?>/images/main/main_exchange_cny_icon.jpg" alt=""></span>China (CNY)</p></th>
-										<td><?=$op1?></td>
-										<td><p class="net-change"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span><?=$_scp?></p></td>
-										<td><p class="up-down"><span class="<? if($_scp>0){ ?>up-icon<? } else if($_scp<0){ ?>down-icon<? } ?>"></span> <? if($_scp>0){ ?>+<? } else if($_scp<0){ ?>-<? } ?><?=sprintf('%0.2f',$_openusd_op)?>%</p></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+<!--									<tr class="blue-row">-->
+<!--										<th><p><span class="plag-icon"><img src="--><?php //=$site_host?><!--/images/main/main_exchange_cny_icon.jpg" alt=""></span>China (CNY)</p></th>-->
+<!--										<td>--><?php //=$op1?><!--</td>-->
+<!--										<td><p class="net-change"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span>--><?php //=$_scp?><!--</p></td>-->
+<!--										<td><p class="up-down"><span class="--><?// if($_scp>0){ ?><!--up-icon--><?// } else if($_scp<0){ ?><!--down-icon--><?// } ?><!--"></span> --><?// if($_scp>0){ ?><!--+--><?// } else if($_scp<0){ ?><!-----><?// } ?><!----><?php //=sprintf('%0.2f',$_openusd_op)?><!--%</p></td>-->
+<!--									</tr>-->
+<!--								</tbody>-->
+<!--							</table>-->
+<!--						</div>-->
 					</div>
 				</div>
 			</article>

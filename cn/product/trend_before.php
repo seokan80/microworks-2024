@@ -1,6 +1,6 @@
 <?
 $page_num = "03";
-$sub_num = "04";
+$sub_num = "05";
 $page_section = "product";
 $sub_section = "trend";
 $page_info = "PRODUCT SEARCH";

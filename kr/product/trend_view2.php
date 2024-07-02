@@ -1,10 +1,10 @@
 <?
 $page_num = "03";
-$sub_num = "01";
+$sub_num = "05";
 $page_section = "product";
 $sub_section = "trend";
 $page_info = "PRODUCT SEARCH";
-$sub_info = "Memory trend";
+$sub_info = "Memory Trend (~2019)";
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용

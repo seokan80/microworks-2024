@@ -38,40 +38,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					AS 9100D, IATF 16949, ISO 9001, ISO 14001의 품질 인증을
 					보유하고 있습니다.
 					</p>
-					<!-- !NOTE : 영문 입니다. en클래스 추가 부탁드립니다. -->
-					<p class="summary-plt en">
-					Sincethe establishment in 1978, the Company continues to
-					uphold the concept of “Trust and Responsibility, Sustainable
-					Operations”. The Company has undergone several internal
-					adjustments and reconstructions in light of facing future
-					changes and challenges.<br />
-					With the efforts of all employees, APEX has successfully
-					developed its own line of products and has been deeply rooted
-					in Taiwan with global distribution while stepping toward the
-					field of diverse products and international business
-					operations.<br />
-					We have always believed that the mission of an enterprise is
-					to upgrade the living quality of mankind in order to create a
-					comfortable and refreshing environment as well as a convenient
-					living style.<br />
-					Accordingly, APEX has developed a thorough review and
-					prospective planning in order to make further improvements in
-					the aspects of the research and development of products,
-					manufacturing process rationalization, automation, marketing,
-					services, etc. With the spirit of innovation demanding
-					continuous improvement, we believe that maintaining the
-					current status without improvement is in a way similar to
-					stepping backward without innovations.<br />
-					APEX looks forward to demonstrating the outcomes of research
-					and development in the field of technology products with
-					extensive capabilities and strong ambitions in order to allow
-					the products to be implemented in the daily lives of various
-					types of industries and promoted worldwide. This is a
-					peaceful, healthy and mutually caring society, and we look
-					forward to excel with you in order to jointly create the
-					greatest achievement for human living and to achieve the
-					notion of enterprise sustainable operations.
-					</p>
 				</div>
 				</article>
 				<article class="industrial-content area">

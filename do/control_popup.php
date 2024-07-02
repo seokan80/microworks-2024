@@ -133,10 +133,7 @@ if($lang==2){ // 영문
 /* css */
 
 </style>
-<script>
-/* js */
-
-</script>
+<script type="text/javascript" src="/js/layer_popup.js"></script>
 <? include $_SERVER["DOCUMENT_ROOT"] . $site_directory . "/include/top.php"; ?>
 				<!-- 컨텐츠 내용 -->
 				<!-- 모달 레이어팝업 -->
@@ -147,7 +144,7 @@ if($lang==2){ // 영문
 						<div class="modal-inner-box">
 							<div class="modal-inner-header">
 								<p class="modal-title"><?=$control_txt_semiconductor_analysis_inquiry?></p>
-								<a href="javascript:;" onclick="$('.modal-fixed-pop-wrapper').hide();" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
+								<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="material-icons">&#xE14C;</i></a>
 							</div>
 							<div class="modal-inner-content">
 								<article class="contact-form inquiry-page">
@@ -283,7 +280,7 @@ if($lang==2){ // 영문
 											-->
 											<div class="button-layout bottom-buttons">
 												<button type="button" class="button" onClick="controlpop_sendit();"><strong><?=$control_txt_send?></strong></button>
-												<a href="javascript:;" onclick="$('.modal-fixed-pop-wrapper').hide();" class="button type-secondary"><strong><?=$control_txt_cancel?></strong></a>
+												<a href="javascript:;" onclick="$('.inquiry-popup .modal-close-btn').click();" class="button type-secondary"><strong><?=$control_txt_cancel?></strong></a>
 											</div>
 										</section>
 									</form>

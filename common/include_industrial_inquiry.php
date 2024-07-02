@@ -232,6 +232,10 @@
     window.onload = function() {
         // 파라미터 값을 HTML 요소에 표시 (선택적)
         document.getElementById('part').value = getUrlParams('part');
+
+        if(document.getElementById('part').value == '') {
+            document.getElementById('part').value = getUrlParams('productNumber');
+        }
     };
     function inquiry_sendit() {
         var f = document.inquiryform;
